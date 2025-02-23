@@ -1,0 +1,188 @@
+/* Global Variables */
+:root {
+    --primary-color: #004c6d;
+    --secondary-color: #007bff;
+    --background-color: #f4f7fc;
+    --text-color: #343a40;
+    --accent-color: #ffcc00;
+    --dark-bg: #1e1e2f;
+    --light-bg: white;
+}
+
+/* Body Styling */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    padding-top: 75px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container {
+    flex: 1;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color) 30%, var(--secondary-color) 100%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
+}
+.navbar.scrolled {
+    background: var(--primary-color);
+}
+.navbar-nav .nav-link {
+    color: white;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+}
+.navbar-nav .nav-link:hover {
+    color: var(--accent-color);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+.navbar-nav .nav-item.active .nav-link {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white !important;
+}
+.navbar-toggler {
+    border-color: white;
+}
+
+/* Hero Section 
+*/
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 30%, var(--secondary-color) 100%);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+
+}
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.hero p {
+    font-size: 1.5rem;
+}
+/*
+.hero::after {
+    content: "";
+    background: url('https://media.istockphoto.com/id/1330137048/vector/fox-geometric-shapes-lines-and-triangles-minimalism-illustration-the-idea-for-a-a-tattoo-a.jpg?s=612x612&w=0&k=20&c=v1UvOa7eyP8LhrXkhRAMcWy6JDvmxu9uKF29TQeMCGE=') no-repeat center;
+    background-size: contain;
+    position: absolute;
+    bottom: -20px;
+    right: 10px;
+    width: 120px;
+    height: 120px;
+    opacity: 0.8;
+}
+*/
+/* Geometric 'Z' Accent */
+.logo-z {
+    font-size: 2rem;
+    font-weight: bold;
+    background: var(--gradient-fox);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Cards */
+.card {
+    background: var(--light-bg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    border-left: 5px solid var(--accent-color);
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Titles */
+.section-title {
+    color: var(--primary-color);
+    border-left: 5px solid var(--accent-color);
+    padding-left: 10px;
+    font-size: 1.8rem;
+    margin-top: 30px;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    transition: all 0.3s;
+}
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+}
+
+/* Footer */
+.footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+/* project section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+.project-img:hover {
+    transform: scale(1.05);
+}
+
+/* headshot */
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.contact-section {
+    background: url('/images/contact-bg.jpg') no-repeat center center/cover;
+    padding: 100px 20px;
+    color: var(--text-color);
+    text-align: center;
+}
