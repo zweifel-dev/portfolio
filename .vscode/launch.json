@@ -9,7 +9,7 @@
         "request": "launch",
         "reAttach": true,
         "name": "Launch localhost",
-        "url": "http://127.0.0.1:5500/index.html",
+        "url": "http://127.0.0.1:5500/views/index.html",
         "webRoot": "${workspaceFolder}"
     },
         {
