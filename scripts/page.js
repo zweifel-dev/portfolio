@@ -1,9 +1,9 @@
-fetch("../views/nav.html")
+fetch("views/nav.html")
     .then(response => response.text())
     .then(data => {
         document.getElementById("navbar-placeholder").innerHTML = data;
     });
-fetch("../views/footer.html")
+fetch("views/footer.html")
     .then(response => response.text())
     .then(data => {
         document.getElementById("footer-placeholder").innerHTML = data;
