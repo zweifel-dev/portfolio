@@ -101,7 +101,6 @@ body {
     font-size: 2rem;
     font-weight: bold;
     background: var(--gradient-fox);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
