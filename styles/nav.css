@@ -1,0 +1,42 @@
+
+/* Navbar */
+.navbar {
+    background: #0a192fe6;
+    backdrop-filter: blur(8px);
+    border-bottom: 2px solid var(--secondary-color);
+    box-shadow: 0 4px 10px rgba(100, 255, 218, 0.2);
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar-brand {
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--text-color) !important;
+    font-family: var(--heading-font);
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    color: #E8EAF6; /* Slightly brighter shade for contrast */
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: var(--secondary-color);
+}
