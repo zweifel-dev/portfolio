@@ -1,0 +1,49 @@
+
+/* Project Section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-img:hover {
+    transform: scale(1.05);
+}
+
+.project-card {
+    background: rgba(27, 38, 59, 0.98); /* Slightly less transparent */
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 30px;
+    transition: all 0.3s ease-in-out;
+    width: 100%; /* Ensures cards take full column width */
+    max-width: 500px; /* Prevents them from becoming too wide */
+    margin: 15px auto; /* Centers the cards */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Adds a sleek hover effect */
+    box-shadow: 0px 10px 25px rgba(100, 255, 218, 0.3);
+}
+
+.project-card h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--text-color);
+}
+
+.project-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
