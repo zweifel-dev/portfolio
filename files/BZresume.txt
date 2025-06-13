@@ -1,0 +1,80 @@
+BRANDON ZWEIFEL 
+Roscoe, Illinois · 608.931.4726  
+Brandon@Zweifel.tech · https://www.linkedin.com/in/bzweifel/  
+
+EXECUTIVE SUMMARY 
+Proven SaaS and healthcare technology executive with over a decade of success leading software development and  data-driven strategies that deliver transformative results. Expert in scaling technology teams, optimizing operational  efficiency, and implementing solutions that drive significant revenue growth. Skilled at aligning business and technology  strategy, guiding multi-million-dollar cloud migrations, and championing data as a product to foster innovation.  Dedicated to fostering inclusive leadership, driving DEI initiatives, and empowering diverse, high-performing teams.  Currently pursuing an MBA in Advanced Business Strategy and Analytics to further strengthen my ability to deliver  growth in dynamic environments.  
+Key strengths include SaaS leadership, strategic growth through data, and delivering operational excellence in fast paced, evolving industries.  
+
+EXPERIENCE 
+
+Jan. 2025 - Present
+SR DIRECTOR OF DATA STRATEGY & ANALYTICS 
+EXPERITY 
+● Spearhead enterprise-wide data strategy, governance, and analytics initiatives, aligning data capabilities with corporate objectives across product, operations, RCM, and client success teams.
+● Lead a high-performing team of 15+ professionals including data engineers, analysts, and a data scientist, fostering a culture of innovation, collaboration, and data literacy.
+● Architect and execute the company’s transition to a modern data stack including Snowflake, dbt/Coalesce, and Tableau Cloud, enabling real-time insights and scalable analytics delivery.
+● Partner with C-suite and executive leaders to define key metrics, OKRs, and self-service analytics capabilities, driving operational efficiency and informed decision-making.
+● Developed and launched a Data-as-a-Product strategy, integrating predictive analytics and AI/ML models to improve client workflows and patient outcomes.
+● Oversaw M&A data integration efforts including feature parity, cost analysis, and stakeholder alignment, resulting in platform consolidation and increased ROI.
+● Implemented a Hub-and-Spoke analytics model to support department-level insight generation while maintaining centralized governance and tooling consistency.
+● Negotiated and managed multi-million-dollar contracts for data and analytics platforms, ensuring HIPAA compliance, license optimization, and vendor accountability.
+● Introduced observability and monitoring strategies using Datadog, enhancing platform uptime visibility and service reliability for internal teams and external clients.
+● Provide executive reporting and advisory on data maturity, analytic impact, and growth opportunities, influencing strategic planning and board-level discussions.
+
+JUN. 2016 – Jan. 2025 
+DIRECTOR OF SOFTWARE DEVELOPMENT  
+EXPERITY / PRACTICE VELOCITY 
+● Architect of Change: Led a team of 50+ engineers in re-engineering healthcare solutions, driving a 40%  increase in product efficiency, and generating $20M in annual cost savings.  
+● Strategic Transformation: Directed a comprehensive migration from legacy monolith applications to a  micro-services architecture in a hybrid cloud environment, reducing maintenance costs by $12M annually.  
+● Revenue Growth Catalyst: Enhanced agile methodologies, boosting team productivity by 30% and reducing  time-to-market by 20%, contributing to an additional $150M in annual revenue.  
+● Post-Merger Integration Leader: Spearheaded feature parity initiatives post-merger, resulting in $125M in  recurring infrastructure cost savings and increasing company valuation from $500M to $1.2B within two  years.  
+● Data-Driven Innovator: Implemented decision-making frameworks that improved product performance  and provided strategic insights. 
+● DEI Champion: Launched successful initiatives to address gender bias, foster communication across  generations, promote introverted leadership, and break mental health stigmas, improving team satisfaction  and retention by 15%.  
+● Talent Development Leader: Mentored and developed engineering talent, increasing employee retention  and performance through leadership coaching and technical skills development. 
+
+MAR. 2015 – JUN. 2016 
+MANAGER OF SOFTWARE ENGINEERING  
+FATWALLET 
+● User Experience Enhancer: Led feature development, improving site performance by 30% and attracting  1.5M additional monthly users.  
+● Revenue Driver: Partnered with UX/UI designers to optimize the user interface, reducing clicks by 15% and  driving $5M in additional annual revenue  
+● Engineering Mentor: Led junior engineers in performance optimization, improving website loading times by  40%.
+
+AUG. 2012 – FEB. 2015 
+MANAGER OF SOFTWARE ENGINEERING 
+SUPPLYCORE 
+● Operational Efficiency Leader: Developed and deployed custom ERP solutions that improved operational  efficiency by 20% and saved clients $2.5M annually.  
+● Client Satisfaction Driver: Led the development of a real-time analytics reporting module, increasing  customer satisfaction by 30% and generating $10M in additional revenue.  
+● Training & Development Advocate: Conducted technical training sessions, reducing support tickets by 25%  and saving 500 hours of support time monthly.  
+
+NOV. 2005 – DEC. 2013 
+INTEL ANALYST NON-COMMISSIONED OFFICER  
+UNITED STATES ARMY 
+● Led intelligence analysis operations, using advanced data tools to drive mission-critical outcomes.  ● Trained and mentored junior personnel, improving team performance and operational readiness. 
+
+EDUCATION 
+MBA IN ADVANCED BUSINESS STRATEGY USING A.I. AND ANALYTICS  
+MILWAUKEE SCHOOL OF ENGINEERING 
+Expected Completion: Dec. 2025  
+Currently integrating strategic AI and analytics insights into leadership roles to optimize business growth  and technology-driven innovation. 
+BACHELORS IN COMPUTER SCIENCE  
+UNIVERSITY OF ILLINOIS – SPRINGFIELD 
+Emphasis in Software Engineering, Architecture, and Security 
+
+SKILLS TECHNOLOGY 
+● Strategic Leadership 
+● Data-Driven Decision Making 
+● Agile Methodologies 
+● Cloud Migration 
+● Cross-Functional Collaboration 
+● Program Management 
+● Continuous Improvement 
+● CI/CD Implementation 
+● Effective Communication 
+● Cloud Technologies: AWS, EKS, EC2, Kafka,  Lambdas, Serverless 
+● Monitoring Tools: Kibana, Elasticsearch,  CloudWatch, New Relic, Open Telemetry 
+● Programming Languages: C#, VB.NET, Java 
+● Web Technologies: Angular, Node.js, React 
+● Databases: SQL, PostgreSQL, DynamoDB 
+● CI/CD: Jenkins, GitLab CI, CircleCI
+
