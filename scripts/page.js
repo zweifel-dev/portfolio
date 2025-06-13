@@ -1,7 +1,7 @@
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Smooth scrolling for navigation links
-    document.querySelectorAll(".navbar-nav .nav-link").forEach(anchor => {
+function initializeSmoothScrolling() {
+    // Smooth scrolling only for anchor links (starting with #), not for page routing
+    document.querySelectorAll("a[href^='#']").forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
             const targetId = this.getAttribute("href").substring(1);
@@ -14,17 +14,21 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+}
 
+function initializeStickyNavbar() {
     // Sticky navbar effect on scroll
     window.addEventListener("scroll", function () {
         const navbar = document.querySelector(".navbar");
-        if (window.scrollY > 50) {
+        if (navbar && window.scrollY > 50) {
             navbar.classList.add("scrolled");
-        } else {
+        } else if (navbar) {
             navbar.classList.remove("scrolled");
         }
     });
+}
 
+function initializeFadeInEffects() {
     // Fade-in effect on scroll
     const fadeElements = document.querySelectorAll(".fade-in");
     const fadeInOnScroll = () => {
@@ -38,5 +42,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", fadeInOnScroll);
     fadeInOnScroll(); // Trigger animation on load
+}
+
+// Initialize all effects when DOM is loaded
+document.addEventListener("DOMContentLoaded", function () {
+    initializeSmoothScrolling();
+    initializeStickyNavbar();
+    initializeFadeInEffects();
 });
-    
+
+// Export functions for router.js to use after dynamic content loading
+window.initializeSmoothScrolling = initializeSmoothScrolling;
+window.initializeFadeInEffects = initializeFadeInEffects;

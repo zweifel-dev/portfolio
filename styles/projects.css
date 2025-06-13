@@ -46,28 +46,6 @@
     margin-bottom: 15px;
 }
 
-.resource-card {
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    font-weight: 500;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    transition: 0.3s;
-}
-
-.resource-card:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.resource-card i {
-    font-size: 24px;
-    margin-right: 12px;
-    color: #ffcc00;
-}
 
 .resource-img {
     max-width: 100%;

@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://zweifel.tech/sitemap.xml
+
+# Crawl-delay (in seconds) - optional, remove if not needed
+Crawl-delay: 1
+
+# Disallow access to internal files
+Disallow: /scripts/
+Disallow: /styles/
+Disallow: /views/
+
+# Allow search engines to access images and files
+Allow: /images/
+Allow: /files/
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.pdf$
