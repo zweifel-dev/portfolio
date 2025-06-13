@@ -1,5 +1,5 @@
 // Valid pages for routing
-const validPages = ['home', 'about', 'contact', 'projects', 'reflections', 'research', 'day_trading_journey', 'experity_analytic_assessment', 'ma_feature_parity'];
+const validPages = ['home', 'about', 'contact', 'projects', 'reflections', 'research', 'day_trading_journey', 'experity_analytic_assessment', 'ma_feature_parity', 'delta_framework_implementation', 'enterprise_data_transformation', 'ma_integration_strategy', 'team_scaling_leadership'];
 
 // Page metadata for SEO and dynamic titles
 const pageMetadata = {
@@ -11,7 +11,11 @@ const pageMetadata = {
     research: { title: 'Research - Brandon Zweifel', description: 'Research projects and academic work by Brandon Zweifel' },
     day_trading_journey: { title: 'Day Trading Journey - Brandon Zweifel', description: 'Strategic analysis and data-driven approach to day trading research' },
     experity_analytic_assessment: { title: 'Experity Analytics - Brandon Zweifel', description: 'Case study on Experity analytic assessment project' },
-    ma_feature_parity: { title: 'MA Feature Parity - Brandon Zweifel', description: 'Case study on MA feature parity project' }
+    ma_feature_parity: { title: 'MA Feature Parity - Brandon Zweifel', description: 'Case study on MA feature parity project' },
+    delta_framework_implementation: { title: 'DELTA Framework Implementation - Brandon Zweifel', description: 'Comprehensive case study on DELTA framework organizational transformation at Experity' },
+    enterprise_data_transformation: { title: 'Enterprise Data Transformation - Brandon Zweifel', description: 'Modern data stack migration and infrastructure modernization case study' },
+    ma_integration_strategy: { title: 'M&A Integration Strategy - Brandon Zweifel', description: '$125M+ cost savings through strategic data integration and platform consolidation' },
+    team_scaling_leadership: { title: 'Team Scaling & Leadership - Brandon Zweifel', description: 'Building high-performance data teams from 15 to 65+ professionals' }
 };
 
 document.addEventListener("DOMContentLoaded", function () {
