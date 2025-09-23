@@ -1,0 +1,51 @@
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+import Reflections from "./pages/Reflections";
+import Research from "./pages/Research";
+import ExperityAnalyticAssessment from "./pages/ExperityAnalyticAssessment";
+import MAFeatureParity from "./pages/MAFeatureParity";
+import DeltaFrameworkImplementation from "./pages/DeltaFrameworkImplementation";
+import EnterpriseDataTransformation from "./pages/EnterpriseDataTransformation";
+import MAIntegrationStrategy from "./pages/MAIntegrationStrategy";
+import TeamScalingLeadership from "./pages/TeamScalingLeadership";
+import NotFound from "./pages/NotFound";
+
+const queryClient = new QueryClient();
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/reflections" element={<Reflections />} />
+            <Route path="/research" element={<Research />} />
+            <Route path="/experity-analytic-assessment" element={<ExperityAnalyticAssessment />} />
+            <Route path="/ma-feature-parity" element={<MAFeatureParity />} />
+            <Route path="/delta-framework-implementation" element={<DeltaFrameworkImplementation />} />
+            <Route path="/enterprise-data-transformation" element={<EnterpriseDataTransformation />} />
+            <Route path="/ma-integration-strategy" element={<MAIntegrationStrategy />} />
+            <Route path="/team-scaling-leadership" element={<TeamScalingLeadership />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Layout>
+      </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
+
+export default App;
