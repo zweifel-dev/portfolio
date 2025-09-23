@@ -25,7 +25,7 @@ EXPERITY
 JUN. 2016 – Jan. 2025 
 DIRECTOR OF SOFTWARE DEVELOPMENT  
 EXPERITY / PRACTICE VELOCITY 
-● Architect of Change: Led a team of 50+ engineers in re-engineering healthcare solutions, driving a 40%  increase in product efficiency, and generating $20M in annual cost savings.  
+● Architect of Change: Led a team of 50+ engineers in re-engineering healthcare solutions, driving a 40%  increase in product efficiency, and generating $10M in annual cost savings.  
 ● Strategic Transformation: Directed a comprehensive migration from legacy monolith applications to a  micro-services architecture in a hybrid cloud environment, reducing maintenance costs by $12M annually.  
 ● Revenue Growth Catalyst: Enhanced agile methodologies, boosting team productivity by 30% and reducing  time-to-market by 20%, contributing to an additional $150M in annual revenue.  
 ● Post-Merger Integration Leader: Spearheaded feature parity initiatives post-merger, resulting in $125M in  recurring infrastructure cost savings and increasing company valuation from $500M to $1.2B within two  years.  

@@ -33,7 +33,7 @@ const TeamScalingLeadership: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-gray-600">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
-                  <span>Timeline: 6-Year Leadership Journey</span>
+                  <span>Timeline: 20-Year Leadership Journey</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Users className="w-4 h-4" />
@@ -61,7 +61,7 @@ const TeamScalingLeadership: React.FC = () => {
               
               <div className="bg-blue-50 border-l-4 border-blue-400 p-6 mb-6">
                 <blockquote className="text-lg italic text-gray-700 mb-2">
-                  "Success isn't just about hitting goals—it's about helping others grow. When people feel valued and informed, they don't just follow—they thrive."
+                  "Strong leadership builds both people and performance. By shaping strategy with data and empowering teams to act on it, success becomes sustainable, scalable, and repeatable."
                 </blockquote>
                 <cite className="text-sm text-gray-600">— Personal Leadership Philosophy</cite>
               </div>
@@ -207,7 +207,7 @@ const TeamScalingLeadership: React.FC = () => {
                     <li><strong>Flexible Work Arrangements:</strong> Remote work options and flexible scheduling for work-life balance</li>
                     <li><strong>Stress Management Resources:</strong> Company-sponsored mindfulness training and mental health resources</li>
                     <li><strong>Workload Management:</strong> Regular check-ins on workload and capacity to prevent burnout</li>
-                    <li><strong>Results:</strong> 20% reduction in stress-related absences and improved team satisfaction</li>
+                    <li><strong>Results:</strong> Reduction in stress-related absences and improved team satisfaction</li>
                   </ul>
                 </Card>
               </div>
@@ -312,10 +312,10 @@ const TeamScalingLeadership: React.FC = () => {
                 <Card className="p-6">
                   <h4 className="font-bold text-lg mb-3">Business Impact Through Team Excellence</h4>
                   <ul className="space-y-2 text-sm">
-                    <li><strong>Revenue Contribution:</strong> Team deliverables directly contributed to $150M+ annual revenue</li>
-                    <li><strong>Cost Optimization:</strong> Process improvements generated $20M+ in annual cost savings</li>
+                    <li><strong>Revenue Contribution:</strong> Team deliverables directly contributed to $20M+ annual revenue</li>
+                    <li><strong>Cost Optimization:</strong> Process improvements generated $10M+ in annual cost savings</li>
                     <li><strong>Time-to-Market:</strong> 50% reduction in analytics project delivery times</li>
-                    <li><strong>Customer Impact:</strong> Analytics products improved client satisfaction scores by 25%</li>
+                    <li><strong>Customer Impact:</strong> Analytics products improved client satisfaction scores by 20%</li>
                     <li><strong>Competitive Advantage:</strong> Team capabilities became key differentiator in market positioning</li>
                   </ul>
                 </Card>
@@ -397,7 +397,6 @@ const TeamScalingLeadership: React.FC = () => {
                 <li><strong>Speaking Engagements:</strong> Keynote presentations on building data teams at major conferences</li>
                 <li><strong>Industry Awards:</strong> Team recognized for excellence in analytics and innovation</li>
                 <li><strong>Best Practices Sharing:</strong> Regular participation in healthcare technology leadership roundtables</li>
-                <li><strong>Academic Collaboration:</strong> Guest lectures on team leadership and organizational development</li>
                 <li><strong>Mentorship Network:</strong> Active mentor for aspiring data leaders across the industry</li>
               </ul>
             </section>

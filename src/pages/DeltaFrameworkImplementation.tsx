@@ -27,7 +27,7 @@ const DeltaFrameworkImplementation: React.FC = () => {
                 Organizational Data Culture Transformation at Experity
               </h1>
               <p className="text-lg text-blue-600 font-medium mb-6">
-                A comprehensive case study on implementing the DELTA Plus framework to drive $150M+ in revenue impact and build a sustainable data culture across a merged healthcare technology organization.
+                A comprehensive case study on implementing the DELTA Plus framework to drive $20M+ in revenue impact and build a sustainable data culture across a merged healthcare technology organization.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-gray-600">
@@ -45,7 +45,7 @@ const DeltaFrameworkImplementation: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <DollarSign className="w-4 h-4" />
-                  <span>Business Impact: $150M+ Revenue</span>
+                  <span>Business Impact: $20M+ Revenue</span>
                 </div>
               </div>
             </div>
@@ -58,7 +58,7 @@ const DeltaFrameworkImplementation: React.FC = () => {
                   As Senior Director of Data Strategy & Analytics at Experity, I led the implementation of the DELTA Plus framework to transform our merged organization into a data-driven healthcare technology leader. This comprehensive transformation involved building data culture, implementing modern analytics infrastructure, and scaling high-performing teams across the organization.
                 </p>
                 <p>
-                  The initiative delivered measurable business impact including <strong>$150M+ in annual revenue growth</strong>, <strong>$125M+ in cost savings through M&A integration</strong>, and the successful scaling of our data organization from 15 to 65+ professionals while maintaining industry-leading retention rates.
+                  The initiative delivered measurable business impact including <strong>$20M+ in annual revenue growth</strong>, <strong>$10M+ in cost savings through M&A integration</strong>, and the successful scaling of our data organization from 15 to 65+ professionals while maintaining industry-leading retention rates.
                 </p>
               </div>
             </section>
@@ -183,11 +183,11 @@ const DeltaFrameworkImplementation: React.FC = () => {
 
             {/* Implementation Strategy */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Implementation Strategy: A Phased Approach</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Implementation Strategy:</h2>
               
               <div className="space-y-6">
                 <Card className="p-6 border-l-4 border-blue-500">
-                  <h4 className="font-bold text-lg mb-2">Phase 1: Foundation Building (Months 1-6)</h4>
+                  <h4 className="font-bold text-lg mb-2">Foundation Building:</h4>
                   <p className="font-medium mb-3"><strong>Objective:</strong> Establish data infrastructure and governance framework</p>
                   <ul className="space-y-2 text-sm mb-3">
                     <li>• Migrated to modern data stack (Snowflake, dbt/Coalesce, Tableau Cloud)</li>
@@ -200,7 +200,7 @@ const DeltaFrameworkImplementation: React.FC = () => {
                 </Card>
 
                 <Card className="p-6 border-l-4 border-green-500">
-                  <h4 className="font-bold text-lg mb-2">Phase 2: Culture and Capability Development (Months 7-18)</h4>
+                  <h4 className="font-bold text-lg mb-2">Culture and Capability Development:</h4>
                   <p className="font-medium mb-3"><strong>Objective:</strong> Build data literacy and analytical capabilities across organization</p>
                   <ul className="space-y-2 text-sm mb-3">
                     <li>• Launched enterprise-wide data literacy training programs</li>
@@ -213,7 +213,7 @@ const DeltaFrameworkImplementation: React.FC = () => {
                 </Card>
 
                 <Card className="p-6 border-l-4 border-orange-500">
-                  <h4 className="font-bold text-lg mb-2">Phase 3: Advanced Analytics and AI/ML (Months 19-36)</h4>
+                  <h4 className="font-bold text-lg mb-2">Advanced Analytics and AI/ML:</h4>
                   <p className="font-medium mb-3"><strong>Objective:</strong> Deploy predictive analytics and machine learning capabilities</p>
                   <ul className="space-y-2 text-sm mb-3">
                     <li>• Built predictive models for patient flow optimization and revenue forecasting</li>
@@ -222,11 +222,11 @@ const DeltaFrameworkImplementation: React.FC = () => {
                     <li>• Created automated reporting and alerting systems</li>
                     <li>• Established ML model governance and monitoring frameworks</li>
                   </ul>
-                  <p className="text-sm font-medium text-green-600"><strong>Key Results:</strong> 25% improvement in patient wait times, $20M+ in operational cost savings</p>
+                  <p className="text-sm font-medium text-green-600"><strong>Key Results:</strong> 20% improvement in patient wait times, $10M+ in operational cost savings</p>
                 </Card>
 
                 <Card className="p-6 border-l-4 border-purple-500">
-                  <h4 className="font-bold text-lg mb-2">Phase 4: Scale and Optimization (Months 37-72)</h4>
+                  <h4 className="font-bold text-lg mb-2">Scale and Optimization:</h4>
                   <p className="font-medium mb-3"><strong>Objective:</strong> Scale capabilities and drive continuous improvement</p>
                   <ul className="space-y-2 text-sm mb-3">
                     <li>• Expanded analytics team from 15 to 65+ professionals across multiple functions</li>
@@ -235,7 +235,7 @@ const DeltaFrameworkImplementation: React.FC = () => {
                     <li>• Established thought leadership through conference presentations and publications</li>
                     <li>• Achieved measurable business impact across all strategic objectives</li>
                   </ul>
-                  <p className="text-sm font-medium text-green-600"><strong>Key Results:</strong> $150M+ revenue impact, 15% improvement in team retention, industry recognition</p>
+                  <p className="text-sm font-medium text-green-600"><strong>Key Results:</strong> $20M+ revenue impact, 15% improvement in team retention, industry recognition</p>
                 </Card>
               </div>
             </section>
@@ -246,7 +246,7 @@ const DeltaFrameworkImplementation: React.FC = () => {
               
               <div className="bg-blue-50 border-l-4 border-blue-400 p-6 mb-6">
                 <blockquote className="text-lg italic text-gray-700 mb-2">
-                  "The biggest challenge wasn't technical—it was cultural. We had to help people see data not as a burden, but as their competitive advantage."
+                  "The biggest challenge wasn't technical, it was cultural. We had to help people see data not as a burden, but as their competitive advantage."
                 </blockquote>
                 <cite className="text-sm text-gray-600">— Reflection on DELTA Framework Implementation</cite>
               </div>
@@ -256,7 +256,7 @@ const DeltaFrameworkImplementation: React.FC = () => {
                   <h4 className="font-bold text-lg mb-2">Challenge 1: M&A Data Integration Complexity</h4>
                   <p className="mb-2"><strong>Issue:</strong> Merging two different technology platforms with incompatible data models and governance standards.</p>
                   <p className="mb-2"><strong>Solution:</strong> Implemented a unified data architecture using modern cloud technologies and established common data governance framework. Created automated ETL processes to harmonize data from both legacy systems.</p>
-                  <p className="text-green-600 font-medium"><strong>Result:</strong> $125M+ in recurring infrastructure cost savings and successful platform consolidation.</p>
+                  <p className="text-green-600 font-medium"><strong>Result:</strong> $10M+ in recurring infrastructure cost savings and successful platform consolidation.</p>
                 </Card>
 
                 <Card className="p-6">
@@ -270,7 +270,7 @@ const DeltaFrameworkImplementation: React.FC = () => {
                   <h4 className="font-bold text-lg mb-2">Challenge 3: Healthcare Regulatory Compliance</h4>
                   <p className="mb-2"><strong>Issue:</strong> Ensuring all analytics initiatives met HIPAA compliance and healthcare industry standards.</p>
                   <p className="mb-2"><strong>Solution:</strong> Integrated compliance requirements into every aspect of the DELTA framework implementation. Established dedicated compliance review processes and automated monitoring.</p>
-                  <p className="text-green-600 font-medium"><strong>Result:</strong> 100% compliance audit success rate with zero data security incidents.</p>
+                  <p className="text-green-600 font-medium"><strong>Result:</strong> 98% compliance audit success rate with zero data security incidents.</p>
                 </Card>
               </div>
             </section>
@@ -284,11 +284,11 @@ const DeltaFrameworkImplementation: React.FC = () => {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div className="text-center">
                     <DollarSign className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                    <span className="text-sm font-medium">$150M+ Annual Revenue Impact</span>
+                    <span className="text-sm font-medium">$20M+ Annual Revenue Impact</span>
                   </div>
                   <div className="text-center">
                     <BarChart3 className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                    <span className="text-sm font-medium">$125M+ M&A Cost Savings</span>
+                    <span className="text-sm font-medium">$10M+ M&A Cost Savings</span>
                   </div>
                   <div className="text-center">
                     <Eye className="w-8 h-8 text-purple-600 mx-auto mb-2" />
@@ -309,7 +309,7 @@ const DeltaFrameworkImplementation: React.FC = () => {
                     <li><strong>Self-Service Adoption:</strong> 300% increase in business user analytics adoption</li>
                     <li><strong>Decision Speed:</strong> 60% faster time-to-insight for critical business decisions</li>
                     <li><strong>Team Performance:</strong> 30% improvement in team productivity metrics</li>
-                    <li><strong>Customer Satisfaction:</strong> 25% improvement in client Net Promoter Score</li>
+                    <li><strong>Customer Satisfaction:</strong> 20% improvement in client Net Promoter Score</li>
                   </ul>
                 </Card>
 
@@ -362,11 +362,9 @@ const DeltaFrameworkImplementation: React.FC = () => {
               </p>
               
               <ul className="space-y-2 ml-6 list-disc">
-                <li><strong>Conference Presentations:</strong> Delivered keynote presentations on DELTA framework implementation at major healthcare technology conferences</li>
+                <li><strong>Conference Presentations:</strong> Delivered presentations on DELTA framework implementation at major healthcare technology conferences</li>
                 <li><strong>Peer Recognition:</strong> Invited to participate in industry roundtables and advisory panels on healthcare analytics transformation</li>
-                <li><strong>Vendor Partnerships:</strong> Recognized by Snowflake, Tableau, and dbt Labs as implementation excellence partner</li>
-                <li><strong>Academic Collaboration:</strong> Guest lectures at Milwaukee School of Engineering on practical applications of analytics frameworks</li>
-                <li><strong>Industry Publications:</strong> Contributing author for healthcare technology and analytics transformation best practices</li>
+                <li><strong>Vendor Partnerships:</strong> Recognized by Snowflake and Tableau as implementation excellence partner</li>
               </ul>
             </section>
 
@@ -384,7 +382,7 @@ const DeltaFrameworkImplementation: React.FC = () => {
                   <li><strong>Real-Time Analytics:</strong> Implementing streaming analytics for immediate operational insights and patient care optimization</li>
                   <li><strong>Data Monetization:</strong> Developing external data products and industry benchmarking services</li>
                   <li><strong>Predictive Healthcare:</strong> Building predictive models for patient outcomes and preventive care recommendations</li>
-                  <li><strong>Industry Leadership:</strong> Continuing thought leadership through research, publications, and conference presentations</li>
+                  <li><strong>Industry Leadership:</strong> Continuing thought leadership through research, and conference presentations</li>
                 </ul>
               </Card>
             </section>
