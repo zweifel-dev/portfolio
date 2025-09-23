@@ -33,8 +33,10 @@ jobs:
       - name: Build
         run: npm run build
         
-      - name: Copy CNAME to dist
-        run: cp CNAME dist/
+      - name: Copy deployment files to dist
+        run: |
+          cp CNAME dist/
+          cp .nojekyll dist/
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
