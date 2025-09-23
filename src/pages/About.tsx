@@ -108,7 +108,7 @@ const About = () => {
                         <li>Led cross-functional teams of 50+ engineers during Practice Velocity acquisition, scaling M&A integration efforts to 65+ professionals for feature parity initiatives, driving 40% increase in product efficiency.</li>
                         <li>Directed comprehensive migration from legacy monolith to micro-services architecture during M&A consolidation, reducing maintenance costs by $10M annually and enabling scalable platform integration.</li>
                         <li>Enhanced agile methodologies, boosting team productivity by 30% and reducing time-to-market by 20%, enabling faster feature parity during M&A integration.</li>
-                        <li>Spearheaded feature parity initiatives post-merger, resulting in $0M in recurring infrastructure cost savings and increasing company valuation from $500M to $1.2B within two years.</li>
+                        <li>Spearheaded feature parity initiatives post-merger, resulting in $10M in recurring infrastructure cost savings and increasing company valuation from $500M to $1.2B within two years.</li>
                         <li>Implemented decision-making frameworks that improved product performance and provided strategic insights.</li>
                         <li>Launched successful DEI initiatives to address gender bias, foster communication across generations, promote introverted leadership, and break mental health stigmas, improving team satisfaction and retention by 15%.</li>
                         <li>Mentored and developed engineering talent, increasing employee retention and performance through leadership coaching and technical skills development.</li>
