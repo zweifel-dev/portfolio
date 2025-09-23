@@ -23,7 +23,7 @@ const Home = () => {
               <div className="text-sm">M&A Integration Team</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-              <div className="text-3xl font-bold">$125M+</div>
+              <div className="text-3xl font-bold">$10M+</div>
               <div className="text-sm">Cost Savings</div>
             </div>
           </div>
