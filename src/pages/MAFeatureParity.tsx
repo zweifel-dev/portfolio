@@ -47,18 +47,18 @@ const MAFeatureParity = () => {
                 <section className="space-y-4">
                   <h3 className="text-2xl font-bold text-gray-900">Project Overview</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    This MBA project management case study analyzes the successful 2019 acquisition where Warburg Pincus purchased Practice Velocity and merged it with DocuTAP to form Experity. As a key member of the integration team, I led the feature parity analysis that enabled this $320M healthcare technology consolidation.
+                    This MBA project management case study applies academic frameworks to a real-world M&A integration challenge. Post-merger, Experity operated two EMR platforms—Practice Velocity and DocuTAP—causing duplication, increased costs, client confusion, and delayed innovation. As Head of Engineering, I co-led the feature parity initiative to consolidate these platforms.
                   </p>
                   
                   <p className="text-gray-700 leading-relaxed">
-                    The academic project applies formal project management methodologies retrospectively to this completed M&A transaction, demonstrating how structured frameworks could enhance future integration efforts. This analysis bridges practical experience with academic theory, examining what made this integration successful and identifying opportunities for process improvement.
+                    Over 1.5 years of coursework, I applied project management methodologies—including A3 analysis, project charter development, scope definition, and Gantt chart planning—to document and analyze this critical integration. The project goal: seamless, cost-effective consolidation achieving 80%+ feature parity, 90%+ client retention, and 35% cost reduction.
                   </p>
                 </section>
 
                 <section className="space-y-6">
-                  <h3 className="text-2xl font-bold text-gray-900">Academic Framework & Methodology</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">Project Management Methodologies Applied</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    This case study applies MBA project management principles to analyze the Experity formation, examining how formal methodologies align with the successful integration approach:
+                    Throughout the MBA coursework, I applied formal project management tools to analyze and document the real-world EMR consolidation project:
                   </p>
                   
                   <div className="grid md:grid-cols-2 gap-6">
@@ -66,49 +66,49 @@ const MAFeatureParity = () => {
                       <CardContent className="p-6">
                         <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
                           <BarChart3 className="w-5 h-5 text-blue-600" />
-                          Strategic Analysis
+                          A3 Problem Solving Analysis
                         </h4>
                         <ul className="list-disc pl-6 space-y-1 text-gray-700">
-                          <li>Comprehensive stakeholder analysis and impact assessment</li>
-                          <li>Cost-benefit evaluation methodologies</li>
-                          <li>Risk assessment and mitigation strategies</li>
-                          <li>Timeline and resource optimization frameworks</li>
+                          <li>Root cause analysis of dual-platform inefficiencies</li>
+                          <li>Current state vs future state mapping</li>
+                          <li>Cost-benefit analysis for platform consolidation</li>
+                          <li>Implementation roadmap with measurable outcomes</li>
                         </ul>
                       </CardContent>
                     </Card>
                     
                     <Card className="border border-gray-200">
                       <CardContent className="p-6">
-                        <h4 className="text-xl font-bold text-gray-900 mb-4">Decision Framework</h4>
+                        <h4 className="text-xl font-bold text-gray-900 mb-4">Project Charter Development</h4>
                         <ul className="list-disc pl-6 space-y-1 text-gray-700">
-                          <li>Multi-criteria decision analysis (MCDA)</li>
-                          <li>Weighted scoring models for feature prioritization</li>
-                          <li>Financial modeling and ROI calculations</li>
-                          <li>Sensitivity analysis for key variables</li>
+                          <li>Defined project objectives: 80%+ feature parity, 90%+ retention</li>
+                          <li>Stakeholder roles: PM, Engineering, Product, Data, Client Success</li>
+                          <li>Success criteria: 35% cost reduction, unified roadmap</li>
+                          <li>Resource allocation and timeline constraints</li>
                         </ul>
                       </CardContent>
                     </Card>
                     
                     <Card className="border border-gray-200">
                       <CardContent className="p-6">
-                        <h4 className="text-xl font-bold text-gray-900 mb-4">Stakeholder Management</h4>
+                        <h4 className="text-xl font-bold text-gray-900 mb-4">Scope Definition & Management</h4>
                         <ul className="list-disc pl-6 space-y-1 text-gray-700">
-                          <li>Cross-functional team coordination strategies</li>
-                          <li>Communication and change management planning</li>
-                          <li>Executive reporting and decision support</li>
-                          <li>Client impact assessment and mitigation</li>
+                          <li>Gap analysis between Practice Velocity and DocuTAP platforms</li>
+                          <li>Feature prioritization based on client usage data</li>
+                          <li>Migration planning and client segmentation strategy</li>
+                          <li>Iterative feedback loops and scope refinement</li>
                         </ul>
                       </CardContent>
                     </Card>
                     
                     <Card className="border border-gray-200">
                       <CardContent className="p-6">
-                        <h4 className="text-xl font-bold text-gray-900 mb-4">Project Management</h4>
+                        <h4 className="text-xl font-bold text-gray-900 mb-4">Gantt Chart & Implementation</h4>
                         <ul className="list-disc pl-6 space-y-1 text-gray-700">
-                          <li>Work breakdown structure development</li>
-                          <li>Critical path analysis and scheduling</li>
-                          <li>Resource allocation and capacity planning</li>
-                          <li>Quality assurance and testing protocols</li>
+                          <li>Phased approach: Gap Analysis → Roadmap → Execution → Migration</li>
+                          <li>Critical path identification for feature development</li>
+                          <li>Resource allocation across engineering and product teams</li>
+                          <li>Milestone tracking and performance monitoring</li>
                         </ul>
                       </CardContent>
                     </Card>
@@ -116,41 +116,60 @@ const MAFeatureParity = () => {
                 </section>
 
                 <section className="space-y-6">
-                  <h3 className="text-2xl font-bold text-gray-900">Key Learning Outcomes</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">Cross-Functional Team & Implementation</h3>
+                  
+                  <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-6">
+                    <h4 className="text-xl font-bold text-gray-900 mb-4">Project Team Structure</h4>
+                    <ul className="space-y-2 text-gray-700">
+                      <li><strong>Cassie Kennedy</strong> - Project Manager</li>
+                      <li><strong>Brandon Zweifel</strong> - Head of Engineering</li>
+                      <li><strong>Product Managers & SMEs</strong> - Feature Identification and Planning</li>
+                      <li><strong>Data Analysts</strong> - Usage & Cost Data Modeling</li>
+                      <li><strong>Engineering Managers</strong> - Feasibility Assessment and Delivery</li>
+                      <li><strong>Client Success Managers</strong> - Migration Planning, Communication, & Training</li>
+                    </ul>
+                  </div>
+                </section>
+
+                <section className="space-y-6">
+                  <h3 className="text-2xl font-bold text-gray-900">Implementation & Learning Outcomes</h3>
                   
                   <div className="space-y-6">
                     <Card className="bg-blue-50 border border-blue-200">
                       <CardContent className="p-6">
-                        <h4 className="text-xl font-bold text-gray-900 mb-4">Strategic Business Analysis Skills</h4>
+                        <h4 className="text-xl font-bold text-gray-900 mb-4">Implementation Phases Applied</h4>
                         <ul className="list-disc pl-6 space-y-1 text-gray-700">
-                          <li><strong>Quantitative Analysis:</strong> Advanced financial modeling and statistical analysis techniques</li>
-                          <li><strong>Qualitative Assessment:</strong> Stakeholder impact evaluation and organizational change considerations</li>
-                          <li><strong>Risk Management:</strong> Comprehensive risk identification and mitigation planning</li>
-                          <li><strong>Decision Support:</strong> Executive-level reporting and recommendation development</li>
+                          <li><strong>Gap Analysis:</strong> Documented feature differences between platforms</li>
+                          <li><strong>Cost-Benefit Modeling:</strong> Client value vs. development cost analysis</li>
+                          <li><strong>Roadmap Alignment:</strong> Unified product and engineering roadmap</li>
+                          <li><strong>Feature Execution:</strong> Iterative development and deployment</li>
+                          <li><strong>Client Migration:</strong> Phased rollout with continuous monitoring</li>
                         </ul>
                       </CardContent>
                     </Card>
 
                     <Card className="bg-green-50 border border-green-200">
                       <CardContent className="p-6">
-                        <h4 className="text-xl font-bold text-gray-900 mb-4">Technology Integration Expertise</h4>
+                        <h4 className="text-xl font-bold text-gray-900 mb-4">Project Management Skills Developed</h4>
                         <ul className="list-disc pl-6 space-y-1 text-gray-700">
-                          <li><strong>Feature Mapping:</strong> Systematic comparison of platform capabilities and user requirements</li>
-                          <li><strong>Cost Optimization:</strong> Total cost of ownership analysis and budget planning</li>
-                          <li><strong>Timeline Management:</strong> Critical path analysis for complex technology projects</li>
-                          <li><strong>Quality Assurance:</strong> Testing protocols and validation methodologies</li>
+                          <li><strong>A3 Problem Solving:</strong> Structured approach to complex business problems</li>
+                          <li><strong>Charter Development:</strong> Clear project scope and success criteria</li>
+                          <li><strong>Gantt Chart Planning:</strong> Resource optimization and timeline management</li>
+                          <li><strong>Stakeholder Management:</strong> Cross-functional team coordination</li>
+                          <li><strong>Risk Management:</strong> Proactive identification and mitigation strategies</li>
                         </ul>
                       </CardContent>
                     </Card>
 
                     <Card className="bg-purple-50 border border-purple-200">
                       <CardContent className="p-6">
-                        <h4 className="text-xl font-bold text-gray-900 mb-4">Professional Development Impact</h4>
+                        <h4 className="text-xl font-bold text-gray-900 mb-4">Real-World Impact & Results</h4>
                         <ul className="list-disc pl-6 space-y-1 text-gray-700">
-                          <li><strong>Enhanced Analytical Rigor:</strong> Formal frameworks complement practical experience</li>
-                          <li><strong>Improved Communication:</strong> Academic writing and presentation skills development</li>
-                          <li><strong>Strategic Thinking:</strong> Broader perspective on business strategy and decision-making</li>
-                          <li><strong>Leadership Credibility:</strong> Advanced degree enhances executive presence and capabilities</li>
+                          <li><strong>Cost Reduction:</strong> Achieved 35%+ reduction in operational costs</li>
+                          <li><strong>Feature Parity:</strong> Delivered 85%+ feature coverage</li>
+                          <li><strong>Client Retention:</strong> Maintained 92%+ client retention during migration</li>
+                          <li><strong>Platform Unification:</strong> Successfully consolidated to single EMR platform</li>
+                          <li><strong>Innovation Velocity:</strong> Unified roadmap accelerated feature delivery</li>
                         </ul>
                       </CardContent>
                     </Card>
@@ -158,28 +177,28 @@ const MAFeatureParity = () => {
                 </section>
 
                 <section className="space-y-4">
-                  <h3 className="text-2xl font-bold text-gray-900">Integration with Professional Experience</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">Academic Application to Real-World Challenge</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    This MBA case study examines the actual 2019 Warburg Pincus transaction that created Experity, analyzing how project management principles were applied in practice. The retrospective analysis provides insights for future M&A integrations:
+                    This MBA project demonstrates how academic project management methodologies enhance real-world execution. By applying A3, project charter, scope management, and Gantt chart planning to the actual EMR consolidation, I developed a comprehensive framework for managing complex technology integrations:
                   </p>
                   
                   <blockquote className="border-l-4 border-blue-500 pl-6 py-4 bg-gray-50 rounded-r-lg">
                     <p className="text-lg text-gray-700 font-medium">
-                      "The best leaders combine practical experience with formal analytical frameworks to make better decisions and communicate more effectively with stakeholders."
+                      "Applying project management frameworks to real-world challenges during the coursework allowed me to validate methodologies while solving actual business problems."
                     </p>
                     <p className="text-sm text-gray-600 mt-2">
-                      <em>— On the value of academic rigor in executive leadership</em>
+                      <em>— Bridging academic theory with practical execution</em>
                     </p>
                   </blockquote>
 
                   <Card className="bg-yellow-50 border border-yellow-200">
                     <CardContent className="p-6">
-                      <h4 className="text-xl font-bold text-gray-900 mb-4">Real-World Application</h4>
+                      <h4 className="text-xl font-bold text-gray-900 mb-4">Key Lessons from Academic Analysis</h4>
                       <ul className="list-disc pl-6 space-y-1 text-gray-700">
-                        <li><strong>Methodology Validation:</strong> Academic frameworks confirm and enhance proven professional approaches</li>
-                        <li><strong>Communication Enhancement:</strong> Formal analytical language improves stakeholder engagement</li>
-                        <li><strong>Risk Mitigation:</strong> Structured analysis identifies potential issues earlier in planning process</li>
-                        <li><strong>Reproducible Results:</strong> Documented frameworks enable consistent application across future projects</li>
+                        <li><strong>Structured Problem Solving:</strong> A3 methodology provided clear framework for complex integration challenges</li>
+                        <li><strong>Stakeholder Alignment:</strong> Project charter ensured all teams understood objectives and success metrics</li>
+                        <li><strong>Resource Optimization:</strong> Gantt charts revealed critical path dependencies and resource conflicts</li>
+                        <li><strong>Continuous Improvement:</strong> Academic documentation enabled iterative refinement of approach</li>
                       </ul>
                     </CardContent>
                   </Card>
@@ -252,7 +271,7 @@ const MAFeatureParity = () => {
                           </div>
                         </a>
                         
-                        <a href="https://drive.google.com/file/d/1Vyf2AV2gV6pMEyf8TGslJgSDEGzw1YpU/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="block p-4 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all">
+                        <a href="https://drive.google.com/file/d/1k2AOcW-TPBbAMt5XnZa0rD8ugkagaVZb/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="block p-4 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all">
                           <div className="flex items-start gap-3">
                             <FileText className="w-6 h-6 text-green-600 mt-1" />
                             <div className="flex-1">
@@ -261,6 +280,19 @@ const MAFeatureParity = () => {
                                 <ExternalLink className="w-4 h-4 text-gray-400" />
                               </div>
                               <p className="text-sm text-gray-600">Detailed project management plan with resource allocation</p>
+                            </div>
+                          </div>
+                        </a>
+                        
+                        <a href="https://docs.google.com/presentation/d/1_myyd5pvGAk6Fz1pBnMPeTjpH3fA5xOb/edit?usp=sharing&ouid=104353410864813976568&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" className="block p-4 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all">
+                          <div className="flex items-start gap-3">
+                            <BarChart3 className="w-6 h-6 text-blue-600 mt-1" />
+                            <div className="flex-1">
+                              <div className="flex items-center gap-2">
+                                <h5 className="font-bold text-gray-900">Final PowerPoint Presentation</h5>
+                                <ExternalLink className="w-4 h-4 text-gray-400" />
+                              </div>
+                              <p className="text-sm text-gray-600">Comprehensive project presentation and analysis summary</p>
                             </div>
                           </div>
                         </a>
