@@ -27,7 +27,7 @@ const EnterpriseDataTransformation: React.FC = () => {
                 Enterprise Data Stack Modernization
               </h1>
               <p className="text-lg text-blue-600 font-medium mb-6">
-                Leading the technical transformation from legacy monolith systems to a modern, cloud-native data architecture that delivers $20M+ in annual savings and 60% faster insights.
+                Leading the technical transformation from legacy monolith systems to a modern, cloud-native data architecture that delivers $10M+ in annual savings and 60% faster insights.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-gray-600">
@@ -45,7 +45,7 @@ const EnterpriseDataTransformation: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <DollarSign className="w-4 h-4" />
-                  <span>Impact: $20M+ Annual Savings</span>
+                  <span>Impact: $10M+ Annual Savings</span>
                 </div>
               </div>
             </div>
@@ -58,7 +58,7 @@ const EnterpriseDataTransformation: React.FC = () => {
                   As Senior Director of Data Strategy & Analytics at Experity, I led the enterprise-wide migration from legacy data infrastructure to a modern, cloud-native data stack. This comprehensive transformation involved migrating from disparate on-premises systems to an integrated Snowflake, dbt/Coalesce, and Tableau Cloud architecture serving over 4,000 healthcare practices.
                 </p>
                 <p>
-                  The project delivered transformational results: <strong>$20M+ in annual cost savings</strong>, <strong>60% faster time-to-insight</strong>, and enabled real-time analytics capabilities that directly support patient care and operational efficiency across our healthcare technology platform.
+                  The project delivered transformational results: <strong>$10M+ in annual cost savings</strong>, <strong>60% faster time-to-insight</strong>, and enabled real-time analytics capabilities that directly support patient care and operational efficiency across our healthcare technology platform.
                 </p>
               </div>
             </section>
@@ -92,7 +92,7 @@ const EnterpriseDataTransformation: React.FC = () => {
                   </div>
                   <ul className="space-y-2 text-sm">
                     <li>• 5-7 day lag for critical business reporting</li>
-                    <li>• $12M+ annual infrastructure maintenance costs</li>
+                    <li>• $10M+ annual infrastructure maintenance costs</li>
                     <li>• Limited self-service analytics for business users</li>
                     <li>• Data quality issues affecting patient care decisions</li>
                     <li>• Inability to scale with rapid business growth</li>
@@ -175,9 +175,9 @@ const EnterpriseDataTransformation: React.FC = () => {
               
               <div className="bg-blue-50 border-l-4 border-blue-400 p-6 mb-6">
                 <blockquote className="text-lg italic text-gray-700 mb-2">
-                  "We didn't just migrate data—we transformed how our entire organization thinks about and uses data to drive better patient outcomes."
+                  "We didn't just migrate data, we transformed how our entire organization thinks about and uses data to drive better patient outcomes."
                 </blockquote>
-                <cite className="text-sm text-gray-600">— On the transformation philosophy</cite>
+                <cite className="text-sm text-gray-600">— On the Data Culture Transformation</cite>
               </div>
 
               <div className="space-y-6">
@@ -275,7 +275,7 @@ const EnterpriseDataTransformation: React.FC = () => {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div className="text-center">
                     <DollarSign className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                    <span className="text-sm font-medium">$20M+ Annual Savings</span>
+                    <span className="text-sm font-medium">$10M+ Annual Savings</span>
                   </div>
                   <div className="text-center">
                     <Zap className="w-8 h-8 text-yellow-600 mx-auto mb-2" />
@@ -287,7 +287,7 @@ const EnterpriseDataTransformation: React.FC = () => {
                   </div>
                   <div className="text-center">
                     <Shield className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                    <span className="text-sm font-medium">100% Compliance Success</span>
+                    <span className="text-sm font-medium">98% Compliance Success</span>
                   </div>
                 </div>
               </Card>
@@ -296,9 +296,9 @@ const EnterpriseDataTransformation: React.FC = () => {
                 <Card className="p-6">
                   <h4 className="font-bold text-lg mb-3">Operational Excellence Metrics</h4>
                   <ul className="space-y-2 text-sm">
-                    <li><strong>Infrastructure Costs:</strong> $12M annual reduction in data infrastructure costs</li>
+                    <li><strong>Infrastructure Costs:</strong> $10M annual reduction in data infrastructure costs</li>
                     <li><strong>Data Quality:</strong> 95% reduction in data quality issues through automated monitoring</li>
-                    <li><strong>Time-to-Insight:</strong> Reduced from 5-7 days to real-time for critical metrics</li>
+                    <li><strong>Time-to-Insight:</strong> Reduced from 5-7 days to near real-time for critical metrics</li>
                     <li><strong>System Uptime:</strong> 99.9% availability with automated failover capabilities</li>
                     <li><strong>User Adoption:</strong> 400+ active users with 300% increase in analytics usage</li>
                   </ul>
@@ -307,8 +307,8 @@ const EnterpriseDataTransformation: React.FC = () => {
                 <Card className="p-6">
                   <h4 className="font-bold text-lg mb-3">Strategic Business Value</h4>
                   <ul className="space-y-2 text-sm">
-                    <li><strong>Revenue Impact:</strong> Enabled $150M+ revenue growth through improved analytics capabilities</li>
-                    <li><strong>Operational Efficiency:</strong> 25% improvement in patient wait times through real-time analytics</li>
+                    <li><strong>Revenue Impact:</strong> Enabled revenue growth through improved analytics capabilities</li>
+                    <li><strong>Operational Efficiency:</strong> 10% improvement in patient wait times through real-time analytics</li>
                     <li><strong>Clinical Outcomes:</strong> Enhanced patient care through data-driven decision support</li>
                     <li><strong>Competitive Advantage:</strong> Industry-leading analytics capabilities attract new clients</li>
                     <li><strong>Scalability:</strong> Architecture supports 10x growth without major infrastructure changes</li>
@@ -326,7 +326,7 @@ const EnterpriseDataTransformation: React.FC = () => {
                   <h4 className="font-bold text-lg mb-2">Challenge: Zero-Downtime Migration</h4>
                   <p className="mb-2"><strong>Issue:</strong> Healthcare operations require 24/7 data availability with no tolerance for outages.</p>
                   <p className="mb-2"><strong>Solution:</strong> Implemented parallel processing approach with gradual cutover and comprehensive rollback procedures.</p>
-                  <p className="text-green-600 font-medium"><strong>Result:</strong> Achieved 100% uptime during migration with seamless user experience.</p>
+                  <p className="text-green-600 font-medium"><strong>Result:</strong> Achieved 99% uptime during migration with seamless user experience.</p>
                 </Card>
 
                 <Card className="p-6">

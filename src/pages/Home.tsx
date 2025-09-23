@@ -48,7 +48,7 @@ const Home = () => {
                 <p className="text-lg leading-relaxed">
                   Data strategy executive who transformed urgent care technology during critical healthcare market consolidation. 
                   Led enterprise data integration during <span className="font-semibold">$500M private equity acquisition</span>, 
-                  delivering <span className="font-semibold">$125M+ recurring cost savings</span> through strategic platform 
+                  delivering <span className="font-semibold">$10M+ recurring cost savings</span> through strategic platform 
                   consolidation and DELTA framework implementation. Specialized in healthcare technology M&A integration 
                   where data unification drives competitive advantage and operational efficiency at scale.
                 </p>

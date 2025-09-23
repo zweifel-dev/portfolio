@@ -98,8 +98,8 @@ const Research = () => {
                           <div className="text-sm text-gray-600">Research Capital</div>
                         </div>
                         <div className="text-center">
-                          <div className="text-2xl font-bold text-purple-600">2 Months</div>
-                          <div className="text-sm text-gray-600">Intensive Study</div>
+                          <div className="text-2xl font-bold text-purple-600">2+ Years</div>
+                          <div className="text-sm text-gray-600">Intensive Real Application Study</div>
                         </div>
                       </div>
                       

@@ -53,7 +53,7 @@ const DayTradingJourney = () => {
                     With my background established, let me detail the systematic learning approach I've developed over these past months.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
-                    In these past 2 months, I have now read 4 books on day trading in this order:
+                    In these past months, I have now read these books on day trading in this order:
                   </p>
                   <ol className="list-decimal pl-6 space-y-1 text-gray-700">
                     <li><em>How to Day Trade: The Plain Truth</em> by Ross Cameron</li>
