@@ -3,47 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <!-- Standard Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
-
+    <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico">
+    
     <!-- PNG Favicons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
-
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+    
     <!-- Apple Touch Icon (For iOS) -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
-
-    <!-- PNG Favicons -->
-    <link rel="android-chrome" sizes="192x192" href="images/icons/android-chrome-192x192.png">
-    <link rel="android-chrome" sizes="512x512" href="images/icons/android-chrome-512x512.png">
-
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png">
+    
     <!-- Android Chrome Icons -->
-    <link rel="manifest" href="site.webmanifest">
-
-
-    <!--base href="https://zweifel.tech/"-->
-    <!--base href="http://127.0.0.1:5500/" -->
-    <title>Home - Brandon Zweifel</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-    <script defer src="scripts/router.js"></script>  <!-- Router Script -->
-    <link rel="stylesheet" href="styles/tech.css">
-
+    <link rel="icon" sizes="192x192" href="/images/icons/android-chrome-192x192.png">
+    <link rel="icon" sizes="512x512" href="/images/icons/android-chrome-512x512.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <title>Brandon Zweifel - Portfolio</title>
+    <meta name="description" content="Portfolio of Brandon Zweifel - Software Engineer and Technical Leader">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Brandon Zweifel - Portfolio">
+    <meta property="og:description" content="Software Engineer and Technical Leader">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zweifel.tech">
 </head>
 <body>
-    <div id="navbar-placeholder"></div>
-    <div id="content"> 
-        <!-- The requested page content will be loaded here -->
-    </div>
-        
-    <script src="scripts/page.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
 </body>
-<footer>
-    <div class="footer text-center mt-5 p-3">
-        <p>&copy; 2025 Brandon Zweifel | <a href="?page=contact">Contact</a> | <a href="https://www.linkedin.com/in/bzweifel/" target="_blank">LinkedIn</a></p>
-    </div>
-</footer>
 </html>
