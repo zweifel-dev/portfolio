@@ -13,7 +13,7 @@ const MAIntegrationStrategy: React.FC = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">M&A Integration Strategy</h1>
           <p className="text-xl md:text-2xl opacity-90">
-            $125M+ Cost Savings Through Strategic Data Integration & Platform Consolidation
+            Driving 140% Valuation Growth: From $500M to $1.2B GTCR Exit Through Strategic Integration
           </p>
         </div>
       </section>
@@ -27,7 +27,7 @@ const MAIntegrationStrategy: React.FC = () => {
                 Post-Merger Technology Integration Excellence
               </h1>
               <p className="text-lg text-blue-600 font-medium mb-6">
-                Leading the strategic integration of Practice Velocity and DocuTAP systems following Warburg Pincus merger, delivering $125M+ in recurring cost savings and increasing company valuation from $500M to $1.2B.
+                Leading the strategic integration of Practice Velocity and DocuTAP systems following Warburg Pincus merger, delivering an increasing company valuation from $500M to $1.2B.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-gray-600">
@@ -55,13 +55,16 @@ const MAIntegrationStrategy: React.FC = () => {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Strategic Transaction Overview</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="mb-4">
-                  In May 2019, Warburg Pincus executed a strategic merger combining DocuTAP and Practice Velocity—the two leading companies in urgent care technology—to form Experity. As Senior Director of Data Strategy & Analytics, I was tasked with leading the critical technology integration that would determine the success of this $500M+ transaction.
+                  In May 2019, Warburg Pincus executed a strategic merger combining DocuTAP and Practice Velocity, the two leading companies in urgent care technology, to form Experity. 
+                  As Director of Software Engineering at that time, I was tasked with leading the critical technology integration that would determine the success of this $500M+ transaction.
                 </p>
                 <p className="mb-4">
-                  The merger combined complementary but distinct technology platforms serving over 4,000 on-demand healthcare practices. My role was to design and execute a data integration strategy that would eliminate redundant infrastructure, harmonize disparate systems, and create a unified platform capable of supporting aggressive growth targets.
+                  The merger combined complementary but distinct technology platforms serving over 4,000 on-demand healthcare practices. 
+                  My role was to design and execute an integration strategy that would eliminate redundant infrastructure, harmonize disparate systems, and create a unified platform capable of supporting aggressive growth targets.
                 </p>
                 <p>
-                  <strong>The results exceeded all expectations:</strong> $125M+ in recurring infrastructure cost savings, successful platform consolidation, and direct contribution to company valuation growth from $500M to $1.2B within 24 months.
+                  <strong>The results exceeded all expectations:</strong> 
+                  $125M+ in recurring infrastructure cost savings, successful platform consolidation, and direct contribution to company valuation growth from $500M to $1.2B within 24 months.
                 </p>
               </div>
             </section>
@@ -81,7 +84,7 @@ const MAIntegrationStrategy: React.FC = () => {
                   </div>
                   <ul className="space-y-2 text-sm">
                     <li>• Cloud-native AWS architecture with modern microservices</li>
-                    <li>• Sophisticated analytics platform serving 2,000+ practices</li>
+                    <li>• Sophisticated analytics platform serving 2,000+ clinics</li>
                     <li>• Advanced reporting and dashboard capabilities</li>
                     <li>• Scalable data warehouse and ETL processes</li>
                     <li>• Strong security and compliance framework</li>
@@ -96,7 +99,7 @@ const MAIntegrationStrategy: React.FC = () => {
                   <ul className="space-y-2 text-sm">
                     <li>• Hybrid cloud and on-premises systems</li>
                     <li>• Legacy data warehouse with complex ETL processes</li>
-                    <li>• Established client base of 2,000+ practices</li>
+                    <li>• Established client base of 2,000+ clinics</li>
                     <li>• Proprietary urgent care workflow optimizations</li>
                     <li>• Deep integration with clinical protocols</li>
                   </ul>
@@ -112,7 +115,7 @@ const MAIntegrationStrategy: React.FC = () => {
                     <li>• Overlapping but non-standardized functionality</li>
                     <li>• Different compliance and security approaches</li>
                     <li>• Competing vendor relationships and contracts</li>
-                    <li>• Cultural differences in data governance</li>
+                    <li>• Company Cultural differences</li>
                   </ul>
                 </Card>
 
@@ -145,36 +148,37 @@ const MAIntegrationStrategy: React.FC = () => {
 
               <div className="space-y-6">
                 <Card className="p-6 border-l-4 border-blue-500">
-                  <h4 className="font-bold text-lg mb-2">Phase 1: Strategic Assessment & Planning (Months 1-3)</h4>
+                  <h4 className="font-bold text-lg mb-2">Phase 1: Strategic Assessment & Planning</h4>
                   <p className="font-medium mb-3"><strong>Objective:</strong> Comprehensive analysis and integration roadmap development</p>
                   <ul className="space-y-2 text-sm mb-3">
                     <li>• <strong>Technical Due Diligence:</strong> Deep-dive analysis of both technology stacks, identifying 200+ integration points</li>
                     <li>• <strong>Cost-Benefit Analysis:</strong> Quantified potential savings and investment requirements for each integration scenario</li>
                     <li>• <strong>Stakeholder Alignment:</strong> Facilitated executive decision-making on integration priorities and timelines</li>
-                    <li>• <strong>Risk Assessment:</strong> Identified and mitigated potential disruption to client operations</li>
+                    <li>• <strong>Risk Assessment:</strong> Identified and mitigated potential disruption to client operations and churn</li>
                     <li>• <strong>Resource Planning:</strong> Assembled cross-functional integration teams with clear accountability</li>
                   </ul>
                   <p className="text-sm font-medium text-green-600"><strong>Key Deliverable:</strong> Board-approved integration roadmap with $125M+ savings target</p>
                 </Card>
 
                 <Card className="p-6 border-l-4 border-green-500">
-                  <h4 className="font-bold text-lg mb-2">Phase 2: Feature Parity & Optimization (Months 4-9)</h4>
+                  <h4 className="font-bold text-lg mb-2">Phase 2: Feature Parity & Optimization</h4>
                   <p className="font-medium mb-3"><strong>Objective:</strong> Deliver enhanced functionality exceeding capabilities of either legacy system</p>
                   <ul className="space-y-2 text-sm mb-3">
-                    <li>• <strong>Feature Mapping:</strong> Comprehensive analysis identifying best-of-breed functionality from both platforms</li>
+                    <li>• <strong>Feature Mapping:</strong> Analysis identifying best-of-both functionality from platforms</li>
                     <li>• <strong>Product Roadmap Integration:</strong> Unified development priorities maximizing customer value</li>
                     <li>• <strong>Performance Optimization:</strong> Achieved 40% improvement in system response times</li>
                     <li>• <strong>User Experience Enhancement:</strong> Streamlined workflows reducing user clicks by 30%</li>
-                    <li>• <strong>Innovation Acceleration:</strong> Combined R&D capabilities enabling faster feature development</li>
+                    <li>• <strong>Feature Acceleration:</strong> Combined and scaled R&D teams from 15 to over 100+ engineers</li>
                   </ul>
-                  <p className="text-sm font-medium text-green-600"><strong>Key Result:</strong> Customer satisfaction scores increased 25% post-integration</p>
+                  <p className="text-sm font-medium text-green-600"><strong>Key Result:</strong> Customer satisfaction scores increased 25% post-integration, measured NPS</p>
                 </Card>
 
                 <Card className="p-6 border-l-4 border-orange-500">
-                  <h4 className="font-bold text-lg mb-2">Phase 3: Infrastructure Consolidation (Months 10-15)</h4>
+                  <h4 className="font-bold text-lg mb-2">Phase 3: Infrastructure Consolidation</h4>
                   <p className="font-medium mb-3"><strong>Objective:</strong> Eliminate redundant systems and optimize infrastructure costs</p>
                   <ul className="space-y-2 text-sm mb-3">
-                    <li>• <strong>Data Center Consolidation:</strong> Migrated DocuTAP on-premises infrastructure to AWS cloud platform</li>
+                    <li>• <strong>Data Center Consolidation:</strong> Migrated DocuTap's infrastructure to Experit's removing cost of infrastructure</li>
+                    <li>• <strong>Enterprise Scalability:</strong> Migrated Practice Velocity (Experity) on-premises infrastructure to AWS cloud platform, and removed DocuTap's infrastructure</li>
                     <li>• <strong>Vendor Rationalization:</strong> Negotiated consolidated contracts, eliminating duplicate vendor relationships</li>
                     <li>• <strong>Platform Modernization:</strong> Upgraded legacy systems to modern, scalable architecture</li>
                     <li>• <strong>Security Harmonization:</strong> Implemented unified security and compliance framework</li>
@@ -184,11 +188,11 @@ const MAIntegrationStrategy: React.FC = () => {
                 </Card>
 
                 <Card className="p-6 border-l-4 border-purple-500">
-                  <h4 className="font-bold text-lg mb-2">Phase 4: Data Integration & Harmonization (Months 16-24)</h4>
-                  <p className="font-medium mb-3"><strong>Objective:</strong> Create unified data platform supporting combined customer base</p>
+                  <h4 className="font-bold text-lg mb-2">Phase 4: Data Integration & Harmonization</h4>
+                  <p className="font-medium mb-3"><strong>Objective:</strong> Create unified platform supporting combined customer base</p>
                   <ul className="space-y-2 text-sm mb-3">
-                    <li>• <strong>Schema Unification:</strong> Developed master data model accommodating both platforms' requirements</li>
-                    <li>• <strong>ETL Modernization:</strong> Built robust data pipelines supporting real-time integration</li>
+                    <li>• <strong>Schema Unification:</strong> Developed master data model accommodating both platforms' requirements, migrating all data from legacy platform to unified upgraded platform</li>
+                    <li>• <strong>ETL Modernization:</strong> Built robust data pipelines supporting near real-time integration</li>
                     <li>• <strong>Data Quality Framework:</strong> Implemented comprehensive data validation and cleansing processes</li>
                     <li>• <strong>Analytics Consolidation:</strong> Migrated 300+ reports and dashboards to unified platform</li>
                     <li>• <strong>API Integration:</strong> Created seamless data exchange between previously isolated systems</li>
@@ -287,21 +291,21 @@ const MAIntegrationStrategy: React.FC = () => {
                   <h4 className="font-bold text-lg mb-2">Challenge: Zero-Downtime Integration for Healthcare Operations</h4>
                   <p className="mb-2"><strong>Issue:</strong> Healthcare practices cannot tolerate system outages that would disrupt patient care.</p>
                   <p className="mb-2"><strong>Solution:</strong> Designed sophisticated parallel processing architecture with real-time data synchronization.</p>
-                  <p className="text-green-600 font-medium"><strong>Result:</strong> Achieved 100% uptime during integration with seamless user experience.</p>
+                  <p className="text-green-600 font-medium"><strong>Result:</strong> Achieved 99% uptime during integration with seamless user experience.</p>
                 </Card>
 
                 <Card className="p-6">
                   <h4 className="font-bold text-lg mb-2">Challenge: Regulatory Compliance Across Different Standards</h4>
                   <p className="mb-2"><strong>Issue:</strong> Both companies had different interpretations of HIPAA and healthcare compliance requirements.</p>
                   <p className="mb-2"><strong>Solution:</strong> Implemented highest common standard approach with external compliance validation.</p>
-                  <p className="text-green-600 font-medium"><strong>Result:</strong> Achieved 100% compliance audit success rate with enhanced security posture.</p>
+                  <p className="text-green-600 font-medium"><strong>Result:</strong> Achieved 98% compliance audit success rate with enhanced security posture.</p>
                 </Card>
 
                 <Card className="p-6">
                   <h4 className="font-bold text-lg mb-2">Challenge: Cultural Integration of Technical Teams</h4>
                   <p className="mb-2"><strong>Issue:</strong> Engineering cultures and technical approaches differed significantly between organizations.</p>
                   <p className="mb-2"><strong>Solution:</strong> Created cross-functional integration teams with shared objectives and recognition programs.</p>
-                  <p className="text-green-600 font-medium"><strong>Result:</strong> 95% retention rate of key technical personnel throughout integration period.</p>
+                  <p className="text-green-600 font-medium"><strong>Result:</strong> 75% retention rate of key technical personnel throughout integration period.</p>
                 </Card>
 
                 <Card className="p-6">
@@ -324,10 +328,9 @@ const MAIntegrationStrategy: React.FC = () => {
                 <Card className="p-6">
                   <h4 className="font-bold text-lg mb-3">New Capabilities Delivered</h4>
                   <ul className="space-y-2 text-sm">
-                    <li><strong>Unified Analytics Platform:</strong> Combined best features from both systems into industry-leading analytics solution</li>
-                    <li><strong>Enhanced AI/ML Capabilities:</strong> Larger dataset enabled more sophisticated predictive models</li>
+                    <li><strong>Unified Platform:</strong> Combined best features from both systems into industry-leading solution</li>
                     <li><strong>Improved Clinical Workflows:</strong> Integrated urgent care protocols optimizing patient care delivery</li>
-                    <li><strong>Advanced Reporting:</strong> Comprehensive dashboard suite exceeding capabilities of either legacy system</li>
+                    <li><strong>Advanced Reporting & Analytics:</strong> Comprehensive BI suite exceeding capabilities of either legacy system</li>
                   </ul>
                 </Card>
 
@@ -351,8 +354,8 @@ const MAIntegrationStrategy: React.FC = () => {
               </p>
               
               <ul className="space-y-2 ml-6 list-disc">
-                <li><strong>Industry Case Study:</strong> Featured as best-practice example in healthcare technology M&A publications</li>
-                <li><strong>Conference Presentations:</strong> Keynote presentations on M&A integration strategies at industry conferences</li>
+                <li><strong>Industry Case Study:</strong> Featured as best-practice example in healthcare technology M&A and covid response publications</li>
+                <li><strong>Conference Presentations:</strong> Keynote presentations on integration strategies and scaling fast at industry conferences</li>
                 <li><strong>Peer Recognition:</strong> Invited to participate in healthcare technology executive roundtables</li>
                 <li><strong>Academic Collaboration:</strong> MBA coursework studying integration methodology and results</li>
                 <li><strong>Investor Recognition:</strong> Warburg Pincus highlighted integration as key value creation driver</li>
