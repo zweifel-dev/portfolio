@@ -40,7 +40,7 @@ const About = () => {
                   <h2 className="text-3xl font-bold text-gray-900">My Journey</h2>
                   <p className="text-lg font-semibold text-blue-600">From Military Intelligence Officer to Data Strategy Senior Director.</p>
                   <p className="text-gray-700 leading-relaxed">
-                    Data strategy executive with over a decade of success leading healthcare technology M&A integrations that deliver measurable business results. I combine military intelligence discipline with analytical expertise to architect enterprise data strategies during critical market consolidation. Led platform unification strategies that enabled $500M valuation growth and $125M+ recurring cost savings through strategic platfrom consolidation and DELTA framework implementation. Passionate about healthcare analytics, M&A data integration, and quantitative research methodologies.
+                    Data strategy executive with over a decade of success leading healthcare technology M&A integrations that deliver measurable business results. I combine military intelligence discipline with analytical expertise to architect enterprise data strategies during critical market consolidation. Led platform unification strategies that enabled $500M valuation growth and $10M+ recurring cost savings through strategic platfrom consolidation and DELTA framework implementation. Passionate about healthcare analytics, M&A data integration, and quantitative research methodologies.
                   </p>
                 </section>
 
@@ -56,7 +56,7 @@ const About = () => {
                       <li><strong>Senior Director of Data Strategy & Analytics</strong> at Experity, leading enterprise-wide data initiatives and governance across all business functions.</li>
                       <li>Spearheading transition to modern data stack with <strong>Snowflake, dbt/Coalesce, and Tableau Cloud</strong>, enabling real-time insights and scalable analytics.</li>
                       <li>Architected <strong>Data-as-a-Product strategy</strong> integrating predictive analytics and AI/ML models to improve client workflows and patient outcomes.</li>
-                      <li>Led M&A data integration efforts resulting in <strong>$125M+ in recurring infrastructure cost savings</strong> and platform consolidation.</li>
+                      <li>Led M&A data integration efforts resulting in <strong>$10M+ in recurring infrastructure cost savings</strong> and platform consolidation.</li>
                       <li>Successfully managed <strong>$500M to $1.2B company valuation growth</strong> through strategic technology initiatives and team leadership.</li>
                       <li>Implemented <strong>DELTA framework</strong> for organizational data transformation and culture building.</li>
                     </ul>
@@ -106,9 +106,9 @@ const About = () => {
                       <p className="text-gray-600 italic">Experity / Practice Velocity | June 2016 - January 2025</p>
                       <ul className="mt-2 space-y-1 text-gray-700">
                         <li>Led cross-functional teams of 50+ engineers during Practice Velocity acquisition, scaling M&A integration efforts to 65+ professionals for feature parity initiatives, driving 40% increase in product efficiency.</li>
-                        <li>Directed comprehensive migration from legacy monolith to micro-services architecture during M&A consolidation, reducing maintenance costs by $12M annually and enabling scalable platform integration.</li>
+                        <li>Directed comprehensive migration from legacy monolith to micro-services architecture during M&A consolidation, reducing maintenance costs by $10M annually and enabling scalable platform integration.</li>
                         <li>Enhanced agile methodologies, boosting team productivity by 30% and reducing time-to-market by 20%, enabling faster feature parity during M&A integration.</li>
-                        <li>Spearheaded feature parity initiatives post-merger, resulting in $125M in recurring infrastructure cost savings and increasing company valuation from $500M to $1.2B within two years.</li>
+                        <li>Spearheaded feature parity initiatives post-merger, resulting in $0M in recurring infrastructure cost savings and increasing company valuation from $500M to $1.2B within two years.</li>
                         <li>Implemented decision-making frameworks that improved product performance and provided strategic insights.</li>
                         <li>Launched successful DEI initiatives to address gender bias, foster communication across generations, promote introverted leadership, and break mental health stigmas, improving team satisfaction and retention by 15%.</li>
                         <li>Mentored and developed engineering talent, increasing employee retention and performance through leadership coaching and technical skills development.</li>
