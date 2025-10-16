@@ -121,7 +121,6 @@ const MAFeatureParity = () => {
                   <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-6">
                     <h4 className="text-xl font-bold text-gray-900 mb-4">Project Team Structure</h4>
                     <ul className="space-y-2 text-gray-700">
-                      <li><strong>Cassie Kennedy</strong> - Project Manager</li>
                       <li><strong>Brandon Zweifel</strong> - Head of Engineering</li>
                       <li><strong>Product Managers & SMEs</strong> - Feature Identification and Planning</li>
                       <li><strong>Data Analysts</strong> - Usage & Cost Data Modeling</li>
@@ -284,7 +283,7 @@ const MAFeatureParity = () => {
                           </div>
                         </a>
                         
-                        <a href="https://docs.google.com/presentation/d/1_myyd5pvGAk6Fz1pBnMPeTjpH3fA5xOb/edit?usp=sharing&ouid=104353410864813976568&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" className="block p-4 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all">
+                        <a href="https://docs.google.com/presentation/d/1b-AMarQCcjX2ANt-m7DUFeACjZnr6GI6/edit?usp=sharing&ouid=104353410864813976568&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" className="block p-4 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all">
                           <div className="flex items-start gap-3">
                             <BarChart3 className="w-6 h-6 text-blue-600 mt-1" />
                             <div className="flex-1">
