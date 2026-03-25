@@ -4,6 +4,7 @@ import { Calendar, Handshake, Building, DollarSign, Server, Database, AlertTrian
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const MAIntegrationStrategy: React.FC = () => {
   return (
@@ -70,6 +71,7 @@ const MAIntegrationStrategy: React.FC = () => {
             </section>
 
             {/* Pre-Merger Landscape */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Pre-Merger Landscape Analysis</h2>
               <p className="mb-6">
@@ -135,7 +137,10 @@ const MAIntegrationStrategy: React.FC = () => {
               </div>
             </section>
 
+            </ScrollReveal>
+
             {/* Integration Strategy */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Integration Strategy & Methodology</h2>
               
@@ -202,7 +207,10 @@ const MAIntegrationStrategy: React.FC = () => {
               </div>
             </section>
 
+            </ScrollReveal>
+
             {/* Financial Analysis */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Financial Analysis & Value Creation</h2>
               
@@ -253,7 +261,10 @@ const MAIntegrationStrategy: React.FC = () => {
               </div>
             </section>
 
+            </ScrollReveal>
+
             {/* Critical Success Factors */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Critical Success Factors</h2>
               
@@ -282,7 +293,10 @@ const MAIntegrationStrategy: React.FC = () => {
               </div>
             </section>
 
+            </ScrollReveal>
+
             {/* Complex Challenges */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Complex Challenges & Solutions</h2>
               
@@ -316,6 +330,8 @@ const MAIntegrationStrategy: React.FC = () => {
                 </Card>
               </div>
             </section>
+
+            </ScrollReveal>
 
             {/* Innovation Through Integration */}
             <section className="mb-8">

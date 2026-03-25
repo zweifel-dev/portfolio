@@ -4,6 +4,7 @@ import { Database, Layers, Server, Zap, BarChart3, Shield, TrendingUp, Mail, Fol
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const EnterpriseDataPlatform: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ const EnterpriseDataPlatform: React.FC = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Enterprise Data Platform</h1>
           <p className="text-xl md:text-2xl opacity-90">
-            Six-Layer Architecture with Semantic Layer Governance at Experity
+            Delivering Certified Metrics in Days, Not Months — Recovering 30-40% of Analyst Capacity
           </p>
         </div>
       </section>
@@ -63,9 +64,10 @@ const EnterpriseDataPlatform: React.FC = () => {
               </div>
             </section>
 
-            {/* Platform Architecture — The Six Layers */}
+            {/* How the Platform Delivers Value — The Six Layers */}
+            <ScrollReveal>
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Platform Architecture — The Six Layers</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">How the Platform Delivers Value</h2>
               <p className="mb-6">
                 The platform is organized into six distinct layers, each with clear responsibilities, contracts, and ownership. This separation of concerns ensures that changes in one layer do not cascade unpredictably through the system.
               </p>
@@ -169,9 +171,12 @@ const EnterpriseDataPlatform: React.FC = () => {
               </div>
             </section>
 
-            {/* The Gold Model */}
+            </ScrollReveal>
+
+            {/* Unified Business Entity Model */}
+            <ScrollReveal>
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">The Gold Model</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Single Source of Truth for Business Entities</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="mb-4">
                   The Gold Model is a canonical Kimball star schema resolving business entities across EMR/PM, Salesforce, and NetSuite through cross-system crosswalks. This is the single source of truth for business entities across the organization.
@@ -193,18 +198,21 @@ const EnterpriseDataPlatform: React.FC = () => {
               </Card>
             </section>
 
-            {/* CDC & Ingestion Contracts */}
+            </ScrollReveal>
+
+            {/* Pipeline Resilience & Cross-Team Governance */}
+            <ScrollReveal>
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">CDC & Ingestion Contracts</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Pipeline Resilience & Cross-Team Governance</h2>
               <p className="mb-6">
-                The ingestion layer is designed for resilience and rapid recovery. Formal contracts between source systems and the data platform eliminated the fragility that previously caused multi-week blocking incidents.
+                Formal contracts between source systems and the data platform eliminated the fragility that previously caused multi-week blocking incidents, reducing resolution time from weeks to same-day.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <Server className="w-6 h-6 text-blue-600" />
-                    <h4 className="font-bold text-lg">Technical Architecture</h4>
+                    <h4 className="font-bold text-lg">Ingestion Infrastructure</h4>
                   </div>
                   <ul className="space-y-2 text-sm">
                     <li>• Kafka + Confluent Schema Registry + Debezium for change data capture</li>
@@ -235,7 +243,10 @@ const EnterpriseDataPlatform: React.FC = () => {
               </div>
             </section>
 
+            </ScrollReveal>
+
             {/* Metric Certification Lifecycle */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Metric Certification Lifecycle</h2>
               <p className="mb-6">
@@ -275,7 +286,10 @@ const EnterpriseDataPlatform: React.FC = () => {
               </div>
             </section>
 
+            </ScrollReveal>
+
             {/* Delivery Pattern */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Delivery Pattern</h2>
               <p className="mb-6">
@@ -317,6 +331,8 @@ const EnterpriseDataPlatform: React.FC = () => {
                 </Card>
               </div>
             </section>
+
+            </ScrollReveal>
 
             {/* Culture & Governance */}
             <section className="mb-8">

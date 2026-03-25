@@ -4,6 +4,7 @@ import { Calendar, Users, TrendingUp, Award, Database, BarChart3, Brain, Shield,
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const TeamScalingLeadership: React.FC = () => {
   return (
@@ -72,6 +73,7 @@ const TeamScalingLeadership: React.FC = () => {
             </section>
 
             {/* Organizational Structure */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Organizational Structure & Team Composition</h2>
               <p className="mb-6">
@@ -167,7 +169,10 @@ const TeamScalingLeadership: React.FC = () => {
               </div>
             </section>
 
+            </ScrollReveal>
+
             {/* DEI Leadership */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Diversity, Equity & Inclusion Leadership</h2>
               <p className="mb-6">
@@ -227,7 +232,10 @@ const TeamScalingLeadership: React.FC = () => {
               </div>
             </section>
 
+            </ScrollReveal>
+
             {/* Talent Acquisition */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Talent Acquisition & Development Strategy</h2>
               
@@ -257,7 +265,10 @@ const TeamScalingLeadership: React.FC = () => {
               </Card>
             </section>
 
+            </ScrollReveal>
+
             {/* Performance Management */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Performance Management & Recognition</h2>
               
@@ -285,7 +296,10 @@ const TeamScalingLeadership: React.FC = () => {
               </Card>
             </section>
 
+            </ScrollReveal>
+
             {/* Quantified Results */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Quantified Leadership Results</h2>
               
@@ -335,6 +349,8 @@ const TeamScalingLeadership: React.FC = () => {
                 </Card>
               </div>
             </section>
+
+            </ScrollReveal>
 
             {/* Leadership Development */}
             <section className="mb-8">

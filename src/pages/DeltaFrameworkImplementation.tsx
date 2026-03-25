@@ -4,6 +4,7 @@ import { Calendar, Building, Users, DollarSign, Database, Settings, GraduationCa
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const DeltaFrameworkImplementation: React.FC = () => {
   return (
@@ -83,6 +84,7 @@ const DeltaFrameworkImplementation: React.FC = () => {
             </section>
 
             {/* DELTA Plus Framework */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">The DELTA Plus Framework: Our Strategic Foundation</h2>
               <p className="mb-6">
@@ -184,7 +186,10 @@ const DeltaFrameworkImplementation: React.FC = () => {
               </div>
             </section>
 
+            </ScrollReveal>
+
             {/* Implementation Strategy */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Implementation Strategy:</h2>
               
@@ -244,7 +249,10 @@ const DeltaFrameworkImplementation: React.FC = () => {
               </div>
             </section>
 
+            </ScrollReveal>
+
             {/* Key Challenges and Solutions */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Key Challenges and Solutions</h2>
               
@@ -279,7 +287,10 @@ const DeltaFrameworkImplementation: React.FC = () => {
               </div>
             </section>
 
+            </ScrollReveal>
+
             {/* Quantified Business Impact */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Quantified Business Impact</h2>
               
@@ -329,7 +340,10 @@ const DeltaFrameworkImplementation: React.FC = () => {
               </div>
             </section>
 
+            </ScrollReveal>
+
             {/* Lessons Learned */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Lessons Learned and Best Practices</h2>
               
@@ -357,6 +371,8 @@ const DeltaFrameworkImplementation: React.FC = () => {
                 </Card>
               </div>
             </section>
+
+            </ScrollReveal>
 
             {/* Industry Recognition */}
             <section className="mb-8">

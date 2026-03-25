@@ -51,9 +51,17 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
+    /* Fluid typography scale */
+    --fs-hero: clamp(2.5rem, 5vw + 1rem, 4.5rem);
+    --fs-h1: clamp(2rem, 3vw + 0.5rem, 3rem);
+    --fs-h2: clamp(1.5rem, 2vw + 0.5rem, 2.25rem);
+    --fs-h3: clamp(1.25rem, 1.5vw + 0.5rem, 1.75rem);
+    --fs-body: clamp(1rem, 0.5vw + 0.875rem, 1.125rem);
+    --fs-small: clamp(0.875rem, 0.25vw + 0.8rem, 0.9375rem);
+
     /* Executive gradients */
     --gradient-primary: linear-gradient(135deg, hsl(220 91% 25%), hsl(220 91% 35%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 91% 25%) 0%, hsl(220 91% 35%) 50%, hsl(45 93% 47%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 91% 22%) 0%, hsl(220 91% 30%) 40%, hsl(220 70% 35%) 70%, hsl(45 93% 47%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 13% 98%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(45 93% 47%), hsl(45 93% 57%));
 
@@ -141,8 +149,27 @@ All colors MUST be HSL.
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1 {
     @apply font-semibold tracking-tight;
+    font-size: var(--fs-h1);
+  }
+
+  h2 {
+    @apply font-semibold tracking-tight;
+    font-size: var(--fs-h2);
+  }
+
+  h3 {
+    @apply font-semibold tracking-tight;
+    font-size: var(--fs-h3);
+  }
+
+  h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  body {
+    font-size: var(--fs-body);
   }
 
   .font-mono {
@@ -155,6 +182,7 @@ All colors MUST be HSL.
   .hero-section {
     @apply relative min-h-screen flex items-center justify-center;
     background: var(--gradient-hero);
+    background-size: 200% 200%;
   }
 
   .hero-content {
@@ -162,19 +190,29 @@ All colors MUST be HSL.
   }
 
   .hero-title {
-    @apply text-5xl md:text-7xl font-bold mb-6 tracking-tight;
+    @apply font-bold mb-8 tracking-tight;
+    font-size: var(--fs-hero);
+    line-height: 1.1;
   }
 
   .hero-subtitle {
-    @apply text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto leading-relaxed;
+    @apply mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed;
+    font-size: var(--fs-h3);
   }
 
   .hero-metrics {
-    @apply flex flex-wrap justify-center gap-8 mb-8;
+    @apply flex flex-wrap justify-center gap-6 lg:gap-8 mb-10;
   }
 
   .metric-card {
-    @apply bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20;
+    @apply bg-white/10 backdrop-blur-md rounded-2xl p-8 text-center border border-white/20;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .metric-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px hsl(0 0% 0% / 0.2);
   }
 
   .metric-number {
@@ -187,15 +225,15 @@ All colors MUST be HSL.
 
   /* Executive Cards */
   .executive-card {
-    @apply relative overflow-hidden rounded-2xl;
+    @apply relative overflow-hidden rounded-2xl p-8 lg:p-10;
     background: var(--gradient-card);
     box-shadow: var(--shadow-lg);
     border: 1px solid hsl(var(--border));
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .executive-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
     box-shadow: var(--shadow-xl);
   }
 
@@ -269,7 +307,10 @@ All colors MUST be HSL.
   }
 
   .metric-highlight {
-    @apply px-3 py-1 text-xs font-medium rounded-full bg-success/10 text-success border border-success/20;
+    @apply px-3 py-1 text-xs font-medium rounded-full border;
+    background: hsl(142 71% 45% / 0.1);
+    color: hsl(142 71% 30%);
+    border-color: hsl(142 71% 45% / 0.2);
   }
 
   .project-tags {
@@ -282,11 +323,21 @@ All colors MUST be HSL.
 
   /* Section styling */
   .section-title {
-    @apply text-3xl font-bold mb-6 text-foreground;
+    @apply font-bold text-foreground;
+    font-size: var(--fs-h1);
+    margin-bottom: 2rem;
   }
 
   .content-section {
-    @apply mb-8;
+    @apply mb-16;
+  }
+
+  .page-section {
+    @apply py-20 lg:py-28;
+  }
+
+  .page-section-sm {
+    @apply py-12 lg:py-20;
   }
 
   .highlight-text {
@@ -329,5 +380,24 @@ All colors MUST be HSL.
       opacity: 1;
       transform: translateY(0);
     }
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .executive-card:hover,
+  .project-card:hover,
+  .metric-card:hover,
+  .btn-executive:hover {
+    transform: none;
   }
 }

@@ -4,6 +4,7 @@ import { Calendar, Database, Cloud, DollarSign, Server, AlertTriangle, Snowflake
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const EnterpriseDataTransformation: React.FC = () => {
   return (
@@ -67,6 +68,7 @@ const EnterpriseDataTransformation: React.FC = () => {
             </section>
 
             {/* Technical Challenge */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Technical Challenge & Legacy Architecture</h2>
               <p className="mb-6">
@@ -104,7 +106,10 @@ const EnterpriseDataTransformation: React.FC = () => {
               </div>
             </section>
 
+            </ScrollReveal>
+
             {/* Modern Data Stack Architecture */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Modern Data Stack Architecture</h2>
               <p className="mb-6">
@@ -172,7 +177,10 @@ const EnterpriseDataTransformation: React.FC = () => {
               </div>
             </section>
 
+            </ScrollReveal>
+
             {/* Implementation Methodology */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Implementation Methodology</h2>
               
@@ -229,7 +237,10 @@ const EnterpriseDataTransformation: React.FC = () => {
               </div>
             </section>
 
+            </ScrollReveal>
+
             {/* Technical Innovation */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Technical Innovation & Best Practices</h2>
               
@@ -269,7 +280,10 @@ const EnterpriseDataTransformation: React.FC = () => {
               </div>
             </section>
 
+            </ScrollReveal>
+
             {/* Business Impact & Results */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Business Impact & Results</h2>
               
@@ -319,6 +333,8 @@ const EnterpriseDataTransformation: React.FC = () => {
                 </Card>
               </div>
             </section>
+
+            </ScrollReveal>
 
             {/* Challenges Overcome */}
             <section className="mb-8">
