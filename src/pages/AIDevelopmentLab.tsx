@@ -4,6 +4,7 @@ import { Server, Cpu, Database, BookOpen, Brain, Mail, Layers, FolderOpen, Searc
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const AIDevelopmentLab: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ const AIDevelopmentLab: React.FC = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">AI Development Lab</h1>
           <p className="text-xl md:text-2xl opacity-90">
-            Practitioner-Depth Agentic AI Platform — From Local Experimentation to Enterprise Architecture Decisions
+            Hands-On Framework Evaluations That Drove Enterprise AI Architecture Selection and Team Upskilling
           </p>
         </div>
       </section>
@@ -27,7 +28,7 @@ const AIDevelopmentLab: React.FC = () => {
                 AI Development Lab
               </h1>
               <p className="text-lg text-purple-600 font-medium mb-6">
-                A fully local AI development platform orchestrating multiple inference engines, vector databases, and production agents — built to evaluate frameworks and inform enterprise architecture decisions.
+                Built three production agents and evaluated four agentic AI frameworks hands-on — generating the practitioner depth that directly informed the enterprise's selection of Strands SDK for production deployment and shaped the team's AI upskilling roadmap.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-gray-600">
@@ -64,6 +65,7 @@ const AIDevelopmentLab: React.FC = () => {
             </section>
 
             {/* Platform Architecture */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Platform Architecture</h2>
               <p className="mb-6">
@@ -134,7 +136,10 @@ const AIDevelopmentLab: React.FC = () => {
               </div>
             </section>
 
+            </ScrollReveal>
+
             {/* Three Production Agents */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Three Production Agents</h2>
               <p className="mb-6">
@@ -222,7 +227,10 @@ const AIDevelopmentLab: React.FC = () => {
               </div>
             </section>
 
+            </ScrollReveal>
+
             {/* Framework Evaluations */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Framework Evaluations</h2>
               <p className="mb-6">
@@ -291,7 +299,10 @@ const AIDevelopmentLab: React.FC = () => {
               </div>
             </section>
 
+            </ScrollReveal>
+
             {/* Learning Infrastructure */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Learning Infrastructure</h2>
               <p className="mb-6">
@@ -358,7 +369,10 @@ const AIDevelopmentLab: React.FC = () => {
               </div>
             </section>
 
+            </ScrollReveal>
+
             {/* Design Philosophy */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Design Philosophy</h2>
               <p className="mb-6">
@@ -407,6 +421,8 @@ const AIDevelopmentLab: React.FC = () => {
                 </Card>
               </div>
             </section>
+
+            </ScrollReveal>
 
             {/* Agentic AI Resource Guide */}
             <section className="mb-8">

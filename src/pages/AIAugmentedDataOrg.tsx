@@ -4,6 +4,7 @@ import { Calendar, Bot, Cloud, Target, Search, Upload, GitBranch, BarChart3, Lay
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const AIAugmentedDataOrg: React.FC = () => {
   return (
@@ -51,6 +52,7 @@ const AIAugmentedDataOrg: React.FC = () => {
             </div>
 
             {/* Executive Summary */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Executive Summary</h2>
               <div className="prose prose-lg max-w-none">
@@ -62,6 +64,8 @@ const AIAugmentedDataOrg: React.FC = () => {
                 </p>
               </div>
             </section>
+
+            </ScrollReveal>
 
             {/* Vision & Strategy */}
             <section className="mb-8">
@@ -82,11 +86,12 @@ const AIAugmentedDataOrg: React.FC = () => {
               </div>
             </section>
 
-            {/* Production Pipeline Agents */}
+            {/* Agent-Driven Delivery Capabilities */}
+            <ScrollReveal>
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Production Pipeline Agents</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Agent-Driven Delivery Capabilities</h2>
               <p className="mb-6">
-                Seven domain-specialized agents deployed on AWS Bedrock AgentCore with MCP tool integration. Each agent was piloted on low-risk domains, validated under production review rigor, then expanded across the pipeline:
+                Seven domain-specialized agents now accelerate every stage of the data pipeline. Each was piloted on low-risk domains, validated under production review rigor, then expanded to maximize team throughput:
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -162,7 +167,10 @@ const AIAugmentedDataOrg: React.FC = () => {
               </div>
             </section>
 
+            </ScrollReveal>
+
             {/* Operating Model Transformation */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Operating Model Transformation</h2>
               <p className="mb-6">
@@ -210,11 +218,14 @@ const AIAugmentedDataOrg: React.FC = () => {
               </Card>
             </section>
 
-            {/* Framework Evaluation & Selection */}
+            </ScrollReveal>
+
+            {/* Strategic Technology Selection */}
+            <ScrollReveal>
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Framework Evaluation & Selection</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Strategic Technology Selection</h2>
               <p className="mb-6">
-                Built and evaluated production agents across multiple frameworks in a hands-on AI development lab. Framework evaluations conducted in the AI Lab directly drove the selection for the enterprise pipeline and informed the architectural patterns the team adopted:
+                Evaluated multiple agent frameworks through hands-on lab builds before committing to the enterprise standard. These evaluations directly drove the production platform selection and informed the architectural patterns the team adopted:
               </p>
 
               <div className="space-y-6">
@@ -268,7 +279,10 @@ const AIAugmentedDataOrg: React.FC = () => {
               </div>
             </section>
 
+            </ScrollReveal>
+
             {/* Change Management */}
+            <ScrollReveal>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Change Management</h2>
               <p className="mb-6">
@@ -319,11 +333,13 @@ const AIAugmentedDataOrg: React.FC = () => {
               </div>
             </section>
 
-            {/* Architecture Decisions */}
+            </ScrollReveal>
+
+            {/* Key Design Decisions */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Architecture Decisions</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Key Design Decisions</h2>
               <p className="mb-6">
-                Three core architectural decisions shaped the agent platform. Each was made deliberately, with clear rationale:
+                Three deliberate design choices shaped the agent platform and its ability to deliver business value safely at scale:
               </p>
 
               <div className="space-y-6">
@@ -350,9 +366,9 @@ const AIAugmentedDataOrg: React.FC = () => {
               </div>
             </section>
 
-            {/* Technical Stack */}
+            {/* Platform Infrastructure */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Technical Stack & Integration</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Platform Infrastructure</h2>
 
               <div className="space-y-6">
                 <Card className="p-6 border-l-4 border-violet-500">

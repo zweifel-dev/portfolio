@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { FileText, BarChart3, ExternalLink, GraduationCap, Handshake, BookOpen } from 'lucide-react';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const MAFeatureParity = () => {
   return (
@@ -9,7 +10,7 @@ const MAFeatureParity = () => {
       <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-6">M&A Feature Parity Analysis</h1>
-          <p className="text-xl leading-relaxed">MBA Project Management Case Study: Warburg Pincus Acquisition of Practice Velocity</p>
+          <p className="text-xl leading-relaxed">How Strategic Feature Consolidation Enabled a $500M to $1.2B Valuation Transformation</p>
         </div>
       </section>
 
@@ -21,7 +22,7 @@ const MAFeatureParity = () => {
                 <div className="text-center space-y-4">
                   <h2 className="text-3xl font-bold text-gray-900">MBA Project Management Case Study</h2>
                   <p className="text-lg text-blue-600 font-semibold">
-                    Academic analysis of the successful 2019 Warburg Pincus acquisition of Practice Velocity and DocuTAP that formed Experity, applying project management principles to a completed M&A integration.
+                    Strategic analysis of the Warburg Pincus acquisition that formed Experity — examining how structured feature parity planning and platform consolidation enabled $125M in cost reductions and drove valuation from $500M to $1.2B.
                   </p>
                   
                   <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
@@ -55,6 +56,7 @@ const MAFeatureParity = () => {
                   </p>
                 </section>
 
+                <ScrollReveal>
                 <section className="space-y-6">
                   <h3 className="text-2xl font-bold text-gray-900">Project Management Methodologies Applied</h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -115,6 +117,9 @@ const MAFeatureParity = () => {
                   </div>
                 </section>
 
+                </ScrollReveal>
+
+                <ScrollReveal>
                 <section className="space-y-6">
                   <h3 className="text-2xl font-bold text-gray-900">Cross-Functional Team & Implementation</h3>
                   
@@ -130,6 +135,9 @@ const MAFeatureParity = () => {
                   </div>
                 </section>
 
+                </ScrollReveal>
+
+                <ScrollReveal>
                 <section className="space-y-6">
                   <h3 className="text-2xl font-bold text-gray-900">Implementation & Learning Outcomes</h3>
                   
@@ -175,6 +183,9 @@ const MAFeatureParity = () => {
                   </div>
                 </section>
 
+                </ScrollReveal>
+
+                <ScrollReveal>
                 <section className="space-y-4">
                   <h3 className="text-2xl font-bold text-gray-900">Academic Application to Real-World Challenge</h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -203,6 +214,9 @@ const MAFeatureParity = () => {
                   </Card>
                 </section>
 
+                </ScrollReveal>
+
+                <ScrollReveal>
                 <section className="space-y-6">
                   <h3 className="text-2xl font-bold text-gray-900">Project Documentation & Resources</h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -299,6 +313,8 @@ const MAFeatureParity = () => {
                     </CardContent>
                   </Card>
                 </section>
+
+                </ScrollReveal>
 
                 <section className="space-y-4">
                   <h3 className="text-2xl font-bold text-gray-900">Academic Excellence & Professional Growth</h3>

@@ -46,3 +46,10 @@ GitHub Actions workflow (`.github/workflows/deploy.yml`) builds and deploys to G
 ## TypeScript Config
 
 Strict null checks and unused variable checks are **disabled** (`noImplicitAny: false`, `strictNullChecks: false`, `noUnusedLocals: false`, `noUnusedParameters: false`).
+
+## Active Technologies
+- TypeScript 5.8.3 / React 18.3.1 + react-router-dom 6.30, Tailwind CSS 3.4.17, shadcn/ui (Radix UI), tailwindcss-animate 1.0.7, Vite 5.4.19, **motion 12.x (to add)** (001-portfolio-executive-refresh)
+- N/A (fully static site) (001-portfolio-executive-refresh)
+
+## Recent Changes
+- 001-portfolio-executive-refresh: Added TypeScript 5.8.3 / React 18.3.1 + react-router-dom 6.30, Tailwind CSS 3.4.17, shadcn/ui (Radix UI), tailwindcss-animate 1.0.7, Vite 5.4.19, **motion 12.x (to add)**
