@@ -13,7 +13,7 @@ const EnterpriseDataTransformation: React.FC = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Enterprise Data Transformation</h1>
           <p className="text-xl md:text-2xl opacity-90">
-            Modern Data Stack Migration & Infrastructure Modernization at Experity
+            Modern Data Stack Migration — Foundation for the AI-Augmented Enterprise at Experity
           </p>
         </div>
       </section>
@@ -55,10 +55,13 @@ const EnterpriseDataTransformation: React.FC = () => {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Project Overview</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="mb-4">
-                  As Senior Director of Data Strategy & Analytics at Experity, I led the enterprise-wide migration from legacy data infrastructure to a modern, cloud-native data stack. This comprehensive transformation involved migrating from disparate on-premises systems to an integrated Snowflake, dbt/Coalesce, and Tableau Cloud architecture serving over 4,000 healthcare practices.
+                  As Sr. Director of Data Strategy & Analytics at Experity, I led the enterprise-wide migration from legacy data infrastructure to a modern, cloud-native data stack. This comprehensive transformation involved migrating from disparate on-premises systems to an integrated Snowflake, dbt/Coalesce, and Tableau Cloud architecture serving over 4,000 healthcare practices.
                 </p>
                 <p>
                   The project delivered transformational results: <strong>$10M+ in annual cost savings</strong>, <strong>60% faster time-to-insight</strong>, and enabled real-time analytics capabilities that directly support patient care and operational efficiency across our healthcare technology platform.
+                </p>
+                <p>
+                  This transformation laid the critical foundation for the six-layer enterprise data platform and AI agent integration that followed — without modern cloud infrastructure, the agent-augmented operating model would not have been possible.
                 </p>
               </div>
             </section>
@@ -373,6 +376,7 @@ const EnterpriseDataTransformation: React.FC = () => {
                   <li><strong>Transformation Layer:</strong> dbt Core and Coalesce for version-controlled transformations</li>
                   <li><strong>Analytics Layer:</strong> Tableau Cloud with embedded analytics and mobile optimization</li>
                   <li><strong>Governance Layer:</strong> Comprehensive security, compliance, and observability framework</li>
+                  <li><strong>AI Agent Layer:</strong> The modern data stack architecture provides the governed endpoints that production pipeline agents now consume, enabling the AI-augmented operating model built on top of this foundation.</li>
                 </ul>
               </Card>
             </section>
@@ -395,6 +399,12 @@ const EnterpriseDataTransformation: React.FC = () => {
                   <Link to="/delta-framework-implementation">
                     <Layers className="w-4 h-4 mr-2" />
                     View DELTA Framework Case Study
+                  </Link>
+                </Button>
+                <Button variant="outline" asChild>
+                  <Link to="/enterprise-data-platform">
+                    <Database className="w-4 h-4 mr-2" />
+                    View Enterprise Data Platform
                   </Link>
                 </Button>
                 <Button variant="outline" asChild>

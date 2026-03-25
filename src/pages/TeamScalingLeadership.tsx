@@ -13,7 +13,7 @@ const TeamScalingLeadership: React.FC = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Team Scaling & Leadership Excellence</h1>
           <p className="text-xl md:text-2xl opacity-90">
-            Building High-Performance Data Teams: From 15 to 65+ Professionals
+            Building High-Performance Data Teams — From 15 to 65+ Professionals Through M&A and AI Transformation
           </p>
         </div>
       </section>
@@ -27,7 +27,7 @@ const TeamScalingLeadership: React.FC = () => {
                 Strategic Team Development & Organizational Leadership
               </h1>
               <p className="text-lg text-blue-600 font-medium mb-6">
-                Scaling high-performance data and analytics teams from 15 to 65+ professionals while implementing DEI initiatives, mentorship programs, and performance frameworks that improved retention by 15% and productivity by 30%.
+                Scaling high-performance data and analytics teams from 15 to 65+ professionals while implementing DEI initiatives, mentorship programs, and performance frameworks that improved retention by 15% and productivity by 30%. Most recently, led the team through the AI transformation — shifting the operating model from manual producers to agent-augmented reviewers, upskilling engineers on agentic AI frameworks, and managing the organizational change required to trust and adopt AI-augmented workflows.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-gray-600">
@@ -148,6 +148,20 @@ const TeamScalingLeadership: React.FC = () => {
                     <li>• Analytics Managers leading business partnerships</li>
                     <li>• Program Managers coordinating cross-functional initiatives</li>
                     <li>• Operations Specialists supporting team efficiency</li>
+                  </ul>
+                </Card>
+
+                <Card className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Lightbulb className="w-6 h-6 text-yellow-600" />
+                    <h4 className="font-bold text-lg">AI Enablement</h4>
+                  </div>
+                  <ul className="space-y-2 text-sm">
+                    <li>• Agent architecture and production agent deployment</li>
+                    <li>• Framework evaluation (Strands, LangGraph, CrewAI)</li>
+                    <li>• AI-augmented workflow design and optimization</li>
+                    <li>• Change management for AI-augmented workflows</li>
+                    <li>• Upskilling programs for agentic AI adoption</li>
                   </ul>
                 </Card>
               </div>
@@ -383,6 +397,17 @@ const TeamScalingLeadership: React.FC = () => {
                     <li><strong>Results:</strong> Stronger unified team with enhanced capabilities and collaboration</li>
                   </ul>
                 </Card>
+
+                <Card className="p-6">
+                  <h4 className="font-bold text-lg mb-3">AI Transition</h4>
+                  <ul className="space-y-2 text-sm">
+                    <li><strong>Operating Model Shift:</strong> Led the most significant operating model shift in the team's history — transitioning from manual producers to agent-augmented reviewers</li>
+                    <li><strong>Anxiety Management:</strong> Managed anxiety about AI replacing jobs by demonstrating that agents multiply the team's capacity while preserving the engineering judgment that makes output production-ready</li>
+                    <li><strong>Trust Building:</strong> Built trust through incremental wins on low-risk domains before expanding to the full pipeline</li>
+                    <li><strong>Upskilling:</strong> Trained engineers on agentic AI frameworks (Strands, LangGraph, CrewAI) and production agent deployment</li>
+                    <li><strong>Results:</strong> Successful transition to AI-augmented workflows with retained team engagement and accelerated delivery capacity</li>
+                  </ul>
+                </Card>
               </div>
             </section>
 
@@ -450,6 +475,12 @@ const TeamScalingLeadership: React.FC = () => {
                   <Link to="/projects">
                     <FolderOpen className="w-4 h-4 mr-2" />
                     View Other Initiatives
+                  </Link>
+                </Button>
+                <Button variant="outline" asChild>
+                  <Link to="/ai-augmented-data-org">
+                    <Brain className="w-4 h-4 mr-2" />
+                    View AI-Augmented Data Org
                   </Link>
                 </Button>
               </div>

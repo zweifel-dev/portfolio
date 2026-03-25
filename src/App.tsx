@@ -21,6 +21,9 @@ const DeltaFrameworkImplementation = lazy(() => import("./pages/DeltaFrameworkIm
 const EnterpriseDataTransformation = lazy(() => import("./pages/EnterpriseDataTransformation"));
 const MAIntegrationStrategy = lazy(() => import("./pages/MAIntegrationStrategy"));
 const TeamScalingLeadership = lazy(() => import("./pages/TeamScalingLeadership"));
+const AIAugmentedDataOrg = lazy(() => import("./pages/AIAugmentedDataOrg"));
+const EnterpriseDataPlatform = lazy(() => import("./pages/EnterpriseDataPlatform"));
+const AIDevelopmentLab = lazy(() => import("./pages/AIDevelopmentLab"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -53,6 +56,9 @@ const App = () => (
               <Route path="/enterprise-data-transformation" element={<EnterpriseDataTransformation />} />
               <Route path="/ma-integration-strategy" element={<MAIntegrationStrategy />} />
               <Route path="/team-scaling-leadership" element={<TeamScalingLeadership />} />
+              <Route path="/ai-augmented-data-org" element={<AIAugmentedDataOrg />} />
+              <Route path="/enterprise-data-platform" element={<EnterpriseDataPlatform />} />
+              <Route path="/ai-development-lab" element={<AIDevelopmentLab />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

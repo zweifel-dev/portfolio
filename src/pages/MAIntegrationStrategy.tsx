@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Handshake, Building, DollarSign, Server, Database, AlertTriangle, Target, Users, Settings, TrendingUp, Mail, GraduationCap, FolderOpen } from 'lucide-react';
+import { Calendar, Handshake, Building, DollarSign, Server, Database, AlertTriangle, Target, Users, Settings, TrendingUp, Mail, GraduationCap, FolderOpen, Layers } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -13,7 +13,7 @@ const MAIntegrationStrategy: React.FC = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">M&A Integration Strategy</h1>
           <p className="text-xl md:text-2xl opacity-90">
-            Driving 140% Valuation Growth: From $500M to $1.2B GTCR Exit Through Strategic Integration
+            Driving $500M to $1.2B Valuation Growth Through Strategic M&A Integration
           </p>
         </div>
       </section>
@@ -45,7 +45,7 @@ const MAIntegrationStrategy: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <DollarSign className="w-4 h-4" />
-                  <span>Impact: $10M+ Cost Savings</span>
+                  <span>Impact: $125M+ Cost Savings</span>
                 </div>
               </div>
             </div>
@@ -56,7 +56,7 @@ const MAIntegrationStrategy: React.FC = () => {
               <div className="prose prose-lg max-w-none">
                 <p className="mb-4">
                   In May 2019, Warburg Pincus executed a strategic merger combining DocuTAP and Practice Velocity, the two leading companies in urgent care technology, to form Experity. 
-                  As Director of Software Engineering at that time, I was tasked with leading the critical technology integration that would determine the success of this $500M+ transaction.
+                  As Director of Software Development at Experity, I was tasked with leading the critical technology integration that would determine the success of this $500M+ transaction.
                 </p>
                 <p className="mb-4">
                   The merger combined complementary but distinct technology platforms serving over 4,000 on-demand healthcare practices. 
@@ -64,7 +64,7 @@ const MAIntegrationStrategy: React.FC = () => {
                 </p>
                 <p>
                   <strong>The results exceeded all expectations:</strong> 
-                  $10M+ in recurring infrastructure cost savings, successful platform consolidation, and direct contribution to company valuation growth from $500M to $1.2B within 24 months.
+                  $125M+ in recurring infrastructure cost savings, successful platform consolidation, and direct contribution to company valuation growth from $500M to $1.2B within 24 months.
                 </p>
               </div>
             </section>
@@ -157,7 +157,7 @@ const MAIntegrationStrategy: React.FC = () => {
                     <li>• <strong>Risk Assessment:</strong> Identified and mitigated potential disruption to client operations and churn</li>
                     <li>• <strong>Resource Planning:</strong> Assembled cross-functional integration teams with clear accountability</li>
                   </ul>
-                  <p className="text-sm font-medium text-green-600"><strong>Key Deliverable:</strong> Board-approved integration roadmap with $10M+ savings target</p>
+                  <p className="text-sm font-medium text-green-600"><strong>Key Deliverable:</strong> Board-approved integration roadmap with $125M+ savings target</p>
                 </Card>
 
                 <Card className="p-6 border-l-4 border-green-500">
@@ -184,7 +184,7 @@ const MAIntegrationStrategy: React.FC = () => {
                     <li>• <strong>Security Harmonization:</strong> Implemented unified security and compliance framework</li>
                     <li>• <strong>Network Optimization:</strong> Redesigned network architecture for optimal performance and cost efficiency</li>
                   </ul>
-                  <p className="text-sm font-medium text-green-600"><strong>Key Result:</strong> $10M in annual infrastructure cost savings achieved</p>
+                  <p className="text-sm font-medium text-green-600"><strong>Key Result:</strong> $125M in post-M&A infrastructure cost reductions achieved</p>
                 </Card>
 
                 <Card className="p-6 border-l-4 border-purple-500">
@@ -211,7 +211,7 @@ const MAIntegrationStrategy: React.FC = () => {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div className="text-center">
                     <Server className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                    <span className="text-sm font-medium">$10M Infrastructure Savings</span>
+                    <span className="text-sm font-medium">$125M Infrastructure Savings</span>
                   </div>
                   <div className="text-center">
                     <Users className="w-8 h-8 text-green-600 mx-auto mb-2" />
@@ -232,11 +232,11 @@ const MAIntegrationStrategy: React.FC = () => {
                 <Card className="p-6">
                   <h4 className="font-bold text-lg mb-3">Detailed Cost Savings Analysis</h4>
                   <ul className="space-y-2 text-sm">
-                    <li><strong>Infrastructure Consolidation ($10M annually):</strong> Eliminated duplicate data centers, reduced cloud costs through optimized resource allocation</li>
+                    <li><strong>Infrastructure Consolidation ($125M):</strong> Eliminated duplicate data centers, reduced cloud costs through optimized resource allocation</li>
                     <li><strong>Personnel Optimization ($500k annually):</strong> Eliminated redundant roles while investing in high-value positions</li>
                     <li><strong>Vendor Rationalization ($2M annually):</strong> Consolidated software licenses, renegotiated contracts with improved terms</li>
                     <li><strong>Process Efficiency (20% annually):</strong> Automated manual processes, eliminated duplicate workflows</li>
-                    <li><strong>Total Recurring Savings:</strong> $22.5M+ annually with 18-month payback period</li>
+                    <li><strong>Total Recurring Savings:</strong> $125M+ in post-M&A infrastructure cost reductions with 18-month payback period</li>
                   </ul>
                 </Card>
 
@@ -382,7 +382,7 @@ const MAIntegrationStrategy: React.FC = () => {
             <div className="border-t pt-8">
               <h3 className="text-xl font-bold mb-4">M&A Integration Expertise Available</h3>
               <p className="mb-6">
-                This case study represents one of the most successful healthcare technology M&A integrations in recent years. I'm available to discuss specific methodologies, technical approaches, and lessons learned for organizations considering similar transactions.
+                This case study represents one of the most successful healthcare technology M&A integrations in recent years. The platform consolidation and infrastructure rationalization achieved during M&A integration created the foundation for the enterprise data platform and AI-augmented operating model that followed. I'm available to discuss specific methodologies, technical approaches, and lessons learned for organizations considering similar transactions.
               </p>
               
               <div className="flex flex-wrap gap-4 mb-6">
@@ -399,13 +399,19 @@ const MAIntegrationStrategy: React.FC = () => {
                   </Link>
                 </Button>
                 <Button variant="outline" asChild>
+                  <Link to="/ai-augmented-data-org">
+                    <Layers className="w-4 h-4 mr-2" />
+                    View AI-Augmented Data Org
+                  </Link>
+                </Button>
+                <Button variant="outline" asChild>
                   <Link to="/projects">
                     <FolderOpen className="w-4 h-4 mr-2" />
                     View Other Projects
                   </Link>
                 </Button>
               </div>
-              
+
               <div className="flex flex-wrap gap-2">
                 <Badge variant="secondary">M&A Integration</Badge>
                 <Badge variant="secondary">Strategic Planning</Badge>

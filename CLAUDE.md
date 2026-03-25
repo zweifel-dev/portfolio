@@ -4,55 +4,45 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a portfolio website for Brandon Zweifel built as a single-page application (SPA) using vanilla JavaScript with client-side routing. The site is hosted on GitHub Pages at zweifel.tech.
+Portfolio website for Brandon Zweifel, hosted on GitHub Pages at zweifel.tech. React + TypeScript SPA built with Vite.
+
+## Commands
+
+```bash
+npm run dev        # Start dev server on port 8080
+npm run build      # Production build to dist/
+npm run build:dev  # Development build
+npm run lint       # ESLint
+npm run preview    # Preview production build
+```
 
 ## Architecture
 
-### Core Structure
-- **Single-page application** with client-side routing via query parameters (`?page=pagename`)
-- **Router** (`scripts/router.js`): Handles page navigation, validation, and dynamic content loading
-- **Views** (`views/`): Individual HTML pages loaded dynamically into the main index.html
-- **Styles** (`styles/`): CSS files including Bootstrap customizations and page-specific styles
-- **Static Files** (`files/`): PDFs and documents available for download
+**React 18 SPA** using react-router-dom for client-side routing with BrowserRouter.
 
-### Key Components
-- `index.html`: Main entry point that loads router and provides content container
-- `scripts/router.js`: Client-side router managing page navigation and metadata
-- `scripts/page.js`: Additional page initialization scripts
-- `views/nav.html`: Navigation component loaded into all pages
-- `views/*.html`: Individual page content (home, about, projects, etc.)
+### Routing
+Routes are defined in `src/App.tsx`. Home is eagerly loaded; all other pages use `React.lazy()` with Suspense. The `Layout` component wraps all routes with a fixed top navigation bar and footer.
 
-### Routing System
-Valid pages are explicitly defined in `router.js`:
-- home, about, contact, projects, reflections, research
-- Case studies: day_trading_journey, experity_analytic_assessment, ma_feature_parity, delta_framework_implementation, enterprise_data_transformation, ma_integration_strategy, team_scaling_leadership
+### Adding a New Page
+1. Create component in `src/pages/`
+2. Add lazy import and `<Route>` in `src/App.tsx`
+3. Add nav entry in `src/components/Navigation.tsx` `navItems` array (if it should appear in nav)
 
-## Development
+### UI Components
+- **shadcn/ui** components in `src/components/ui/` — Radix UI primitives styled with Tailwind. These are library code; modify only if customizing component behavior.
+- **Custom components** (`Layout.tsx`, `Navigation.tsx`) in `src/components/`
+- `cn()` utility in `src/lib/utils.ts` merges Tailwind classes via clsx + tailwind-merge
 
-### Local Development Server
-```bash
-# Start local server (Python 3)
-python3 -m http.server 8000
-
-# Then navigate to http://localhost:8000
-```
-
-### Adding New Pages
-1. Create new HTML file in `views/` directory
-2. Add page name to `validPages` array in `scripts/router.js`
-3. Add metadata to `pageMetadata` object in `scripts/router.js`
-4. Update navigation in `views/nav.html` if needed
+### Styling
+- **Tailwind CSS 3** with a custom design system defined as CSS variables in `src/index.css`
+- Color palette: navy blue primary, gold accent, all colors in HSL format
+- Custom gradients (`gradient-primary`, `gradient-hero`, `gradient-card`, `gradient-accent`) and shadows (`executive-sm/md/lg/xl`) configured in `tailwind.config.ts`
+- Fonts: Inter (sans), JetBrains Mono (mono)
+- Path alias: `@/` maps to `src/`
 
 ### Deployment
-The site is deployed via GitHub Pages. Any commits to the main branch are automatically deployed to zweifel.tech (configured via CNAME file).
+GitHub Actions workflow (`.github/workflows/deploy.yml`) builds and deploys to GitHub Pages on push to main. The build copies `CNAME` and `.nojekyll` into `dist/`.
 
-## CSS Framework
-- Bootstrap 5.3.0 loaded via CDN
-- Font Awesome 6.4.2 for icons
-- Custom styles in `styles/tech.css`, `styles/nav.css`, `styles/projects.css`
+## TypeScript Config
 
-## Important Files
-- `CNAME`: Contains domain configuration for GitHub Pages
-- `robots.txt`: Search engine crawling rules
-- `sitemap.xml`: Site map for SEO
-- `site.webmanifest`: PWA manifest configuration
+Strict null checks and unused variable checks are **disabled** (`noImplicitAny: false`, `strictNullChecks: false`, `noUnusedLocals: false`, `noUnusedParameters: false`).
