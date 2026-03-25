@@ -6,7 +6,7 @@ const Contact = () => {
       <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-6">Contact Me</h1>
-          <p className="text-xl leading-relaxed">Feel free to reach out for inquiries, collaborations, or just to connect.</p>
+          <p className="text-xl leading-relaxed">Interested in AI-augmented data strategy, technology leadership, or strategic collaboration? Let's connect.</p>
         </div>
       </section>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Building, Users, DollarSign, Database, Settings, GraduationCap, Target, BarChart3, Eye, Mail, User, FolderOpen } from 'lucide-react';
+import { Calendar, Building, Users, DollarSign, Database, Settings, GraduationCap, Target, BarChart3, Eye, Mail, User, FolderOpen, Layers } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -59,6 +59,9 @@ const DeltaFrameworkImplementation: React.FC = () => {
                 </p>
                 <p>
                   The initiative delivered measurable business impact including <strong>$20M+ in annual revenue growth</strong>, <strong>$10M+ in cost savings through M&A integration</strong>, and the successful scaling of our data organization from 15 to 65+ professionals while maintaining industry-leading retention rates.
+                </p>
+                <p>
+                  This cultural foundation proved essential for the subsequent AI transformation — the team's data literacy and governance discipline made the transition to an agent-augmented operating model dramatically smoother.
                 </p>
               </div>
             </section>
@@ -221,6 +224,7 @@ const DeltaFrameworkImplementation: React.FC = () => {
                     <li>• Deployed real-time analytics for operational efficiency improvements</li>
                     <li>• Created automated reporting and alerting systems</li>
                     <li>• Established ML model governance and monitoring frameworks</li>
+                    <li>• Built foundation for seven production pipeline agents by establishing metric certification and governance standards that AI agents now consume</li>
                   </ul>
                   <p className="text-sm font-medium text-green-600"><strong>Key Results:</strong> 20% improvement in patient wait times, $10M+ in operational cost savings</p>
                 </Card>
@@ -378,7 +382,7 @@ const DeltaFrameworkImplementation: React.FC = () => {
               <Card className="p-6">
                 <h4 className="font-bold text-lg mb-3">Ongoing Innovation Areas</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><strong>Advanced AI/ML:</strong> Expanding machine learning capabilities for clinical decision support and population health management</li>
+                  <li><strong>AI-Augmented Operating Model:</strong> The cultural transformation achieved through DELTA implementation — data literacy, governance discipline, and metric certification — proved essential for the subsequent AI agent deployment. The team's comfort with governed, certified data made the transition to agent-augmented workflows dramatically smoother.</li>
                   <li><strong>Real-Time Analytics:</strong> Implementing streaming analytics for immediate operational insights and patient care optimization</li>
                   <li><strong>Data Monetization:</strong> Developing external data products and industry benchmarking services</li>
                   <li><strong>Predictive Healthcare:</strong> Building predictive models for patient outcomes and preventive care recommendations</li>
@@ -408,13 +412,19 @@ const DeltaFrameworkImplementation: React.FC = () => {
                   </Link>
                 </Button>
                 <Button variant="outline" asChild>
+                  <Link to="/ai-augmented-data-org">
+                    <Layers className="w-4 h-4 mr-2" />
+                    View AI-Augmented Data Org
+                  </Link>
+                </Button>
+                <Button variant="outline" asChild>
                   <Link to="/projects">
                     <FolderOpen className="w-4 h-4 mr-2" />
                     View Other Projects
                   </Link>
                 </Button>
               </div>
-              
+
               <div className="flex flex-wrap gap-2">
                 <Badge variant="secondary">DELTA Framework</Badge>
                 <Badge variant="secondary">Data Transformation</Badge>

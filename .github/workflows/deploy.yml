@@ -37,6 +37,7 @@ jobs:
         run: |
           cp CNAME dist/
           cp .nojekyll dist/
+          cp dist/index.html dist/404.html
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
