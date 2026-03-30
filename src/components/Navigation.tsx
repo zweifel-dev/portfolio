@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Home, User, Briefcase, Mail, Brain, FileText } from "lucide-react";
+import { Menu, X, Home, User, Briefcase, Mail, Brain, FileText, Download } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
@@ -68,6 +68,14 @@ const Navigation = () => {
                 </Link>
               );
             })}
+            <a
+              href="/files/BrandonZweifel_Resume.pdf"
+              download
+              className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-gradient-primary text-primary-foreground text-sm font-medium transition-opacity hover:opacity-90"
+            >
+              <Download className="w-4 h-4" />
+              <span>Resume</span>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -102,6 +110,15 @@ const Navigation = () => {
                   </Link>
                 );
               })}
+              <a
+                href="/files/BrandonZweifel_Resume.pdf"
+                download
+                onClick={() => setIsOpen(false)}
+                className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gradient-primary text-primary-foreground font-medium transition-opacity hover:opacity-90"
+              >
+                <Download className="w-4 h-4" />
+                <span>Resume</span>
+              </a>
             </div>
           </div>
         )}
