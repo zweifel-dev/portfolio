@@ -42,9 +42,9 @@ const About = () => {
                     />
                     <div className="space-y-4">
                       <p className="text-lg leading-relaxed text-muted-foreground">
-                        Senior Software, Data, and AI executive who delivers measurable business outcomes through AI-augmented data organizations.
-                        Built and scaled teams, platforms, and cultures where LLM-powered agents and governed data infrastructure
-                        multiply what a data team can deliver.
+                        Senior Software, Data, and AI executive who delivers measurable business outcomes through AI-augmented organizations.
+                        Built and scaled teams, platforms, and cultures where LLM-powered agents and governed R&D infrastructure
+                        multiply what a team can deliver.
                       </p>
                       <p className="text-lg leading-relaxed text-muted-foreground">
                         Career arc from <span className="font-semibold text-foreground">U.S. Army Intelligence Officer</span> to
@@ -55,7 +55,7 @@ const About = () => {
                         <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">AI Leadership</span>
                         <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Healthcare SaaS</span>
                         <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">M&A Integration</span>
-                        <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Data Platforms</span>
+                        <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Platforms at Scale</span>
                       </div>
                     </div>
                   </div>
@@ -101,7 +101,7 @@ const About = () => {
                       Deployed 7 production AI agents, built a six-layer data platform, and created a product analytics practice the CEO called the highest-value internal function.
                     </p>
                     <ul className="space-y-2 text-muted-foreground">
-                      <li>Transformed the data team from manual producers to <strong className="text-foreground">agent-augmented reviewers</strong> — agents produce first-draft models, metrics, tests, and documentation; engineers review and merge.</li>
+                      <li>Transformed the R&D team from manual producers to <strong className="text-foreground">agent-augmented reviewers</strong> — agents produce first-draft models, metrics, tests, and documentation; engineers review and merge.</li>
                       <li>Architected and delivered a <strong className="text-foreground">six-layer enterprise data platform</strong> on Snowflake with semantic layer governance, reducing new metric delivery from weeks to 2-5 days.</li>
                       <li>Eliminated per-dashboard metric rebuilding that consumed <strong className="text-foreground">30-40% of analyst capacity</strong> through certified, governed semantic views.</li>
                       <li>Built a product analytics practice that quantified <strong className="text-foreground">$1.1M/month</strong> in AI Scribe value, shaping pricing and go-to-market strategy.</li>
@@ -138,7 +138,7 @@ const About = () => {
                         <p className="text-muted-foreground">Drove $5M in additional revenue through UX optimization; reduced load times by 40%.</p>
                       </div>
                       <div>
-                        <p className="font-medium">Manager of Software Data Engineering <span className="text-muted-foreground">&bull; Supplycore &bull; 2012 – 2015</span></p>
+                        <p className="font-medium">Manager of Software Engineering <span className="text-muted-foreground">&bull; Supplycore &bull; 2012 – 2015</span></p>
                         <p className="text-muted-foreground">Deployed ERP solutions saving clients $2.5M annually; built real-time analytics generating $10M in revenue.</p>
                       </div>
                       <div>
@@ -164,7 +164,7 @@ const About = () => {
                       <li>Agent-Augmented Operating Models</li>
                       <li>Agentic AI Architecture & Deployment</li>
                       <li>Organizational AI Transformation</li>
-                      <li>Enterprise Data Platform Strategy</li>
+                      <li>Enterprise Platform Strategy</li>
                       <li>Product Research Analytics</li>
                       <li>Data Monetization</li>
                       <li>M&A Data Integration</li>
@@ -223,7 +223,7 @@ const About = () => {
             <ScrollReveal>
               <div className="text-center space-y-4 pt-4">
                 <h3 className="text-2xl font-bold">Let's Connect</h3>
-                <p className="text-muted-foreground text-lg">Ready to discuss AI-augmented data strategy or leadership opportunities?</p>
+                <p className="text-muted-foreground text-lg">Ready to discuss AI-augmented strategy or leadership opportunities?</p>
                 <Link to="/contact">
                   <Button size="lg" className="btn-executive mt-2">Get in Touch</Button>
                 </Link>

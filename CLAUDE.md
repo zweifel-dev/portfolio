@@ -98,5 +98,6 @@ The PROVE pattern (Predict, Run, Observe, Validate, Evolve) is the scientific me
 - Generating audit trails (use `/prove.audit`)
 
 ## Recent Changes
+- 003-rd-narrative-reframe: Added TypeScript 5.8.3 / React 18.3.1 + react-router-dom 6.30, Tailwind CSS 3.4.17, shadcn/ui (Radix UI)
 - 002-prove-methodology-enhancement: Added Markdown (Claude Code configuration files) + None — pure markdown definitions consumed by Claude Code
 - 001-portfolio-executive-refresh: Added TypeScript 5.8.3 / React 18.3.1 + react-router-dom 6.30, Tailwind CSS 3.4.17, shadcn/ui (Radix UI), tailwindcss-animate 1.0.7, Vite 5.4.19, **motion 12.x (to add)**
