@@ -59,7 +59,7 @@ const AIDevelopmentLab: React.FC = () => {
                   Built a fully local AI development platform orchestrating Ollama, vLLM, and Qdrant with three production agents and comprehensive framework evaluation infrastructure. This practitioner-depth work — building, evaluating, and benchmarking agentic AI systems across multiple frameworks — directly informed enterprise architecture decisions including the selection of Strands Agents SDK for production pipeline agents.
                 </p>
                 <p>
-                  The AI Lab demonstrates that <strong>leadership credibility in AI transformation comes from building, not just directing</strong>. By operating at the practitioner level — writing agent code, benchmarking inference engines, and comparing framework trade-offs — the lab produced insights that shaped how an entire data organization approaches AI-augmented workflows.
+                  The AI Lab demonstrates that <strong>leadership credibility in AI transformation comes from building, not just directing</strong>. By operating at the practitioner level — writing agent code, benchmarking inference engines, and comparing framework trade-offs — the lab produced insights that shaped how an entire organization approaches AI-augmented workflows.
                 </p>
               </div>
             </section>
@@ -494,7 +494,7 @@ const AIDevelopmentLab: React.FC = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Impact on Enterprise Decisions</h2>
               <p className="mb-6">
-                The AI Lab was not built in isolation — every experiment, agent, and evaluation was designed to answer specific questions facing the enterprise data organization:
+                The AI Lab was not built in isolation — every experiment, agent, and evaluation was designed to answer specific questions facing the enterprise organization:
               </p>
 
               <div className="space-y-6">

@@ -28,7 +28,7 @@ const AIAugmentedDataOrg: React.FC = () => {
                 AI-Augmented Data Organization
               </h1>
               <p className="text-lg text-violet-600 font-medium mb-6">
-                Senior data and AI executive who deployed seven domain-specialized pipeline agents to production, shifting the team's operating model from manual build capacity to agent-augmented review capacity — a fundamentally better bottleneck.
+                Senior Software, Data, and AI executive who deployed seven domain-specialized pipeline agents to production, shifting the team's operating model from manual build capacity to agent-augmented review capacity — a fundamentally better bottleneck.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-gray-600">
@@ -57,7 +57,7 @@ const AIAugmentedDataOrg: React.FC = () => {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Executive Summary</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="mb-4">
-                  As a senior data and AI executive, I transformed a data organization's operating model by deploying seven domain-specialized pipeline agents to production. LLM agents now produce first-draft dbt models, metric YAML definitions, quality tests, and documentation. Engineers review and merge via pull requests.
+                  As a Senior Software, Data, and AI executive, I transformed a data organization's operating model by deploying seven domain-specialized pipeline agents to production. LLM agents now produce first-draft dbt models, metric YAML definitions, quality tests, and documentation. Engineers review and merge via pull requests.
                 </p>
                 <p>
                   The team's constraint shifted from <strong>build capacity</strong> to <strong>review capacity</strong> — a fundamentally better bottleneck. Review is faster than creation and preserves quality judgment at every merge point.

@@ -51,7 +51,7 @@ const Contact = () => {
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Executive data &amp; AI leadership &bull; Advisory partnerships &bull; Strategic consulting
+              Executive software, data, &amp; AI leadership &bull; Advisory partnerships &bull; Strategic consulting
             </p>
           </ScrollReveal>
         </div>
@@ -66,8 +66,8 @@ const Contact = () => {
               <Card className="p-8 lg:p-10 shadow-executive-lg">
                 <CardContent className="space-y-6 p-0">
                   <p className="text-lg leading-relaxed text-muted-foreground">
-                    Whether you're looking for executive data &amp; AI leadership, exploring advisory partnerships,
-                    or want to discuss how AI-augmented data organizations can transform your business — I welcome
+                    Whether you're looking for executive software, data, &amp; AI leadership, exploring advisory partnerships,
+                    or want to discuss how AI-augmented organizations can transform your business — I welcome
                     the conversation. My background spans enterprise platform architecture, agentic AI deployment,
                     M&amp;A data integration, and building high-performance teams from the ground up.
                   </p>
