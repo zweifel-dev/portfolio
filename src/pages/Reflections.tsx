@@ -18,9 +18,9 @@ const reflections = [
     body: 'Before the transformation, analysts spent 30-40% of capacity rebuilding the same metric logic across dozens of dashboards — every new dashboard was a fresh interpretation of "revenue." The fix was metric certification: formal definition workshops with Finance, Product, and Operations, certified definitions in the semantic layer, and every downstream consumer reusing them without re-engineering. Conflicting figures disappeared from executive meetings, and analysts shifted to insight work. Lesson learned the hard way: I inherited a three-year Tableau contract without evaluating it against strategic direction. The future for SaaS is embedded analytics, not a separate BI product. That mistake informed every subsequent vendor decision.',
   },
   {
-    title: 'From Military Intelligence to AI-Augmented Data Leadership',
+    title: 'From Military Intelligence to AI-Augmented Leadership',
     insight: 'The analytical discipline is identical: synthesize multi-source inputs, validate quality, deliver actionable conclusions. The scale of tooling has changed — the need for human judgment has not.',
-    body: 'My transition from military intelligence to data leadership is a twenty-year arc with a consistent through-line: turning raw information into decisions under uncertainty. In Iraq, the data was intelligence reports and satellite imagery; now it\'s CDC event streams and semantic layer metrics. LLM-powered agents do in minutes what would have taken my intelligence team hours — but human judgment about what matters, what\'s reliable, and what to act on remains irreplaceable. Every agent in our pipeline has a human reviewer. The military taught me that the best intelligence is useless without trusted delivery.',
+    body: 'My transition from military intelligence to software leadership is a twenty-year arc with a consistent through-line: turning raw information into decisions under uncertainty. In Iraq, the data was intelligence reports and satellite imagery; now it\'s CDC event streams and semantic layer metrics. LLM-powered agents do in minutes what would have taken my intelligence team hours — but human judgment about what matters, what\'s reliable, and what to act on remains irreplaceable. Every agent in our pipeline has a human reviewer. The military taught me that the best intelligence is useless without trusted delivery.',
   },
   {
     title: 'Building High-Performance Teams Through Transformation',
@@ -50,7 +50,7 @@ const Reflections = () => {
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              AI Adoption &bull; Data Leadership &bull; Technology Strategy &bull; Organizational Change
+              AI Adoption &bull; Software and Data Leadership &bull; Technology Strategy &bull; Organizational Change
             </p>
           </ScrollReveal>
         </div>

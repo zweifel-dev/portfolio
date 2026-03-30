@@ -14,7 +14,7 @@ const TeamScalingLeadership: React.FC = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Team Scaling & Leadership Excellence</h1>
           <p className="text-xl md:text-2xl opacity-90">
-            Building High-Performance Data Teams — From 15 to 65+ Professionals Through M&A and AI Transformation
+            Building High-Performance R&D Teams — From 15 to 65+ Professionals Through M&A and AI Transformation
           </p>
         </div>
       </section>
@@ -28,7 +28,7 @@ const TeamScalingLeadership: React.FC = () => {
                 Strategic Team Development & Organizational Leadership
               </h1>
               <p className="text-lg text-blue-600 font-medium mb-6">
-                Scaling high-performance data and analytics teams from 15 to 65+ professionals while implementing DEI initiatives, mentorship programs, and performance frameworks that improved retention by 15% and productivity by 30%. Most recently, led the team through the AI transformation — shifting the operating model from manual producers to agent-augmented reviewers, upskilling engineers on agentic AI frameworks, and managing the organizational change required to trust and adopt AI-augmented workflows.
+                Scaling high-performance R&D teams from 15 to 65+ professionals while implementing DEI initiatives, mentorship programs, and performance frameworks that improved retention by 15% and productivity by 30%. Most recently, led the team through the AI transformation — shifting the operating model from manual producers to agent-augmented reviewers, upskilling engineers on agentic AI frameworks, and managing the organizational change required to trust and adopt AI-augmented workflows.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-gray-600">
@@ -56,7 +56,7 @@ const TeamScalingLeadership: React.FC = () => {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Leadership Philosophy & Approach</h2>
               <div className="prose prose-lg max-w-none mb-6">
                 <p className="mb-4">
-                  As Senior Director of Data Strategy & Analytics at Experity, I've had the privilege of building and leading one of the most successful data organizations in the healthcare technology industry. My leadership journey began with a 15-person team and has grown to encompass 65+ professionals across data engineering, analytics, data science, and business intelligence functions.
+                  As Senior Director of Data Strategy & Analytics at Experity, I've had the privilege of building and leading one of the most successful software organizations in the healthcare technology industry. My leadership journey began with a 15-person team and has grown to encompass 65+ professionals across data engineering, analytics, data science, and business intelligence functions.
                 </p>
               </div>
               
@@ -77,7 +77,7 @@ const TeamScalingLeadership: React.FC = () => {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Organizational Structure & Team Composition</h2>
               <p className="mb-6">
-                Building a world-class data organization requires thoughtful structure and diverse talent acquisition. Here's how I've architected our teams for maximum impact:
+                Building a world-class software organization requires thoughtful structure and diverse talent acquisition. Here's how I've architected our teams for maximum impact:
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -87,7 +87,7 @@ const TeamScalingLeadership: React.FC = () => {
                     <h4 className="font-bold text-lg">Data Engineering</h4>
                   </div>
                   <ul className="space-y-2 text-sm">
-                    <li>• Senior Data Engineers leading pipeline architecture</li>
+                    <li>• Senior Software, Data, Engineers leading pipeline architecture</li>
                     <li>• Cloud Infrastructure Engineers (AWS, Snowflake)</li>
                     <li>• DevOps Engineers focusing on DataOps automation</li>
                     <li>• Quality Engineers ensuring data integrity</li>
@@ -117,7 +117,7 @@ const TeamScalingLeadership: React.FC = () => {
                     <h4 className="font-bold text-lg">Data Science & ML</h4>
                   </div>
                   <ul className="space-y-2 text-sm">
-                    <li>• Senior Data Scientists leading research initiatives</li>
+                    <li>• Senior Software, Data, Scientists leading research initiatives</li>
                     <li>• Machine Learning Engineers deploying models</li>
                     <li>• Healthcare Outcomes Researchers with clinical background</li>
                     <li>• Predictive Analytics Specialists</li>
@@ -241,10 +241,10 @@ const TeamScalingLeadership: React.FC = () => {
               
               <Card className="p-6 mb-6">
                 <h4 className="font-bold text-lg mb-2">Competitive Hiring Market Navigation</h4>
-                <p className="mb-2"><strong>Challenge:</strong> High demand for data professionals in healthcare technology created intense competition for talent.</p>
+                <p className="mb-2"><strong>Challenge:</strong> High demand for R&D professionals in healthcare technology created intense competition for talent.</p>
                 <p className="mb-4"><strong>Strategy:</strong> Developed comprehensive talent acquisition approach focusing on culture, growth, and impact over compensation alone.</p>
                 <ul className="space-y-2 text-sm mb-3">
-                  <li><strong>Employer Branding:</strong> Built reputation as premier data organization through thought leadership</li>
+                  <li><strong>Employer Branding:</strong> Built reputation as premier software organization through thought leadership</li>
                   <li><strong>University Partnerships:</strong> Established relationships with top universities for early talent pipeline</li>
                   <li><strong>Referral Programs:</strong> Employee referral incentives with emphasis on cultural fit</li>
                   <li><strong>Comprehensive Benefits:</strong> Competitive packages including professional development budgets</li>
@@ -435,7 +435,7 @@ const TeamScalingLeadership: React.FC = () => {
               </p>
               
               <ul className="space-y-2 ml-6 list-disc">
-                <li><strong>Speaking Engagements:</strong> Keynote presentations on building data teams at major conferences</li>
+                <li><strong>Speaking Engagements:</strong> Keynote presentations on building R&D teams at major conferences</li>
                 <li><strong>Industry Awards:</strong> Team recognized for excellence in analytics and innovation</li>
                 <li><strong>Best Practices Sharing:</strong> Regular participation in healthcare technology leadership roundtables</li>
                 <li><strong>Mentorship Network:</strong> Active mentor for aspiring data leaders across the industry</li>

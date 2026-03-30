@@ -15,12 +15,12 @@ const Home = () => {
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <p className="hero-subtitle">
-              Senior Data & AI Executive
+              Senior Software, Data, & AI Executive
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
             <p className="text-lg lg:text-xl mb-12 text-white/80 max-w-2xl mx-auto">
-              Building AI-augmented data organizations that deliver measurable business outcomes in healthcare SaaS
+              Building AI-augmented organizations that deliver measurable business outcomes in healthcare SaaS
             </p>
           </ScrollReveal>
           <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 max-w-5xl mx-auto" staggerDelay={0.08}>
@@ -60,23 +60,23 @@ const Home = () => {
               <CardContent className="pt-10 pb-10 text-center">
                 <img
                   src="/images/Brandon-Zweifel-headshot.jpg"
-                  alt="Brandon Zweifel - Senior Data & AI Executive"
+                  alt="Brandon Zweifel - Senior Software, Data, & AI Executive"
                   className="w-40 h-40 rounded-full mx-auto mb-8 object-cover shadow-executive-md"
                 />
                 <h2 className="text-3xl font-bold mb-6">Executive Summary</h2>
                 <div className="max-w-4xl mx-auto mb-10">
                   <p className="text-lg leading-relaxed text-muted-foreground">
-                    Senior data and AI executive who delivers measurable business outcomes through <span className="font-semibold text-foreground">AI-augmented data organizations</span>.
+                    Senior Software, Data, and AI executive who delivers measurable business outcomes through <span className="font-semibold text-foreground">AI-augmented organizations</span>.
                     Drove <span className="font-semibold text-foreground">$125M in post-M&A cost reductions</span> and
                     contributed to <span className="font-semibold text-foreground">$500M to $1.2B valuation growth</span> at
-                    Experity. Built and scaled a <span className="font-semibold text-foreground">65+ person data organization</span>,
+                    Experity. Built and scaled a <span className="font-semibold text-foreground">65+ person R&D organization</span>,
                     deployed <span className="font-semibold text-foreground">seven production AI agents</span> that transformed
                     the team's operating model, and architected a six-layer enterprise data platform governing
                     one of the nation's largest urgent care datasets. The CEO identified the product analytics practice
                     built under this leadership as the highest-value function delivered internally.
                   </p>
                 </div>
-                <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+                <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
                   <StaggerItem>
                     <div className="flex flex-col items-center p-4 bg-primary/5 rounded-xl">
                       <Bot className="w-8 h-8 text-primary mb-2" />
@@ -86,7 +86,7 @@ const Home = () => {
                   <StaggerItem>
                     <div className="flex flex-col items-center p-4 bg-primary/5 rounded-xl">
                       <Database className="w-8 h-8 text-primary mb-2" />
-                      <span className="text-sm font-medium">Data Platforms</span>
+                      <span className="text-sm font-medium">Enterprise Platforms</span>
                     </div>
                   </StaggerItem>
                   <StaggerItem>
@@ -118,9 +118,9 @@ const Home = () => {
                   <div className="w-14 h-14 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Bot className="w-7 h-7 text-white" />
                   </div>
-                  <CardTitle className="text-xl">AI-Augmented Data Organization</CardTitle>
+                  <CardTitle className="text-xl">AI-Augmented R&D Organization</CardTitle>
                   <CardDescription className="text-base mt-2">
-                    Transformed a data team from manual producers to agent-augmented reviewers, deploying seven
+                    Transformed an R&D team from manual producers to agent-augmented reviewers, deploying seven
                     production agents that shifted the team's constraint from build capacity to review capacity.
                   </CardDescription>
                 </CardHeader>
@@ -138,7 +138,7 @@ const Home = () => {
                   <div className="w-14 h-14 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Database className="w-7 h-7 text-white" />
                   </div>
-                  <CardTitle className="text-xl">Enterprise Data Platform</CardTitle>
+                  <CardTitle className="text-xl">Enterprise R&D Platform</CardTitle>
                   <CardDescription className="text-base mt-2">
                     Built a six-layer platform with semantic layer governance, delivering certified metrics
                     in weeks instead of months and recovering 30-40% of analyst capacity.
@@ -160,7 +160,7 @@ const Home = () => {
                   </div>
                   <CardTitle className="text-xl">Full Project Portfolio</CardTitle>
                   <CardDescription className="text-base mt-2">
-                    M&A integration delivering $125M in savings, team scaling from 15 to 65+, data culture
+                    M&A integration delivering $125M in savings, team scaling from 15 to 65+, R&D culture
                     transformation driving $20M+ in revenue impact, and more.
                   </CardDescription>
                 </CardHeader>
@@ -181,7 +181,7 @@ const Home = () => {
                   <CardTitle className="text-xl">Let's Connect</CardTitle>
                   <CardDescription className="text-base mt-2">
                     Open to executive leadership opportunities, advisory roles, and strategic conversations
-                    about AI-augmented data organizations.
+                    about AI-augmented organizations.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="text-center pt-0">
