@@ -47,6 +47,78 @@ const Research = () => {
                     management for AI adoption.
                   </p>
 
+                  {/* PROVE Pattern Highlight */}
+                  <Card className="bg-primary/5 border border-primary/20">
+                    <CardContent className="p-6 space-y-4">
+                      <div className="flex items-center gap-3 flex-wrap">
+                        <h3 className="font-semibold text-foreground">The PROVE Pattern — Original Research</h3>
+                        {/*<span className="px-2 py-0.5 bg-accent/20 text-accent-foreground rounded text-xs font-medium">Published</span>*/}
+                      </div>
+                      <p className="text-muted-foreground leading-relaxed">
+                        PROVE (Predict, Run, Observe, Validate, Evolve) applies the scientific method as an agentic AI
+                        reasoning loop. Developed from analysis of documented failure modes in production ReAct-based
+                        architectures — looping, premature commitment, error propagation, and confabulation — the pattern
+                        addresses each by implementing the complete hypothesis-driven cycle that existing frameworks only
+                        partially recover.
+                      </p>
+                      <div className="space-y-2 text-sm text-muted-foreground">
+                        <p className="flex items-start gap-2">
+                          <span className="font-mono font-bold text-primary flex-shrink-0">P</span>
+                          <span><span className="font-medium text-foreground">Predict</span> — Form falsifiable hypotheses with competing predictions before any action</span>
+                        </p>
+                        <p className="flex items-start gap-2">
+                          <span className="font-mono font-bold text-primary flex-shrink-0">R</span>
+                          <span><span className="font-medium text-foreground">Run</span> — Execute targeted experiments that maximize diagnostic value between hypotheses</span>
+                        </p>
+                        <p className="flex items-start gap-2">
+                          <span className="font-mono font-bold text-primary flex-shrink-0">O</span>
+                          <span><span className="font-medium text-foreground">Observe</span> — Collect factual results separated from interpretation to prevent confirmation bias</span>
+                        </p>
+                        <p className="flex items-start gap-2">
+                          <span className="font-mono font-bold text-primary flex-shrink-0">V</span>
+                          <span><span className="font-medium text-foreground">Validate</span> — Compare observations against predictions: supported, falsified, or inconclusive</span>
+                        </p>
+                        <p className="flex items-start gap-2">
+                          <span className="font-mono font-bold text-primary flex-shrink-0">E</span>
+                          <span><span className="font-medium text-foreground">Evolve</span> — Update understanding based on evidence, then iterate or conclude with confidence</span>
+                        </p>
+                      </div>
+                      <p className="text-muted-foreground leading-relaxed text-sm">
+                        The pattern operates recursively across four abstraction layers — Meta, Strategic, Tactical,
+                        and Operational — and maps naturally to multi-agent architectures with specialized roles.
+                        Analyzed against 8+ existing frameworks including ReAct, Reflexion, Tree of Thoughts, LATS,
+                        and Plan-and-Execute to demonstrate how each independently rediscovered pieces of what PROVE
+                        implements as a complete loop.
+                      </p>
+                      <StaggerContainer className="grid grid-cols-4 gap-4">
+                        <StaggerItem>
+                          <div className="text-center">
+                            <div className="text-2xl font-bold text-primary">26</div>
+                            <div className="text-xs text-muted-foreground">Academic Sources</div>
+                          </div>
+                        </StaggerItem>
+                        <StaggerItem>
+                          <div className="text-center">
+                            <div className="text-2xl font-bold text-primary">8+</div>
+                            <div className="text-xs text-muted-foreground">Frameworks Analyzed</div>
+                          </div>
+                        </StaggerItem>
+                        <StaggerItem>
+                          <div className="text-center">
+                            <div className="text-2xl font-bold text-primary">4</div>
+                            <div className="text-xs text-muted-foreground">Abstraction Layers</div>
+                          </div>
+                        </StaggerItem>
+                        <StaggerItem>
+                          <div className="text-center">
+                            <div className="text-2xl font-bold text-primary">5</div>
+                            <div className="text-xs text-muted-foreground">Step Cycle</div>
+                          </div>
+                        </StaggerItem>
+                      </StaggerContainer>
+                    </CardContent>
+                  </Card>
+
                   {/* Resource Guide Highlight */}
                   <Card className="bg-muted/50 border border-border">
                     <CardContent className="p-6 space-y-4">
@@ -111,9 +183,12 @@ const Research = () => {
                     </ul>
                   </div>
 
-                  <div className="text-center pt-2">
+                  <div className="flex flex-wrap justify-center gap-3 pt-2">
+                    <Link to="/prove-pattern">
+                      <Button>Read: The PROVE Pattern</Button>
+                    </Link>
                     <Link to="/ai-development-lab">
-                      <Button>View AI Development Lab Case Study</Button>
+                      <Button variant="outline">View AI Development Lab Case Study</Button>
                     </Link>
                   </div>
                 </CardContent>
