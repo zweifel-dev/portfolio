@@ -87,7 +87,7 @@ const TeamScalingLeadership: React.FC = () => {
                     <h4 className="font-bold text-lg">Data Engineering</h4>
                   </div>
                   <ul className="space-y-2 text-sm">
-                    <li>• Senior Data Engineers leading pipeline architecture</li>
+                    <li>• Senior Software, Data, Engineers leading pipeline architecture</li>
                     <li>• Cloud Infrastructure Engineers (AWS, Snowflake)</li>
                     <li>• DevOps Engineers focusing on DataOps automation</li>
                     <li>• Quality Engineers ensuring data integrity</li>
@@ -117,7 +117,7 @@ const TeamScalingLeadership: React.FC = () => {
                     <h4 className="font-bold text-lg">Data Science & ML</h4>
                   </div>
                   <ul className="space-y-2 text-sm">
-                    <li>• Senior Data Scientists leading research initiatives</li>
+                    <li>• Senior Software, Data, Scientists leading research initiatives</li>
                     <li>• Machine Learning Engineers deploying models</li>
                     <li>• Healthcare Outcomes Researchers with clinical background</li>
                     <li>• Predictive Analytics Specialists</li>

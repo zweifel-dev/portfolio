@@ -15,7 +15,7 @@ const Home = () => {
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <p className="hero-subtitle">
-              Senior Data & AI Executive
+              Senior Software, Data, & AI Executive
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
@@ -60,13 +60,13 @@ const Home = () => {
               <CardContent className="pt-10 pb-10 text-center">
                 <img
                   src="/images/Brandon-Zweifel-headshot.jpg"
-                  alt="Brandon Zweifel - Senior Data & AI Executive"
+                  alt="Brandon Zweifel - Senior Software, Data, & AI Executive"
                   className="w-40 h-40 rounded-full mx-auto mb-8 object-cover shadow-executive-md"
                 />
                 <h2 className="text-3xl font-bold mb-6">Executive Summary</h2>
                 <div className="max-w-4xl mx-auto mb-10">
                   <p className="text-lg leading-relaxed text-muted-foreground">
-                    Senior data and AI executive who delivers measurable business outcomes through <span className="font-semibold text-foreground">AI-augmented data organizations</span>.
+                    Senior Software, Data, and AI executive who delivers measurable business outcomes through <span className="font-semibold text-foreground">AI-augmented data organizations</span>.
                     Drove <span className="font-semibold text-foreground">$125M in post-M&A cost reductions</span> and
                     contributed to <span className="font-semibold text-foreground">$500M to $1.2B valuation growth</span> at
                     Experity. Built and scaled a <span className="font-semibold text-foreground">65+ person data organization</span>,

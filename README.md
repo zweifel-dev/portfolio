@@ -1,6 +1,6 @@
 # zweifel.tech
 
-Personal portfolio website for Brandon Zweifel — Senior Data & AI Executive.
+Personal portfolio website for Brandon Zweifel — Senior Software, Data, & AI Executive.
 
 **Live site:** [zweifel.tech](https://zweifel.tech)
 

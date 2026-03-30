@@ -14,7 +14,7 @@ const About = () => {
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <p className="hero-subtitle">
-              Senior Data & AI Executive
+              Senior Software, Data, & AI Executive
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
@@ -36,13 +36,13 @@ const About = () => {
                   <div className="flex flex-col md:flex-row gap-8 items-start">
                     <img
                       src="/images/Brandon-Zweifel-headshot.jpg"
-                      alt="Brandon Zweifel - Senior Data & AI Executive"
+                      alt="Brandon Zweifel - Senior Software, Data, & AI Executive"
                       className="w-48 h-48 rounded-2xl object-cover shadow-executive-md mx-auto md:mx-0 flex-shrink-0"
                       loading="lazy"
                     />
                     <div className="space-y-4">
                       <p className="text-lg leading-relaxed text-muted-foreground">
-                        Senior data and AI executive who delivers measurable business outcomes through AI-augmented data organizations.
+                        Senior Software, Data, and AI executive who delivers measurable business outcomes through AI-augmented data organizations.
                         Built and scaled teams, platforms, and cultures where LLM-powered agents and governed data infrastructure
                         multiply what a data team can deliver.
                       </p>
