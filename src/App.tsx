@@ -24,6 +24,7 @@ const TeamScalingLeadership = lazy(() => import("./pages/TeamScalingLeadership")
 const AIAugmentedDataOrg = lazy(() => import("./pages/AIAugmentedDataOrg"));
 const EnterpriseDataPlatform = lazy(() => import("./pages/EnterpriseDataPlatform"));
 const AIDevelopmentLab = lazy(() => import("./pages/AIDevelopmentLab"));
+const ProvePattern = lazy(() => import("./pages/ProvePattern"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -59,6 +60,7 @@ const App = () => (
               <Route path="/ai-augmented-data-org" element={<AIAugmentedDataOrg />} />
               <Route path="/enterprise-data-platform" element={<EnterpriseDataPlatform />} />
               <Route path="/ai-development-lab" element={<AIDevelopmentLab />} />
+              <Route path="/prove-pattern" element={<ProvePattern />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
