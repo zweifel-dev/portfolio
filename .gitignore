@@ -412,6 +412,7 @@ docs/
 
 # JetBrains Rider
 *.sln.iml
-.claude/commands/
+.claude/
 .specify/
 specs/
+prove/
