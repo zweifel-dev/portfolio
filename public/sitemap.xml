@@ -108,4 +108,34 @@
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
+    <url>
+        <loc>https://zweifel.tech/midnight-alibi/how-to-play/</loc>
+        <lastmod>2026-09-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://zweifel.tech/midnight-alibi/ranks/</loc>
+        <lastmod>2026-09-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://zweifel.tech/midnight-alibi/challenges/</loc>
+        <lastmod>2026-09-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://zweifel.tech/midnight-alibi/rooms/</loc>
+        <lastmod>2026-09-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://zweifel.tech/midnight-alibi/suspects/</loc>
+        <lastmod>2026-09-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
 </urlset>

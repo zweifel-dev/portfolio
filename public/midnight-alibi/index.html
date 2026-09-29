@@ -7,17 +7,17 @@
   <meta name="description" content="Midnight Alibi is a logic puzzle for people who like Sudoku and murder mysteries. Rebuild every suspect's night, hour by hour, and name the killer. For Android.">
   <link rel="canonical" href="https://zweifel.tech/midnight-alibi/">
   <meta name="theme-color" content="#141217">
-  <link rel="icon" href="assets/seal.svg" type="image/svg+xml">
-  <link rel="icon" href="assets/icon-512.png" type="image/png" sizes="512x512">
-  <link rel="apple-touch-icon" href="assets/icon-512.png">
+  <link rel="icon" href="/midnight-alibi/assets/seal.svg" type="image/svg+xml">
+  <link rel="icon" href="/midnight-alibi/assets/icon-512.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="/midnight-alibi/assets/icon-512.png">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Midnight Alibi">
   <meta property="og:description" content="Every alibi is a clue. A murder-mystery logic puzzle for Android.">
   <meta property="og:url" content="https://zweifel.tech/midnight-alibi/">
   <meta property="og:image" content="https://zweifel.tech/midnight-alibi/assets/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preload" href="assets/fonts/bodoni-moda.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/site.css">
+  <link rel="preload" href="/midnight-alibi/assets/fonts/bodoni-moda.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/midnight-alibi/assets/site.css">
   <!-- A static page, not a React route: GitHub Pages serves this folder as-is.
        It deliberately uses the game's own look, not the portfolio's. -->
 </head>
@@ -26,20 +26,15 @@
 
   <header class="topbar">
     <div class="wrap">
-      <a class="brand" href="./"><img src="assets/seal.svg" alt="" width="34" height="34">Midnight <em>Alibi</em></a>
-      <nav aria-label="Page">
-        <a href="#how">How it plays</a>
-        <a href="#levels">Levels</a>
-        <a href="#price">Price</a>
-        <a href="privacy/">Privacy</a>
-      </nav>
+      <a class="brand" href="./"><img src="/midnight-alibi/assets/seal.svg" alt="" width="34" height="34">Midnight <em>Alibi</em></a>
+      <nav aria-label="Midnight Alibi"><a href="/midnight-alibi/how-to-play/">How to play</a><a href="/midnight-alibi/ranks/">Ranks</a><a href="/midnight-alibi/challenges/">Challenges</a><a href="/midnight-alibi/rooms/">Rooms</a><a href="/midnight-alibi/suspects/">Suspects</a></nav>
     </div>
   </header>
 
   <main id="main">
     <section class="hero" aria-labelledby="title">
       <div class="wrap">
-        <img class="hero-seal rise" src="assets/seal.svg" alt="" width="76" height="76">
+        <img class="hero-seal rise" src="/midnight-alibi/assets/seal.svg" alt="" width="76" height="76">
         <h1 id="title" class="rise d1">Midnight <em>Alibi</em></h1>
         <p class="tagline rise d2">Every alibi is a clue.</p>
         <p class="lede rise d2">A logic puzzle for people who like Sudoku and murder mysteries. Rebuild every suspect’s night, hour by hour, until only one of them could have been in the room when the victim died.</p>
@@ -77,21 +72,22 @@
             </div>
             <div role="row" style="display:contents">
               <span class="who" role="rowheader">Basil</span>
-              <span class="sq r0" role="cell">Lounge</span><span class="sq r1" role="cell">Garden</span><span class="sq r2" role="cell">Gallery</span><span class="sq r3" role="cell">Consv.</span>
+              <span class="sq r0" role="cell"><svg class="ico-lg" aria-hidden="true" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#lounge"></use></svg><span class="sr-only">Lounge</span></span><span class="sq r1" role="cell"><svg class="ico-lg" aria-hidden="true" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#garden"></use></svg><span class="sr-only">Garden</span></span><span class="sq r2" role="cell"><svg class="ico-lg" aria-hidden="true" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#gallery"></use></svg><span class="sr-only">Gallery</span></span><span class="sq r3" role="cell"><svg class="ico-lg" aria-hidden="true" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#conservatory"></use></svg><span class="sr-only">Conservatory</span></span>
             </div>
             <div role="row" style="display:contents">
               <span class="who" role="rowheader">Nora</span>
-              <span class="sq r1" role="cell">Garden</span><span class="sq r0" role="cell">Lounge</span><span class="sq r3" role="cell">Consv.</span><span class="sq r2" role="cell">Gallery</span>
+              <span class="sq r1" role="cell"><svg class="ico-lg" aria-hidden="true" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#garden"></use></svg><span class="sr-only">Garden</span></span><span class="sq r0" role="cell"><svg class="ico-lg" aria-hidden="true" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#lounge"></use></svg><span class="sr-only">Lounge</span></span><span class="sq r3" role="cell"><svg class="ico-lg" aria-hidden="true" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#conservatory"></use></svg><span class="sr-only">Conservatory</span></span><span class="sq r2" role="cell"><svg class="ico-lg" aria-hidden="true" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#gallery"></use></svg><span class="sr-only">Gallery</span></span>
             </div>
             <div role="row" style="display:contents">
               <span class="who" role="rowheader">Hugo</span>
-              <span class="sq r2" role="cell">Gallery</span><span class="sq r3" role="cell">Consv.</span><span class="sq r0 hit" role="cell">Lounge</span><span class="sq r1" role="cell">Garden</span>
+              <span class="sq r2" role="cell"><svg class="ico-lg" aria-hidden="true" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#gallery"></use></svg><span class="sr-only">Gallery</span></span><span class="sq r3" role="cell"><svg class="ico-lg" aria-hidden="true" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#conservatory"></use></svg><span class="sr-only">Conservatory</span></span><span class="sq r0 hit" role="cell"><svg class="ico-lg" aria-hidden="true" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#lounge"></use></svg><span class="sr-only">Lounge</span></span><span class="sq r1" role="cell"><svg class="ico-lg" aria-hidden="true" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#garden"></use></svg><span class="sr-only">Garden</span></span>
             </div>
             <div role="row" style="display:contents">
               <span class="who" role="rowheader">Esme</span>
-              <span class="sq r3" role="cell">Consv.</span><span class="sq r2" role="cell">Gallery</span><span class="sq r1" role="cell">Garden</span><span class="sq r0" role="cell">Lounge</span>
+              <span class="sq r3" role="cell"><svg class="ico-lg" aria-hidden="true" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#conservatory"></use></svg><span class="sr-only">Conservatory</span></span><span class="sq r2" role="cell"><svg class="ico-lg" aria-hidden="true" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#gallery"></use></svg><span class="sr-only">Gallery</span></span><span class="sq r1" role="cell"><svg class="ico-lg" aria-hidden="true" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#garden"></use></svg><span class="sr-only">Garden</span></span><span class="sq r0" role="cell"><svg class="ico-lg" aria-hidden="true" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#lounge"></use></svg><span class="sr-only">Lounge</span></span>
             </div>
           </div>
+          <p class="room-key" aria-hidden="true"><span class="k r0"><svg class="ico-lg" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#lounge"></use></svg>Lounge</span> <span class="k r1"><svg class="ico-lg" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#garden"></use></svg>Garden</span> <span class="k r2"><svg class="ico-lg" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#gallery"></use></svg>Gallery</span> <span class="k r3"><svg class="ico-lg" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#conservatory"></use></svg>Conservatory</span></p>
           <figcaption class="verdict"><span>Hugo was in the Lounge at 11pm.</span><span class="stamp">Case closed</span></figcaption>
         </figure>
       </div>
@@ -104,20 +100,32 @@
         <p class="intro">Every case can be solved by logic alone: no guessing, and exactly one answer.</p>
         <div class="steps">
           <div class="step">
-            <div class="phone"><img src="assets/screens/testimony.webp" alt="The Testimony tab: four suspects' statements on case-file cards" width="390" height="844" loading="lazy"></div>
+            <div class="phone"><img src="/midnight-alibi/assets/screens/testimony.webp" alt="The Testimony tab: compare the suspects’ statements" width="360" height="640" loading="lazy"></div>
             <h3>Read the testimony</h3>
             <p>Each suspect makes one statement. Evidence cards add what forensics found.</p>
           </div>
           <div class="step">
-            <div class="phone"><img src="assets/screens/board.webp" alt="The Board: a timeline grid of suspects by hour, with room buttons below" width="390" height="844" loading="lazy"></div>
+            <div class="phone"><img src="/midnight-alibi/assets/screens/board.webp" alt="The Board: place room symbols in the suspect timeline to reconstruct the crime" width="360" height="640" loading="lazy"></div>
             <h3>Fill the timeline</h3>
             <p>Place every suspect in a room for every hour. Pencil in notes, undo freely, and ask for a hint when you’re stuck.</p>
           </div>
           <div class="step">
-            <div class="phone"><img src="assets/screens/lineup.webp" alt="The lineup: four suspects standing for the accusation" width="390" height="844" loading="lazy"></div>
+            <div class="phone"><img src="/midnight-alibi/assets/screens/lineup.webp" alt="The lineup: name the killer after reconstructing the timeline" width="360" height="640" loading="lazy"></div>
             <h3>Name the killer</h3>
             <p>Who was in the room at the time of death? Make your accusation and close the case.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tight" aria-labelledby="devices-title">
+      <div class="wrap">
+        <p class="kicker">Phone and tablet</p>
+        <h2 id="devices-title">A bigger desk on a tablet.</h2>
+        <p class="intro">The same casebook on every Android screen: a roomier board on a tablet, and everything within thumb’s reach on a phone.</p>
+        <div class="devices">
+          <figure><div class="tablet"><img src="/midnight-alibi/assets/tablet/investigation.webp" alt="The Board on a 7-inch tablet: a wide suspect timeline with room symbols" width="360" height="640" loading="lazy"></div><figcaption>7-inch tablet</figcaption></figure>
+          <figure><div class="phone"><img src="/midnight-alibi/assets/screens/casebook.webp" alt="The casebook on a phone: today’s case and the case library" width="360" height="640" loading="lazy"></div><figcaption>Phone</figcaption></figure>
         </div>
       </div>
     </section>
@@ -126,13 +134,28 @@
       <div class="wrap">
         <p class="kicker">Four levels</p>
         <h2 id="levels-title">From a quiet evening to a house full of liars.</h2>
-        <p class="intro">Each case is graded by the hardest technique it needs, and every case has a permanent number you can share. The Methods tab shows which techniques a case needs, so you learn as you go.</p>
+        <p class="intro">Each case is graded by the hardest method it needs, and every case has a permanent number you can share. In free play, Hard and Expert open as you rise through the ranks. <a href="/midnight-alibi/how-to-play/#levels">The levels and methods, in full</a>.</p>
         <div class="levels">
           <article class="level"><span class="tab">Level 1</span><h3>Easy</h3><p class="meta">4 suspects</p><p>Direct statements, cross-hatching and singles, with extra clues to get you started.</p></article>
           <article class="level"><span class="tab">Level 2</span><h3>Medium</h3><p class="meta">5 suspects</p><p>Adds naked and hidden pairs.</p></article>
           <article class="level"><span class="tab">Level 3</span><h3>Hard</h3><p class="meta">5 suspects · one lies</p><p>Catch the liar, then X-wings and XY-wings.</p></article>
           <article class="level"><span class="tab">Level 4</span><h3>Expert</h3><p class="meta">6 suspects · one lies</p><p>Needs X-wing or harder: XY-wing and swordfish.</p></article>
         </div>
+      </div>
+    </section>
+
+    <section id="explore" aria-labelledby="explore-title">
+      <div class="wrap">
+        <p class="kicker">Explore the manor</p>
+        <h2 id="explore-title">Before you open a case</h2>
+        <p class="intro">The rules, the ranks and challenges you can earn, and the rooms and people of the house.</p>
+        <nav class="explore" aria-label="Explore Midnight Alibi">
+          <a href="/midnight-alibi/how-to-play/" style="--art: url('/midnight-alibi/assets/rooms/library.webp')"><span class="glyph line"><svg class="ico-lg" viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#board"></use></svg></span><b>How to play</b><span>The rules, four levels and eleven methods.</span></a>
+          <a href="/midnight-alibi/ranks/" style="--art: url('/midnight-alibi/assets/rooms/gallery.webp')"><span class="glyph"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="/midnight-alibi/assets/ranks.svg#rank-18"></use></svg></span><b>Ranks</b><span>Eighteen ranks from Clue Hunter to Baker Street.</span></a>
+          <a href="/midnight-alibi/challenges/" style="--art: url('/midnight-alibi/assets/rooms/study.webp')"><span class="glyph line"><svg class="ico-lg" viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#ch-clock"></use></svg></span><b>Challenges</b><span>Four ways to raise the stakes.</span></a>
+          <a href="/midnight-alibi/rooms/" style="--art: url('/midnight-alibi/assets/rooms/conservatory.webp')"><span class="glyph line"><svg class="ico-lg" viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#chapel"></use></svg></span><b>Rooms</b><span>Twelve rooms, one long night.</span></a>
+          <a href="/midnight-alibi/suspects/" style="--art: url('/midnight-alibi/assets/rooms/lounge.webp')"><span class="glyph line"><svg class="ico-lg" viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#testimony"></use></svg></span><b>Suspects</b><span>Sixteen people with a reason to be here.</span></a>
+        </nav>
       </div>
     </section>
 
@@ -209,7 +232,7 @@
         <div>
           <h2 id="privacy-title" style="font-size:clamp(1.6rem,4vw,2.2rem)">Your data, briefly.</h2>
           <p>Playing never needs an account. The app sends anonymous gameplay statistics to help improve it, and you can turn that off in Settings. Cloud Sync is off unless you turn it on, and you can delete your cloud history from inside the app at any time.</p>
-          <p><a href="privacy/">Read the privacy policy</a> · <a href="delete-account/">Delete your data</a></p>
+          <p><a href="/midnight-alibi/privacy/">Read the privacy policy</a> · <a href="/midnight-alibi/delete-account/">Delete your data</a></p>
         </div>
       </div>
     </section>
@@ -219,8 +242,9 @@
     <div class="wrap">
       <span>© 2026 Brandon Zweifel · Made at <a href="/">zweifel.tech</a></span>
       <nav aria-label="Footer">
-        <a href="privacy/">Privacy policy</a>
-        <a href="delete-account/">Delete your data</a>
+        <a href="/midnight-alibi/how-to-play/">How to play</a>
+        <a href="/midnight-alibi/privacy/">Privacy policy</a>
+        <a href="/midnight-alibi/delete-account/">Delete your data</a>
         <a href="/contact">Contact</a>
       </nav>
     </div>

@@ -101,3 +101,7 @@ The PROVE pattern (Predict, Run, Observe, Validate, Evolve) is the scientific me
 - 003-rd-narrative-reframe: Added TypeScript 5.8.3 / React 18.3.1 + react-router-dom 6.30, Tailwind CSS 3.4.17, shadcn/ui (Radix UI)
 - 002-prove-methodology-enhancement: Added Markdown (Claude Code configuration files) + None — pure markdown definitions consumed by Claude Code
 - 001-portfolio-executive-refresh: Added TypeScript 5.8.3 / React 18.3.1 + react-router-dom 6.30, Tailwind CSS 3.4.17, shadcn/ui (Radix UI), tailwindcss-animate 1.0.7, Vite 5.4.19, **motion 12.x (to add)**
+
+## Midnight Alibi pages (`public/midnight-alibi/`)
+
+Static HTML outside the React app, styled by its own `assets/site.css`, in the game's noir look (not the portfolio theme). `npm run midnight-alibi` (`scripts/build-midnight-alibi.cjs`) reads the game repo at `../midnight-alibi` (or `--game <path>`): it copies the game art the pages use and regenerates `how-to-play/`, `ranks/`, `challenges/`, `rooms/` and `suspects/`. Edit the script, not those five pages. The home page (`index.html`), `privacy/`, `delete-account/` and `site.css` are hand-written. Play Console links to the privacy and delete-account pages, so they must stay online.
