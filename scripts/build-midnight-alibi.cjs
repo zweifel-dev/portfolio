@@ -175,7 +175,7 @@ const levelRows = [
 const levelsHtml = levelRows.map(([k, n, liar, m, o]) =>
   `<tr><th scope="row">${LEVEL[k]}</th><td data-label="Suspects">${n}</td><td data-label="A liar">${liar}</td><td data-label="Methods">${m}</td><td data-label="Opens">${o}</td></tr>`).join('');
 
-page('how-to-play', 'How to play', 'The rules of Midnight Alibi: fill in the timeline, question the suspects, and name the killer. Plus the four levels and all eleven solving methods.', `${hero('How to play', 'How to <em>play</em>', 'Every case is a small logic puzzle with a murder at its centre. Here is everything you need to know, from your first Easy case to Expert.')}
+page('how-to-play', 'How to play', 'The rules of Midnight Alibi: fill in the timeline, question the suspects, and name the killer. Plus the four levels and all eleven solving methods.', `${hero('How to play', 'How to <em>play</em>', 'Every case is a small logic puzzle with a murder at its center. This page covers everything from your first Easy case to Expert.')}
 
     <section class="tight">
       <div class="wrap">
@@ -184,7 +184,7 @@ page('how-to-play', 'How to play', 'The rules of Midnight Alibi: fill in the tim
             <div class="prose"><p class="num">01</p><h2>The timeline</h2>
               <p>The Board is a grid. Each <strong>row is a suspect</strong>, each <strong>column is an hour</strong>, and each square is the room that suspect was in.</p>
               <p>Like a Sudoku, <strong>every suspect visits every room exactly once</strong>, and <strong>no two suspects share a room at the same hour</strong>. Tap a square, then pick a room.</p></div>
-            ${phone('board', 'The Board: a grid of suspects by hour, with room icons placed and hunches pencilled in')}
+            ${phone('board', 'The Board: a grid of suspects by hour, with room symbols placed')}
           </li>
           <li class="split flip">
             <div class="prose"><p class="num">02</p><h2>Question everyone</h2>
@@ -194,7 +194,7 @@ page('how-to-play', 'How to play', 'The rules of Midnight Alibi: fill in the tim
           </li>
           <li class="split">
             <div class="prose"><p class="num">03</p><h2>Name the killer</h2>
-              <p>The body was found in one room at the time of death. <strong>Whoever was in that room then is the killer.</strong> As soon as someone is placed at the scene, you can accuse, without finishing the whole board.</p>
+              <p>The body was found in one room at the time of death. <strong>Whoever was in that room then is the killer.</strong> As soon as someone is placed at the scene at that hour, the Accuse button appears, so you don’t have to finish the whole board.</p>
               <p>On <strong>Hard</strong> and <strong>Expert</strong>, the killer’s testimony is a lie. Find the statement that can’t be true.</p></div>
             ${phone('lineup', 'The lineup: full-length suspects waiting for your accusation')}
           </li>
@@ -207,9 +207,9 @@ page('how-to-play', 'How to play', 'The rules of Midnight Alibi: fill in the tim
         <p class="kicker">When you’re stuck</p>
         <h2>Help that teaches</h2>
         <div class="help-grid">
-          <div class="help-card"><h3>${icon('hint')} Hint</h3><p>A nudge first: it names the method and points at the right square. Ask again and it shows the answer, with every step explained.</p></div>
-          <div class="help-card"><h3>${icon('evidence')} Check your work</h3><p>If a square you placed doesn’t fit the clues, the hint outlines it in red and clears it so you can think again.</p></div>
-          <div class="help-card"><h3>${icon('hunch')} Hunch</h3><p>Pencil in the rooms a square might be. Placing a room clears it from the rest of that row and hour.</p></div>
+          <div class="help-card"><h3>${icon('hint')} Hint</h3><p>A nudge comes first. It names the method and points at the right square. Tap Show answer to see the answer, with every step explained.</p></div>
+          <div class="help-card"><h3>${icon('evidence')} Check your work</h3><p>If a square you placed doesn’t fit the clues, the hint outlines it in red. Show answer clears it so you can work it out again.</p></div>
+          <div class="help-card"><h3>${icon('hunch')} Hunch</h3><p>Pencil in the rooms a square might be. When you place a room, it is removed from the hunches in the rest of that row and hour.</p></div>
           <div class="help-card"><h3>${icon('methods')} Methods</h3><p>Each case lists the methods it needs, so you know what to look for before you start.</p></div>
         </div>
         <div class="gallery" style="margin-top: 28px">
@@ -236,8 +236,8 @@ page('how-to-play', 'How to play', 'The rules of Midnight Alibi: fill in the tim
     <section class="band tight" id="methods">
       <div class="wrap">
         <p class="kicker">The methods</p>
-        <h2>Eleven ways to crack an alibi</h2>
-        <p class="intro">Every case can be solved by logic alone, with exactly one answer. These are the methods, from the first you will need to the hardest.</p>
+        <h2>The eleven methods</h2>
+        <p class="intro">Every case can be solved by logic alone, with exactly one answer. These are the methods in order, from the first you will need to the hardest.</p>
         <ul class="methods">${methodsHtml}</ul>
       </div>
     </section>`);
@@ -268,7 +268,7 @@ function rankCard(r) {
 const TIERS = [
   ['The amateur', 'Ink stamps on paper. Learning the trade, one case at a time.', 1, 5],
   ['The police', 'Enamelled shields and brass chevrons. Harder levels and the first challenges.', 6, 13],
-  ['The legend', 'Gold medallions, for the few who make Baker Street.', 14, 18],
+  ['The legend', 'Gold medallions, for the players who reach Baker Street Detective.', 14, 18],
 ];
 const tiersHtml = TIERS.map(([t, d, a, b]) => {
   const cards = [];
@@ -296,15 +296,15 @@ page('ranks', 'The detective ladder', 'Eighteen ranks from Clue Hunter to Baker 
         <div class="prose">
           <p class="kicker">Rank points</p>
           <h2>Harder cases count for more</h2>
-          <p>Each case earns its points once, the first time you close it. <strong>Clean solves</strong> (no hints, no nudges) and <strong>challenges</strong> add a point each, so playing well climbs faster than playing a lot.</p>
+          <p>A case earns its points once, however often you replay it. A <strong>clean solve</strong> (no hints and no nudges) adds a point, and so does each <strong>challenge</strong> you meet on it. You climb faster by playing well than by playing a lot.</p>
           <div class="points">
             <div><b>${P.easy}</b><span>Easy case</span></div><div><b>${P.medium}</b><span>Medium case</span></div>
             <div><b>${P.hard}</b><span>Hard case</span></div><div><b>${P.expert}</b><span>Expert case</span></div>
             <div><b>+${P.clean}</b><span>Clean solve</span></div><div><b>+${P.challenge}</b><span>Challenge met</span></div>
           </div>
-          <p>Some ranks also ask for particular solves, such as Hard cases or challenges, so every level and challenge plays its part. Ranks are climbed in order, your rank never drops, and with Cloud Sync it follows you to your other Android devices.</p>
+          <p>Some ranks also need particular solves, such as Hard cases or challenges met, so every level and challenge counts toward the top. You climb the ranks in order, and your rank never drops. With Cloud Sync, your rank follows you to your other Android devices.</p>
         </div>
-        <div class="gallery" style="grid-template-columns: repeat(2, minmax(0, 1fr))"><figure>${phone('profile-record', 'The detective profile: rank, rank points, streaks and statistics')}</figure><figure>${phone('profile-ladder', 'The ladder in the app, with needs and unlocks for each rank')}</figure></div>
+        <div class="gallery" style="grid-template-columns: repeat(2, minmax(0, 1fr))"><figure>${phone('profile-record', 'The Detective record: rank, rank points, streaks and statistics')}</figure><figure>${phone('profile-ladder', 'The Ladder tab, with what each rank needs and unlocks')}</figure></div>
       </div>
     </section>
 
@@ -321,7 +321,7 @@ page('ranks', 'The detective ladder', 'Eighteen ranks from Clue Hunter to Baker 
         <div>
           <p class="kicker">Looks</p>
           <h2>Dress the desk</h2>
-          <p class="intro">Ranks unlock looks: desk themes, a Scotland Yard case file, badge frames, a gold stamp, fountain-pen ink and a personal wax seal. They never change how a case plays, and nothing that helps with accessibility is ever locked.</p>
+          <p class="intro">Ranks unlock looks: desk themes, a Scotland Yard case file, badge frames, a gold stamp, fountain-pen ink and a personal wax seal. They never change how a case plays.</p>
           <ul class="looks-grid">${looksHtml}</ul>
         </div>
         ${phone('profile-looks', 'The Looks tab: desk themes and case files, some in use and some locked')}
@@ -348,7 +348,7 @@ const parHtml = clock ? `
           <h3 style="margin-top: 24px">Par times for Against the Clock</h3>
           <table class="par"><tbody>${Object.entries(clock).map(([k, v]) => `<tr><th scope="row">${LEVEL[k]}</th><td>${fmt(v)}</td></tr>`).join('')}</tbody></table>` : '';
 
-page('challenges', 'Challenges', 'Cold Case, Against the Clock, From Memory and One Shot: the four challenges in Midnight Alibi, what they ask and where they unlock.', `${hero('Challenges', 'Take on a <em>challenge</em>', 'When you open a new case, you can play it straight or take on a challenge. Meet it and you earn a bonus rank point. Break it and the case simply carries on as a normal one.')}
+page('challenges', 'Challenges', 'Cold Case, Against the Clock, From Memory and One Shot: the four challenges in Midnight Alibi, what they ask and where they unlock.', `${hero('Challenges', 'Take on a <em>challenge</em>', 'When you open a new case, you can choose Normal or take on a challenge. Meet the challenge and you earn a bonus rank point. If you break it, the case carries on as a normal case.')}
 
     <section class="tight">
       <div class="wrap">
@@ -361,11 +361,11 @@ page('challenges', 'Challenges', 'Cold Case, Against the Clock, From Memory and 
         <div class="prose">
           <p class="kicker">How challenges work</p>
           <h2>One rule, one case</h2>
-          <p>You choose a challenge as the case opens, one at a time, and it can’t be added halfway through. A chip under the case title shows the challenge in play, and turns to “Challenge ended” if the rule is broken.</p>
+          <p>You choose one challenge as you open a new case, and you can’t add one partway through. A label under the case title shows the challenge in play. It changes to “Challenge ended” if you break the rule.</p>
           <p><strong>Replays count.</strong> Replay a case you have already closed under a new challenge to earn that challenge’s bonus point. The case’s own points are only earned once.</p>${parHtml}
           <p>Challenges met also count toward the higher ranks, so the top of the ladder needs every challenge on an Expert case.</p>
         </div>
-        ${phone('profile-challenges', 'The Challenges tab: each challenge with its rule and where it unlocks')}
+        ${phone('profile-challenges', 'The Challenges tab: each challenge with its rule and the rank that opens it')}
       </div>
     </section>`);
 
@@ -396,7 +396,7 @@ page('rooms', 'The rooms', 'The twelve rooms of the manor in Midnight Alibi, fro
     <section class="tight">
       <div class="wrap">
         <ul class="room-grid">${roomsHtml}</ul>
-        <p class="note" style="margin-top: 18px">On the board, each room has its own symbol and colour, so you can read the timeline at a glance.</p>
+        <p class="note" style="margin-top: 18px">On the board, each room has its own symbol and color, so you can read the timeline quickly.</p>
       </div>
     </section>`);
 
