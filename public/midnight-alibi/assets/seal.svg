@@ -6,6 +6,7 @@
   </defs>
   <rect width="512" height="512" fill="url(#desk)"/>
   <path d="M0 112L512 0v45L0 157zm0 101L512 101v22L0 235" fill="#eadcb8" opacity=".035"/>
+  <g transform="translate(256 256) scale(1.32) translate(-256 -256)">
   <circle cx="256" cy="264" r="178" fill="#09090d" opacity=".6"/>
   <circle cx="256" cy="256" r="173" fill="url(#brass)"/>
   <circle cx="256" cy="256" r="164" fill="#302820" stroke="#141217" stroke-width="3"/>
@@ -22,4 +23,5 @@
   <path d="M305 107l-15 44 19 26-12 38 17 26" fill="none" stroke="#09090d" stroke-width="6"/>
   <path d="M308 107l-15 44 19 26-12 38 17 26" fill="none" stroke="#b68b48" stroke-width="2" opacity=".7"/>
   <path d="M206 298h100m-78 7h56" stroke="#c7ad7e" opacity=".25"/>
+  </g>
 </svg>
