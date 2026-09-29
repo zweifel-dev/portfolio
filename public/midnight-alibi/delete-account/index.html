@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delete Your Data – Midnight Alibi</title>
+  <meta name="description" content="How to delete your Midnight Alibi Cloud Sync account and data.">
+  <link rel="canonical" href="https://zweifel.tech/midnight-alibi/delete-account/">
+  <link rel="icon" href="/icons/favicon-32x32.png" sizes="32x32">
+  <!-- A static page, not a React route: GitHub Pages serves it with HTTP 200,
+       which Google Play's privacy-policy check requires. -->
+  <style>
+    :root {
+      --fg: hsl(220 13% 18%);
+      --muted: hsl(220 13% 46%);
+      --primary: hsl(220 91% 25%);
+      --accent: hsl(45 93% 47%);
+      --line: hsl(220 13% 90%);
+      --panel: hsl(220 13% 97%);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: #fff; color: var(--fg);
+      font: 16px/1.65 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    header { background: var(--primary); color: #fff; border-bottom: 4px solid var(--accent); }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+    header .wrap { padding-top: 28px; padding-bottom: 24px; }
+    header a { color: #fff; opacity: 0.8; font-size: 0.9rem; text-decoration: none; }
+    header a:hover { opacity: 1; text-decoration: underline; }
+    h1 { margin: 10px 0 4px; font-size: 1.9rem; line-height: 1.2; }
+    .sub { margin: 0; opacity: 0.85; }
+    main { padding: 28px 0 48px; }
+    h2 { margin: 32px 0 8px; font-size: 1.2rem; color: var(--primary); }
+    p, ul, ol { margin: 0 0 14px; }
+    ul, ol { padding-left: 1.25em; }
+    li { margin-bottom: 6px; }
+    .summary { background: var(--panel); border-left: 4px solid var(--accent); padding: 14px 18px; border-radius: 4px; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    a { color: var(--primary); }
+    footer { border-top: 1px solid var(--line); padding: 20px 0 32px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a href="/">zweifel.tech</a>
+      <h1>Delete your Midnight Alibi data</h1>
+      <p class="sub">Midnight Alibi by Brandon Zweifel</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="summary"><strong>In short:</strong> You never need an account to play. An account exists only if you turned on <em>Cloud Sync</em>, and you can delete it and all its data from inside the app at any time.</p>
+
+    <h2>Delete in the app (fastest)</h2>
+    <ol>
+      <li>Open Midnight Alibi and tap <em>Open the casebook</em>.</li>
+      <li>Scroll to the bottom and tap <strong>Settings</strong>.</li>
+      <li>Under <em>Cloud Sync</em>, tap <strong>Delete cloud history</strong>, then tap it again to confirm.</li>
+    </ol>
+    <p>This permanently deletes your Cloud Sync account (an anonymous identifier) and every case record stored with it in our cloud database. It takes effect immediately and cannot be undone.</p>
+
+    <h2>Request deletion by email</h2>
+    <p>If you no longer have the app, email <a href="mailto:Brandon@Zweifel.tech?subject=Midnight%20Alibi%20data%20deletion">Brandon@Zweifel.tech</a> with the subject “Midnight Alibi data deletion” from the Google account you used with Google Play Games. We will delete your Cloud Sync account and data within 30 days and confirm by email.</p>
+
+    <h2>What is deleted</h2>
+    <ul>
+      <li>Your Cloud Sync account identifier (Firebase Authentication).</li>
+      <li>Your synced case history: case numbers, difficulty, times, hints and mistakes.</li>
+      <li>Your synced statistics summary.</li>
+    </ul>
+
+    <h2>What is kept</h2>
+    <ul>
+      <li><strong>Anonymous usage statistics</strong> are not linked to your account and are deleted automatically by Google Analytics after 14 months. You can stop them at any time in <em>Settings → Usage data</em>.</li>
+      <li><strong>Purchases</strong> are records held by Google Play, not by us. Deleting your data doesn’t remove a purchase; <em>Restore purchase</em> in the app still works.</li>
+      <li><strong>Data on your phone</strong> stays until you clear the app’s storage or uninstall the app.</li>
+    </ul>
+
+    <p class="muted">See also the <a href="/midnight-alibi/privacy/">Midnight Alibi privacy policy</a>.</p>
+  </main>
+
+  <footer>
+    <div class="wrap muted">© 2026 Brandon Zweifel · <a href="/">zweifel.tech</a></div>
+  </footer>
+</body>
+</html>
