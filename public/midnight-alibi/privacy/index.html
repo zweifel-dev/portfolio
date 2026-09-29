@@ -6,51 +6,29 @@
   <title>Privacy Policy – Midnight Alibi</title>
   <meta name="description" content="Privacy policy for Midnight Alibi, a logic puzzle game for Android by Brandon Zweifel.">
   <link rel="canonical" href="https://zweifel.tech/midnight-alibi/privacy/">
-  <link rel="icon" href="/icons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" href="../assets/seal.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/icon-512.png" type="image/png" sizes="512x512">
+  <meta name="theme-color" content="#141217">
+  <link rel="stylesheet" href="../assets/site.css">
   <!-- A static page, not a React route: GitHub Pages serves it with HTTP 200,
-       which Google Play's privacy-policy check requires. -->
-  <style>
-    :root {
-      --fg: hsl(220 13% 18%);
-      --muted: hsl(220 13% 46%);
-      --primary: hsl(220 91% 25%);
-      --accent: hsl(45 93% 47%);
-      --line: hsl(220 13% 90%);
-      --panel: hsl(220 13% 97%);
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0; background: #fff; color: var(--fg);
-      font: 16px/1.65 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    }
-    header { background: var(--primary); color: #fff; border-bottom: 4px solid var(--accent); }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
-    header .wrap { padding-top: 28px; padding-bottom: 24px; }
-    header a { color: #fff; opacity: 0.8; font-size: 0.9rem; text-decoration: none; }
-    header a:hover { opacity: 1; text-decoration: underline; }
-    h1 { margin: 10px 0 4px; font-size: 1.9rem; line-height: 1.2; }
-    .sub { margin: 0; opacity: 0.85; }
-    main { padding: 28px 0 48px; }
-    h2 { margin: 32px 0 8px; font-size: 1.2rem; color: var(--primary); }
-    p, ul { margin: 0 0 14px; }
-    ul { padding-left: 1.25em; }
-    li { margin-bottom: 6px; }
-    .summary { background: var(--panel); border-left: 4px solid var(--accent); padding: 14px 18px; border-radius: 4px; }
-    .muted { color: var(--muted); font-size: 0.9rem; }
-    a { color: var(--primary); }
-    footer { border-top: 1px solid var(--line); padding: 20px 0 32px; }
-  </style>
+       which Google Play's checks require. Styled like the game (../assets/site.css). -->
 </head>
 <body>
-  <header>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="doc-bar">
     <div class="wrap">
-      <a href="/">zweifel.tech</a>
+      <a class="brand" href="../"><img src="../assets/seal.svg" alt="" width="34" height="34">Midnight <em>Alibi</em></a>
+      <a class="back" href="../">← Back to the game</a>
+    </div>
+  </header>
+  <div class="doc-head">
+    <div class="wrap">
       <h1>Midnight Alibi Privacy Policy</h1>
       <p class="sub">Effective 28 September 2026</p>
     </div>
-  </header>
+  </div>
 
-  <main class="wrap">
+  <main id="main" class="wrap doc">
     <p class="summary"><strong>In short:</strong> You never need an account to play Midnight Alibi, and your games are saved on your device. The app sends anonymous gameplay statistics to help improve it, which you can turn off. If you choose to turn on Cloud Sync, your case history is backed up under your Google Play Games account. We never collect your name or email, never show ads and never sell data.</p>
 
     <h2>Who we are</h2>
@@ -99,7 +77,15 @@
   </main>
 
   <footer>
-    <div class="wrap muted">© 2026 Brandon Zweifel · <a href="/">zweifel.tech</a></div>
+    <div class="wrap">
+      <span>© 2026 Brandon Zweifel · Made at <a href="/">zweifel.tech</a></span>
+      <nav aria-label="Footer">
+        <a href="../">Midnight Alibi</a>
+        <a href="../privacy/">Privacy policy</a>
+        <a href="../delete-account/">Delete your data</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
   </footer>
 </body>
 </html>
