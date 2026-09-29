@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Midnight Alibi – A murder-mystery logic puzzle</title>
+  <meta name="description" content="Midnight Alibi is a logic puzzle for people who like Sudoku and murder mysteries. Rebuild every suspect's night, hour by hour, and name the killer. For Android.">
+  <link rel="canonical" href="https://zweifel.tech/midnight-alibi/">
+  <meta name="theme-color" content="#141217">
+  <link rel="icon" href="assets/seal.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icon-512.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="assets/icon-512.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Midnight Alibi">
+  <meta property="og:description" content="Every alibi is a clue. A murder-mystery logic puzzle for Android.">
+  <meta property="og:url" content="https://zweifel.tech/midnight-alibi/">
+  <meta property="og:image" content="https://zweifel.tech/midnight-alibi/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="assets/fonts/bodoni-moda.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
+  <!-- A static page, not a React route: GitHub Pages serves this folder as-is.
+       It deliberately uses the game's own look, not the portfolio's. -->
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="./"><img src="assets/seal.svg" alt="" width="34" height="34">Midnight <em>Alibi</em></a>
+      <nav aria-label="Page">
+        <a href="#how">How it plays</a>
+        <a href="#levels">Levels</a>
+        <a href="#price">Price</a>
+        <a href="privacy/">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="title">
+      <div class="wrap">
+        <img class="hero-seal rise" src="assets/seal.svg" alt="" width="76" height="76">
+        <h1 id="title" class="rise d1">Midnight <em>Alibi</em></h1>
+        <p class="tagline rise d2">Every alibi is a clue.</p>
+        <p class="lede rise d2">A logic puzzle for people who like Sudoku and murder mysteries. Rebuild every suspect’s night, hour by hour, until only one of them could have been in the room when the victim died.</p>
+        <div class="actions rise d3">
+          <!-- Launch day: set data-live="true". The link is already the app's Play Store address. -->
+          <a class="btn btn-primary btn-play" data-live="false" href="https://play.google.com/store/apps/details?id=tech.zweifel.midnightalibi" aria-disabled="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.2 2.6 13.6 12l-9.4 9.4a1.6 1.6 0 0 1-.7-1.3V3.9c0-.5.3-1 .7-1.3Zm10.5 10.5 2.3 2.3-10.9 6.2 8.6-8.5Zm3.4-4.8 3 1.7c.9.5.9 1.8 0 2.3l-3 1.7-2.6-2.5 2.6-3.2ZM6.1 2.4 17 8.6l-2.3 2.3-8.6-8.5Z"/></svg>
+            <span class="live">Get it on Google Play</span>
+            <span class="soon">Coming soon to Google Play</span>
+          </a>
+          <a class="btn btn-ghost" href="#how">How it plays</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="premise" aria-labelledby="premise-title">
+      <div class="wrap premise">
+        <div>
+          <p class="kicker">The case</p>
+          <h2 id="premise-title">Someone was killed tonight.</h2>
+          <p>The board is a <strong>timeline</strong>: each row is a suspect, each column is an hour, and each square is the room that suspect was in. Like Sudoku, every suspect visits every room exactly once, and no two suspects share a room in the same hour.</p>
+          <p>Each suspect gives one testimony, and forensics add a little evidence. The body was found in one room at the time of death, so <strong>whoever was there then is the killer</strong>.</p>
+          <p>On Hard and Expert, the killer’s testimony is a lie. You’re also hunting for the one statement that can’t be true.</p>
+        </div>
+
+        <figure class="casefile" aria-label="An example solved timeline">
+          <div class="head"><span>Crime briefing</span><span>No. 1002</span></div>
+          <p class="victim">Lord Ashcombe</p>
+          <p class="found">Found dead · <b>Lounge · 11pm</b></p>
+          <div class="timeline" role="table" aria-label="Where each suspect was, by hour">
+            <div role="row" style="display:contents">
+              <span role="columnheader"></span>
+              <span class="hr" role="columnheader">9pm</span><span class="hr" role="columnheader">10pm</span>
+              <span class="hr crime" role="columnheader">11pm †</span><span class="hr" role="columnheader">12am</span>
+            </div>
+            <div role="row" style="display:contents">
+              <span class="who" role="rowheader">Basil</span>
+              <span class="sq r0" role="cell">Lounge</span><span class="sq r1" role="cell">Garden</span><span class="sq r2" role="cell">Gallery</span><span class="sq r3" role="cell">Consv.</span>
+            </div>
+            <div role="row" style="display:contents">
+              <span class="who" role="rowheader">Nora</span>
+              <span class="sq r1" role="cell">Garden</span><span class="sq r0" role="cell">Lounge</span><span class="sq r3" role="cell">Consv.</span><span class="sq r2" role="cell">Gallery</span>
+            </div>
+            <div role="row" style="display:contents">
+              <span class="who" role="rowheader">Hugo</span>
+              <span class="sq r2" role="cell">Gallery</span><span class="sq r3" role="cell">Consv.</span><span class="sq r0 hit" role="cell">Lounge</span><span class="sq r1" role="cell">Garden</span>
+            </div>
+            <div role="row" style="display:contents">
+              <span class="who" role="rowheader">Esme</span>
+              <span class="sq r3" role="cell">Consv.</span><span class="sq r2" role="cell">Gallery</span><span class="sq r1" role="cell">Garden</span><span class="sq r0" role="cell">Lounge</span>
+            </div>
+          </div>
+          <figcaption class="verdict"><span>Hugo was in the Lounge at 11pm.</span><span class="stamp">Case closed</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="how" class="band" aria-labelledby="how-title">
+      <div class="wrap">
+        <p class="kicker">How it plays</p>
+        <h2 id="how-title">Read. Deduce. Accuse.</h2>
+        <p class="intro">Every case can be solved by logic alone: no guessing, and exactly one answer.</p>
+        <div class="steps">
+          <div class="step">
+            <div class="phone"><img src="assets/screens/testimony.webp" alt="The Testimony tab: four suspects' statements on case-file cards" width="390" height="844" loading="lazy"></div>
+            <h3>Read the testimony</h3>
+            <p>Each suspect makes one statement. Evidence cards add what forensics found.</p>
+          </div>
+          <div class="step">
+            <div class="phone"><img src="assets/screens/board.webp" alt="The Board: a timeline grid of suspects by hour, with room buttons below" width="390" height="844" loading="lazy"></div>
+            <h3>Fill the timeline</h3>
+            <p>Place every suspect in a room for every hour. Pencil in notes, undo freely, and ask for a hint when you’re stuck.</p>
+          </div>
+          <div class="step">
+            <div class="phone"><img src="assets/screens/lineup.webp" alt="The lineup: four suspects standing for the accusation" width="390" height="844" loading="lazy"></div>
+            <h3>Name the killer</h3>
+            <p>Who was in the room at the time of death? Make your accusation and close the case.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="levels" aria-labelledby="levels-title">
+      <div class="wrap">
+        <p class="kicker">Four levels</p>
+        <h2 id="levels-title">From a quiet evening to a house full of liars.</h2>
+        <p class="intro">Each case is graded by the hardest technique it needs. The Methods tab shows which ones, so you learn as you go.</p>
+        <div class="levels">
+          <article class="level"><span class="tab">Level 1</span><h3>Easy</h3><p class="meta">4 suspects</p><p>Direct statements, cross-hatching and singles, with extra clues to get you started.</p></article>
+          <article class="level"><span class="tab">Level 2</span><h3>Medium</h3><p class="meta">5 suspects</p><p>Adds naked and hidden pairs.</p></article>
+          <article class="level"><span class="tab">Level 3</span><h3>Hard</h3><p class="meta">5 suspects · one lies</p><p>Catch the liar, then X-wings and XY-wings.</p></article>
+          <article class="level"><span class="tab">Level 4</span><h3>Expert</h3><p class="meta">6 suspects · one lies</p><p>Needs X-wing or harder: XY-wing and swordfish.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="features-title">
+      <div class="wrap">
+        <p class="kicker">In the casebook</p>
+        <h2 id="features-title">Made for a quiet half hour.</h2>
+        <div class="features">
+          <div class="feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <h3>A new case every day</h3>
+            <p>Today’s case is free for everyone, the same case on every phone.</p>
+          </div>
+          <div class="feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.4 1 1.1 1 1.8V16h5v-.3c0-.7.4-1.4 1-1.8A6 6 0 0 0 12 3Z"/></svg>
+            <h3>Hints that teach</h3>
+            <p>A hint names the technique and gives a nudge first. Ask again and it shows the answer with every step explained.</p>
+          </div>
+          <div class="feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/></svg>
+            <h3>Numbered cases</h3>
+            <p>Every case has a permanent number, so you can tell a friend: “Have you tried 4021?”</p>
+          </div>
+          <div class="feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4-9-4Z"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4"/></svg>
+            <h3>Plays offline</h3>
+            <p>No account and no connection needed. Your progress, stats and detective rank stay on your phone.</p>
+          </div>
+          <div class="feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9H7Z"/><path d="M12 11v5M9.5 13.5 12 16l2.5-2.5"/></svg>
+            <h3>Optional Cloud Sync</h3>
+            <p>Back up your case history with Google Play Games and pick it up on your other Android devices.</p>
+          </div>
+          <div class="feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg>
+            <h3>No ads</h3>
+            <p>No banners and no videos between cases. Nothing interrupts the investigation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="price" aria-labelledby="price-title">
+      <div class="wrap">
+        <p class="kicker">Price</p>
+        <h2 id="price-title">Free to start. Pay once for more.</h2>
+        <div class="pricing">
+          <div class="plan">
+            <p class="price">Free</p>
+            <h3>Open cases</h3>
+            <ul>
+              <li>The first 10 cases of every level: 40 in all</li>
+              <li>Today’s daily case, every day</li>
+              <li>Hints, notes, stats and Cloud Sync</li>
+            </ul>
+          </div>
+          <div class="plan paid">
+            <p class="price">One-time purchase</p>
+            <h3>Case Files: Volume 1</h3>
+            <ul>
+              <li>The first 100 cases of every level: 400 in all</li>
+              <li>Yours to keep, with nothing to renew</li>
+              <li>Restores on a new phone with the same Google account</li>
+            </ul>
+          </div>
+        </div>
+        <p class="fineprint">No subscription and no ads. The price is shown in Google Play before you buy.</p>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="privacy-title">
+      <div class="wrap privacy-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3 5 6v5c0 4.4 3 8.3 7 10 4-1.7 7-5.6 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+        <div>
+          <h2 id="privacy-title" style="font-size:clamp(1.6rem,4vw,2.2rem)">Your data, briefly.</h2>
+          <p>Playing never needs an account. The app sends anonymous gameplay statistics to help improve it, and you can turn that off in Settings. Cloud Sync is off unless you turn it on, and you can delete your cloud history from inside the app at any time.</p>
+          <p><a href="privacy/">Read the privacy policy</a> · <a href="delete-account/">Delete your data</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Brandon Zweifel · Made at <a href="/">zweifel.tech</a></span>
+      <nav aria-label="Footer">
+        <a href="privacy/">Privacy policy</a>
+        <a href="delete-account/">Delete your data</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

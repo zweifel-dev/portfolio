@@ -204,6 +204,62 @@ const Projects = () => {
             );
           })}
         </StaggerContainer>
+
+        {/* Independent Work */}
+        <ScrollReveal>
+          <h2 className="section-title mb-4 mt-20">Independent Work</h2>
+          <p className="text-muted-foreground mb-10 max-w-3xl">
+            Products I design and build on my own time.
+          </p>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          {/* A plain link, not <Link>: /midnight-alibi/ is a static page in public/, outside the React app. */}
+          <a
+            href="/midnight-alibi/"
+            className="group relative block overflow-hidden rounded-xl border border-[#d6a54d]/30 bg-[#141217] text-[#ece4d1] shadow-lg transition-shadow hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d6a54d]"
+          >
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 bg-cover bg-[center_30%] opacity-60 transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+              style={{ backgroundImage: "url('/midnight-alibi/assets/manor-night.webp')" }}
+            />
+            <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-[#141217] via-[#141217]/85 to-[#141217]/20" />
+            <div className="relative grid gap-8 p-8 lg:grid-cols-[1fr_auto] lg:items-center lg:p-12">
+              <div className="max-w-2xl">
+                <div className="mb-5 flex items-center gap-4">
+                  <img src="/midnight-alibi/assets/seal.svg" alt="" className="h-14 w-14 rounded-full shadow-lg" />
+                  <div>
+                    <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#d6a54d]">Android game</p>
+                    <h3 className="text-3xl font-bold lg:text-4xl">
+                      Midnight <em className="text-[#d6a54d]">Alibi</em>
+                    </h3>
+                  </div>
+                </div>
+                <p className="mb-6 leading-relaxed text-[#ece4d1]/80">
+                  A murder-mystery logic puzzle: rebuild every suspect's night, hour by hour, and name the killer. Under
+                  the noir art is a constraint solver that builds and grades a library of 1,200 cases by the deduction
+                  techniques each one needs, a web game wrapped for Android with Capacitor, Google Play Billing, and
+                  optional Firebase cloud sync through Google Play Games.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {['JavaScript', 'Constraint Solving', 'Capacitor', 'Firebase', 'Google Play'].map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-[#ece4d1]/20 px-3 py-1 text-xs text-[#ece4d1]/80"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <span className="inline-flex items-center justify-center gap-2 self-start rounded-lg bg-[#d6a54d] px-6 py-3 font-semibold text-[#141217] transition-colors group-hover:bg-[#eadcb8] lg:self-center">
+                Visit the game
+                <ArrowRight className="h-4 w-4" />
+              </span>
+            </div>
+          </a>
+        </ScrollReveal>
       </section>
     </main>
   );
