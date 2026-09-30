@@ -344,9 +344,11 @@ const challengesHtml = Challenges.active().map((c) =>
   `<p class="opens">${badge(c.unlockRank)} Opens at ${rankLink(c.unlockRank)}</p></li>`).join('');
 const clock = (Challenges.get('clock') || {}).par;
 const fmt = (sec) => `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, '0')}`;
+// Par is per level, for cases of one, two and three stars.
 const parHtml = clock ? `
           <h3 style="margin-top: 24px">Par times for Against the Clock</h3>
-          <table class="par"><tbody>${Object.entries(clock).map(([k, v]) => `<tr><th scope="row">${LEVEL[k]}</th><td>${fmt(v)}</td></tr>`).join('')}</tbody></table>` : '';
+          <p>Every case has one to three stars for how hard it is within its level. The more stars, the more time you get.</p>
+          <table class="par"><thead><tr><td></td><th scope="col">1 star</th><th scope="col">2 stars</th><th scope="col">3 stars</th></tr></thead><tbody>${Object.entries(clock).map(([k, times]) => `<tr><th scope="row">${LEVEL[k]}</th>${times.map((v) => `<td>${fmt(v)}</td>`).join('')}</tr>`).join('')}</tbody></table>` : '';
 
 page('challenges', 'Challenges', 'Cold Case, Against the Clock, From Memory and One Shot: the four challenges in Midnight Alibi, what they ask and where they unlock.', `${hero('Challenges', 'Take on a <em>challenge</em>', 'When you open a new case, you can choose Normal or take on a challenge. Meet the challenge and you earn a bonus rank point. If you break it, the case carries on as a normal case.')}
 
