@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Midnight Alibi – A murder-mystery logic puzzle</title>
-  <meta name="description" content="Midnight Alibi is a logic puzzle for people who like Sudoku and murder mysteries. Rebuild every suspect's night, hour by hour, and name the killer. For Android.">
+  <meta name="description" content="Midnight Alibi is a logic puzzle for people who like Sudoku and murder mysteries. Rebuild every suspect's night, hour by hour, and name the killer. For Android and iOS.">
   <link rel="canonical" href="https://zweifel.tech/midnight-alibi/">
   <meta name="theme-color" content="#141217">
   <link rel="icon" href="/midnight-alibi/assets/seal.svg" type="image/svg+xml">
@@ -12,7 +12,7 @@
   <link rel="apple-touch-icon" href="/midnight-alibi/assets/icon-512.png">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Midnight Alibi">
-  <meta property="og:description" content="Every alibi is a clue. A murder-mystery logic puzzle for Android.">
+  <meta property="og:description" content="Every alibi is a clue. A murder-mystery logic puzzle for Android and iOS.">
   <meta property="og:url" content="https://zweifel.tech/midnight-alibi/">
   <meta property="og:image" content="https://zweifel.tech/midnight-alibi/assets/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -27,7 +27,7 @@
   <header class="topbar">
     <div class="wrap">
       <a class="brand" href="./"><img src="/midnight-alibi/assets/seal.svg" alt="" width="34" height="34">Midnight <em>Alibi</em></a>
-      <nav aria-label="Midnight Alibi"><a href="/midnight-alibi/how-to-play/">How to play</a><a href="/midnight-alibi/ranks/">Ranks</a><a href="/midnight-alibi/challenges/">Challenges</a><a href="/midnight-alibi/rooms/">Rooms</a><a href="/midnight-alibi/suspects/">Suspects</a></nav>
+      <nav aria-label="Midnight Alibi"><a href="/midnight-alibi/how-to-play/">How to play</a><a href="/midnight-alibi/ranks/">Ranks</a><a href="/midnight-alibi/challenges/">Challenges</a><a href="/midnight-alibi/honours/">Honours</a><a href="/midnight-alibi/rooms/">Rooms</a><a href="/midnight-alibi/suspects/">Suspects</a></nav>
     </div>
   </header>
 
@@ -39,11 +39,17 @@
         <p class="tagline rise d2">Every alibi is a clue.</p>
         <p class="lede rise d2">A logic puzzle for people who like Sudoku and murder mysteries. Rebuild every suspect’s night, hour by hour, until only one of them could have been in the room when the victim died.</p>
         <div class="actions rise d3">
-          <!-- Launch day: set data-live="true". The link is already the app's Play Store address. -->
-          <a class="btn btn-primary btn-play" data-live="false" href="https://play.google.com/store/apps/details?id=tech.zweifel.midnightalibi" aria-disabled="true">
+          <!-- Launch day, per store: set data-live="true" and remove aria-disabled.
+               The links are already the app's Play Store and App Store addresses. -->
+          <a class="btn btn-primary btn-store" data-live="false" href="https://play.google.com/store/apps/details?id=tech.zweifel.midnightalibi" aria-disabled="true">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.2 2.6 13.6 12l-9.4 9.4a1.6 1.6 0 0 1-.7-1.3V3.9c0-.5.3-1 .7-1.3Zm10.5 10.5 2.3 2.3-10.9 6.2 8.6-8.5Zm3.4-4.8 3 1.7c.9.5.9 1.8 0 2.3l-3 1.7-2.6-2.5 2.6-3.2ZM6.1 2.4 17 8.6l-2.3 2.3-8.6-8.5Z"/></svg>
             <span class="live">Get it on Google Play</span>
             <span class="soon">Coming soon to Google Play</span>
+          </a>
+          <a class="btn btn-primary btn-store" data-live="false" href="https://apps.apple.com/app/id6817921863" aria-disabled="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>
+            <span class="live">Download on the App Store</span>
+            <span class="soon">Coming soon to the App Store</span>
           </a>
           <a class="btn btn-ghost" href="#how">How it plays</a>
         </div>
@@ -122,7 +128,7 @@
       <div class="wrap">
         <p class="kicker">Phone and tablet</p>
         <h2 id="devices-title">A bigger desk on a tablet.</h2>
-        <p class="intro">The same casebook on every Android screen: a roomier board on a tablet, and everything within thumb’s reach on a phone.</p>
+        <p class="intro">The same casebook on every phone and tablet, Android or iPhone and iPad: a roomier board on a tablet, and everything within thumb’s reach on a phone.</p>
         <div class="devices">
           <figure><div class="tablet"><img src="/midnight-alibi/assets/tablet/investigation.webp" alt="The Board on a 7-inch tablet: a wide suspect timeline with room symbols" width="360" height="640" loading="lazy"></div><figcaption>7-inch tablet</figcaption></figure>
           <figure><div class="phone"><img src="/midnight-alibi/assets/screens/casebook.webp" alt="The casebook on a phone: today’s case and the case library" width="360" height="640" loading="lazy"></div><figcaption>Phone</figcaption></figure>
@@ -148,11 +154,12 @@
       <div class="wrap">
         <p class="kicker">Explore the manor</p>
         <h2 id="explore-title">Before you open a case</h2>
-        <p class="intro">The rules, the ranks and challenges you can earn, and the rooms and people of the house.</p>
+        <p class="intro">The rules, the ranks, challenges and honours you can earn, and the rooms and people of the house.</p>
         <nav class="explore" aria-label="Explore Midnight Alibi">
           <a href="/midnight-alibi/how-to-play/" style="--art: url('/midnight-alibi/assets/rooms/library.webp')"><span class="glyph line"><svg class="ico-lg" viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#board"></use></svg></span><b>How to play</b><span>The rules, four levels and eleven methods.</span></a>
           <a href="/midnight-alibi/ranks/" style="--art: url('/midnight-alibi/assets/rooms/gallery.webp')"><span class="glyph"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="/midnight-alibi/assets/ranks.svg#rank-18"></use></svg></span><b>Ranks</b><span>Eighteen ranks from Clue Hunter to Baker Street.</span></a>
           <a href="/midnight-alibi/challenges/" style="--art: url('/midnight-alibi/assets/rooms/study.webp')"><span class="glyph line"><svg class="ico-lg" viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#ch-clock"></use></svg></span><b>Challenges</b><span>Four optional rules, each worth a bonus rank point.</span></a>
+          <a href="/midnight-alibi/honours/" style="--art: url('/midnight-alibi/assets/rooms/gallery.webp')"><span class="glyph line"><svg class="ico-lg" viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#star"></use></svg></span><b>Honours</b><span>Commendations to earn, and secret ones to discover.</span></a>
           <a href="/midnight-alibi/rooms/" style="--art: url('/midnight-alibi/assets/rooms/conservatory.webp')"><span class="glyph line"><svg class="ico-lg" viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#chapel"></use></svg></span><b>Rooms</b><span>Twelve rooms, one long night.</span></a>
           <a href="/midnight-alibi/suspects/" style="--art: url('/midnight-alibi/assets/rooms/lounge.webp')"><span class="glyph line"><svg class="ico-lg" viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#testimony"></use></svg></span><b>Suspects</b><span>Sixteen people with a reason to be here.</span></a>
         </nav>
@@ -177,7 +184,7 @@
           <div class="feature">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3 5 6v5c0 4.4 3 8.3 7 10 4-1.7 7-5.6 7-10V6l-7-3Z"/><path d="m9 11 3-2 3 2M9 14.5l3-2 3 2"/></svg>
             <h3>Rise through the ranks</h3>
-            <p>Eighteen ranks from Clue Hunter to Baker Street Detective. Each promotion opens a level, a challenge or a new look for your desk.</p>
+            <p>Eighteen ranks from Clue Hunter to Baker Street Detective, and commendations for milestones, challenges and a few secret feats. Each earns a level, a challenge or a new look for your desk.</p>
           </div>
           <div class="feature">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4-9-4Z"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4"/></svg>
@@ -187,7 +194,7 @@
           <div class="feature">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9H7Z"/><path d="M12 11v5M9.5 13.5 12 16l2.5-2.5"/></svg>
             <h3>Optional Cloud Sync</h3>
-            <p>Back up your case history with Google Play Games and pick it up on your other Android devices.</p>
+            <p>Back up your case history with Google Play Games on Android, or Game Center on iPhone and iPad, and pick it up on your other devices of the same kind.</p>
           </div>
           <div class="feature">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg>
@@ -218,11 +225,11 @@
             <ul>
               <li>The first 100 cases of every level: 400 in all</li>
               <li>Yours to keep, with nothing to renew</li>
-              <li>Restores on a new phone with the same Google account</li>
+              <li>Restores on a new device with the same Google or Apple account</li>
             </ul>
           </div>
         </div>
-        <p class="fineprint">No subscription and no ads. The price is shown in Google Play before you buy.</p>
+        <p class="fineprint">No subscription and no ads. The price is shown in Google Play or the App Store before you buy.</p>
       </div>
     </section>
 

@@ -1,0 +1,272 @@
+/* ---------- looks (www/js/cosmetics.js) ----------
+   Every look is defined here, once: the custom properties it sets serve the
+   game and its previews alike. Desks, files and inks set colour tokens on
+   <html> (data-desk / data-file / data-ink), and on a preview's .look-scene
+   or swatch; frames, stamps and seals are classes. Default tokens are in
+   :root of styles.css, which previews share (.look-scene and standard
+   swatches), so a preview shows the look on the standard desk and paper.
+   Emblems (assets/cosmetics/emblems) are masks, so they take the colour of
+   whatever wears them. Adding a look: one block below plus its catalogue
+   line in cosmetics.js. */
+
+/* ---------- desks: colour, light and texture ---------- */
+:is(:root, .look-scene)[data-desk="rainy-precinct"], .look-desk[data-look="rainy-precinct"] {
+  --desk: #11161c; --desk-ink: #e6eaee; --desk-muted: #9aa6b0; --noir: #11161c; --noir-2: #1a2129; --noir-ink: #e6eaee; --noir-muted: #9aa6b0;
+  --noir-line: rgba(230, 234, 238, 0.14); --lamp: rgba(160, 200, 235, 0.14); --fabric: #1f262d; --wood: #3a4550;
+  --desk-detail: repeating-linear-gradient(110deg, rgba(169, 220, 240, 0.09) 0 1px, transparent 1px 12px), radial-gradient(ellipse at 80% 0, rgba(70, 158, 204, 0.27), transparent 70%);
+}
+:is(:root, .look-scene)[data-desk="jazz-club"], .look-desk[data-look="jazz-club"] {
+  --desk: #1a0f1c; --desk-ink: #f1e2ee; --desk-muted: #b799ae; --noir: #1a0f1c; --noir-2: #26172a; --noir-ink: #f1e2ee; --noir-muted: #b799ae;
+  --noir-line: rgba(241, 226, 238, 0.14); --lamp: rgba(232, 120, 190, 0.2); --fabric: #2c1a2f; --wood: #4f2d45;
+  --desk-detail: repeating-linear-gradient(120deg, rgba(184, 107, 192, 0.09) 0 2px, transparent 2px 48px), radial-gradient(ellipse at 15% 0, rgba(188, 82, 156, 0.33), transparent 70%);
+}
+:is(:root, .look-scene)[data-desk="gaslight-study"], .look-desk[data-look="gaslight-study"] {
+  --desk: #1a120c; --desk-ink: #f3e5ca; --desk-muted: #b8a282; --noir: #1a120c; --noir-2: #261a12; --noir-ink: #f3e5ca; --noir-muted: #b8a282;
+  --noir-line: rgba(243, 229, 202, 0.14); --lamp: rgba(255, 180, 90, 0.24); --fabric: #2c1f16; --wood: #5b3d25;
+  --desk-detail: radial-gradient(ellipse at 80% 10%, rgba(233, 163, 81, 0.33), transparent 65%), radial-gradient(60% 40% at 10% 100%, rgba(255, 160, 70, 0.08), transparent 70%);
+}
+:is(:root, .look-scene)[data-desk="manor-library"], .look-desk[data-look="manor-library"] {
+  --desk: #0f1712; --desk-ink: #e8e4d1; --desk-muted: #a4a992; --noir: #0f1712; --noir-2: #17221b; --noir-ink: #e8e4d1; --noir-muted: #a4a992;
+  --noir-line: rgba(232, 228, 209, 0.14); --lamp: rgba(230, 200, 120, 0.14); --fabric: #1d2a22; --wood: #4a3322;
+  --desk-detail: repeating-linear-gradient(90deg, rgba(186, 146, 84, 0.08) 0 16px, transparent 17px 50px), radial-gradient(ellipse at 70% 0, rgba(198, 173, 66, 0.25), transparent 70%);
+}
+:is(:root, .look-scene)[data-desk="moonlit-pier"], .look-desk[data-look="moonlit-pier"] {
+  --desk: #0f1420; --desk-ink: #e3e8f4; --desk-muted: #98a3bd; --noir: #0f1420; --noir-2: #171e2d; --noir-ink: #e3e8f4; --noir-muted: #98a3bd;
+  --noir-line: rgba(227, 232, 244, 0.14); --lamp: rgba(190, 205, 255, 0.2); --fabric: #1b2333; --wood: #34405a;
+  --desk-detail: repeating-linear-gradient(0deg, rgba(150, 176, 219, 0.07) 0 1px, transparent 2px 40px), radial-gradient(circle at 85% 0, rgba(143, 171, 229, 0.36), transparent 60%);
+}
+:is(:root, .look-scene)[data-desk="night-train"], .look-desk[data-look="night-train"] {
+  --desk: #1a1411; --desk-ink: #efe3d4; --desk-muted: #b3a08a; --noir: #1a1411; --noir-2: #261d18; --noir-ink: #efe3d4; --noir-muted: #b3a08a;
+  --noir-line: rgba(239, 227, 212, 0.14); --lamp: rgba(255, 150, 80, 0.2); --fabric: #2b201a; --wood: #5e3b26;
+  --desk-detail: repeating-linear-gradient(90deg, transparent 0 100px, rgba(216, 162, 92, 0.13) 101px 105px), linear-gradient(120deg, rgba(214, 133, 48, 0.19), transparent 60%);
+}
+:is(:root, .look-scene)[data-desk="harbour-fog"], .look-desk[data-look="harbour-fog"] {
+  --desk: #151a1b; --desk-ink: #e4eaea; --desk-muted: #9fadae; --noir: #151a1b; --noir-2: #1e2526; --noir-ink: #e4eaea; --noir-muted: #9fadae;
+  --noir-line: rgba(228, 234, 234, 0.14); --lamp: rgba(200, 220, 215, 0.18); --fabric: #222a2b; --wood: #3e4a4a;
+  --desk-detail: radial-gradient(ellipse at 20% 10%, rgba(185, 215, 210, 0.27), transparent 70%), radial-gradient(ellipse at 100% 50%, rgba(130, 157, 159, 0.15), transparent 70%);
+}
+:is(:root, .look-scene)[data-desk="dawn"], .look-desk[data-look="dawn"] {
+  --desk: #1c1418; --desk-ink: #f5e6ea; --desk-muted: #bfa0aa; --noir: #1c1418; --noir-2: #281c22; --noir-ink: #f5e6ea; --noir-muted: #bfa0aa;
+  --noir-line: rgba(245, 230, 234, 0.14); --lamp: rgba(255, 175, 150, 0.24); --fabric: #2e2027; --wood: #5a3a40;
+  --desk-detail: linear-gradient(165deg, rgba(239, 156, 109, 0.31), rgba(186, 110, 147, 0.13) 38%, transparent 70%);
+}
+:is(:root, .look-scene)[data-desk="glacier"], .look-desk[data-look="glacier"] {
+  --desk: #0e1719; --desk-ink: #e2f2f5; --desk-muted: #93b3ba; --noir: #0e1719; --noir-2: #152226; --noir-ink: #e2f2f5; --noir-muted: #93b3ba;
+  --noir-line: rgba(226, 242, 245, 0.14); --lamp: rgba(150, 220, 240, 0.22); --fabric: #192a2e; --wood: #2f4c54;
+  --desk-detail: repeating-linear-gradient(135deg, rgba(155, 235, 238, 0.09) 0 1px, transparent 2px 54px), linear-gradient(135deg, rgba(84, 167, 182, 0.3), transparent 65%);
+}
+:is(:root, .look-scene)[data-desk="221b"], .look-desk[data-look="221b"] {
+  --desk: #1b0f10; --desk-ink: #f2e4d6; --desk-muted: #bf9f97; --brass: #dcae5c; --noir: #1b0f10; --noir-2: #281618; --noir-ink: #f2e4d6; --noir-muted: #bf9f97;
+  --noir-line: rgba(242, 228, 214, 0.14); --lamp: rgba(255, 196, 120, 0.18); --fabric: #2b1719; --wood: #5a2f2a;
+  --desk-detail: repeating-linear-gradient(45deg, rgba(220, 174, 92, 0.08) 0 1px, transparent 1px 18px), repeating-linear-gradient(-45deg, rgba(220, 174, 92, 0.08) 0 1px, transparent 1px 18px), linear-gradient(120deg, rgba(144, 62, 62, 0.25), transparent 70%);
+}
+/* Where a desk shows: the light behind everything, the board, the casebook
+   (a plain desk colour, now with the desk's texture), and the case list and
+   profile, whose manor photo stays, washed in the desk's light. */
+html[data-desk] body { background-image: var(--desk-detail), radial-gradient(110% 60% at 20% 0%, var(--lamp), transparent 70%); }
+html[data-desk] :is(.page.noir, #casebook) { background-image: var(--desk-detail); }
+html[data-desk] .casebook:not(#casebook) {
+  background-image: var(--desk-detail), linear-gradient(var(--lamp), var(--lamp)), linear-gradient(180deg, rgba(20, 18, 23, 0.7), var(--noir) 440px), url('../assets/manor-night.webp');
+  background-size: auto, auto, auto, cover; background-position: center, center, center, center top; background-attachment: scroll, scroll, scroll, fixed;
+}
+
+/* ---------- case files: paper colour and finish ---------- */
+:is(:root, .look-scene)[data-file="scotland-yard"], .look-file[data-look="scotland-yard"] {
+  --manila: #cfd6dc; --manila-back: #aeb9c3; --manila-edge: #9fb0bd; --card: #e6ebef; --ink: #1d2733; --muted: #4f5d6a; --line: rgba(29, 39, 51, 0.16); --newsprint: #e3e8ec;
+  --file-detail: linear-gradient(90deg, rgba(49, 87, 117, 0.25) 0 7px, transparent 7px), repeating-linear-gradient(0deg, transparent 0 27px, rgba(49, 87, 117, 0.08) 28px 29px);
+}
+:is(:root, .look-scene)[data-file="evidence-envelope"], .look-file[data-look="evidence-envelope"] {
+  --manila: #c9a77a; --manila-back: #a9845a; --manila-edge: #94704a; --card: #e2cfae; --ink: #2e2114; --muted: #6a5236; --line: rgba(46, 33, 20, 0.18); --newsprint: #e6d6ba;
+  --file-detail: repeating-linear-gradient(135deg, rgba(117, 82, 48, 0.07) 0 2px, transparent 2px 6px);
+}
+:is(:root, .look-scene)[data-file="archive"], .look-file[data-look="archive"] {
+  --manila: #d9c9a3; --manila-back: #b8a074; --manila-edge: #a58c5e; --card: #ebdfc4; --ink: #3a2a14; --muted: #6e5634; --line: rgba(58, 42, 20, 0.18); --newsprint: #ece0c2;
+  --file-detail: repeating-linear-gradient(0deg, transparent 0 27px, rgba(97, 77, 40, 0.13) 28px 29px), linear-gradient(90deg, transparent 0 18px, rgba(166, 73, 73, 0.19) 19px 20px, transparent 21px);
+}
+:is(:root, .look-scene)[data-file="weathered"], .look-file[data-look="weathered"] {
+  --manila: #cbbf9f; --manila-back: #a99b78; --manila-edge: #978a68; --card: #dfd6bd; --ink: #2f2a1f; --muted: #645a45; --line: rgba(47, 42, 31, 0.18); --newsprint: #e2d9c0;
+  --file-detail: linear-gradient(100deg, rgba(96, 66, 22, 0.19), transparent 18% 82%, rgba(96, 66, 22, 0.19)), repeating-linear-gradient(2deg, transparent 0 9px, rgba(96, 66, 22, 0.05) 10px 11px);
+}
+:is(:root, .look-scene)[data-file="black-dossier"], .look-file[data-look="black-dossier"] {
+  --manila: #c8c3b8; --manila-back: #3a3836; --manila-edge: #2a2826; --card: #e3dfd6; --ink: #1c1b19; --muted: #55524c; --line: rgba(28, 27, 25, 0.18); --newsprint: #e6e2d8;
+  --file-detail: linear-gradient(90deg, #292725 0 10px, transparent 10px), linear-gradient(0deg, #292725 0 5px, transparent 5px);
+}
+:is(:root, .look-scene)[data-file="coffee"], .look-file[data-look="coffee"] {
+  --manila: #d3bb93; --manila-back: #8f6a45; --manila-edge: #7d5a39; --card: #e6d5b6; --ink: #2b1d10; --muted: #6b4f33; --line: rgba(43, 29, 16, 0.2); --newsprint: #e8d8ba;
+  --file-detail: radial-gradient(ellipse at 86% 30%, transparent 0 25px, rgba(120, 66, 17, 0.2) 26px 29px, transparent 31px), radial-gradient(ellipse at 83% 32%, transparent 0 28px, rgba(120, 66, 17, 0.13) 29px 31px, transparent 33px);
+}
+:is(:root, .look-scene)[data-file="index-card"], .look-file[data-look="index-card"] {
+  --manila: #f2eee4; --manila-back: #d6cfbf; --manila-edge: #c5bca9; --card: #fbf8f1; --ink: #23262e; --muted: #5b5f6b; --line: rgba(35, 38, 46, 0.16); --newsprint: #f5f1e8;
+  --file-detail: linear-gradient(90deg, transparent 0 22px, rgba(190, 60, 60, 0.35) 22px 23px, transparent 23px), repeating-linear-gradient(0deg, transparent 0 21px, rgba(64, 110, 180, 0.22) 21px 22px);
+}
+/* Where a file shows: the testimony and evidence pages, and the report
+   (its folder flap, which covers the file). */
+html[data-file] :is(.page:not(.noir), .closed-file .closure-flap) { background-image: var(--file-detail); }
+
+/* ---------- inks: the colour and hand of pencilled hunches ---------- */
+:is(:root, .look-scene)[data-ink="fountain-pen"], .look-ink[data-look="fountain-pen"] { --note-ink: #fffaf0; --note-font: italic 600 clamp(0.38rem, 1.5vw, 0.5rem)/1.5 var(--display); --ink-face: italic 600 0.72rem var(--display); }
+:is(:root, .look-scene)[data-ink="blue-pencil"], .look-ink[data-look="blue-pencil"] { --note-ink: #dbe7ff; --note-font: 700 clamp(0.38rem, 1.6vw, 0.52rem)/1.5 var(--sans); --ink-face: 700 0.64rem var(--sans); }
+:is(:root, .look-scene)[data-ink="red-pen"], .look-ink[data-look="red-pen"] { --note-ink: #ffdcd4; --note-font: italic 700 clamp(0.38rem, 1.6vw, 0.52rem)/1.5 var(--sans); --ink-face: italic 700 0.64rem var(--sans); }
+:is(:root, .look-scene)[data-ink="typewriter"], .look-ink[data-look="typewriter"] { --note-ink: #fbf6ea; --note-font: 700 clamp(0.38rem, 1.6vw, 0.52rem)/1.5 var(--type); --ink-face: 700 0.64rem var(--type); }
+:is(:root, .look-scene)[data-ink="frost"], .look-ink[data-look="frost"] { --note-ink: #b0f2ff; --note-font: 700 clamp(0.4rem, 1.5vw, 0.52rem)/1.5 var(--display); --ink-face: 700 0.74rem var(--display); }
+:is(:root, .look-scene)[data-ink="lamplight"], .look-ink[data-look="lamplight"] { --note-ink: #ffe6ad; --note-font: italic 600 clamp(0.38rem, 1.5vw, 0.5rem)/1.5 var(--display); --ink-face: italic 600 0.72rem var(--display); }
+:is(:root, .look-scene)[data-ink="pumpkin"], .look-ink[data-look="pumpkin"] { --note-ink: #ffcb8e; --note-font: 800 clamp(0.38rem, 1.6vw, 0.52rem)/1.5 var(--sans); --ink-face: 800 0.62rem var(--sans); }
+:is(:root, .look-scene)[data-ink="sepia"], .look-ink[data-look="sepia"] { --note-ink: #f2dcb8; --note-font: italic 600 clamp(0.38rem, 1.6vw, 0.52rem)/1.5 var(--sans); --ink-face: italic 600 0.64rem var(--sans); }
+
+/* ---------- badge frames ----------
+   --frame is the ring's colour (and --frame-glow its glow). --frame-art adds
+   artwork around the badge, and an outline gives a frame its silhouette. */
+.badge[class*="frame-"], .look-frame[data-look^="frame-"]::before { box-shadow: 0 0 0 2px var(--noir), 0 0 0 4px var(--frame), 0 0 10px var(--frame-glow, transparent); }
+.frame-brass, [data-look="frame-brass"] { --frame: #b68b48; }
+.frame-iron, [data-look="frame-iron"] { --frame: #9faab5; }
+.frame-silver, [data-look="frame-silver"] { --frame: #c9ced4; }
+.frame-gunmetal, [data-look="frame-gunmetal"] { --frame: #5d6670; --frame-glow: rgba(150, 165, 180, 0.35); }
+.frame-chronometer, [data-look="frame-chronometer"] { --frame: #c07a4a; --frame-glow: rgba(192, 122, 74, 0.4); --frame-art: url('../assets/cosmetics/frame-chronometer.svg'); }
+.frame-filigree, [data-look="frame-filigree"] { --frame: #e4d3a6; --frame-glow: rgba(228, 211, 166, 0.35); --frame-art: url('../assets/cosmetics/frame-filigree.svg'); }
+.frame-gold, [data-look="frame-gold"] { --frame: #e2b84f; --frame-glow: rgba(226, 184, 79, 0.45); }
+.frame-top, [data-look="frame-top"] { --frame: #e2b84f; --frame-glow: rgba(226, 184, 79, 0.45); --frame-art: url('../assets/cosmetics/frame-top.svg'); }
+.frame-laurel-stars, [data-look="frame-laurel-stars"] { --frame: #f3d77e; --frame-glow: rgba(243, 215, 126, 0.65); --frame-art: url('../assets/cosmetics/frame-laurel-stars.svg'), url('../assets/cosmetics/frame-top.svg'); }
+.frame-pearl, [data-look="frame-pearl"] { --frame: #ece6dc; --frame-glow: rgba(255, 250, 240, 0.5); }
+/* Foxfire: kitsune-bi, the blue fox fire of folklore. */
+.frame-foxfire, [data-look="frame-foxfire"] { --frame: #80d6ff; --frame-glow: rgba(88, 191, 255, 0.5); --frame-art: url('../assets/cosmetics/frame-foxfire.svg'); }
+.badge.frame-iron, .look-frame[data-look="frame-iron"]::before { outline: 2px dashed var(--frame); outline-offset: 5px; }
+.badge.frame-gunmetal, .look-frame[data-look="frame-gunmetal"]::before { outline: 3px double var(--frame); outline-offset: 5px; border-radius: 22%; }
+.badge.frame-silver, .look-frame[data-look="frame-silver"]::before { outline: 1px solid var(--frame); outline-offset: 7px; }
+.badge.frame-gold, .look-frame[data-look="frame-gold"]::before { outline: 3px double var(--frame); outline-offset: 7px; }
+.badge.frame-pearl, .look-frame[data-look="frame-pearl"]::before { outline: 4px dotted var(--frame); outline-offset: 5px; }
+.badge[class*="frame-"]::after, .look-frame[data-look^="frame-"]::after {
+  content: ''; position: absolute; pointer-events: none;
+  background-image: var(--frame-art, none); background-position: center; background-size: contain; background-repeat: no-repeat;
+}
+.badge[class*="frame-"]::after { inset: -17%; }
+.look-frame[data-look^="frame-"]::after { inset: 4%; }
+
+/* ---------- case-closed stamps ----------
+   --stamp on the manila report, --stamp-lit where it lands on the desk;
+   a border, emblem and finish make each one distinct as well as its colour. */
+.stamp, .look-stamp { --stamp-lit: var(--stamp-on-dark); }
+.stamp, .look-stamp::before {
+  border-style: var(--stamp-border, solid); border-width: var(--stamp-width, 2.5px); border-radius: var(--stamp-radius, 4px);
+  background: var(--stamp-bg, none); font-style: var(--stamp-slant, normal);
+}
+.look-stamp::before { border-width: var(--stamp-width-preview, 1.5px); }
+.stamp-black, [data-look="stamp-black"] { --stamp: #2a2624; --stamp-lit: #d8cfbf; --emblem: url('../assets/cosmetics/emblems/magnifier.svg'); }
+.stamp-gold, [data-look="stamp-gold"] { --stamp: #a8781f; --stamp-lit: #c9953a; --stamp-bg: linear-gradient(135deg, rgba(232, 196, 110, 0.35), rgba(168, 120, 31, 0.1)); --stamp-border: double; --stamp-width: 4px; --stamp-width-preview: 3px; --emblem: url('../assets/cosmetics/emblems/star.svg'); }
+.stamp-ledger, [data-look="stamp-ledger"] { --stamp: #2f6b45; --stamp-lit: #6fbf8a; --stamp-border: dashed; --emblem: url('../assets/cosmetics/emblems/check.svg'); }
+.stamp-frost, [data-look="stamp-frost"] { --stamp: #3c7fa8; --stamp-lit: #8cc6e6; --stamp-border: double; --stamp-width: 4px; --stamp-width-preview: 3px; --emblem: url('../assets/cosmetics/emblems/snowflake.svg'); }
+.stamp-marksman, [data-look="stamp-marksman"] { --stamp: #8f1d2c; --stamp-lit: #e2667a; --stamp-bg: repeating-linear-gradient(-45deg, transparent 0 4px, rgba(143, 29, 44, 0.08) 4px 6px); --stamp-radius: 30px; --emblem: url('../assets/cosmetics/emblems/target.svg'); }
+.stamp-clockwork, [data-look="stamp-clockwork"] { --stamp: #6e757d; --stamp-lit: #d5dbe1; --stamp-border: dotted; --stamp-width: 3px; --stamp-width-preview: 2px; --emblem: url('../assets/cosmetics/emblems/clock.svg'); }
+.stamp-lightning, [data-look="stamp-lightning"] { --stamp: #a8830a; --stamp-lit: #ffe14d; --stamp-slant: italic; --emblem: url('../assets/cosmetics/emblems/bolt.svg'); }
+.stamp-flashbulb, [data-look="stamp-flashbulb"] { --stamp: #6b6b70; --stamp-lit: #f4f4f6; --stamp-bg: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.35), transparent 60%); --stamp-radius: 4px 18px; --emblem: url('../assets/cosmetics/emblems/sparkle.svg'); }
+/* Every stamp but the standard red one carries its emblem before the words. */
+.stamp[class*="stamp-"]::before {
+  content: ''; display: inline-block; width: 0.95em; height: 0.95em; margin-right: 0.35em; vertical-align: -0.12em; background: currentColor;
+  -webkit-mask: var(--emblem) center / contain no-repeat; mask: var(--emblem) center / contain no-repeat;
+}
+
+/* ---------- case-closed seals ----------
+   --seal and --seal-dark colour the wax, --seal-ink the mark pressed into it.
+   The Personal seal presses your own rank badge; the others, their emblem. */
+.seal-personal, [data-look="seal-personal"] { --seal: #b3372d; --seal-dark: #6d1a14; --seal-ring: rgba(109, 26, 20, 0.55); }
+.seal-black-wax, [data-look="seal-black-wax"] { --seal: #3d3738; --seal-dark: #121011; --seal-ink: #e8dcc4; --emblem: url('../assets/cosmetics/emblems/diamond.svg'); }
+.seal-midnight, [data-look="seal-midnight"] { --seal: #33468a; --seal-dark: #141c3d; --seal-ink: #e6ecff; --emblem: url('../assets/cosmetics/emblems/crescent.svg'); }
+.seal-steel, [data-look="seal-steel"] { --seal: #a4adb7; --seal-dark: #4b535c; --seal-ink: #121619; --seal-radius: 18%; --emblem: url('../assets/cosmetics/emblems/shield.svg'); }
+.seal-crosshair, [data-look="seal-crosshair"] { --seal: #66783a; --seal-dark: #252d14; --seal-ink: #edf3d6; --emblem: url('../assets/cosmetics/emblems/crosshair.svg'); }
+.seal-ivory, [data-look="seal-ivory"] { --seal: #f3ead5; --seal-dark: #b9a983; --seal-ink: #4a3d24; --emblem: url('../assets/cosmetics/emblems/quill.svg'); }
+.seal-raven, [data-look="seal-raven"] { --seal: #3f2d52; --seal-dark: #120b1a; --seal-ink: #eadcf7; --emblem: url('../assets/cosmetics/emblems/raven.svg'); }
+.seal-opal, [data-look="seal-opal"] { --seal: #e3eef0; --seal-dark: #8ea6be; --seal-ink: #24323f; --seal-wax: conic-gradient(from 40deg, #e3eef0, #8ea6be, #dfbfdc, #e3eef0); --emblem: url('../assets/cosmetics/emblems/eye.svg'); }
+.closed-file .closed-seal {
+  position: absolute; right: 12px; bottom: -14px; width: 50px; height: 50px; font-size: 1.1rem; border: 0; border-radius: var(--seal-radius, 50%);
+  color: var(--seal-ink, #f6e6c8); background: var(--seal-wax, radial-gradient(circle at 35% 35%, var(--seal), var(--seal-dark)));
+  box-shadow: 0 0 0 3px var(--seal-ring, var(--seal-dark)), 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.closed-file .closed-seal .badge-art { inset: 8px; width: calc(100% - 16px); height: calc(100% - 16px); }
+.closed-file .closed-seal { outline: 0; } /* no frame silhouette or artwork on the wax */
+.closed-file .closed-seal::after { display: none; }
+.closed-file:not(.seal-personal) .closed-seal :is(.badge-art, .badge-letter) { visibility: hidden; }
+.closed-file:not(.seal-personal) .closed-seal::before {
+  content: ''; position: absolute; inset: 24%; background: currentColor;
+  -webkit-mask: var(--emblem) center / contain no-repeat; mask: var(--emblem) center / contain no-repeat;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .closed-file .closed-seal { animation: slam 520ms 700ms cubic-bezier(0.2, 0.7, 0.3, 1) both; }
+  .badge.frame-foxfire::after { animation: foxfire-glimmer 3.5s ease-in-out infinite alternate; }
+  @keyframes foxfire-glimmer { from { filter: drop-shadow(0 0 1px var(--frame)); opacity: 0.7; } to { filter: drop-shadow(0 0 4px var(--frame)); opacity: 1; } }
+}
+
+/* ---------- swatches on the Looks tab ---------- */
+.look-desk { background: var(--desk-detail), var(--desk); }
+.look-file { background: var(--file-detail), linear-gradient(var(--manila) 60%, var(--manila-back) 60%); }
+.look-frame, .look-seal { position: relative; }
+.look-frame::before { content: ''; width: 24px; height: 24px; border-radius: 50%; background: var(--noir); border: 1.5px solid var(--brass); }
+.look-ink::before { content: 'Lib'; padding: 1px 6px; border-radius: 2px; background: var(--room-0); color: var(--note-ink); font: var(--ink-face, 800 0.62rem var(--sans)); }
+.look-stamp::before { content: 'CLOSED'; padding: 0 4px; border-color: var(--stamp-lit); color: var(--stamp-lit); font: 800 0.46rem var(--sans); letter-spacing: 0.1em; transform: rotate(-4deg); }
+.look-seal::before { content: ''; width: 22px; height: 22px; border-radius: 50%; border: 1px dashed var(--noir-muted); }
+.look-seal:not([data-look="standard"])::before { border: 0; border-radius: var(--seal-radius, 50%); background: var(--seal-wax, radial-gradient(circle at 35% 35%, var(--seal), var(--seal-dark))); box-shadow: 0 0 0 2px var(--seal-ring, var(--seal-dark)); }
+.look-seal:not([data-look="standard"]):not([data-look="seal-personal"])::after {
+  content: ''; position: absolute; left: 50%; top: 50%; width: 40%; height: 40%; transform: translate(-50%, -50%); background: var(--seal-ink);
+  -webkit-mask: var(--emblem) center / contain no-repeat; mask: var(--emblem) center / contain no-repeat;
+}
+
+/* ---------- the Looks tab ---------- */
+/* One page that scrolls: no pager, so it also takes the pager's row. */
+.pf-panel.looks-mode { overflow-y: auto; padding: 2px 4px 18px; grid-row: 3 / -1; }
+.look-categories { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.look-categories button { min-height: 44px; padding: 6px; border: 1px solid var(--noir-line); background: var(--noir-2); color: var(--noir-ink); font: 700 0.75rem var(--sans); border-radius: 5px; cursor: pointer; }
+.look-categories button[aria-pressed="true"] { background: var(--brass); color: var(--ink); }
+.looks-mode .look { grid-template-columns: 84px minmax(0, 1fr) auto; min-height: 86px; }
+.looks-mode .look-preview { width: 84px; height: 62px; cursor: zoom-in; overflow: visible; }
+.look-preview::after { pointer-events: none; }
+.look-preview:focus-visible, .look-categories button:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
+.looks-mode .look-frame::before { width: 34px; height: 34px; }
+.looks-mode .look-stamp::before { font-size: 0.6rem; }
+.looks-mode .look-seal::before { width: 36px; height: 36px; }
+.looks-mode .look-seal::after { width: 18px; height: 18px; }
+
+/* ---------- the preview dialog ---------- */
+.look-dialog { width: min(540px, calc(100% - 28px)); max-height: calc(100% - 48px); overflow: auto; padding: 22px; border: 1px solid var(--brass); border-radius: 12px; background: var(--noir); color: var(--noir-ink); box-shadow: 0 24px 80px rgba(0, 0, 0, 0.67); }
+.look-dialog::backdrop { background: rgba(5, 6, 9, 0.85); }
+.look-dialog header { display: flex; align-items: start; justify-content: space-between; gap: 12px; }
+.look-dialog h2 { margin: 0 0 20px; font: 500 1.7rem var(--display); }
+.look-dialog header button { min-width: 44px; min-height: 44px; }
+.look-dialog p { line-height: 1.5; }
+.look-dialog .note { color: var(--noir-muted); }
+.look-dialog .btn-primary { background: var(--brass); color: var(--ink); }
+.look-dialog .btn-primary:disabled { opacity: 0.65; }
+.look-equip { width: 100%; min-height: 48px; }
+.look-feedback { margin-bottom: 0; color: var(--brass); }
+/* The scene a look is shown in: the standard desk and paper (shared tokens),
+   with the look applied by its data attribute or class. */
+.look-scene {
+  position: relative; min-height: 245px; display: grid; place-items: center; padding: 30px;
+  border: 1px solid var(--noir-line); border-radius: 8px; background: var(--desk-detail), var(--noir); color: var(--noir-ink);
+}
+.look-scene > .badge { width: 116px; height: 116px; font-size: 3rem; }
+.look-scene .closed-file { width: 100%; min-height: 150px; color: var(--ink); }
+.look-scene .closed-seal { width: 68px; height: 68px; }
+.look-scene .stamp { font-size: 1.35rem; }
+.look-hunch { width: 100%; text-align: center; font: 0.75rem var(--type); }
+.look-hunch .notes { position: static; margin-top: 20px; gap: 6px; }
+.look-hunch .notes span { padding: 14px 4px; font-size: 1.1rem; }
+.look-paper { width: 100%; padding: 20px; background: var(--file-detail), var(--manila); color: var(--ink); border: 1px solid var(--manila-edge); box-shadow: 5px 6px 0 var(--manila-back); }
+.look-paper span, .look-paper small, .look-desk-scene > span { font: 0.6rem var(--type); letter-spacing: 0.08em; }
+.look-paper h3, .look-desk-scene h3 { font: 500 1.6rem var(--display); margin: 14px 0; }
+.look-paper p { font: 0.9rem/1.6 var(--type); }
+.look-desk-scene { width: 100%; }
+.look-desk-folder { padding: 20px; background: var(--manila); color: var(--ink); transform: rotate(-3deg); box-shadow: 0 6px 16px rgba(0, 0, 0, 0.33); font: 0.8rem/1.8 var(--type); border-top: 5px solid var(--brass); }
+
+/* ---------- look rewards: name, then Preview and Use now ---------- */
+button.reward, button.chip[data-act="preview-look"] { min-height: 44px; align-items: center; cursor: pointer; }
+.reward-look { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; width: 100%; padding: 8px; }
+.reward-look > span { grid-column: 1 / -1; }
+.reward-look b { font: inherit; }
+.reward-look button { min-height: 44px; padding: 0 12px; border: 1px solid rgba(214, 165, 77, 0.5); border-radius: 6px; background: none; color: inherit; font: 700 0.74rem var(--sans); cursor: pointer; }
+.reward-look [data-act="use-look"]:not(:disabled) { border-color: var(--brass); background: var(--brass); color: var(--ink); }
+.reward-look button:disabled { opacity: 0.7; cursor: default; }
+
+@media (max-width: 370px) {
+  .looks-mode .look { grid-template-columns: 64px minmax(0, 1fr) auto; gap: 7px; }
+  .looks-mode .look-preview { width: 64px; }
+  .look-dialog { padding: 16px; }
+  .look-scene { padding: 24px 16px; }
+}
