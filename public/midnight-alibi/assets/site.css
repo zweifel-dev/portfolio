@@ -25,6 +25,11 @@
   --room-ink: #f7efdc;
   --room-0: #33607f; --room-1: #8e3a2f; --room-2: #2f6b4b; --room-3: #604680;
   --lamp: rgba(255, 214, 140, 0.14);
+  /* defaults the game's look styles (looks.css) fall back to */
+  --desk: #141217; --manila-back: #c5b390; --manila-edge: #c4ae7c; --paper-rule: rgba(72, 54, 29, .045);
+  --stamp-on-dark: #e0605a; --note-ink: var(--room-ink); --ink-face: 800 0.62rem var(--sans);
+  --desk-detail: radial-gradient(ellipse at 85% 0, var(--lamp), transparent 65%);
+  --file-detail: repeating-linear-gradient(0deg, transparent 0 25px, var(--paper-rule) 25px 26px);
   --display: 'Bodoni Moda', 'Didot', 'Bodoni 72', Georgia, serif;
   --sans: 'Karla', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --type: 'Courier Prime', 'Courier New', Courier, monospace;
@@ -104,8 +109,9 @@ a:hover { color: var(--brass-hi); }
 .btn-ghost:hover { color: var(--noir-ink); border-color: var(--brass); }
 .btn svg { width: 20px; height: 20px; flex: none; }
 /* Before launch the Play link shows as "Coming soon" and isn't clickable. */
-.btn-play[data-live="false"] { background: transparent; color: var(--brass); border: 1px dashed rgba(214, 165, 77, 0.55); cursor: default; pointer-events: none; }
-.btn-play[data-live="false"] .live, .btn-play[data-live="true"] .soon { display: none; }
+/* Store buttons: "Coming soon" until data-live="true" on launch day. */
+.btn-store[data-live="false"] { background: transparent; color: var(--brass); border: 1px dashed rgba(214, 165, 77, 0.55); cursor: default; pointer-events: none; }
+.btn-store[data-live="false"] .live, .btn-store[data-live="true"] .soon { display: none; }
 
 /* ---------- sections ---------- */
 section { padding: clamp(56px, 9vw, 104px) 0; }
@@ -286,7 +292,7 @@ section.tight { padding: clamp(36px, 6vw, 64px) 0; }
 .gallery figcaption b { display: block; color: var(--noir-ink); font: 500 1.05rem var(--display); }
 
 /* explore cards (home) */
-.explore { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+.explore { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 @media (max-width: 980px) { .explore { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 520px) { .explore { grid-template-columns: 1fr; } }
 .explore a {
@@ -350,18 +356,22 @@ section.tight { padding: clamp(36px, 6vw, 64px) 0; }
 .looks-grid li { padding: 12px; border-radius: 12px; background: var(--noir-2); border: 1px solid var(--noir-line); }
 .looks-grid b { display: block; margin-top: 8px; font-size: 0.92rem; }
 .looks-grid span { font-size: 0.78rem; color: var(--noir-muted); }
-.swatch { display: grid; place-items: center; height: 70px; border-radius: 8px; border: 1px solid var(--noir-line); overflow: hidden; }
-.sw-precinct { background: repeating-linear-gradient(100deg, rgba(200, 220, 240, .12) 0 1px, transparent 1px 6px), radial-gradient(70% 80% at 80% 0%, rgba(160, 200, 235, .3), transparent 70%), #11161c; }
-.sw-gaslight { background: radial-gradient(80% 90% at 70% 10%, rgba(255, 180, 90, .45), transparent 70%), #1a120c; }
-.sw-library { background: repeating-linear-gradient(90deg, rgba(120, 80, 40, .35) 0 10px, transparent 10px 20px), #0f1712; }
-.sw-221b { background: radial-gradient(circle at 50% 50%, rgba(220, 174, 92, .35) 1.5px, transparent 2px) 0 0 / 9px 9px, #1b0f10; }
-.sw-yard { background: linear-gradient(#cfd6dc 60%, #aeb9c3 60%); }
-.sw-ink::before { content: 'Library'; padding: 3px 10px; border-radius: 3px; background: #33607f; color: #fffaf0; font: italic 600 0.95rem var(--display); }
-.sw-frame::before { content: ''; width: 40px; height: 40px; border-radius: 50%; background: #1d1a21; border: 2px solid var(--brass); box-shadow: 0 0 0 3px #1d1a21, 0 0 0 6px var(--ring); }
-.sw-stamp::before { content: 'CASE CLOSED'; padding: 2px 8px; border: 2px solid #a8781f; color: #a8781f; font: 800 0.7rem var(--sans); letter-spacing: 0.12em; transform: rotate(-4deg); background: rgba(232, 196, 110, .2); }
-.sw-seal::before { content: ''; width: 44px; height: 44px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #b3372d, #6d1a14); box-shadow: 0 0 0 3px rgba(109, 26, 20, .6); }
-.sw-laurel { position: relative; }
-.sw-laurel::after { content: ''; position: absolute; inset: 6px; background: url('cosmetics/frame-top.svg') center / contain no-repeat; }
+/* Looks are drawn by the game's own styles (looks.css, copied from the game
+   by scripts/build-midnight-alibi.cjs); these only size them for the page. */
+.look-kind { margin-top: 28px; }
+.look-kind h3 { margin: 0; font: 500 1.3rem var(--display); }
+.look-kind > p { margin: 2px 0 12px; font-size: 0.88rem; color: var(--noir-muted); }
+.swatch { display: grid; place-items: center; height: 76px; padding: 0; border-radius: 8px; border: 1px solid var(--noir-line); background: var(--noir); overflow: hidden; }
+.swatch.look-frame::before { width: 40px; height: 40px; }
+.swatch.look-seal::before { width: 46px; height: 46px; }
+.swatch.look-seal::after { width: 22px; height: 22px; }
+.swatch.look-ink::before { transform: scale(1.6); }
+.swatch .stamp { padding: 3px 9px; font: 800 0.7rem/1.3 var(--sans); letter-spacing: 0.12em; color: var(--stamp-lit); border-color: var(--stamp-lit); transform: rotate(-4deg); animation: none; }
+
+/* ---------- honours ---------- */
+.challenge .earns { color: var(--noir-ink); }
+.honour.sealed .ch-ico { border-style: dashed; }
+.honour .riddle { font: italic 500 1.1rem/1.45 var(--display); color: var(--noir-ink); }
 
 /* ---------- challenges ---------- */
 .challenge-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
