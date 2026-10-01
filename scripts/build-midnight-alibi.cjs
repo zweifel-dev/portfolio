@@ -209,7 +209,7 @@ page('how-to-play', 'How to play', 'The rules of Midnight Alibi: fill in the tim
         <div class="help-grid">
           <div class="help-card"><h3>${icon('hint')} Hint</h3><p>A nudge comes first. It names the method and points at the right square. Tap Show answer to see the answer, with every step explained.</p></div>
           <div class="help-card"><h3>${icon('evidence')} Check your work</h3><p>If a square you placed doesn’t fit the clues, the hint outlines it in red. Show answer clears it so you can work it out again.</p></div>
-          <div class="help-card"><h3>${icon('hunch')} Hunch</h3><p>Pencil in the rooms a square might be. When you place a room, it is removed from the hunches in the rest of that row and hour.</p></div>
+          <div class="help-card"><h3>${icon('hunch')} Hunch</h3><p>Pencil in the rooms a square might be: tap a room once for a maybe, twice to rule it out, and a third time to clear it. When you place a room, it is removed from the maybes in the rest of that row and hour.</p></div>
           <div class="help-card"><h3>${icon('methods')} Methods</h3><p>Each case lists the methods it needs, so you know what to look for before you start.</p></div>
         </div>
         <div class="gallery" style="margin-top: 28px">
