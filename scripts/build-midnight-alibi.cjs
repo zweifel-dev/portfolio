@@ -196,13 +196,13 @@ page('how-to-play', 'How to play', 'The rules of Midnight Alibi: fill in the tim
             ${phone('board', 'The Board: a grid of suspects by hour, with room symbols placed')}
           </li>
           <li class="split flip">
-            <div class="prose"><p class="num">02</p><h2>Question everyone</h2>
+            <div class="prose"><p class="num">02</p><h2>Testimony and evidence</h2>
               <p>The <strong>Testimony</strong> tab has one statement from each suspect. The <strong>Evidence</strong> corkboard holds what forensics found, and evidence is always true.</p>
               <p>Tap a statement to cross it off once you have used it. On the corkboard, tap one pin and then another to run red string between clues.</p></div>
             <div class="gallery" style="grid-template-columns: repeat(2, minmax(0, 1fr))"><figure>${phone('testimony', 'The Testimony tab: each suspect gives one statement')}</figure><figure>${phone('evidence', 'The Evidence corkboard: pinned notes with red string')}</figure></div>
           </li>
           <li class="split">
-            <div class="prose"><p class="num">03</p><h2>Name the killer</h2>
+            <div class="prose"><p class="num">03</p><h2>The accusation</h2>
               <p>The body was found in one room at the time of death. <strong>Whoever was in that room then is the killer.</strong> As soon as someone is placed at the scene at that hour, the Accuse button appears, so you don’t have to finish the whole board. Be sure: accuse the wrong suspect and the case earns no rank points.</p>
               <p>On <strong>Hard</strong> and <strong>Expert</strong>, the killer’s testimony is a lie. Find the statement that can’t be true.</p></div>
             ${phone('lineup', 'The lineup: full-length suspects waiting for your accusation')}
@@ -352,7 +352,7 @@ page('ranks', 'The detective ladder', 'Eighteen ranks from Clue Hunter to Baker 
       <div class="wrap split flip">
         <div>
           <p class="kicker">Looks</p>
-          <h2>Dress the desk</h2>
+          <h2>Looks you can earn</h2>
           <p class="intro">Every rank and most <a href="${BASE}/honours/">commendations</a> earn a look: ${earnable.length} in all, across desk themes, case files, badge frames, stamps, ink and seals. They never change how a case plays.</p>
           ${looksHtml}
         </div>
@@ -391,7 +391,7 @@ const parHtml = clock ? `
           <p>Every case has one to three stars for how hard it is within its level. The more stars, the more time you get.</p>
           <table class="par"><thead><tr><td></td><th scope="col">1 star</th><th scope="col">2 stars</th><th scope="col">3 stars</th></tr></thead><tbody>${Object.entries(clock).map(([k, times]) => `<tr><th scope="row">${LEVEL[k]}</th>${times.map((v) => `<td>${fmt(v)}</td>`).join('')}</tr>`).join('')}</tbody></table>` : '';
 
-page('challenges', 'Challenges', 'Cold Case, Against the Clock, From Memory and One Shot: the four challenges in Midnight Alibi, what they ask and where they unlock.', `${hero('Challenges', 'Take on a <em>challenge</em>', 'When you open a new case, you can choose Normal or take on a challenge. Meet the challenge and you earn a bonus rank point. If you break it, the case carries on as a normal case.')}
+page('challenges', 'Challenges', 'Cold Case, Against the Clock, From Memory and One Shot: the four challenges in Midnight Alibi, what they ask and where they unlock.', `${hero('Challenges', 'The four <em>challenges</em>', 'When you open a new case, you can choose Normal or take on a challenge. Meet the challenge and you earn a bonus rank point. If you break it, the case carries on as a normal case.')}
 
     <section class="tight">
       <div class="wrap">
@@ -403,7 +403,7 @@ page('challenges', 'Challenges', 'Cold Case, Against the Clock, From Memory and 
       <div class="wrap split">
         <div class="prose">
           <p class="kicker">How challenges work</p>
-          <h2>One rule, one case</h2>
+          <h2>One challenge per case</h2>
           <p>You choose one challenge as you open a new case, and you can’t add one partway through. A label under the case title shows the challenge in play. It changes to “Challenge ended” if you break the rule.</p>
           <p><strong>Replays count.</strong> Replay a case you have already closed under a new challenge to earn that challenge’s bonus point, as long as you don’t accuse the wrong suspect. The case’s own points are only earned once.</p>${parHtml}
           <p>Challenges met also count toward the higher ranks, so the top of the ladder needs every challenge on an Expert case. Meet a challenge again and again and it earns a <a href="${BASE}/honours/">commendation</a>, in bronze, silver and gold.</p>
@@ -430,7 +430,7 @@ const openHtml = OPEN.map((c) =>
 const secretHtml = SECRET.map((c) =>
   `<li class="challenge honour sealed"><span class="ch-ico">${icon('sealed', 'ico-lg')}</span><h3>Sealed commendation</h3><p class="riddle">“${e(c.secret)}”</p></li>`).join('');
 
-page('honours', 'Honours', `Commendations in Midnight Alibi: ${OPEN.length} to work toward, ${SECRET.length} secret ones to discover, and the looks they earn.`, `${hero('Honours', 'Earn your <em>honours</em>', `Commendations reward what your play adds up to: challenges met again and again, streaks, milestones and a few secret feats. ${OPEN.length + SECRET.length} in all, most with a look of their own, and once earned they are kept for good.`, `${A}/rooms/gallery.webp`)}
+page('honours', 'Honours', `Commendations in Midnight Alibi: ${OPEN.length} to work toward, ${SECRET.length} secret ones to discover, and the looks they earn.`, `${hero('Honours', 'The <em>commendations</em>', `Commendations reward what your play adds up to: challenges met again and again, streaks, milestones and a few secret feats. ${OPEN.length + SECRET.length} in all, most with a look of their own, and once earned they are kept for good.`, `${A}/rooms/gallery.webp`)}
 
     <section class="tight">
       <div class="wrap">
