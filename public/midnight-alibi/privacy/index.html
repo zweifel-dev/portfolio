@@ -29,7 +29,7 @@
   </div>
 
   <main id="main" class="wrap doc">
-    <p class="summary"><strong>In short:</strong> You never need an account to play Midnight Alibi, and your games are saved on your device. The app sends anonymous gameplay statistics to help improve it, which you can turn off. If you choose to turn on Cloud Sync, your case history is backed up under your Google Play Games account (Android) or your Game Center account (iPhone and iPad), and you appear on public leaderboards under a detective name built from the game’s own lists. We never collect your name or email, never show ads and never sell data.</p>
+    <p class="summary"><strong>In short:</strong> You never need an account to play Midnight Alibi, and your games are saved on your device. The app sends anonymous gameplay statistics to help improve it, which you can turn off. Cloud Sync is on by default: it backs your case history up under your Google Play Games account (Android) or your Game Center account (iPhone and iPad), and you appear on public leaderboards under a detective name built from the game’s own lists. You can turn it off in Settings. We never collect your name or email, never show ads and never sell data.</p>
 
     <h2>Who we are</h2>
     <p>Midnight Alibi is a logic puzzle game for Android, iPhone and iPad, developed by Brandon Zweifel (“we”). This policy explains what happens to information when you use the app. It covers the Midnight Alibi app only.</p>
@@ -38,7 +38,7 @@
     <p>To remember your games, the app saves the following in its own private storage on your phone or tablet:</p>
     <ul>
       <li>your progress in each case (the squares you have filled in and your notes),</li>
-      <li>your case history: for each case you finish or abandon, the case number, difficulty, time taken, hints used and mistakes,</li>
+      <li>your case history: for each case you finish or abandon, the case number, difficulty, time taken, hints used, mistakes, any challenge taken and whether it was a replay,</li>
       <li>your statistics, detective rank, commendations and daily streak,</li>
       <li>simple preferences, such as the difficulty you last chose, the looks you use, whether you have seen the tutorial and your Cloud Sync and usage-data settings,</li>
       <li>your leaderboard name and visibility, and a copy of the last leaderboards you opened, which show other players’ public entries,</li>
@@ -47,13 +47,14 @@
     <p>On iPhone and iPad, the app also keeps a second copy of these saves in its own settings storage on the device, so your progress survives if iOS clears space. This copy never leaves your device.</p>
 
     <h2>Anonymous usage statistics</h2>
-    <p>The app uses Google Analytics for Firebase to count gameplay events, such as a case started, finished, reset or abandoned, a hint used, a difficulty chosen and the tutorial opened. These events include only game details, such as the case number, difficulty, time taken, counts of hints and mistakes, ranks and commendations reached, challenges, the looks you use and which leaderboard you opened. They never include your name, email, account or anything you type. Firebase also records basic device information (device model, operating system version, approximate country) and a random app-instance identifier. The app does not collect the advertising ID (on iPhone and iPad, neither the advertising identifier nor the identifier for vendors), it doesn’t track you across other companies’ apps or websites, and the statistics are not used for advertising.</p>
+    <p>The app uses Google Analytics for Firebase to count gameplay events, such as a case started, finished, reset or abandoned, a hint used, a difficulty chosen and the tutorial opened. These events include only game details, such as the case number, difficulty, time taken, counts of hints and mistakes, ranks and commendations reached, challenges, whether a case was a replay, the looks you use and which leaderboard you opened. They never include your name, email, account or anything you type. Firebase also records basic device information (device model, operating system version, approximate country) and a random app-instance identifier. The app also reports whether it was installed from the app store or is running on an emulator, a test device or a development build, so test installs can be told apart from players. The app does not collect the advertising ID (on iPhone and iPad, neither the advertising identifier nor the identifier for vendors), it doesn’t track you across other companies’ apps or websites, and the statistics are not used for advertising.</p>
     <p>You can turn this off at any time in <em>Settings → Usage data</em>. Google processes this data under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 
-    <h2>Optional Cloud Sync</h2>
-    <p>Cloud Sync is off unless you turn it on. The app offers it once, after the tutorial, and it is always in <em>Settings</em>. When you turn it on, the app signs in with your Google Play Games account on Android, or your Game Center account on iPhone and iPad, and stores your case history (the same details listed above) in Google Cloud Firestore. Only you can read it, and our server reads it only to build your leaderboard entry. This lets you restore your history on a new device and share it between your Android devices, or between your Apple devices.</p>
+    <h2>Cloud Sync</h2>
+    <p>Cloud Sync is on by default. After the tutorial, the app signs in with your Google Play Games account on Android, or your Game Center account on iPhone and iPad, and tells you how to turn Cloud Sync off. If that sign-in can’t finish, for example because you’re offline, the app tries again the next time you open it. If you cancel it, Cloud Sync stays off. While Cloud Sync is on, the app stores your case history (the same details listed above) in Google Cloud Firestore. Only you can read it, and our server reads it only to build your leaderboard entry. This lets you restore your history on a new device and share it between your Android devices, or between your Apple devices.</p>
+    <p>You can turn Cloud Sync off or back on at any time in <em>Settings → Cloud Sync</em>. Turning it off stops saving your history to the cloud and removes your leaderboard entry within 15 minutes. History already in the cloud stays until you delete it, as described under Deleting your data. Once you turn Cloud Sync off, the app doesn’t turn it back on by itself on that device, unless you reinstall the app or clear its data.</p>
     <p>The app receives only an anonymous account identifier from Firebase Authentication. It does not receive your Play Games or Game Center name, email or player profile. Android and Apple devices are never synced with each other.</p>
-    <p>Cloud Sync players also appear on two public leaderboards, all time and this week. Your entry shows a detective name you build from the game’s own lists of first names and surnames (never your real name), a four-digit tag, your rank, points, case statistics, commendations and the looks you use. The entry also includes when you last earned points, which is used to break ties and isn’t shown in the app. Your private leaderboard profile, which only you can read, also stores your device’s time-zone offset. It is used to judge commendations that depend on the time of day. You can change the name or hide yourself in <em>Settings → Leaderboards</em> while Cloud Sync is on. Hiding removes your entry within 15 minutes. To build your entry, our server keeps a private working copy of your synced case history, which nobody else can read. Turning Cloud Sync off leaves your entry in place, so hide yourself first or delete your cloud history if you want it gone.</p>
+    <p>Cloud Sync players also appear on two public leaderboards, all time and this week. Your entry shows a detective name you build from the game’s own lists of first names and surnames (never your real name), a four-digit tag, your rank, points, case statistics, commendations and the looks you use. The entry also includes when you last earned points, which is used to break ties and isn’t shown in the app. Your private leaderboard profile, which only you can read, also stores your device’s time-zone offset. It is used to judge commendations that depend on the time of day. You can change the name or hide yourself in <em>Settings → Leaderboards</em> while Cloud Sync is on. Hiding removes your entry within 15 minutes. To build your entry, our server keeps a private working copy of your synced case history, which nobody else can read. If your device is offline when you turn Cloud Sync off, your entry stays until you turn Cloud Sync back on and hide yourself, or delete your cloud history.</p>
 
     <h2>Deleting your data</h2>
     <ul>
@@ -64,10 +65,10 @@
 
     <h2>Updates and purchases</h2>
     <p>When you open the app, it asks the store it came from (Google Play on Android, the App Store on iPhone and iPad) whether a newer version is available and which of the app’s in-app purchases you own. Purchases, such as Case Files: Volume 1, are made and processed entirely by Google Play or Apple, under their privacy policies. We don’t receive your payment details. To protect the cloud service from abuse, the app asks Google Play (Android) or Apple (iPhone and iPad) to confirm it is a genuine, unmodified copy, and this check sends no personal information to us.</p>
-    <p>Every case is built into the app, and play works offline. The app connects to the internet only for the app store, usage statistics, the genuine-app check described above, the leaderboards (when you open them) and, if you turn it on, Cloud Sync.</p>
+    <p>Every case is built into the app, and play works offline. The app connects to the internet only for the app store, usage statistics, the genuine-app check described above, the leaderboards (when you open them) and Cloud Sync, while it’s on.</p>
 
     <h2>Sharing</h2>
-    <p>We don’t sell your data. The only data we make visible to other people is your leaderboard entry, which is described under Optional Cloud Sync. The services above (Google Play or the App Store, Game Center, Google Analytics for Firebase, Firebase Authentication, Firebase App Check, Cloud Firestore and Cloud Functions for Firebase) process it on our behalf. All data is encrypted in transit.</p>
+    <p>We don’t sell your data. The only data we make visible to other people is your leaderboard entry, which is described under Cloud Sync. The services above (Google Play or the App Store, Game Center, Google Analytics for Firebase, Firebase Authentication, Firebase App Check, Cloud Firestore and Cloud Functions for Firebase) process it on our behalf. All data is encrypted in transit.</p>
 
     <h2>Children</h2>
     <p>The app is not directed at children and doesn’t knowingly collect personal information from anyone.</p>
@@ -76,7 +77,7 @@
     <p>If this policy changes, the updated version will be posted on this page with a new effective date.</p>
 
     <h2>Contact</h2>
-    <p>Questions about this policy or your privacy: email <a href="mailto:Brandon@Zweifel.tech">Brandon@Zweifel.tech</a> or use the <a href="/contact">contact page</a>.</p>
+    <p>For questions about this policy or your privacy, email <a href="mailto:Brandon@Zweifel.tech">Brandon@Zweifel.tech</a> or use the <a href="/contact">contact page</a>.</p>
   </main>
 
   <footer>
