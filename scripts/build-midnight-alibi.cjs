@@ -203,9 +203,9 @@ page('how-to-play', 'How to play', 'The rules of Midnight Alibi: fill in the tim
           </li>
           <li class="split">
             <div class="prose"><p class="num">03</p><h2>The accusation</h2>
-              <p>The body was found in one room at the time of death. <strong>Whoever was in that room then is the killer.</strong> As soon as someone is placed at the scene at that hour, the Accuse button appears, so you don’t have to finish the whole board. Be sure: accuse the wrong suspect and the case earns no rank points.</p>
+              <p>The body was found in one room at the time of death. <strong>Whoever was in that room then is the killer.</strong> As soon as someone is placed at the scene at that hour, the Accuse button appears, so you don’t have to finish the whole board. Accuse shows the suspect your board puts there and asks before naming them. Be sure: a wrong accusation ends that telling of the case without a verdict, and only a replay with new names and rooms can still earn its rank points.</p>
               <p>On <strong>Hard</strong> and <strong>Expert</strong>, the killer’s testimony is a lie. Find the statement that can’t be true.</p></div>
-            ${phone('lineup', 'The lineup: full-length suspects waiting for your accusation')}
+            ${phone('accuse', 'The accusation: the suspect your board places at the scene, and the question before you name them')}
           </li>
         </ol>
       </div>
@@ -235,10 +235,10 @@ page('how-to-play', 'How to play', 'The rules of Midnight Alibi: fill in the tim
         <p class="kicker">Four levels</p>
         <h2>Graded by the hardest method a case needs</h2>
         <table class="levels-table">
-          <thead><tr><th>Level</th><th>Suspects</th><th>A liar</th><th>Methods</th><th>Opens (free play)</th></tr></thead>
+          <thead><tr><th>Level</th><th>Suspects</th><th>A liar</th><th>Methods</th><th>Opens</th></tr></thead>
           <tbody>${levelsHtml}</tbody>
         </table>
-        <p class="note" style="margin-top: 14px">Today’s case is always open, whatever its level. <em>Case Files: Volume 1</em> opens every level at once.</p>
+        <p class="note" style="margin-top: 14px">Today’s case is always open, whatever its level. <em>Case Files: Volume 1</em> adds cases to every level, and Hard and Expert still open with rank.</p>
       </div>
     </section>
 
@@ -318,14 +318,14 @@ page('ranks', 'The detective ladder', 'Eighteen ranks from Clue Hunter to Baker 
         <div class="prose">
           <p class="kicker">Rank points</p>
           <h2>Harder cases count for more</h2>
-          <p>A case’s <strong>first solve</strong> sets its points: more for harder levels, less 1 for each answer you reveal (a solved case always earns at least 1). A <strong>clean solve</strong> (no hints and no nudges) adds a point, and so does each <strong>challenge</strong> you meet on it. Replays can still earn challenge points, but not the case’s own points again.</p>
+          <p>A case earns its points only on its <strong>first solve without a wrong accusation</strong>. Harder levels earn more, and each answer you reveal takes 1 off (a solved case always earns at least 1). A <strong>clean solve</strong> (no hints and no nudges) adds a point, and so does a <strong>challenge</strong> you meet on it. Challenges count only on the solve that earns a case’s points, and a replay of a case that has already earned them earns nothing.</p>
           <div class="points">
             <div><b>${P.easy}</b><span>Easy case</span></div><div><b>${P.medium}</b><span>Medium case</span></div>
             <div><b>${P.hard}</b><span>Hard case</span></div><div><b>${P.expert}</b><span>Expert case</span></div>
             <div><b>−1</b><span>Each answer shown</span></div><div><b>+${P.clean}</b><span>Clean solve</span></div>
-            <div><b>+${P.challenge}</b><span>Challenge met</span></div><div><b>0</b><span>After a wrong accusation</span></div>
+            <div><b>+${P.challenge}</b><span>Challenge met</span></div><div><b>0</b><span>After a wrong accusation on a replay</span></div>
           </div>
-          <p><strong>Be sure before you accuse.</strong> Name the wrong suspect before a case is solved and that case earns nothing on the ladder, ever: no points, no bonuses. You climb faster by playing well than by playing a lot.</p>
+          <p><strong>Be sure before you accuse.</strong> Accuse shows the suspect your board places at the scene and asks before naming them. If that suspect isn’t the killer, the telling ends without a verdict, and the killer stays hidden. A replay then tells the case again with new names and rooms, and it can still earn the points. A wrong accusation on that replay means the case earns nothing on the ladder, ever. You climb faster by playing well than by playing a lot.</p>
           <p>Some ranks also need particular solves, such as Hard cases or challenges met, so every level and challenge counts toward the top. You climb the ranks in order, and your rank never drops. With Cloud Sync, your rank comes back on your other devices of the same kind: Android with Google Play Games, iPhone and iPad with Game Center.</p>
         </div>
         <div class="gallery" style="grid-template-columns: repeat(2, minmax(0, 1fr))"><figure>${phone('profile-record', 'The Detective record: rank, rank points, streaks and statistics')}</figure><figure>${phone('profile-ladder', 'The Ladder tab, with what each rank needs and unlocks')}</figure></div>
@@ -367,7 +367,7 @@ const HOW_IT_ENDS = {
   'cold-case': 'Asking for a hint, a nudge or a check ends it. You’re warned first.',
   clock: 'The timer counts down to par. It only runs while the case is on screen.',
   'from-memory': 'Turning Hunch on ends it. You’re warned first.',
-  'one-shot': 'A wrong accusation ends it. The lineup reminds you before you choose.',
+  'one-shot': 'A wrong accusation ends it. Before you accuse, the game shows who your board places at the scene.',
 };
 const noText = Challenges.active().filter((c) => !HOW_IT_ENDS[c.id]);
 if (noText.length) throw new Error(`Add a line in HOW_IT_ENDS for: ${noText.map((c) => c.id).join(', ')}`);
@@ -405,7 +405,7 @@ page('challenges', 'Challenges', 'Cold Case, Against the Clock, From Memory and 
           <p class="kicker">How challenges work</p>
           <h2>One challenge per case</h2>
           <p>You choose one challenge as you open a new case, and you can’t add one partway through. A label under the case title shows the challenge in play. It changes to “Challenge ended” if you break the rule.</p>
-          <p><strong>Replays count.</strong> Replay a case you have already closed under a new challenge to earn that challenge’s bonus point, as long as you don’t accuse the wrong suspect. The case’s own points are only earned once.</p>${parHtml}
+          <p><strong>A challenge counts once per case.</strong> It earns its bonus point only on the solve that earns the case’s rank points. A replay of a case that has already earned them plays as a normal case, with no challenge to choose, and earns no points. After one wrong accusation, a replay tells the case again with new names and rooms, and can still earn the points and the bonus.</p>${parHtml}
           <p>Challenges met also count toward the higher ranks, so the top of the ladder needs every challenge on an Expert case. Meet a challenge again and again and it earns a <a href="${BASE}/honours/">commendation</a>, in bronze, silver and gold.</p>
         </div>
         ${phone('profile-challenges', 'The Challenges tab: each challenge with its rule and the rank that opens it')}
@@ -455,7 +455,7 @@ page('honours', 'Honours', `Commendations in Midnight Alibi: ${OPEN.length} to w
         <div class="prose">
           <p class="kicker">How they work</p>
           <h2>Earned by playing well</h2>
-          <p>Commendations are worked out from your case history, so with Cloud Sync they come back on your other devices of the same kind. A case where you accused the wrong suspect before solving it counts for nothing, as on the <a href="${BASE}/ranks/">ladder</a>. New commendations are announced when you close a case, with the look ready to use.</p>
+          <p>Commendations are worked out from your case history, so with Cloud Sync they come back on your other devices of the same kind. As on the <a href="${BASE}/ranks/">ladder</a>, a case counts only from the solve that earned its rank points. New commendations are announced when you close a case, with the look ready to use.</p>
         </div>
         ${phone('profile-honours', 'The Honours tab: a challenge commendation at bronze, with the looks for silver and gold')}
       </div>
