@@ -71,47 +71,70 @@ html[data-desk] .casebook:not(#casebook) {
 }
 
 /* ---------- case files: paper colour and finish ---------- */
+/* Each file has its own newsprint, and its own fold for the briefing tab:
+   the same paper about 10% darker, shadowed in the file's ink. */
 :is(:root, .look-scene)[data-file="scotland-yard"], .look-file[data-look="scotland-yard"] {
   --manila: #cfd6dc; --manila-back: #aeb9c3; --manila-edge: #9fb0bd; --card: #e6ebef; --ink: #1d2733; --muted: #4f5d6a; --line: rgba(29, 39, 51, 0.16); --newsprint: #e3e8ec;
+  --newsprint-fold: #c8d0d6; --fold-shadow: -2px 3px 5px rgba(29, 39, 51, .28), inset 1px -1px 0 rgba(29, 39, 51, .2);
   --file-detail: linear-gradient(90deg, rgba(49, 87, 117, 0.25) 0 7px, transparent 7px), repeating-linear-gradient(0deg, transparent 0 27px, rgba(49, 87, 117, 0.08) 28px 29px);
 }
 :is(:root, .look-scene)[data-file="evidence-envelope"], .look-file[data-look="evidence-envelope"] {
-  --manila: #c9a77a; --manila-back: #a9845a; --manila-edge: #94704a; --card: #e2cfae; --ink: #2e2114; --muted: #6a5236; --line: rgba(46, 33, 20, 0.18); --newsprint: #e6d6ba;
+  --manila: #c9a77a; --manila-back: #a9845a; --manila-edge: #94704a; --card: #e2cfae; --ink: #2e2114; --muted: #4d3c27; --line: rgba(46, 33, 20, 0.18); --newsprint: #e6d6ba;
+  --newsprint-fold: #d1be9e; --fold-shadow: -2px 3px 5px rgba(46, 33, 20, .28), inset 1px -1px 0 rgba(46, 33, 20, .2);
   --file-detail: repeating-linear-gradient(135deg, rgba(117, 82, 48, 0.07) 0 2px, transparent 2px 6px);
 }
 :is(:root, .look-scene)[data-file="archive"], .look-file[data-look="archive"] {
-  --manila: #d9c9a3; --manila-back: #b8a074; --manila-edge: #a58c5e; --card: #ebdfc4; --ink: #3a2a14; --muted: #6e5634; --line: rgba(58, 42, 20, 0.18); --newsprint: #ece0c2;
+  --manila: #d9c9a3; --manila-back: #b8a074; --manila-edge: #a58c5e; --card: #ebdfc4; --ink: #3a2a14; --muted: #665030; --line: rgba(58, 42, 20, 0.18); --newsprint: #ece0c2;
+  --newsprint-fold: #d8c9a5; --fold-shadow: -2px 3px 5px rgba(58, 42, 20, .28), inset 1px -1px 0 rgba(58, 42, 20, .2);
   --file-detail: repeating-linear-gradient(0deg, transparent 0 27px, rgba(97, 77, 40, 0.13) 28px 29px), linear-gradient(90deg, transparent 0 18px, rgba(166, 73, 73, 0.19) 19px 20px, transparent 21px);
 }
 :is(:root, .look-scene)[data-file="weathered"], .look-file[data-look="weathered"] {
-  --manila: #cbbf9f; --manila-back: #a99b78; --manila-edge: #978a68; --card: #dfd6bd; --ink: #2f2a1f; --muted: #645a45; --line: rgba(47, 42, 31, 0.18); --newsprint: #e2d9c0;
+  --manila: #cbbf9f; --manila-back: #a99b78; --manila-edge: #978a68; --card: #dfd6bd; --ink: #2f2a1f; --muted: #554c3b; --line: rgba(47, 42, 31, 0.18); --newsprint: #e2d9c0;
+  --newsprint-fold: #ccc2a5; --fold-shadow: -2px 3px 5px rgba(47, 42, 31, .28), inset 1px -1px 0 rgba(47, 42, 31, .2);
   --file-detail: linear-gradient(100deg, rgba(96, 66, 22, 0.19), transparent 18% 82%, rgba(96, 66, 22, 0.19)), repeating-linear-gradient(2deg, transparent 0 9px, rgba(96, 66, 22, 0.05) 10px 11px);
 }
 :is(:root, .look-scene)[data-file="black-dossier"], .look-file[data-look="black-dossier"] {
-  --manila: #c8c3b8; --manila-back: #3a3836; --manila-edge: #2a2826; --card: #e3dfd6; --ink: #1c1b19; --muted: #55524c; --line: rgba(28, 27, 25, 0.18); --newsprint: #e6e2d8;
+  --manila: #c8c3b8; --manila-back: #3a3836; --manila-edge: #2a2826; --card: #e3dfd6; --ink: #1c1b19; --muted: #524f49; --line: rgba(28, 27, 25, 0.18); --newsprint: #e6e2d8;
+  --tab-ink: var(--manila); /* the dark tab: its label in the paper colour */
+  --newsprint-fold: #d0cabd; --fold-shadow: -2px 3px 5px rgba(28, 27, 25, .28), inset 1px -1px 0 rgba(28, 27, 25, .2);
   --file-detail: linear-gradient(90deg, #292725 0 10px, transparent 10px), linear-gradient(0deg, #292725 0 5px, transparent 5px);
 }
 :is(:root, .look-scene)[data-file="coffee"], .look-file[data-look="coffee"] {
-  --manila: #d3bb93; --manila-back: #8f6a45; --manila-edge: #7d5a39; --card: #e6d5b6; --ink: #2b1d10; --muted: #6b4f33; --line: rgba(43, 29, 16, 0.2); --newsprint: #e8d8ba;
+  --manila: #d3bb93; --manila-back: #8f6a45; --manila-edge: #7d5a39; --card: #e6d5b6; --ink: #2b1d10; --muted: #60472e; --line: rgba(43, 29, 16, 0.2); --newsprint: #e8d8ba;
+  --tab-ink: #fffaf0; /* only near-white reaches 4.5:1 on the brown tab */
+  --newsprint-fold: #d3c19e; --fold-shadow: -2px 3px 5px rgba(43, 29, 16, .28), inset 1px -1px 0 rgba(43, 29, 16, .2);
   --file-detail: radial-gradient(ellipse at 86% 30%, transparent 0 25px, rgba(120, 66, 17, 0.2) 26px 29px, transparent 31px), radial-gradient(ellipse at 83% 32%, transparent 0 28px, rgba(120, 66, 17, 0.13) 29px 31px, transparent 33px);
 }
 :is(:root, .look-scene)[data-file="index-card"], .look-file[data-look="index-card"] {
   --manila: #f2eee4; --manila-back: #d6cfbf; --manila-edge: #c5bca9; --card: #fbf8f1; --ink: #23262e; --muted: #5b5f6b; --line: rgba(35, 38, 46, 0.16); --newsprint: #f5f1e8;
+  --newsprint-fold: #e2dbca; --fold-shadow: -2px 3px 5px rgba(35, 38, 46, .28), inset 1px -1px 0 rgba(35, 38, 46, .2);
   --file-detail: linear-gradient(90deg, transparent 0 22px, rgba(190, 60, 60, 0.35) 22px 23px, transparent 23px), repeating-linear-gradient(0deg, transparent 0 21px, rgba(64, 110, 180, 0.22) 21px 22px);
 }
 /* Where a file shows: the testimony and evidence pages, and the report
    (its folder flap, which covers the file). */
 html[data-file] :is(.page:not(.noir), .closed-file .closure-flap) { background-image: var(--file-detail); }
 
-/* ---------- inks: the colour and hand of pencilled hunches ---------- */
-:is(:root, .look-scene)[data-ink="fountain-pen"], .look-ink[data-look="fountain-pen"] { --note-ink: #fffaf0; --note-font: italic 600 clamp(0.38rem, 1.5vw, 0.5rem)/1.5 var(--display); --ink-face: italic 600 0.72rem var(--display); }
-:is(:root, .look-scene)[data-ink="blue-pencil"], .look-ink[data-look="blue-pencil"] { --note-ink: #dbe7ff; --note-font: 700 clamp(0.38rem, 1.6vw, 0.52rem)/1.5 var(--sans); --ink-face: 700 0.64rem var(--sans); }
-:is(:root, .look-scene)[data-ink="red-pen"], .look-ink[data-look="red-pen"] { --note-ink: #ffdcd4; --note-font: italic 700 clamp(0.38rem, 1.6vw, 0.52rem)/1.5 var(--sans); --ink-face: italic 700 0.64rem var(--sans); }
-:is(:root, .look-scene)[data-ink="typewriter"], .look-ink[data-look="typewriter"] { --note-ink: #fbf6ea; --note-font: 700 clamp(0.38rem, 1.6vw, 0.52rem)/1.5 var(--type); --ink-face: 700 0.64rem var(--type); }
-:is(:root, .look-scene)[data-ink="frost"], .look-ink[data-look="frost"] { --note-ink: #b0f2ff; --note-font: 700 clamp(0.4rem, 1.5vw, 0.52rem)/1.5 var(--display); --ink-face: 700 0.74rem var(--display); }
-:is(:root, .look-scene)[data-ink="lamplight"], .look-ink[data-look="lamplight"] { --note-ink: #ffe6ad; --note-font: italic 600 clamp(0.38rem, 1.5vw, 0.5rem)/1.5 var(--display); --ink-face: italic 600 0.72rem var(--display); }
-:is(:root, .look-scene)[data-ink="pumpkin"], .look-ink[data-look="pumpkin"] { --note-ink: #ffcb8e; --note-font: 800 clamp(0.38rem, 1.6vw, 0.52rem)/1.5 var(--sans); --ink-face: 800 0.62rem var(--sans); }
-:is(:root, .look-scene)[data-ink="sepia"], .look-ink[data-look="sepia"] { --note-ink: #f2dcb8; --note-font: italic 600 clamp(0.38rem, 1.6vw, 0.52rem)/1.5 var(--sans); --ink-face: italic 600 0.64rem var(--sans); }
+/* ---------- inks: the colour and hand of pencilled hunches ----------
+   --note-font has no size of its own: a hunch chip takes its board square's
+   (styles.css .notes). A room's code, ink and all, stays inside half a
+   square, 1px clear of the next chip, with its letters clear of each other
+   (scripts/check-layout.cjs, the inks screen). --ink-face is the hand at
+   swatch size, the serif hands a little larger, as their letters are
+   smaller. Bodoni's italic can't fit a chip both ways (set close enough to
+   clear the next chip, its letters ran together), so fountain pen and
+   lamplight write their chips in Karla, in the ink's colour and slant
+   (lamplight at 700, heavier than sepia and as heavy as fits), and keep
+   Bodoni for their swatch. Frost's upright Bodoni stays, at the chips' size,
+   set a little closer (--note-tracking) in its narrower display cut
+   (--note-variation, Bodoni Moda's optical size 28). */
+:is(:root, .look-scene)[data-ink="fountain-pen"], .look-ink[data-look="fountain-pen"] { --note-ink: #fffaf0; --note-font: italic 600 1em/1.15 var(--sans); --ink-face: italic 600 0.85rem var(--display); }
+:is(:root, .look-scene)[data-ink="blue-pencil"], .look-ink[data-look="blue-pencil"] { --note-ink: #dbe7ff; --note-font: 700 1em/1.15 var(--sans); --ink-face: 700 0.75rem var(--sans); }
+:is(:root, .look-scene)[data-ink="red-pen"], .look-ink[data-look="red-pen"] { --note-ink: #ffdcd4; --note-font: italic 700 1em/1.15 var(--sans); --ink-face: italic 700 0.75rem var(--sans); }
+:is(:root, .look-scene)[data-ink="typewriter"], .look-ink[data-look="typewriter"] { --note-ink: #fbf6ea; --note-font: 700 1em/1.15 var(--type); --ink-face: 700 0.75rem var(--type); }
+:is(:root, .look-scene)[data-ink="frost"], .look-ink[data-look="frost"] { --note-ink: #b0f2ff; --note-font: 700 1em/1.15 var(--display); --note-tracking: -.03em; --note-variation: 'opsz' 28; --ink-face: 700 0.85rem var(--display); }
+:is(:root, .look-scene)[data-ink="lamplight"], .look-ink[data-look="lamplight"] { --note-ink: #ffe6ad; --note-font: italic 700 1em/1.15 var(--sans); --ink-face: italic 600 0.85rem var(--display); }
+:is(:root, .look-scene)[data-ink="pumpkin"], .look-ink[data-look="pumpkin"] { --note-ink: #ffcb8e; --note-font: 800 1em/1.15 var(--sans); --ink-face: 800 0.75rem var(--sans); }
+:is(:root, .look-scene)[data-ink="sepia"], .look-ink[data-look="sepia"] { --note-ink: #f2dcb8; --note-font: italic 600 1em/1.15 var(--sans); --ink-face: italic 600 0.75rem var(--sans); }
 
 /* ---------- badge frames ----------
    --frame is the ring's colour (and --frame-glow its glow). --frame-art adds
@@ -176,11 +199,11 @@ html[data-file] :is(.page:not(.noir), .closed-file .closure-flap) { background-i
 .seal-raven, [data-look="seal-raven"] { --seal: #3f2d52; --seal-dark: #120b1a; --seal-ink: #eadcf7; --emblem: url('../assets/cosmetics/emblems/raven.svg'); }
 .seal-opal, [data-look="seal-opal"] { --seal: #e3eef0; --seal-dark: #8ea6be; --seal-ink: #24323f; --seal-wax: conic-gradient(from 40deg, #e3eef0, #8ea6be, #dfbfdc, #e3eef0); --emblem: url('../assets/cosmetics/emblems/eye.svg'); }
 .closed-file .closed-seal {
-  position: absolute; right: 12px; bottom: -14px; width: 50px; height: 50px; font-size: 1.1rem; border: 0; border-radius: var(--seal-radius, 50%);
+  position: absolute; right: .75rem; bottom: -.875rem; width: 3.125rem; height: 3.125rem; font-size: 1.1rem; border: 0; border-radius: var(--seal-radius, 50%);
   color: var(--seal-ink, #f6e6c8); background: var(--seal-wax, radial-gradient(circle at 35% 35%, var(--seal), var(--seal-dark)));
   box-shadow: 0 0 0 3px var(--seal-ring, var(--seal-dark)), 0 4px 10px rgba(0, 0, 0, 0.3);
 }
-.closed-file .closed-seal .badge-art { inset: 8px; width: calc(100% - 16px); height: calc(100% - 16px); }
+.closed-file .closed-seal .badge-art { inset: .5rem; width: calc(100% - 1rem); height: calc(100% - 1rem); }
 .closed-file .closed-seal { outline: 0; } /* no frame silhouette or artwork on the wax */
 .closed-file .closed-seal::after { display: none; }
 .closed-file:not(.seal-personal) .closed-seal :is(.badge-art, .badge-letter) { visibility: hidden; }
@@ -198,10 +221,10 @@ html[data-file] :is(.page:not(.noir), .closed-file .closure-flap) { background-i
 .look-desk { background: var(--desk-detail), var(--desk); }
 .look-file { background: var(--file-detail), linear-gradient(var(--manila) 60%, var(--manila-back) 60%); }
 .look-frame, .look-seal { position: relative; }
-.look-frame::before { content: ''; width: 24px; height: 24px; border-radius: 50%; background: var(--noir); border: 1.5px solid var(--brass); }
-.look-ink::before { content: 'Lib'; padding: 1px 6px; border-radius: 2px; background: var(--room-0); color: var(--note-ink); font: var(--ink-face, 800 0.62rem var(--sans)); }
-.look-stamp::before { content: 'CLOSED'; padding: 0 4px; border-color: var(--stamp-lit); color: var(--stamp-lit); font: 800 0.46rem var(--sans); letter-spacing: 0.1em; transform: rotate(-4deg); }
-.look-seal::before { content: ''; width: 22px; height: 22px; border-radius: 50%; border: 1px dashed var(--noir-muted); }
+.look-frame::before { content: ''; width: 1.5rem; height: 1.5rem; border-radius: 50%; background: var(--noir); border: 1.5px solid var(--brass); }
+.look-ink::before { content: 'Lib'; padding: 1px .375rem; border-radius: 2px; background: var(--room-library); color: var(--note-ink); font: var(--ink-face, 800 0.75rem var(--sans)); }
+.look-stamp::before { content: 'CLOSED'; padding: 0 .25rem; border-color: var(--stamp-lit); color: var(--stamp-lit); font: 800 0.75rem var(--sans); letter-spacing: 0.08em; transform: rotate(-4deg); }
+.look-seal::before { content: ''; width: 1.375rem; height: 1.375rem; border-radius: 50%; border: 1px dashed var(--noir-muted); }
 .look-seal:not([data-look="standard"])::before { border: 0; border-radius: var(--seal-radius, 50%); background: var(--seal-wax, radial-gradient(circle at 35% 35%, var(--seal), var(--seal-dark))); box-shadow: 0 0 0 2px var(--seal-ring, var(--seal-dark)); }
 .look-seal:not([data-look="standard"]):not([data-look="seal-personal"])::after {
   content: ''; position: absolute; left: 50%; top: 50%; width: 40%; height: 40%; transform: translate(-50%, -50%); background: var(--seal-ink);
@@ -210,63 +233,88 @@ html[data-file] :is(.page:not(.noir), .closed-file .closure-flap) { background-i
 
 /* ---------- the Looks tab ---------- */
 /* One page that scrolls: no pager, so it also takes the pager's row. */
-.pf-panel.looks-mode { overflow-y: auto; padding: 2px 4px 18px; grid-row: 3 / -1; }
-.look-categories { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
-.look-categories button { min-height: 44px; padding: 6px; border: 1px solid var(--noir-line); background: var(--noir-2); color: var(--noir-ink); font: 700 0.75rem var(--sans); border-radius: 5px; cursor: pointer; }
+.pf-panel.looks-mode { overflow-y: auto; padding: 2px .25rem 1.125rem; grid-row: 3 / -1; }
+/* Three categories to a row, fewer where their names wouldn't fit. */
+.look-categories { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .375rem; }
+@container (max-width: 13rem) { .look-categories { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@container (max-width: 7rem) { .look-categories { grid-template-columns: minmax(0, 1fr); } }
+.look-categories button { min-height: 2.75rem; padding: .375rem min(.375rem, 2vw); border: 1px solid var(--noir-line); background: var(--noir-2); color: var(--noir-ink); font: 700 0.75rem var(--sans); border-radius: 5px; cursor: pointer; }
 .look-categories button[aria-pressed="true"] { background: var(--brass); color: var(--ink); }
-.looks-mode .look { grid-template-columns: 84px minmax(0, 1fr) auto; min-height: 86px; }
-.looks-mode .look-preview { width: 84px; height: 62px; cursor: zoom-in; overflow: visible; }
+.looks-mode .look { grid-template-columns: 5.25rem minmax(0, 1fr) auto; min-height: 5.375rem; }
+@container (max-width: 22rem) { .looks-mode .look { grid-template-columns: 5.25rem minmax(0, 1fr); } }
+@container (max-width: 14rem) { .looks-mode .look { grid-template-columns: minmax(0, 1fr); } .looks-mode .look > .look-preview { grid-row: auto; } .looks-mode .look > :nth-child(3) { grid-column: 1; } }
+.looks-mode .look-preview { width: 5.25rem; height: 3.875rem; cursor: zoom-in; overflow: visible; }
 .look-preview::after { pointer-events: none; }
-.look-preview:focus-visible, .look-categories button:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
-.looks-mode .look-frame::before { width: 34px; height: 34px; }
-.looks-mode .look-stamp::before { font-size: 0.6rem; }
-.looks-mode .look-seal::before { width: 36px; height: 36px; }
-.looks-mode .look-seal::after { width: 18px; height: 18px; }
+.looks-mode .look-frame::before { width: 2.125rem; height: 2.125rem; }
+.looks-mode .look-seal::before { width: 2.25rem; height: 2.25rem; }
+.looks-mode .look-seal::after { width: 1.125rem; height: 1.125rem; }
 
 /* ---------- the preview dialog ---------- */
-.look-dialog { width: min(540px, calc(100% - 28px)); max-height: calc(100% - 48px); overflow: auto; padding: 22px; border: 1px solid var(--brass); border-radius: 12px; background: var(--noir); color: var(--noir-ink); box-shadow: 0 24px 80px rgba(0, 0, 0, 0.67); }
+/* Clear of the system bars: across, each side keeps the larger of its gap
+   and that side's own inset, and the preview spans the screen between
+   them (Task 10; fix round 1, M2: a bar on one side moves that side only);
+   down, it is centred, no taller than the screen less the larger of its
+   gap and either bar. A wide one sets the scene beside its words, so no
+   line runs past a readable measure. */
+.look-dialog {
+  --dialog-gap-x: min(.875rem, 3vw);
+  --dialog-gap-y: max(1.5rem, env(safe-area-inset-top, 0px), env(safe-area-inset-bottom, 0px));
+  left: max(var(--dialog-gap-x), env(safe-area-inset-left, 0px)); right: max(var(--dialog-gap-x), env(safe-area-inset-right, 0px));
+  width: auto; margin-inline: 0; max-width: none; max-height: calc(100% - 2 * var(--dialog-gap-y));
+  container-type: inline-size; overflow: auto; padding: min(1.375rem, 5vw); border: 1px solid var(--brass); border-radius: 12px; background: var(--noir); color: var(--noir-ink); box-shadow: 0 24px 80px rgba(0, 0, 0, 0.67);
+}
 .look-dialog::backdrop { background: rgba(5, 6, 9, 0.85); }
-.look-dialog header { display: flex; align-items: start; justify-content: space-between; gap: 12px; }
-.look-dialog h2 { margin: 0 0 20px; font: 500 1.7rem var(--display); }
-.look-dialog header button { min-width: 44px; min-height: 44px; }
+.look-dialog header { display: flex; align-items: start; justify-content: space-between; gap: .75rem; }
+.look-dialog header h2 { min-width: 0; }
+/* Narrow for the title: the close button above it, the title its full width. */
+@container (max-width: 16rem) { .look-dialog header { flex-direction: column-reverse; align-items: stretch; } .look-dialog header button { align-self: flex-end; } }
+.look-dialog h2 { margin: 0 0 1.25rem; font: 500 max(min(1.7rem, 1.7 * 1.25 * var(--base-root)), 1.25rem) var(--display); }
+.look-dialog header button { min-width: 2.75rem; min-height: 2.75rem; }
 .look-dialog p { line-height: 1.5; }
 .look-dialog .note { color: var(--noir-muted); }
 .look-dialog .btn-primary { background: var(--brass); color: var(--ink); }
 .look-dialog .btn-primary:disabled { opacity: 0.65; }
-.look-equip { width: 100%; min-height: 48px; }
+.look-equip { width: 100%; min-height: 3rem; }
+@container (min-width: 40rem) {
+  .look-dialog > .look-scene { float: left; width: 55%; margin: 0 1.75rem .5rem 0; }
+  .look-dialog > p, .look-dialog > .look-equip { overflow-wrap: break-word; }
+  .look-dialog > .look-equip { width: auto; min-width: 12rem; }
+}
 .look-feedback { margin-bottom: 0; color: var(--brass); }
 /* The scene a look is shown in: the standard desk and paper (shared tokens),
    with the look applied by its data attribute or class. */
 .look-scene {
-  position: relative; min-height: 245px; display: grid; place-items: center; padding: 30px;
+  position: relative; min-height: 15.3125rem; display: grid; grid-template-columns: minmax(0, 1fr); place-items: center; padding: min(1.875rem, 5vw);
   border: 1px solid var(--noir-line); border-radius: 8px; background: var(--desk-detail), var(--noir); color: var(--noir-ink);
 }
-.look-scene > .badge { width: 116px; height: 116px; font-size: 3rem; }
-.look-scene .closed-file { width: 100%; min-height: 150px; color: var(--ink); }
-.look-scene .closed-seal { width: 68px; height: 68px; }
+.look-scene > .badge { width: 7.25rem; height: 7.25rem; font-size: 3rem; }
+/* The stamp is drawn as in play. On a very narrow screen at the largest
+   text, the sample file's side spacing gives way, and narrowest (280px) the
+   stamp's own side spacing too, never its size or lettering, so the stamp
+   stays on the screen instead of pushing the preview sideways. */
+.look-scene .closed-file { width: 100%; min-height: 9.375rem; padding-inline: min(1.125rem, 5vw); color: var(--ink); }
+.look-scene .closed-seal { width: 4.25rem; height: 4.25rem; }
 .look-scene .stamp { font-size: 1.35rem; }
+@container (max-width: 8rem) { .look-scene .stamp { padding-inline: min(.75rem, 3.5vw); } }
 .look-hunch { width: 100%; text-align: center; font: 0.75rem var(--type); }
-.look-hunch .notes { position: static; margin-top: 20px; gap: 6px; }
-.look-hunch .notes span { padding: 14px 4px; font-size: 1.1rem; }
-.look-paper { width: 100%; padding: 20px; background: var(--file-detail), var(--manila); color: var(--ink); border: 1px solid var(--manila-edge); box-shadow: 5px 6px 0 var(--manila-back); }
-.look-paper span, .look-paper small, .look-desk-scene > span { font: 0.6rem var(--type); letter-spacing: 0.08em; }
-.look-paper h3, .look-desk-scene h3 { font: 500 1.6rem var(--display); margin: 14px 0; }
+.look-hunch .notes { position: static; margin-top: 1.25rem; gap: .375rem; }
+.look-hunch .notes span { padding: .875rem .25rem; font-size: 1.1rem; }
+/* The paper's side spacing gives way on a very narrow screen, so its words
+   stay whole at the largest text; its heading is a display heading (capped
+   at 1.25 times its Standard size, as every display heading is). */
+.look-paper { width: 100%; padding: min(1.25rem, 4vw); background: var(--file-detail), var(--manila); color: var(--ink); border: 1px solid var(--manila-edge); box-shadow: 5px 6px 0 var(--manila-back); }
+.look-paper span, .look-paper small, .look-desk-scene > span { display: block; font: 0.75rem/1.4 var(--type); letter-spacing: 0.04em; }
+.look-paper h3, .look-desk-scene h3 { font: 500 max(min(1.6rem, 1.6 * 1.25 * var(--base-root)), 1.25rem) var(--display); margin: .875rem 0; }
 .look-paper p { font: 0.9rem/1.6 var(--type); }
 .look-desk-scene { width: 100%; }
-.look-desk-folder { padding: 20px; background: var(--manila); color: var(--ink); transform: rotate(-3deg); box-shadow: 0 6px 16px rgba(0, 0, 0, 0.33); font: 0.8rem/1.8 var(--type); border-top: 5px solid var(--brass); }
+.look-desk-folder { padding: min(1.25rem, 4vw); background: var(--manila); color: var(--ink); transform: rotate(-3deg); box-shadow: 0 6px 16px rgba(0, 0, 0, 0.33); font: 0.8rem/1.8 var(--type); border-top: 5px solid var(--brass); }
 
 /* ---------- look rewards: name, then Preview and Use now ---------- */
-button.reward, button.chip[data-act="preview-look"] { min-height: 44px; align-items: center; cursor: pointer; }
-.reward-look { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; width: 100%; padding: 8px; }
+button.reward, button.chip[data-act="preview-look"] { min-height: 2.75rem; align-items: center; cursor: pointer; }
+/* Preview and Use now side by side, or one above the other. */
+.reward-look { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 7rem), 1fr)); gap: .375rem; width: 100%; padding: .5rem; }
 .reward-look > span { grid-column: 1 / -1; }
 .reward-look b { font: inherit; }
-.reward-look button { min-height: 44px; padding: 0 12px; border: 1px solid rgba(214, 165, 77, 0.5); border-radius: 6px; background: none; color: inherit; font: 700 0.74rem var(--sans); cursor: pointer; }
+.reward-look button { min-height: 2.75rem; padding: 0 .75rem; border: 1px solid rgba(214, 165, 77, 0.5); border-radius: 6px; background: none; color: inherit; font: 700 0.75rem var(--sans); cursor: pointer; }
 .reward-look [data-act="use-look"]:not(:disabled) { border-color: var(--brass); background: var(--brass); color: var(--ink); }
 .reward-look button:disabled { opacity: 0.7; cursor: default; }
-
-@media (max-width: 370px) {
-  .looks-mode .look { grid-template-columns: 64px minmax(0, 1fr) auto; gap: 7px; }
-  .looks-mode .look-preview { width: 64px; }
-  .look-dialog { padding: 16px; }
-  .look-scene { padding: 24px 16px; }
-}

@@ -190,7 +190,7 @@ h3 { margin: 0 0 8px; font: 600 1.35rem/1.2 var(--display); }
 .feature p { margin: 0; color: var(--noir-muted); font-size: 0.97rem; }
 
 /* ---------- pricing ---------- */
-.pricing { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: 20px; }
 @media (max-width: 760px) { .pricing { grid-template-columns: 1fr; } }
 .plan { border: 1px solid var(--noir-line); border-radius: 14px; padding: 26px 24px; background: var(--noir-2); }
 .plan.paid { border-color: rgba(214, 165, 77, 0.45); background: linear-gradient(180deg, rgba(214, 165, 77, 0.08), transparent 60%), var(--noir-2); }

@@ -39,18 +39,19 @@
         <p class="tagline rise d2">Every alibi is a clue.</p>
         <p class="lede rise d2">A logic puzzle for people who like Sudoku and murder mysteries. Rebuild every suspect’s night, hour by hour, until only one of them could have been in the room when the victim died.</p>
         <div class="actions rise d3">
-          <!-- Launch day, per store: set data-live="true" and remove aria-disabled.
-               The links are already the app's Play Store and App Store addresses. -->
-          <a class="btn btn-primary btn-store" data-live="false" href="https://play.google.com/store/apps/details?id=tech.zweifel.midnightalibi" aria-disabled="true">
+          <!-- Live on both stores (App Store 16 Oct 2026, Google Play 19 Oct 2026).
+               data-live="false" with aria-disabled="true" shows a store's "Coming soon" instead. -->
+          <a class="btn btn-primary btn-store" data-live="true" href="https://play.google.com/store/apps/details?id=tech.zweifel.midnightalibi">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.2 2.6 13.6 12l-9.4 9.4a1.6 1.6 0 0 1-.7-1.3V3.9c0-.5.3-1 .7-1.3Zm10.5 10.5 2.3 2.3-10.9 6.2 8.6-8.5Zm3.4-4.8 3 1.7c.9.5.9 1.8 0 2.3l-3 1.7-2.6-2.5 2.6-3.2ZM6.1 2.4 17 8.6l-2.3 2.3-8.6-8.5Z"/></svg>
             <span class="live">Get it on Google Play</span>
             <span class="soon">Coming soon to Google Play</span>
           </a>
-          <a class="btn btn-primary btn-store" data-live="false" href="https://apps.apple.com/app/id6817921863" aria-disabled="true">
+          <a class="btn btn-primary btn-store" data-live="true" href="https://apps.apple.com/app/id6817921863">
             <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>
             <span class="live">Download on the App Store</span>
             <span class="soon">Coming soon to the App Store</span>
           </a>
+          <a class="btn btn-ghost" href="https://midnight-alibi.web.app/">Play today’s case in your browser</a>
           <a class="btn btn-ghost" href="#how">How it plays</a>
         </div>
       </div>
@@ -67,7 +68,7 @@
         </div>
 
         <figure class="casefile" aria-label="An example solved timeline">
-          <div class="head"><span>Crime briefing</span><span>No. 1002</span></div>
+          <div class="head"><span>Crime briefing</span><span>Example</span></div>
           <p class="victim">Lord Ashcombe</p>
           <p class="found">Found dead · <b>Lounge · 11pm</b></p>
           <div class="timeline" role="table" aria-label="Where each suspect was, by hour">
@@ -140,12 +141,12 @@
       <div class="wrap">
         <p class="kicker">Four levels</p>
         <h2 id="levels-title">From four suspects to six, with a liar on Hard and Expert.</h2>
-        <p class="intro">Each case is graded by the hardest method it needs, and every case has a permanent number you can share. Hard and Expert open as you rise through the ranks. <a href="/midnight-alibi/how-to-play/#levels">The levels and methods, in full</a>.</p>
+        <p class="intro">Each level adds suspects, a liar or harder methods, and each case has one to three stars for how hard it is within its level. Every case has a permanent number you can share. Hard and Expert open as you rise through the ranks. <a href="/midnight-alibi/how-to-play/#levels">The levels and methods, in full</a>.</p>
         <div class="levels">
           <article class="level"><span class="tab">Level 1</span><h3>Easy</h3><p class="meta">4 suspects</p><p>One step at a time, with extra clues to help.</p></article>
-          <article class="level"><span class="tab">Level 2</span><h3>Medium</h3><p class="meta">5 suspects</p><p>You will need to spot pairs of rooms and squares.</p></article>
+          <article class="level"><span class="tab">Level 2</span><h3>Medium</h3><p class="meta">5 suspects</p><p>Pairs of rooms and squares start to appear.</p></article>
           <article class="level"><span class="tab">Level 3</span><h3>Hard</h3><p class="meta">5 suspects · one lies</p><p>Pairs, cross-checks and catching the liar.</p></article>
-          <article class="level"><span class="tab">Level 4</span><h3>Expert</h3><p class="meta">6 suspects · one lies</p><p>Cross-checking rows and harder.</p></article>
+          <article class="level"><span class="tab">Level 4</span><h3>Expert</h3><p class="meta">6 suspects · one lies</p><p>The hardest cases, where any method can come up.</p></article>
         </div>
       </div>
     </section>
@@ -158,7 +159,7 @@
         <nav class="explore" aria-label="Explore Midnight Alibi">
           <a href="/midnight-alibi/how-to-play/" style="--art: url('/midnight-alibi/assets/rooms/library.webp')"><span class="glyph line"><svg class="ico-lg" viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#board"></use></svg></span><b>How to play</b><span>The rules, four levels and eleven methods.</span></a>
           <a href="/midnight-alibi/ranks/" style="--art: url('/midnight-alibi/assets/rooms/gallery.webp')"><span class="glyph"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="/midnight-alibi/assets/ranks.svg#rank-18"></use></svg></span><b>Ranks</b><span>Eighteen ranks from Clue Hunter to Baker Street.</span></a>
-          <a href="/midnight-alibi/challenges/" style="--art: url('/midnight-alibi/assets/rooms/study.webp')"><span class="glyph line"><svg class="ico-lg" viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#ch-clock"></use></svg></span><b>Challenges</b><span>Four optional rules, each worth a bonus rank point.</span></a>
+          <a href="/midnight-alibi/challenges/" style="--art: url('/midnight-alibi/assets/rooms/study.webp')"><span class="glyph line"><svg class="ico-lg" viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#ch-clock"></use></svg></span><b>Challenges</b><span>Four rules every solve is judged on. Meet any for a bonus rank point.</span></a>
           <a href="/midnight-alibi/honours/" style="--art: url('/midnight-alibi/assets/rooms/gallery.webp')"><span class="glyph line"><svg class="ico-lg" viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#star"></use></svg></span><b>Honours</b><span>Commendations to earn, and secret ones to discover.</span></a>
           <a href="/midnight-alibi/rooms/" style="--art: url('/midnight-alibi/assets/rooms/conservatory.webp')"><span class="glyph line"><svg class="ico-lg" viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#chapel"></use></svg></span><b>Rooms</b><span>Twelve rooms, one long night.</span></a>
           <a href="/midnight-alibi/suspects/" style="--art: url('/midnight-alibi/assets/rooms/lounge.webp')"><span class="glyph line"><svg class="ico-lg" viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><use href="/midnight-alibi/assets/icons.svg#testimony"></use></svg></span><b>Suspects</b><span>Sixteen people with a reason to be here.</span></a>
@@ -174,7 +175,7 @@
           <div class="feature">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
             <h3>A new case every day</h3>
-            <p>Today’s case is free for everyone, and every player gets the same case.</p>
+            <p>Today’s case is free for everyone, and every player gets the same case. From 9 November it’s a quick one: Easy on weekdays and Medium at the weekend. You can also play it in your browser at <a href="https://midnight-alibi.web.app/">midnight-alibi.web.app</a>.</p>
           </div>
           <div class="feature">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.4 1 1.1 1 1.8V16h5v-.3c0-.7.4-1.4 1-1.8A6 6 0 0 0 12 3Z"/></svg>
@@ -189,12 +190,12 @@
           <div class="feature">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4-9-4Z"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4"/></svg>
             <h3>Plays offline</h3>
-            <p>No account and no connection needed. Your progress, stats and detective rank stay on your phone.</p>
+            <p>No account and no connection needed. Your progress, stats and detective rank are kept on your device, and backed up with Cloud Save.</p>
           </div>
           <div class="feature">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.6-8A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9H7Z"/><path d="M12 11v5M9.5 13.5 12 16l2.5-2.5"/></svg>
             <h3>Cloud Save</h3>
-            <p>Your case history is backed up with Google Play Games on Android, or Game Center on iPhone and iPad, so you can pick it up on your other devices of the same kind. It’s on by default, and you can turn it off in Settings.</p>
+            <p>Your case history is backed up with Google Play Games on Android, or Game Center on iPhone and iPad, so you can pick it up on your other devices of the same kind. Cloud Save players also appear on public leaderboards, all time and this week, under a detective name built from the game’s own lists. It’s on by default, and you can change the name, hide from the leaderboards or turn Cloud Save off in Settings.</p>
           </div>
           <div class="feature">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg>
@@ -208,7 +209,7 @@
     <section id="price" aria-labelledby="price-title">
       <div class="wrap">
         <p class="kicker">Price</p>
-        <h2 id="price-title">Forty cases free, and one purchase for all of Volume 1</h2>
+        <h2 id="price-title">Forty cases free, Volume 1 to keep, or the Detective’s Pass</h2>
         <div class="pricing">
           <div class="plan">
             <p class="price">Free</p>
@@ -220,7 +221,7 @@
             </ul>
           </div>
           <div class="plan paid">
-            <p class="price">One-time purchase</p>
+            <p class="price">$4.99, one time</p>
             <h3>Case Files: Volume 1</h3>
             <ul>
               <li>The first 100 cases of every level: 400 in all (Hard and Expert still open as you rise through the ranks)</li>
@@ -228,8 +229,17 @@
               <li>Restores on a new device with the same Google or Apple account</li>
             </ul>
           </div>
+          <div class="plan paid">
+            <p class="price">$2.99 a month or $19.99 a year</p>
+            <h3>The Detective’s Pass</h3>
+            <ul>
+              <li>Every case in Volume 1, every past daily case and the collection of Hard and Expert cases, and each volume to come, for as long as your Pass lasts</li>
+              <li>On iPhone and iPad, the yearly plan starts with a 3-day free trial</li>
+              <li>Renews automatically until you cancel it in Google Play or in your Apple Account’s subscriptions</li>
+            </ul>
+          </div>
         </div>
-        <p class="fineprint">No subscription and no ads. The price is shown in Google Play or the App Store before you buy.</p>
+        <p class="fineprint">No ads. Prices are in US dollars; Google Play or the App Store shows yours before you buy.</p>
       </div>
     </section>
 
@@ -238,7 +248,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3 5 6v5c0 4.4 3 8.3 7 10 4-1.7 7-5.6 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
         <div>
           <h2 id="privacy-title" style="font-size:clamp(1.6rem,4vw,2.2rem)">How the app handles your data</h2>
-          <p>Playing never needs an account. The app sends anonymous gameplay statistics to help improve it, and you can turn that off in Settings. Cloud Save is on by default and you can turn it off in Settings. You can delete your cloud history from inside the app at any time.</p>
+          <p>Playing never needs an account. The app sends anonymous gameplay statistics to help improve it, and you can turn that off in Settings. Cloud Save is on by default and you can turn it off in Settings. Cloud Save players appear on public leaderboards under a detective name from the game’s own lists, never their real name. You can delete your cloud history from inside the app at any time.</p>
           <p><a href="/midnight-alibi/privacy/">Read the privacy policy</a> · <a href="/midnight-alibi/delete-account/">Delete your data</a></p>
         </div>
       </div>
