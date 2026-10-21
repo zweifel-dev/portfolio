@@ -1,41 +1,65 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, FlaskConical, Microscope } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import PageHero from '@/components/PageHero';
 import SectionHeading from '@/components/SectionHeading';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
+import { caseStudies, research, type WorkItem } from '@/lib/work';
 
-const research = [
-  {
-    title: 'The PROVE Pattern',
-    route: '/prove-pattern',
-    icon: Microscope,
-    kicker: 'Original research',
-    summary:
-      'The scientific method as a reasoning loop for AI agents. PROVE (Predict, Run, Observe, Validate, Evolve) answers the documented failure modes of ReAct-style agents: looping, premature commitment, error propagation and confabulation.',
-    tags: ['Agent architecture', 'Multi-agent', '26 sources'],
-  },
-  {
-    title: 'AI Development Lab',
-    route: '/ai-development-lab',
-    icon: FlaskConical,
-    kicker: 'Lab',
-    summary:
-      'A fully local AI platform running Ollama, vLLM and Qdrant, with three working agents and head-to-head framework evaluations across Strands, LangGraph and CrewAI.',
-    tags: ['LangGraph', 'Strands Agents SDK', 'CrewAI', 'RAG'],
-  },
-];
+// One card for a case study or research piece
+const WorkCard = ({ item }: { item: WorkItem }) => (
+  <Link to={item.to} className="surface-card group flex h-full flex-col p-7 lg:p-8">
+    <div className="flex items-center gap-3">
+      <span className="card-icon">
+        <item.icon className="h-5 w-5" />
+      </span>
+      <p className="eyebrow">{item.kicker}</p>
+    </div>
+    <h3 className="mt-5">{item.title}</h3>
+    <p className="mt-3 flex-1 leading-relaxed text-muted-foreground">{item.summary}</p>
+    <div className="project-tags mt-6">
+      {item.tags.map((tag) => (
+        <span key={tag} className="project-tag">
+          {tag}
+        </span>
+      ))}
+    </div>
+    <span className="arrow-link">
+      Read more <ArrowRight />
+    </span>
+  </Link>
+);
 
 const Projects = () => {
   return (
     <>
       <PageHero
         eyebrow="Projects"
-        title="Things I've built and published."
-        lead="Products from Zweifel Tech LLC and my independent research on agentic AI. Work I did for employers stays with them; the About page covers those roles."
+        title="Things I've built, led and published."
+        lead="Leadership case studies, products from Zweifel Tech LLC, and my independent research on agentic AI. The case studies cover approach and lessons; details that belong to the companies involved stay with them."
       />
 
-      {/* Zweifel Tech LLC */}
+      {/* Leadership case studies */}
       <section className="page-section">
+        <div className="page-container">
+          <ScrollReveal>
+            <SectionHeading
+              eyebrow="Case studies"
+              title="How I lead engineering organizations"
+              description="Operating models, team building and data culture, drawn from leading engineering and data teams in healthcare SaaS."
+            />
+          </ScrollReveal>
+          <StaggerContainer className="grid gap-6 lg:grid-cols-3" staggerDelay={0.1}>
+            {caseStudies.map((item) => (
+              <StaggerItem key={item.to} className="h-full">
+                <WorkCard item={item} />
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Zweifel Tech LLC */}
+      <section className="page-section border-t">
         <div className="page-container">
           <ScrollReveal>
             <SectionHeading
@@ -107,33 +131,11 @@ const Projects = () => {
           </ScrollReveal>
 
           <StaggerContainer className="grid gap-6 md:grid-cols-2" staggerDelay={0.1}>
-            {research.map((project) => {
-              const Icon = project.icon;
-              return (
-                <StaggerItem key={project.route} className="h-full">
-                  <Link to={project.route} className="surface-card group flex h-full flex-col p-7 lg:p-8">
-                    <div className="flex items-center gap-3">
-                      <span className="card-icon">
-                        <Icon className="h-5 w-5" />
-                      </span>
-                      <p className="eyebrow">{project.kicker}</p>
-                    </div>
-                    <h3 className="mt-5">{project.title}</h3>
-                    <p className="mt-3 flex-1 leading-relaxed text-muted-foreground">{project.summary}</p>
-                    <div className="project-tags mt-6">
-                      {project.tags.map((tag) => (
-                        <span key={tag} className="project-tag">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <span className="arrow-link">
-                      Read more <ArrowRight />
-                    </span>
-                  </Link>
-                </StaggerItem>
-              );
-            })}
+            {research.map((item) => (
+              <StaggerItem key={item.to} className="h-full">
+                <WorkCard item={item} />
+              </StaggerItem>
+            ))}
           </StaggerContainer>
         </div>
       </section>

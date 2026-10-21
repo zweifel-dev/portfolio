@@ -514,7 +514,7 @@ const AIDevelopmentLab: React.FC = () => {
             <div className="border-t pt-8">
               <h3 className="text-xl font-bold mb-4">Keep Exploring</h3>
               <p className="mb-6">
-                The lab is where I test ideas before asking a team to rely on them. The PROVE pattern for agent reasoning grew out of the same work.
+                The lab is where I test ideas before asking a team to rely on them. The PROVE pattern for agent reasoning grew out of the same work, and the AI-Augmented SDLC case study describes the operating model these patterns serve.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-6">
@@ -528,6 +528,12 @@ const AIDevelopmentLab: React.FC = () => {
                   <Link to="/prove-pattern">
                     <Lightbulb className="w-4 h-4 mr-2" />
                     The PROVE Pattern
+                  </Link>
+                </Button>
+                <Button variant="outline" asChild>
+                  <Link to="/ai-augmented-sdlc">
+                    <Workflow className="w-4 h-4 mr-2" />
+                    The AI-Augmented SDLC
                   </Link>
                 </Button>
                 <Button variant="outline" asChild>

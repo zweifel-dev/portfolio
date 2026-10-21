@@ -43,6 +43,24 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://zweifel.tech/ai-augmented-sdlc</loc>
+        <lastmod>2026-10-21</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://zweifel.tech/team-scaling-leadership</loc>
+        <lastmod>2026-10-21</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://zweifel.tech/delta-framework-implementation</loc>
+        <lastmod>2026-10-21</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://zweifel.tech/prove-pattern</loc>
         <lastmod>2026-10-21</lastmod>
         <changefreq>yearly</changefreq>

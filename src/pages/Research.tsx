@@ -60,6 +60,7 @@ const topics = [
       ['ROI measurement', 'Quantifying the business value of analytics maturity and infrastructure investment'],
       ['AI readiness', 'The governance, trust, and process discipline that AI agent adoption requires'],
     ],
+    link: { to: '/delta-framework-implementation', label: 'Case study: Building a data culture with DELTA Plus' },
   },
 ];
 
@@ -185,6 +186,9 @@ const Research = () => {
               </Link>
             </Button>
             <Button asChild variant="outline">
+              <Link to="/ai-augmented-sdlc">The AI-Augmented SDLC</Link>
+            </Button>
+            <Button asChild variant="outline">
               <Link to="/ai-development-lab">AI Development Lab</Link>
             </Button>
           </div>
@@ -194,6 +198,11 @@ const Research = () => {
           <Topic key={topic.title} tag={topic.tag} title={topic.title} why={topic.why}>
             <p className="mb-6 text-lg leading-relaxed text-muted-foreground">{topic.intro}</p>
             <PointList points={topic.points} />
+            {topic.link && (
+              <Link to={topic.link.to} className="arrow-link mt-6">
+                {topic.link.label} <ArrowRight />
+              </Link>
+            )}
           </Topic>
         ))}
       </div>

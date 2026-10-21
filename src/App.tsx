@@ -17,21 +17,23 @@ const Reflections = lazy(() => import("./pages/Reflections"));
 const Research = lazy(() => import("./pages/Research"));
 const AIDevelopmentLab = lazy(() => import("./pages/AIDevelopmentLab"));
 const ProvePattern = lazy(() => import("./pages/ProvePattern"));
+const AIAugmentedSDLC = lazy(() => import("./pages/AIAugmentedSDLC"));
+const TeamScalingLeadership = lazy(() => import("./pages/TeamScalingLeadership"));
+const DeltaFrameworkImplementation = lazy(() => import("./pages/DeltaFrameworkImplementation"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
-// Case studies that were taken down. Old links (LinkedIn, résumés, search results) land on Projects instead of a 404.
+// Old URLs that still have links pointing at them (LinkedIn, résumés, search results). Retired case studies land
+// on Projects instead of a 404; renamed ones go to their new address.
 const retiredRoutes = [
   "/experity-analytic-assessment",
   "/ma-feature-parity",
-  "/delta-framework-implementation",
   "/enterprise-data-transformation",
   "/ma-integration-strategy",
-  "/team-scaling-leadership",
-  "/ai-augmented-data-org",
   "/enterprise-data-platform",
 ];
+const renamedRoutes = [{ from: "/ai-augmented-data-org", to: "/ai-augmented-sdlc" }];
 
 // Loading component for lazy-loaded pages
 const PageLoader = () => (
@@ -57,8 +59,14 @@ const App = () => (
               <Route path="/research" element={<Research />} />
               <Route path="/ai-development-lab" element={<AIDevelopmentLab />} />
               <Route path="/prove-pattern" element={<ProvePattern />} />
+              <Route path="/ai-augmented-sdlc" element={<AIAugmentedSDLC />} />
+              <Route path="/team-scaling-leadership" element={<TeamScalingLeadership />} />
+              <Route path="/delta-framework-implementation" element={<DeltaFrameworkImplementation />} />
               {retiredRoutes.map((path) => (
                 <Route key={path} path={path} element={<Navigate to="/projects" replace />} />
+              ))}
+              {renamedRoutes.map(({ from, to }) => (
+                <Route key={from} path={from} element={<Navigate to={to} replace />} />
               ))}
               <Route path="*" element={<NotFound />} />
             </Routes>

@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, FlaskConical, Microscope } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PageHero from "@/components/PageHero";
 import Portrait from "@/components/Portrait";
 import SectionHeading from "@/components/SectionHeading";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import { currentRoles, profile } from "@/lib/profile";
+import { allWork } from "@/lib/work";
 
 const stats = [
   { value: "20+", label: "years leading people, from Army intelligence to engineering leadership" },
@@ -28,6 +29,10 @@ const principles = [
     body: "The right technology is the one that fits the team you have and where the organization is heading.",
   },
 ];
+
+const featured = ["/ai-augmented-sdlc", "/prove-pattern", "/ai-development-lab"].map((to) =>
+  allWork.find((w) => w.to === to)
+);
 
 const Home = () => {
   return (
@@ -131,23 +136,8 @@ const Home = () => {
                 </div>
               </a>
             </StaggerItem>
-            {[
-              {
-                to: "/prove-pattern",
-                icon: Microscope,
-                kicker: "Original research",
-                title: "The PROVE Pattern",
-                body: "The scientific method as a reasoning loop for AI agents: Predict, Run, Observe, Validate, Evolve.",
-              },
-              {
-                to: "/ai-development-lab",
-                icon: FlaskConical,
-                kicker: "Lab",
-                title: "AI Development Lab",
-                body: "A local platform with three working agents, used to compare agent frameworks on real workloads.",
-              },
-            ].map((item) => (
-              <StaggerItem key={item.to} className={item.to === "/prove-pattern" ? "lg:col-span-2" : undefined}>
+            {featured.map((item) => (
+              <StaggerItem key={item.to} className="h-full">
                 <Link to={item.to} className="surface-card group flex h-full flex-col p-7 lg:p-8">
                   <div className="flex items-center gap-3">
                     <span className="card-icon">
@@ -156,7 +146,7 @@ const Home = () => {
                     <p className="eyebrow">{item.kicker}</p>
                   </div>
                   <h3 className="mt-5">{item.title}</h3>
-                  <p className="mt-2 flex-1 leading-relaxed text-muted-foreground">{item.body}</p>
+                  <p className="mt-2 flex-1 leading-relaxed text-muted-foreground">{item.short}</p>
                   <span className="arrow-link mt-5">
                     Read more <ArrowRight />
                   </span>
