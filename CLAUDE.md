@@ -21,27 +21,36 @@ npm run preview    # Preview production build
 **React 18 SPA** using react-router-dom for client-side routing with BrowserRouter.
 
 ### Routing
-Routes are defined in `src/App.tsx`. Home is eagerly loaded; all other pages use `React.lazy()` with Suspense. The `Layout` component wraps all routes with a fixed top navigation bar and footer.
+Routes are defined in `src/App.tsx`. Home is eagerly loaded; all other pages use `React.lazy()` with Suspense. The `Layout` component wraps all routes with a sticky top navigation bar and footer, and scrolls to the top on each route change. URLs of retired case studies are listed in `retiredRoutes` in `App.tsx` and redirect to `/projects`; renamed pages are in `renamedRoutes` (for example `/ai-augmented-data-org` → `/ai-augmented-sdlc`).
 
 ### Adding a New Page
-1. Create component in `src/pages/`
+1. Create component in `src/pages/`, starting with `<PageHero>` and wrapping content in `page-container`
 2. Add lazy import and `<Route>` in `src/App.tsx`
 3. Add nav entry in `src/components/Navigation.tsx` `navItems` array (if it should appear in nav)
+4. Add the URL to `public/sitemap.xml`
 
 ### UI Components
 - **shadcn/ui** components in `src/components/ui/` — Radix UI primitives styled with Tailwind. These are library code; modify only if customizing component behavior.
-- **Custom components** (`Layout.tsx`, `Navigation.tsx`) in `src/components/`
+- **Custom components** in `src/components/`: `Layout.tsx`, `Navigation.tsx`, `PageHero.tsx` (navy band at the top of each page), `SectionHeading.tsx` (eyebrow + heading), `Portrait.tsx` (headshot from the 480/960 px copies; the original is 9 MB), `ScrollReveal.tsx` (motion wrappers)
+- **Profile data** (email, phone, LinkedIn, current roles) lives in `src/lib/profile.ts` and feeds the nav, footer and pages
+- **Work catalog**: case studies and research cards come from `src/lib/work.ts` (Projects, Home, and the "Keep reading" section). Case study pages use `CaseFacts` and `RelatedWork` from `src/components/CaseStudy.tsx`
 - `cn()` utility in `src/lib/utils.ts` merges Tailwind classes via clsx + tailwind-merge
 
 ### Styling
 - **Tailwind CSS 3** with a custom design system defined as CSS variables in `src/index.css`
-- Color palette: navy blue primary, gold accent, all colors in HSL format
-- Custom gradients (`gradient-primary`, `gradient-hero`, `gradient-card`, `gradient-accent`) and shadows (`executive-sm/md/lg/xl`) configured in `tailwind.config.ts`
-- Fonts: Inter (sans), JetBrains Mono (mono)
+- Look: flat navy and gold. Solid navy bands (`hero-band`, `bg-navy`), white surfaces with 1px borders (`surface-card`, `ruled-card` with a gold left rule), gold used sparingly for rules and `eyebrow` labels. No gradients or glass
+- Color palette: navy `--primary` (buttons, links) and `--navy` (bands), gold `--accent` (fills, rules) and `--accent-ink` (gold text on white), all colors in HSL format
+- The gradient tokens (`gradient-primary`, `gradient-hero`, `gradient-card`, `gradient-accent`) are deliberately flat, and the `executive-*` shadows are quiet; both are configured in `tailwind.config.ts`
+- Buttons: `variant="accent"` (gold) and `variant="on-navy"` (outline for navy bands) in `src/components/ui/button.tsx`
+- Fonts: Inter Variable (sans, optical sizes) and JetBrains Mono Variable (mono), self-hosted through `@fontsource-variable` and imported at the top of `src/index.css`
 - Path alias: `@/` maps to `src/`
 
 ### Deployment
 GitHub Actions workflow (`.github/workflows/deploy.yml`) builds and deploys to GitHub Pages on push to main. The build copies `CNAME` and `.nojekyll` into `dist/`.
+
+### Content rules
+- **Experity is under an NDA.** Brandon left Experity in 2026. Describe that work only at résumé level, as on the About page: no internal dollar figures or metrics, executive quotes, product analytics findings, vendor contracts, system names, org charts or internal documents. The Experity deep dives and MBA files about Experity were removed for this reason; don't bring them back. Three leadership case studies (`/ai-augmented-sdlc`, `/team-scaling-leadership`, `/delta-framework-implementation`) are deliberately anonymized: they don't name the company, and carry no internal figures, system or vendor names, or org charts. Keep them that way. The only figures they use are ones on the About page (team growth from 15 to 65+, seven production agents).
+- Brandon is Director of Software Engineering at HHAeXchange (2026 – present) and founder of Zweifel Tech LLC, the software publisher behind Midnight Alibi.
 
 ## TypeScript Config
 
