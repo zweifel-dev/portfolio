@@ -1,6 +1,6 @@
 # zweifel.tech
 
-Personal portfolio website for Brandon Zweifel — Senior Software, Data, & AI Executive.
+Personal website for Brandon Zweifel — Director of Software Engineering at HHAeXchange and founder of Zweifel Tech LLC.
 
 **Live site:** [zweifel.tech](https://zweifel.tech)
 
@@ -34,10 +34,10 @@ npm run dev       # Dev server at http://localhost:8080
 
 ```
 src/
-├── components/       # Layout, Navigation, ScrollReveal, shared components
+├── components/       # Layout, Navigation, PageHero, SectionHeading, Portrait, ScrollReveal
 │   └── ui/           # shadcn/ui primitives (Radix-based)
 ├── pages/            # Route-level page components
-├── lib/              # Utilities (cn helper)
+├── lib/              # Utilities (cn helper) and profile data
 └── index.css         # Tailwind config + CSS custom properties
 ```
 

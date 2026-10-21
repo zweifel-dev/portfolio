@@ -1,129 +1,97 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Home, User, Briefcase, Mail, Brain, FileText, Download } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { profile } from "@/lib/profile";
+
+const navItems = [
+  { path: "/about", label: "About" },
+  { path: "/projects", label: "Projects" },
+  { path: "/research", label: "Research" },
+  { path: "/reflections", label: "Reflections" },
+];
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
+  // Close the mobile menu after navigating
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    setIsOpen(false);
+  }, [location.pathname]);
 
-  const navItems = [
-    { path: "/", label: "Home", icon: Home },
-    { path: "/about", label: "About", icon: User },
-    { path: "/projects", label: "Projects", icon: Briefcase },
-    { path: "/reflections", label: "Reflections", icon: Brain },
-    { path: "/research", label: "Research", icon: FileText },
-    { path: "/contact", label: "Contact", icon: Mail },
-  ];
-
-  const isActive = (path: string) => {
-    if (path === "/") return location.pathname === "/";
-    return location.pathname.startsWith(path);
-  };
+  const isActive = (path: string) => location.pathname.startsWith(path);
 
   return (
-    <nav
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
-          ? "bg-white/80 backdrop-blur-lg border-b border-white/20 shadow-executive-sm"
-          : "bg-background/95 backdrop-blur-md border-b border-border"
-      )}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">BZ</span>
-            </div>
-            <span className="font-semibold text-lg hidden sm:block">Brandon Zweifel</span>
-          </Link>
+    <header className="sticky top-0 z-50 border-b bg-background">
+      <nav className="page-container flex h-16 items-center justify-between" aria-label="Main">
+        <Link to="/" className="flex items-center gap-3" aria-label={`${profile.name}, home`}>
+          <span className="relative flex h-8 w-8 items-center justify-center rounded-md bg-navy text-[0.8125rem] font-semibold tracking-tight text-navy-foreground">
+            BZ
+            <span aria-hidden="true" className="absolute inset-x-1.5 bottom-1 h-px bg-accent" />
+          </span>
+          <span className="text-[0.9375rem] font-semibold tracking-tight">{profile.name}</span>
+        </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => {
-              const Icon = item.icon;
-              return (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className={cn(
-                    "nav-link flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors hover:bg-primary/10",
-                    isActive(item.path) && "active bg-primary/10 text-primary"
-                  )}
-                >
-                  <Icon className="w-4 h-4" />
-                  <span>{item.label}</span>
-                </Link>
-              );
-            })}
-            <a
-              href="/files/BrandonZweifel_Resume.pdf"
-              download
-              className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-gradient-primary text-primary-foreground text-sm font-medium transition-opacity hover:opacity-90"
+        {/* Desktop */}
+        <div className="hidden items-center gap-1 md:flex">
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              aria-current={isActive(item.path) ? "page" : undefined}
+              className={cn(
+                "relative rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground",
+                isActive(item.path) &&
+                  "text-foreground after:absolute after:inset-x-3 after:-bottom-[13px] after:h-0.5 after:bg-accent"
+              )}
             >
-              <Download className="w-4 h-4" />
-              <span>Resume</span>
-            </a>
-          </div>
-
-          {/* Mobile menu button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {item.label}
+            </Link>
+          ))}
+          <Button asChild size="sm" className="ml-3">
+            <Link to="/contact" aria-current={isActive("/contact") ? "page" : undefined}>
+              Contact
+            </Link>
           </Button>
         </div>
 
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden border-t border-border">
-            <div className="space-y-1 px-2 pb-3 pt-2">
-              {navItems.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <Link
-                    key={item.path}
-                    to={item.path}
-                    onClick={() => setIsOpen(false)}
-                    className={cn(
-                      "flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors hover:bg-primary/10",
-                      isActive(item.path) && "bg-primary/10 text-primary"
-                    )}
-                  >
-                    <Icon className="w-4 h-4" />
-                    <span>{item.label}</span>
-                  </Link>
-                );
-              })}
-              <a
-                href="/files/BrandonZweifel_Resume.pdf"
-                download
-                onClick={() => setIsOpen(false)}
-                className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gradient-primary text-primary-foreground font-medium transition-opacity hover:opacity-90"
+        {/* Mobile menu button */}
+        <Button
+          variant="ghost"
+          size="icon"
+          className="md:hidden"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+        >
+          {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </Button>
+      </nav>
+
+      {/* Mobile */}
+      {isOpen && (
+        <div id="mobile-menu" className="border-t bg-background md:hidden">
+          <div className="page-container flex flex-col py-3">
+            {[...navItems, { path: "/contact", label: "Contact" }].map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                aria-current={isActive(item.path) ? "page" : undefined}
+                className={cn(
+                  "border-l-2 border-transparent px-3 py-3 text-base font-medium text-muted-foreground transition-colors hover:text-foreground",
+                  isActive(item.path) && "border-accent text-foreground"
+                )}
               >
-                <Download className="w-4 h-4" />
-                <span>Resume</span>
-              </a>
-            </div>
+                {item.label}
+              </Link>
+            ))}
           </div>
-        )}
-      </div>
-    </nav>
+        </div>
+      )}
+    </header>
   );
 };
 

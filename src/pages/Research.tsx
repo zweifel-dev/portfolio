@@ -1,335 +1,203 @@
+import { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import { Card, CardContent } from '@/components/ui/card';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import PageHero from '@/components/PageHero';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
+
+const proveSteps = [
+  { letter: 'P', name: 'Predict', text: 'Form falsifiable hypotheses with competing predictions before any action' },
+  { letter: 'R', name: 'Run', text: 'Execute targeted experiments that maximize diagnostic value between hypotheses' },
+  { letter: 'O', name: 'Observe', text: 'Collect factual results separated from interpretation to prevent confirmation bias' },
+  { letter: 'V', name: 'Validate', text: 'Compare observations against predictions: supported, falsified, or inconclusive' },
+  { letter: 'E', name: 'Evolve', text: 'Update understanding based on evidence, then iterate or conclude with confidence' },
+];
+
+const agenticAreas = [
+  ['Framework evaluation', 'Strands Agents SDK vs LangGraph vs CrewAI vs OpenAI Agents SDK, with selection criteria tied to team capability and infrastructure fit'],
+  ['Production agent architecture', 'Model-driven loops, graph pipelines, and multi-agent orchestration at enterprise scale'],
+  ['Quality gates', 'Human-in-the-loop review for agent-generated code, documentation, and metric definitions'],
+  ['MCP & composability', 'Tool integration patterns that let agents operate across data platform layers'],
+  ['Change management', 'Moving teams from manual production to agent-augmented review without losing trust or quality'],
+  ['Local AI infrastructure', 'Model routing, RAG patterns, and cloud vs. local vs. hybrid inference trade-offs'],
+];
+
+const topics = [
+  {
+    tag: 'Healthcare SaaS',
+    title: 'AI/ML in Healthcare SaaS',
+    why: 'AI-powered clinical tools only drive value when analytics can prove it. Measured impact is what earns executive buy-in.',
+    intro: 'Applied research into AI and ML products within healthcare technology, and the analytics practices that measure their value.',
+    points: [
+      ['Measuring AI features', 'Time saved, adoption, and correlation between feature usage and outcomes'],
+      ['Product research analytics', 'Segmentation, correlation analysis, and operational insights for customer success and leadership'],
+      ['Predictive analytics', 'Patient flow optimization and real-time clinical decision support'],
+      ['Privacy by design', 'Data governance and privacy architecture in HIPAA-compliant medical systems'],
+    ],
+  },
+  {
+    tag: 'Platform architecture',
+    title: 'Enterprise Data Platform Architecture',
+    why: 'A well-architected data platform ends the "dashboard factory," stops metric rebuilding, and gives every consumer, human or AI, a single source of truth.',
+    intro: 'Modern enterprise data platform design, semantic layer governance, and metric certification: the layer that makes both analytics and AI agents trustworthy.',
+    points: [
+      ['Layered architecture', 'Ingestion through delivery, designed for iterative deployment instead of big-bang launches'],
+      ['Semantic layer governance', 'dbt MetricFlow with a formal certification lifecycle and stakeholder alignment'],
+      ['CDC pipeline design', 'Kafka, Schema Registry, and Debezium for real-time data movement'],
+      ['Strangler pattern migration', 'Iterative platform cutover that builds organizational confidence through early wins'],
+      ['Entity resolution', 'Kimball star schema with crosswalks for cross-system identity mapping'],
+    ],
+  },
+  {
+    tag: 'Culture & transformation',
+    title: 'Data Culture & Organizational Transformation',
+    why: 'AI agent adoption fails without data trust, governance maturity, and cultural readiness. The technology is the easy part.',
+    intro: 'Building data cultures that support both human and AI-augmented decision-making at enterprise scale.',
+    points: [
+      ['DELTA framework', 'Structured implementation for measuring and advancing data-driven maturity'],
+      ['Cultural shift', 'Moving from dashboard factory to metric-certified operation, reducing rework and increasing trust'],
+      ['Executive alignment', 'Frameworks for getting leadership buy-in on data strategy and governance investment'],
+      ['ROI measurement', 'Quantifying the business value of analytics maturity and infrastructure investment'],
+      ['AI readiness', 'The governance, trust, and process discipline that AI agent adoption requires'],
+    ],
+  },
+];
+
+const Topic = ({ tag, title, why, children }: { tag: string; title: string; why: string; children: ReactNode }) => (
+  <article className="grid gap-8 border-t py-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] lg:gap-16 lg:py-20">
+    <ScrollReveal>
+      <div className="lg:sticky lg:top-24">
+        <p className="eyebrow">{tag}</p>
+        <h2 className="mt-3">{title}</h2>
+        <p className="mt-4 text-lg font-medium leading-relaxed text-foreground/80">{why}</p>
+      </div>
+    </ScrollReveal>
+    <ScrollReveal delay={0.05}>
+      <div>{children}</div>
+    </ScrollReveal>
+  </article>
+);
+
+const PointList = ({ points }: { points: string[][] }) => (
+  <ul className="divide-y border-y">
+    {points.map(([name, text]) => (
+      <li key={name} className="py-4">
+        <p className="font-semibold text-foreground">{name}</p>
+        <p className="mt-1 leading-relaxed text-muted-foreground">{text}</p>
+      </li>
+    ))}
+  </ul>
+);
 
 const Research = () => {
   return (
-    <main>
-      {/* Hero */}
-      <section className="bg-gradient-hero text-white py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <ScrollReveal>
-            <h1 className="hero-title">Research</h1>
-          </ScrollReveal>
-          <ScrollReveal delay={0.1}>
-            <p className="hero-subtitle">
-              Applied research that drives enterprise outcomes.
+    <>
+      <PageHero
+        eyebrow="Research"
+        title="Applied research, tested in practice."
+        lead="Agentic AI, healthcare analytics, enterprise data platforms, and the culture that makes them work."
+      />
+
+      <div className="page-container">
+        {/* Agentic AI */}
+        <Topic
+          tag="AI leadership"
+          title="Agentic AI & AI-Augmented Organizations"
+          why="Teams that put AI agents into production workflows gain throughput, consistency, and speed, while human effort shifts from creation to review."
+        >
+          <p className="text-lg leading-relaxed text-muted-foreground">
+            Building and deploying agentic AI systems that change how engineering and data teams operate: framework
+            evaluation, production agent architecture, and the change management that adoption needs.
+          </p>
+
+          {/* PROVE */}
+          <div className="ruled-card mt-8 p-7">
+            <p className="eyebrow">Original research</p>
+            <h3 className="mt-2">The PROVE Pattern</h3>
+            <p className="mt-3 leading-relaxed text-muted-foreground">
+              PROVE (Predict, Run, Observe, Validate, Evolve) applies the scientific method as an agentic AI reasoning loop.
+              It grew out of the documented failure modes of production ReAct-based architectures (looping, premature
+              commitment, error propagation, and confabulation) and answers each by implementing the full hypothesis-driven
+              cycle that existing frameworks only partly recover.
             </p>
-          </ScrollReveal>
-          <ScrollReveal delay={0.15}>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Agentic AI &bull; Healthcare Analytics &bull; Enterprise Platforms &bull; Data Culture Transformation
+            <ol className="mt-6 space-y-3">
+              {proveSteps.map((step) => (
+                <li key={step.letter} className="flex gap-4">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-navy font-mono text-sm font-semibold text-accent">
+                    {step.letter}
+                  </span>
+                  <p className="leading-relaxed text-muted-foreground">
+                    <span className="font-medium text-foreground">{step.name}:</span> {step.text}
+                  </p>
+                </li>
+              ))}
+            </ol>
+            <p className="mt-6 text-[0.9375rem] leading-relaxed text-muted-foreground">
+              The pattern works recursively across four abstraction layers (Meta, Strategic, Tactical, and Operational) and
+              maps naturally to multi-agent architectures. It's analyzed against eight or more existing frameworks, including
+              ReAct, Reflexion, Tree of Thoughts, LATS, and Plan-and-Execute, each of which rediscovered part of the loop.
             </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 page-section">
-        <div className="flex justify-center">
-          <div className="w-full max-w-5xl space-y-12">
-
-            {/* Agentic AI & AI-Augmented Organizations */}
-            <ScrollReveal>
-              <Card className="p-8 lg:p-10 shadow-executive-lg">
-                <CardContent className="space-y-6 p-0">
-                  <div>
-                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">AI Leadership</span>
-                  </div>
-                  <h2 className="section-title !mb-2">Agentic AI &amp; AI-Augmented Organizations</h2>
-                  <p className="text-lg font-semibold text-foreground">
-                    Why it matters: Organizations that deploy AI agents into production workflows unlock step-function
-                    gains in throughput, consistency, and speed-to-delivery — while shifting human effort from creation to review.
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Primary focus on building and deploying agentic AI systems that transform how data teams operate.
-                    This work spans framework evaluation, production agent architecture, and organizational change
-                    management for AI adoption.
-                  </p>
-
-                  {/* PROVE Pattern Highlight */}
-                  <Card className="bg-primary/5 border border-primary/20">
-                    <CardContent className="p-6 space-y-4">
-                      <div className="flex items-center gap-3 flex-wrap">
-                        <h3 className="font-semibold text-foreground">The PROVE Pattern — Original Research</h3>
-                        {/*<span className="px-2 py-0.5 bg-accent/20 text-accent-foreground rounded text-xs font-medium">Published</span>*/}
-                      </div>
-                      <p className="text-muted-foreground leading-relaxed">
-                        PROVE (Predict, Run, Observe, Validate, Evolve) applies the scientific method as an agentic AI
-                        reasoning loop. Developed from analysis of documented failure modes in production ReAct-based
-                        architectures — looping, premature commitment, error propagation, and confabulation — the pattern
-                        addresses each by implementing the complete hypothesis-driven cycle that existing frameworks only
-                        partially recover.
-                      </p>
-                      <div className="space-y-2 text-sm text-muted-foreground">
-                        <p className="flex items-start gap-2">
-                          <span className="font-mono font-bold text-primary flex-shrink-0">P</span>
-                          <span><span className="font-medium text-foreground">Predict</span> — Form falsifiable hypotheses with competing predictions before any action</span>
-                        </p>
-                        <p className="flex items-start gap-2">
-                          <span className="font-mono font-bold text-primary flex-shrink-0">R</span>
-                          <span><span className="font-medium text-foreground">Run</span> — Execute targeted experiments that maximize diagnostic value between hypotheses</span>
-                        </p>
-                        <p className="flex items-start gap-2">
-                          <span className="font-mono font-bold text-primary flex-shrink-0">O</span>
-                          <span><span className="font-medium text-foreground">Observe</span> — Collect factual results separated from interpretation to prevent confirmation bias</span>
-                        </p>
-                        <p className="flex items-start gap-2">
-                          <span className="font-mono font-bold text-primary flex-shrink-0">V</span>
-                          <span><span className="font-medium text-foreground">Validate</span> — Compare observations against predictions: supported, falsified, or inconclusive</span>
-                        </p>
-                        <p className="flex items-start gap-2">
-                          <span className="font-mono font-bold text-primary flex-shrink-0">E</span>
-                          <span><span className="font-medium text-foreground">Evolve</span> — Update understanding based on evidence, then iterate or conclude with confidence</span>
-                        </p>
-                      </div>
-                      <p className="text-muted-foreground leading-relaxed text-sm">
-                        The pattern operates recursively across four abstraction layers — Meta, Strategic, Tactical,
-                        and Operational — and maps naturally to multi-agent architectures with specialized roles.
-                        Analyzed against 8+ existing frameworks including ReAct, Reflexion, Tree of Thoughts, LATS,
-                        and Plan-and-Execute to demonstrate how each independently rediscovered pieces of what PROVE
-                        implements as a complete loop.
-                      </p>
-                      <StaggerContainer className="grid grid-cols-4 gap-4">
-                        <StaggerItem>
-                          <div className="text-center">
-                            <div className="text-2xl font-bold text-primary">26</div>
-                            <div className="text-xs text-muted-foreground">Academic Sources</div>
-                          </div>
-                        </StaggerItem>
-                        <StaggerItem>
-                          <div className="text-center">
-                            <div className="text-2xl font-bold text-primary">8+</div>
-                            <div className="text-xs text-muted-foreground">Frameworks Analyzed</div>
-                          </div>
-                        </StaggerItem>
-                        <StaggerItem>
-                          <div className="text-center">
-                            <div className="text-2xl font-bold text-primary">4</div>
-                            <div className="text-xs text-muted-foreground">Abstraction Layers</div>
-                          </div>
-                        </StaggerItem>
-                        <StaggerItem>
-                          <div className="text-center">
-                            <div className="text-2xl font-bold text-primary">5</div>
-                            <div className="text-xs text-muted-foreground">Step Cycle</div>
-                          </div>
-                        </StaggerItem>
-                      </StaggerContainer>
-                    </CardContent>
-                  </Card>
-
-                  {/* Resource Guide Highlight */}
-                  <Card className="bg-muted/50 border border-border">
-                    <CardContent className="p-6 space-y-4">
-                      <h3 className="font-semibold text-foreground">Agentic AI Resource Guide — Thought Leadership</h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        Authored a comprehensive 85+ resource guide covering architecture patterns, foundational research
-                        (ReAct, Chain of Thought, Tree of Thoughts, CoALA), production operations, and evaluation methodology.
-                        Adopted as the team's onboarding standard for the AI transition — accelerating ramp time and
-                        establishing a shared vocabulary across engineering, product, and leadership.
-                      </p>
-                      <StaggerContainer className="grid grid-cols-3 gap-4">
-                        <StaggerItem>
-                          <div className="text-center">
-                            <div className="text-2xl font-bold text-primary">85+</div>
-                            <div className="text-sm text-muted-foreground">Curated Resources</div>
-                          </div>
-                        </StaggerItem>
-                        <StaggerItem>
-                          <div className="text-center">
-                            <div className="text-2xl font-bold text-primary">14</div>
-                            <div className="text-sm text-muted-foreground">Sections</div>
-                          </div>
-                        </StaggerItem>
-                        <StaggerItem>
-                          <div className="text-center">
-                            <div className="text-2xl font-bold text-primary">6+</div>
-                            <div className="text-sm text-muted-foreground">Frameworks Covered</div>
-                          </div>
-                        </StaggerItem>
-                      </StaggerContainer>
-                    </CardContent>
-                  </Card>
-
-                  {/* Key Research Areas */}
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-3">Key Research Areas</h4>
-                    <ul className="space-y-2 text-muted-foreground">
-                      <li className="flex items-start gap-2">
-                        <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                        <span><span className="font-medium text-foreground">Framework evaluation:</span> Strands Agents SDK vs LangGraph vs CrewAI vs OpenAI Agents SDK — selection criteria tied to team capability and infrastructure fit</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                        <span><span className="font-medium text-foreground">Production agent architecture:</span> Model-driven loops, graph pipelines, multi-agent orchestration at enterprise scale</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                        <span><span className="font-medium text-foreground">Quality gates:</span> Human-in-the-loop review for agent-generated code, documentation, and metric definitions</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                        <span><span className="font-medium text-foreground">MCP &amp; composability:</span> Tool integration patterns that let agents operate across data platform layers</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                        <span><span className="font-medium text-foreground">Change management:</span> Moving teams from manual production to agent-augmented review without losing trust or quality</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                        <span><span className="font-medium text-foreground">Local AI infrastructure:</span> Model routing, RAG patterns, and cloud vs. local vs. hybrid inference trade-offs</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="flex flex-wrap justify-center gap-3 pt-2">
-                    <Link to="/prove-pattern">
-                      <Button>Read: The PROVE Pattern</Button>
-                    </Link>
-                    <Link to="/ai-development-lab">
-                      <Button variant="outline">View AI Development Lab Case Study</Button>
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            {/* AI/ML in Healthcare SaaS */}
-            <ScrollReveal>
-              <Card className="p-8 lg:p-10 shadow-executive-lg">
-                <CardContent className="space-y-6 p-0">
-                  <div>
-                    <span className="px-3 py-1 bg-success/10 text-success rounded-full text-sm font-medium">Healthcare SaaS</span>
-                  </div>
-                  <h2 className="section-title !mb-2">AI/ML in Healthcare SaaS</h2>
-                  <p className="text-lg font-semibold text-foreground">
-                    Why it matters: AI-powered clinical tools only drive value when analytics can prove it —
-                    quantified impact shapes pricing, go-to-market, and executive buy-in.
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Applied research into AI and ML products within healthcare technology, including product
-                    analytics practices that quantify the business value of AI-powered clinical tools.
-                  </p>
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                      <span><span className="font-medium text-foreground">AI Scribe Value Analysis:</span> Quantified 12.4 minutes of documentation time savings per visit ($1.1M monthly impact) — shaped product pricing and go-to-market positioning</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                      <span><span className="font-medium text-foreground">Care Agent Analytics:</span> Adoption analysis and correlation studies for a patient-facing LLM delivering medical lab results, tying feature usage to operational outcomes</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                      <span><span className="font-medium text-foreground">Product Research Analytics:</span> Segmentation, correlation analysis, and operational insights delivered to customer success and leadership</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                      <span>Predictive analytics for patient flow optimization and real-time clinical decision support</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                      <span>Data governance and privacy architecture in HIPAA-compliant medical systems</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            {/* Enterprise Data Platform Architecture */}
-            <ScrollReveal>
-              <Card className="p-8 lg:p-10 shadow-executive-lg">
-                <CardContent className="space-y-6 p-0">
-                  <div>
-                    <span className="px-3 py-1 bg-accent/10 text-accent-foreground rounded-full text-sm font-medium">Platform Architecture</span>
-                  </div>
-                  <h2 className="section-title !mb-2">Enterprise Data Platform Architecture</h2>
-                  <p className="text-lg font-semibold text-foreground">
-                    Why it matters: A well-architected data platform eliminates the "dashboard factory" problem,
-                    cuts metric rebuilding overhead by 30-40%, and gives every consumer — human or AI — a single source of truth.
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Research into modern enterprise data platform design, semantic layer governance, and metric
-                    certification — the infrastructure layer that makes both analytics and AI agents trustworthy.
-                  </p>
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                      <span><span className="font-medium text-foreground">Six-layer architecture:</span> Ingestion through Delivery — designed for iterative deployment, not big-bang launches</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                      <span><span className="font-medium text-foreground">Semantic layer governance:</span> dbt MetricFlow with formal certification lifecycle and stakeholder alignment</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                      <span><span className="font-medium text-foreground">CDC pipeline design:</span> Kafka, Schema Registry, and Debezium for real-time data movement</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                      <span><span className="font-medium text-foreground">Strangler pattern migration:</span> Iterative platform cutover that builds organizational confidence through early wins</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                      <span><span className="font-medium text-foreground">Entity resolution:</span> Kimball star schema with crosswalks for cross-system identity mapping</span>
-                    </li>
-                  </ul>
-                  <div className="text-center pt-2">
-                    <Link to="/enterprise-data-platform">
-                      <Button variant="outline">View Enterprise Data Platform Case Study</Button>
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            {/* Data Culture & Organizational Transformation */}
-            <ScrollReveal>
-              <Card className="p-8 lg:p-10 shadow-executive-lg">
-                <CardContent className="space-y-6 p-0">
-                  <div>
-                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Culture &amp; Transformation</span>
-                  </div>
-                  <h2 className="section-title !mb-2">Data Culture &amp; Organizational Transformation</h2>
-                  <p className="text-lg font-semibold text-foreground">
-                    Why it matters: AI agent adoption fails without an existing foundation of data trust, governance
-                    maturity, and cultural readiness — the technology is the easy part.
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Research into building sustainable data cultures that enable both human and AI-augmented
-                    decision-making at enterprise scale.
-                  </p>
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                      <span><span className="font-medium text-foreground">DELTA framework:</span> Structured implementation for measuring and advancing data-driven maturity</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                      <span><span className="font-medium text-foreground">Cultural shift:</span> Moving from dashboard factory to metric-certified operation — reducing rework, increasing trust</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                      <span><span className="font-medium text-foreground">Executive alignment:</span> Frameworks for getting leadership buy-in on data strategy and governance investment</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                      <span><span className="font-medium text-foreground">ROI measurement:</span> Quantifying the business value of analytics maturity and infrastructure investment</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                      <span><span className="font-medium text-foreground">AI readiness:</span> Building the organizational foundation — governance, trust, process discipline — that AI agent adoption requires</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
+            <StaggerContainer className="mt-6 grid grid-cols-2 gap-4 border-t pt-6 sm:grid-cols-4">
+              {[
+                ['26', 'Academic sources'],
+                ['8+', 'Frameworks analyzed'],
+                ['4', 'Abstraction layers'],
+                ['5', 'Step cycle'],
+              ].map(([value, label]) => (
+                <StaggerItem key={label}>
+                  <p className="text-2xl font-semibold tabular-nums text-foreground">{value}</p>
+                  <p className="text-xs text-muted-foreground">{label}</p>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
           </div>
-        </div>
-      </section>
-    </main>
+
+          {/* Resource guide */}
+          <div className="surface-card mt-6 bg-muted p-7">
+            <p className="eyebrow">Field guide</p>
+            <h3 className="mt-2">Agentic AI Resource Guide</h3>
+            <p className="mt-3 leading-relaxed text-muted-foreground">
+              A guide to more than 85 resources on architecture patterns, foundational research (ReAct, Chain of Thought,
+              Tree of Thoughts, CoALA), production operations, and evaluation methodology. I wrote it to give engineering,
+              product, and leadership a shared vocabulary when a team starts working with agents.
+            </p>
+            <div className="mt-6 grid grid-cols-3 gap-4 border-t pt-6">
+              {[
+                ['85+', 'Curated resources'],
+                ['14', 'Sections'],
+                ['6+', 'Frameworks covered'],
+              ].map(([value, label]) => (
+                <div key={label}>
+                  <p className="text-2xl font-semibold tabular-nums text-foreground">{value}</p>
+                  <p className="text-xs text-muted-foreground">{label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <h3 className="mb-2 mt-10 text-lg">Key research areas</h3>
+          <PointList points={agenticAreas} />
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button asChild>
+              <Link to="/prove-pattern">
+                Read: The PROVE Pattern <ArrowRight />
+              </Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link to="/ai-development-lab">AI Development Lab</Link>
+            </Button>
+          </div>
+        </Topic>
+
+        {topics.map((topic) => (
+          <Topic key={topic.title} tag={topic.tag} title={topic.title} why={topic.why}>
+            <p className="mb-6 text-lg leading-relaxed text-muted-foreground">{topic.intro}</p>
+            <PointList points={topic.points} />
+          </Topic>
+        ))}
+      </div>
+    </>
   );
 };
 

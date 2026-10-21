@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout";
 
 // Eagerly load Home page since it's the landing page
@@ -15,19 +15,23 @@ const Projects = lazy(() => import("./pages/Projects"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Reflections = lazy(() => import("./pages/Reflections"));
 const Research = lazy(() => import("./pages/Research"));
-const ExperityAnalyticAssessment = lazy(() => import("./pages/ExperityAnalyticAssessment"));
-const MAFeatureParity = lazy(() => import("./pages/MAFeatureParity"));
-const DeltaFrameworkImplementation = lazy(() => import("./pages/DeltaFrameworkImplementation"));
-const EnterpriseDataTransformation = lazy(() => import("./pages/EnterpriseDataTransformation"));
-const MAIntegrationStrategy = lazy(() => import("./pages/MAIntegrationStrategy"));
-const TeamScalingLeadership = lazy(() => import("./pages/TeamScalingLeadership"));
-const AIAugmentedDataOrg = lazy(() => import("./pages/AIAugmentedDataOrg"));
-const EnterpriseDataPlatform = lazy(() => import("./pages/EnterpriseDataPlatform"));
 const AIDevelopmentLab = lazy(() => import("./pages/AIDevelopmentLab"));
 const ProvePattern = lazy(() => import("./pages/ProvePattern"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
+
+// Case studies that were taken down. Old links (LinkedIn, résumés, search results) land on Projects instead of a 404.
+const retiredRoutes = [
+  "/experity-analytic-assessment",
+  "/ma-feature-parity",
+  "/delta-framework-implementation",
+  "/enterprise-data-transformation",
+  "/ma-integration-strategy",
+  "/team-scaling-leadership",
+  "/ai-augmented-data-org",
+  "/enterprise-data-platform",
+];
 
 // Loading component for lazy-loaded pages
 const PageLoader = () => (
@@ -51,16 +55,11 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/reflections" element={<Reflections />} />
               <Route path="/research" element={<Research />} />
-              <Route path="/experity-analytic-assessment" element={<ExperityAnalyticAssessment />} />
-              <Route path="/ma-feature-parity" element={<MAFeatureParity />} />
-              <Route path="/delta-framework-implementation" element={<DeltaFrameworkImplementation />} />
-              <Route path="/enterprise-data-transformation" element={<EnterpriseDataTransformation />} />
-              <Route path="/ma-integration-strategy" element={<MAIntegrationStrategy />} />
-              <Route path="/team-scaling-leadership" element={<TeamScalingLeadership />} />
-              <Route path="/ai-augmented-data-org" element={<AIAugmentedDataOrg />} />
-              <Route path="/enterprise-data-platform" element={<EnterpriseDataPlatform />} />
               <Route path="/ai-development-lab" element={<AIDevelopmentLab />} />
               <Route path="/prove-pattern" element={<ProvePattern />} />
+              {retiredRoutes.map((path) => (
+                <Route key={path} path={path} element={<Navigate to="/projects" replace />} />
+              ))}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

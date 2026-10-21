@@ -1,197 +1,218 @@
 import { Link } from "react-router-dom";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ArrowRight, FlaskConical, Microscope } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Bot, Database, Users, Handshake, Briefcase, Layers } from "lucide-react";
+import PageHero from "@/components/PageHero";
+import Portrait from "@/components/Portrait";
+import SectionHeading from "@/components/SectionHeading";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
+import { currentRoles, profile } from "@/lib/profile";
+
+const stats = [
+  { value: "20+", label: "years leading people, from Army intelligence to engineering leadership" },
+  { value: "15 → 65+", label: "people on the R&D team I grew through a merger integration" },
+  { value: "7", label: "production AI agents shipped, each with a human reviewer" },
+  { value: "MBA", label: "in business strategy using AI and analytics, Milwaukee School of Engineering" },
+];
+
+const principles = [
+  {
+    title: "Trust before tooling",
+    body: "AI adoption stalls on trust, not technology. Start with low-risk work, let agents draft, and keep people as reviewers.",
+  },
+  {
+    title: "Leaders in the code",
+    body: "I build with the tools before asking a team to adopt them. It's how you set expectations that hold up.",
+  },
+  {
+    title: "Architecture is a people choice",
+    body: "The right technology is the one that fits the team you have and where the organization is heading.",
+  },
+];
 
 const Home = () => {
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-hero text-white py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <ScrollReveal>
-            <h1 className="hero-title">Brandon Zweifel</h1>
-          </ScrollReveal>
-          <ScrollReveal delay={0.1}>
-            <p className="hero-subtitle">
-              Senior Software, Data, & AI Executive
-            </p>
-          </ScrollReveal>
-          <ScrollReveal delay={0.15}>
-            <p className="text-lg lg:text-xl mb-12 text-white/80 max-w-2xl mx-auto">
-              Building AI-augmented organizations that deliver measurable business outcomes in healthcare SaaS
-            </p>
-          </ScrollReveal>
-          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 max-w-5xl mx-auto" staggerDelay={0.08}>
-            <StaggerItem>
-              <div className="metric-card">
-                <div className="text-3xl lg:text-4xl font-bold text-accent">$125M</div>
-                <div className="text-sm mt-1 text-white/80">Cost Savings Delivered</div>
-              </div>
-            </StaggerItem>
-            <StaggerItem>
-              <div className="metric-card">
-                <div className="text-3xl lg:text-4xl font-bold text-accent">$1.2B</div>
-                <div className="text-sm mt-1 text-white/80">Valuation Growth</div>
-              </div>
-            </StaggerItem>
-            <StaggerItem>
-              <div className="metric-card">
-                <div className="text-3xl lg:text-4xl font-bold text-accent">65+</div>
-                <div className="text-sm mt-1 text-white/80">Team Built & Led</div>
-              </div>
-            </StaggerItem>
-            <StaggerItem>
-              <div className="metric-card">
-                <div className="text-3xl lg:text-4xl font-bold text-accent">7</div>
-                <div className="text-sm mt-1 text-white/80">Production AI Agents</div>
-              </div>
-            </StaggerItem>
-          </StaggerContainer>
-        </div>
-      </section>
+      <PageHero
+        eyebrow={`${profile.title} · HHAeXchange`}
+        title={profile.name}
+        lead="Engineering leader with twenty years of turning information into decisions, from Army intelligence to building software, data and AI teams in healthcare SaaS. I also run Zweifel Tech LLC, a small software publisher."
+        aside={<Portrait eager className="mx-0 w-44 sm:w-64 lg:w-72" />}
+      >
+        <Button asChild variant="accent" size="lg">
+          <Link to="/about">About me</Link>
+        </Button>
+        <Button asChild variant="on-navy" size="lg">
+          <Link to="/contact">Get in touch</Link>
+        </Button>
+      </PageHero>
 
-      {/* Executive Summary */}
+      {/* Now */}
       <section className="page-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-container">
           <ScrollReveal>
-            <Card className="shadow-executive-lg">
-              <CardContent className="pt-10 pb-10 text-center">
-                <img
-                  src="/images/Brandon-Zweifel-headshot.jpg"
-                  alt="Brandon Zweifel - Senior Software, Data, & AI Executive"
-                  className="w-40 h-40 rounded-full mx-auto mb-8 object-cover shadow-executive-md"
-                />
-                <h2 className="text-3xl font-bold mb-6">Executive Summary</h2>
-                <div className="max-w-4xl mx-auto mb-10">
-                  <p className="text-lg leading-relaxed text-muted-foreground">
-                    Senior Software, Data, and AI executive who delivers measurable business outcomes through <span className="font-semibold text-foreground">AI-augmented organizations</span>.
-                    Drove <span className="font-semibold text-foreground">$125M in post-M&A cost reductions</span> and
-                    contributed to <span className="font-semibold text-foreground">$500M to $1.2B valuation growth</span> at
-                    Experity. Built and scaled a <span className="font-semibold text-foreground">65+ person R&D organization</span>,
-                    deployed <span className="font-semibold text-foreground">seven production AI agents</span> that transformed
-                    the team's operating model, and architected a six-layer enterprise data platform governing
-                    one of the nation's largest urgent care datasets. The CEO identified the product analytics practice
-                    built under this leadership as the highest-value function delivered internally.
-                  </p>
-                </div>
-                <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
-                  <StaggerItem>
-                    <div className="flex flex-col items-center p-4 bg-primary/5 rounded-xl">
-                      <Bot className="w-8 h-8 text-primary mb-2" />
-                      <span className="text-sm font-medium">AI Leadership</span>
-                    </div>
-                  </StaggerItem>
-                  <StaggerItem>
-                    <div className="flex flex-col items-center p-4 bg-primary/5 rounded-xl">
-                      <Database className="w-8 h-8 text-primary mb-2" />
-                      <span className="text-sm font-medium">Enterprise Platforms</span>
-                    </div>
-                  </StaggerItem>
-                  <StaggerItem>
-                    <div className="flex flex-col items-center p-4 bg-primary/5 rounded-xl">
-                      <Layers className="w-8 h-8 text-primary mb-2" />
-                      <span className="text-sm font-medium">M&A Integration</span>
-                    </div>
-                  </StaggerItem>
-                  <StaggerItem>
-                    <div className="flex flex-col items-center p-4 bg-primary/5 rounded-xl">
-                      <Users className="w-8 h-8 text-primary mb-2" />
-                      <span className="text-sm font-medium">Team Building</span>
-                    </div>
-                  </StaggerItem>
-                </StaggerContainer>
-              </CardContent>
-            </Card>
+            <SectionHeading eyebrow="Now" title="What I'm working on" />
           </ScrollReveal>
+          <StaggerContainer className="grid gap-6 md:grid-cols-2">
+            {currentRoles.map((role) => (
+              <StaggerItem key={role.org} className="h-full">
+                <article className="ruled-card h-full p-7 lg:p-8">
+                  <p className="font-mono text-xs text-muted-foreground">{role.period}</p>
+                  <h3 className="mt-3">{role.org}</h3>
+                  <p className="font-medium text-primary">{role.role}</p>
+                  <p className="mt-4 leading-relaxed text-muted-foreground">{role.summary}</p>
+                  {role.org === "Zweifel Tech LLC" && (
+                    // A plain link: /midnight-alibi/ is a static page outside the React app
+                    <a href="/midnight-alibi/" className="arrow-link mt-5">
+                      Visit Midnight Alibi <ArrowRight />
+                    </a>
+                  )}
+                </article>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
         </div>
       </section>
 
-      {/* Navigation Cards */}
-      <section className="page-section-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <StaggerContainer className="grid md:grid-cols-2 gap-8">
-            <StaggerItem>
-              <Card className="shadow-executive-md hover:shadow-executive-lg transition-all duration-300 h-full">
-                <CardHeader className="text-center pb-4">
-                  <div className="w-14 h-14 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Bot className="w-7 h-7 text-white" />
-                  </div>
-                  <CardTitle className="text-xl">AI-Augmented R&D Organization</CardTitle>
-                  <CardDescription className="text-base mt-2">
-                    Transformed an R&D team from manual producers to agent-augmented reviewers, deploying seven
-                    production agents that shifted the team's constraint from build capacity to review capacity.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="text-center pt-0">
-                  <Button asChild>
-                    <Link to="/ai-augmented-data-org">View Case Study</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            </StaggerItem>
-
-            <StaggerItem>
-              <Card className="shadow-executive-md hover:shadow-executive-lg transition-all duration-300 h-full">
-                <CardHeader className="text-center pb-4">
-                  <div className="w-14 h-14 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Database className="w-7 h-7 text-white" />
-                  </div>
-                  <CardTitle className="text-xl">Enterprise R&D Platform</CardTitle>
-                  <CardDescription className="text-base mt-2">
-                    Built a six-layer platform with semantic layer governance, delivering certified metrics
-                    in weeks instead of months and recovering 30-40% of analyst capacity.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="text-center pt-0">
-                  <Button asChild>
-                    <Link to="/enterprise-data-platform">View Case Study</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            </StaggerItem>
-
-            <StaggerItem>
-              <Card className="shadow-executive-md hover:shadow-executive-lg transition-all duration-300 h-full">
-                <CardHeader className="text-center pb-4">
-                  <div className="w-14 h-14 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Briefcase className="w-7 h-7 text-white" />
-                  </div>
-                  <CardTitle className="text-xl">Full Project Portfolio</CardTitle>
-                  <CardDescription className="text-base mt-2">
-                    M&A integration delivering $125M in savings, team scaling from 15 to 65+, R&D culture
-                    transformation driving $20M+ in revenue impact, and more.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="text-center pt-0">
-                  <Button asChild>
-                    <Link to="/projects">View All Projects</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            </StaggerItem>
-
-            <StaggerItem>
-              <Card className="shadow-executive-md hover:shadow-executive-lg transition-all duration-300 h-full">
-                <CardHeader className="text-center pb-4">
-                  <div className="w-14 h-14 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Handshake className="w-7 h-7 text-white" />
-                  </div>
-                  <CardTitle className="text-xl">Let's Connect</CardTitle>
-                  <CardDescription className="text-base mt-2">
-                    Open to executive leadership opportunities, advisory roles, and strategic conversations
-                    about AI-augmented organizations.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="text-center pt-0">
-                  <Button asChild>
-                    <Link to="/contact">Get in Touch</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            </StaggerItem>
+      {/* Track record */}
+      <section className="border-y bg-muted">
+        <div className="page-container page-section-sm">
+          <StaggerContainer className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+            {stats.map((stat) => (
+              <StaggerItem key={stat.value}>
+                <div className="border-t-2 border-accent pt-5">
+                  <p className="stat-value">{stat.value}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{stat.label}</p>
+                </div>
+              </StaggerItem>
+            ))}
           </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Selected work */}
+      <section className="page-section">
+        <div className="page-container">
+          <ScrollReveal>
+            <SectionHeading
+              eyebrow="Selected work"
+              title="Things I've built"
+              action={
+                <Link to="/projects" className="arrow-link">
+                  All projects <ArrowRight />
+                </Link>
+              }
+            />
+          </ScrollReveal>
+          <StaggerContainer className="grid gap-6 lg:grid-cols-3">
+            <StaggerItem className="lg:col-span-3">
+              <a
+                href="/midnight-alibi/"
+                className="group relative block overflow-hidden rounded-lg border border-[#d6a54d]/30 bg-[#141217] text-[#ece4d1] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d6a54d]"
+              >
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 bg-cover bg-[center_30%] opacity-60 transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                  style={{ backgroundImage: "url('/midnight-alibi/assets/manor-night.webp')" }}
+                />
+                <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-[#141217] via-[#141217]/85 to-[#141217]/10" />
+                <div className="relative max-w-xl p-8 lg:p-12">
+                  <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#d6a54d]">Zweifel Tech LLC · Game &amp; book</p>
+                  <h3 className="mt-3 text-3xl font-semibold lg:text-4xl">
+                    Midnight <em className="text-[#d6a54d]">Alibi</em>
+                  </h3>
+                  <p className="mt-4 leading-relaxed text-[#ece4d1]/80">
+                    A murder-mystery logic puzzle: rebuild every suspect's night, hour by hour, and name the killer.
+                    Now on the App Store and Google Play.
+                  </p>
+                  <span className="mt-6 inline-flex items-center gap-2 font-semibold text-[#d6a54d]">
+                    Visit the game
+                    <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
+                  </span>
+                </div>
+              </a>
+            </StaggerItem>
+            {[
+              {
+                to: "/prove-pattern",
+                icon: Microscope,
+                kicker: "Original research",
+                title: "The PROVE Pattern",
+                body: "The scientific method as a reasoning loop for AI agents: Predict, Run, Observe, Validate, Evolve.",
+              },
+              {
+                to: "/ai-development-lab",
+                icon: FlaskConical,
+                kicker: "Lab",
+                title: "AI Development Lab",
+                body: "A local platform with three working agents, used to compare agent frameworks on real workloads.",
+              },
+            ].map((item) => (
+              <StaggerItem key={item.to} className={item.to === "/prove-pattern" ? "lg:col-span-2" : undefined}>
+                <Link to={item.to} className="surface-card group flex h-full flex-col p-7 lg:p-8">
+                  <div className="flex items-center gap-3">
+                    <span className="card-icon">
+                      <item.icon className="h-5 w-5" />
+                    </span>
+                    <p className="eyebrow">{item.kicker}</p>
+                  </div>
+                  <h3 className="mt-5">{item.title}</h3>
+                  <p className="mt-2 flex-1 leading-relaxed text-muted-foreground">{item.body}</p>
+                  <span className="arrow-link mt-5">
+                    Read more <ArrowRight />
+                  </span>
+                </Link>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* How I lead */}
+      <section className="page-section border-t">
+        <div className="page-container">
+          <ScrollReveal>
+            <SectionHeading
+              eyebrow="How I lead"
+              title="A few things I believe"
+              action={
+                <Link to="/reflections" className="arrow-link">
+                  Read the reflections <ArrowRight />
+                </Link>
+              }
+            />
+          </ScrollReveal>
+          <StaggerContainer className="grid gap-10 md:grid-cols-3">
+            {principles.map((p, i) => (
+              <StaggerItem key={p.title}>
+                <p className="font-mono text-sm text-accent-ink">0{i + 1}</p>
+                <h3 className="mt-2">{p.title}</h3>
+                <p className="mt-3 leading-relaxed text-muted-foreground">{p.body}</p>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Contact band */}
+      <section className="hero-band">
+        <div className="page-container flex flex-col gap-8 py-16 lg:flex-row lg:items-center lg:justify-between lg:py-20">
+          <div className="max-w-2xl">
+            <p className="eyebrow mb-4">Contact</p>
+            <h2>Let's talk.</h2>
+            <p className="mt-4 text-lg leading-relaxed text-navy-muted">
+              Engineering leadership, agentic AI, or a Midnight Alibi case that got the better of you. I'm glad to hear from you.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <Button asChild variant="accent" size="lg">
+              <a href={`mailto:${profile.email}`}>Email me</a>
+            </Button>
+            <Button asChild variant="on-navy" size="lg">
+              <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
+                LinkedIn
+              </a>
+            </Button>
+          </div>
         </div>
       </section>
     </>
