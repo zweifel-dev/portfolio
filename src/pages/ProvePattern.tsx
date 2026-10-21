@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import ScrollReveal from "@/components/ScrollReveal";
 import ProveDiagram from "@/components/ProveDiagram";
+import PageHero from "@/components/PageHero";
 
 const sources = [
   { num: 1, text: 'Yao, S., et al. (2022). "ReAct: Synergizing Reasoning and Acting in Language Models." ICLR 2023.', url: "https://arxiv.org/abs/2210.03629" },
@@ -19,7 +20,7 @@ const sources = [
   { num: 12, text: 'Liu, R., Neubig, G., & Andreas, J. (2024). "An Incomplete Loop: Instruction Inference, Instruction Following, and In-context Learning." CMU & MIT.', url: "https://arxiv.org/abs/2404.03028" },
   { num: 13, text: 'Qiu, L., et al. (2024). "Phenomenal Yet Puzzling: Testing Inductive Reasoning Capabilities of Language Models."', url: "https://arxiv.org/abs/2310.08559" },
   { num: 14, text: 'Giannone, D., et al. (2025). "Agentic Design Patterns: A System-Theoretic Framework."', url: "https://arxiv.org/abs/2601.19752" },
-  { num: 15, text: 'Google Cloud. (2025). "Choose a Design Pattern for Your Agentic AI System."', url: "https://docs.google.com/architecture/choose-design-pattern-agentic-ai-system" },
+  { num: 15, text: 'Google Cloud. (2025). "Choose a Design Pattern for Your Agentic AI System."', url: "https://cloud.google.com/architecture/choose-design-pattern-agentic-ai-system" },
   { num: 16, text: 'Klu.ai. (2024). "ReACT Agent Model."', url: "https://klu.ai/glossary/react-agent-model" },
   { num: 17, text: 'Token Security. (2026). "Transparency and Explainability in Agentic AI Decision-Making."', url: "https://www.token.security/blog/transparency-and-explainability-in-agentic-ai-decision-making" },
   { num: 18, text: 'Paracha, A. (2026). "The Two Agentic Loops: How to Design and Scale Agentic Apps." Plano AI Blog.', url: "https://planoai.dev/blog/the-two-agentic-loops-how-to-design-and-scale-agentic-apps" },
@@ -35,25 +36,13 @@ const sources = [
 
 const ProvePattern = () => {
   return (
-    <main>
+    <>
       {/* Hero */}
-      <section className="bg-gradient-hero text-white py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <ScrollReveal>
-            <h1 className="hero-title">The PROVE Pattern</h1>
-          </ScrollReveal>
-          <ScrollReveal delay={0.1}>
-            <p className="hero-subtitle">
-              A Scientific Method for Agentic AI
-            </p>
-          </ScrollReveal>
-          <ScrollReveal delay={0.15}>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Predict · Run · Observe · Validate · Evolve
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Original research"
+        title="The PROVE Pattern"
+        lead="A scientific method for agentic AI: Predict · Run · Observe · Validate · Evolve."
+      />
 
       {/* Article Content */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 page-section">
@@ -524,7 +513,7 @@ const ProvePattern = () => {
           </div>
         </div>
       </section>
-    </main>
+    </>
   );
 };
 

@@ -1,136 +1,80 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
-import { Mail, Phone, Linkedin, MapPin } from 'lucide-react';
+import { Mail, Phone, Linkedin, MapPin, ArrowRight } from 'lucide-react';
+import PageHero from '@/components/PageHero';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
+import { profile } from '@/lib/profile';
 
 const contactMethods = [
-  {
-    icon: Mail,
-    label: 'Email',
-    value: 'Brandon@Zweifel.tech',
-    href: 'mailto:Brandon@Zweifel.tech',
-    color: 'bg-primary/10 text-primary',
-  },
-  {
-    icon: Phone,
-    label: 'Phone',
-    value: '608.931.4726',
-    href: 'tel:+16089314726',
-    color: 'bg-success/10 text-success',
-  },
-  {
-    icon: Linkedin,
-    label: 'LinkedIn',
-    value: 'linkedin.com/in/bzweifel',
-    href: 'https://www.linkedin.com/in/bzweifel/',
-    external: true,
-    color: 'bg-blue-500/10 text-blue-600',
-  },
-  {
-    icon: MapPin,
-    label: 'Location',
-    value: 'Roscoe, IL',
-    color: 'bg-accent/10 text-accent-foreground',
-  },
+  { icon: Mail, label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
+  { icon: Linkedin, label: 'LinkedIn', value: profile.linkedinLabel, href: profile.linkedin, external: true },
+  { icon: Phone, label: 'Phone', value: profile.phone, href: profile.phoneHref },
+  { icon: MapPin, label: 'Location', value: profile.location },
 ];
 
 const Contact = () => {
   return (
-    <main>
-      {/* Hero */}
-      <section className="bg-gradient-hero text-white py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <ScrollReveal>
-            <h1 className="hero-title">Let's Connect</h1>
-          </ScrollReveal>
-          <ScrollReveal delay={0.1}>
-            <p className="hero-subtitle">
-              Strategic conversations start here.
-            </p>
-          </ScrollReveal>
-          <ScrollReveal delay={0.15}>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Executive software, data, &amp; AI leadership &bull; Advisory partnerships &bull; Strategic consulting
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
+    <>
+      <PageHero
+        eyebrow="Contact"
+        title="Let's talk."
+        lead="I'm glad to hear from fellow engineering leaders, people working on agentic AI, and Midnight Alibi players. Email is the fastest way to reach me."
+      />
 
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 page-section">
-        <div className="flex justify-center">
-          <div className="w-full max-w-4xl space-y-12">
-
-            {/* Positioning Statement */}
-            <ScrollReveal>
-              <Card className="p-8 lg:p-10 shadow-executive-lg">
-                <CardContent className="space-y-6 p-0">
-                  <p className="text-lg leading-relaxed text-muted-foreground">
-                    Whether you're looking for executive software, data, &amp; AI leadership, exploring advisory partnerships,
-                    or want to discuss how AI-augmented organizations can transform your business — I welcome
-                    the conversation. My background spans enterprise platform architecture, agentic AI deployment,
-                    M&amp;A data integration, and building high-performance teams from the ground up.
-                  </p>
-                  <div className="border-t border-border pt-6">
-                    <p className="font-semibold text-foreground text-lg">
-                      Open to executive leadership opportunities, advisory roles, board positions, and strategic consulting engagements.
-                    </p>
+      <section className="page-section">
+        <div className="page-container grid gap-12 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:gap-16">
+          <StaggerContainer className="grid content-start gap-3">
+            {contactMethods.map((method) => {
+              const content = (
+                <>
+                  <span className="card-icon">
+                    <method.icon className="h-5 w-5" />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="eyebrow">{method.label}</p>
+                    <p className="mt-1 break-words font-medium text-foreground">{method.value}</p>
                   </div>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            {/* Contact Methods Grid */}
-            <StaggerContainer className="grid sm:grid-cols-2 gap-6">
-              {contactMethods.map((method) => (
+                </>
+              );
+              return (
                 <StaggerItem key={method.label}>
-                  <Card className="h-full hover:shadow-executive-lg transition-all duration-300 hover:-translate-y-1">
-                    <CardContent className="p-6 flex items-start gap-4">
-                      <div className={`flex items-center justify-center w-12 h-12 rounded-xl flex-shrink-0 ${method.color}`}>
-                        <method.icon className="w-6 h-6" />
-                      </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground mb-1">{method.label}</p>
-                        {method.href ? (
-                          <a
-                            href={method.href}
-                            target={method.external ? '_blank' : undefined}
-                            rel={method.external ? 'noopener noreferrer' : undefined}
-                            className="font-semibold text-foreground hover:text-primary transition-colors"
-                          >
-                            {method.value}
-                          </a>
-                        ) : (
-                          <p className="font-semibold text-foreground">{method.value}</p>
-                        )}
-                      </div>
-                    </CardContent>
-                  </Card>
+                  {method.href ? (
+                    <a
+                      href={method.href}
+                      target={method.external ? '_blank' : undefined}
+                      rel={method.external ? 'noopener noreferrer' : undefined}
+                      className="surface-card flex items-center gap-4 px-6 py-5"
+                    >
+                      {content}
+                    </a>
+                  ) : (
+                    <div className="surface-card flex items-center gap-4 px-6 py-5">{content}</div>
+                  )}
                 </StaggerItem>
-              ))}
-            </StaggerContainer>
+              );
+            })}
+          </StaggerContainer>
 
-            {/* CTA */}
-            <ScrollReveal>
-              <div className="text-center space-y-6">
-                <p className="text-muted-foreground">
-                  Prefer to start with my background? Review the executive portfolio first.
-                </p>
-                <div className="flex flex-wrap justify-center gap-4">
-                  <Link to="/about">
-                    <Button variant="outline" size="lg">View Full Profile</Button>
-                  </Link>
-                  <Link to="/projects">
-                    <Button size="lg">Executive Portfolio</Button>
-                  </Link>
-                </div>
+          <ScrollReveal delay={0.1}>
+            <aside className="ruled-card p-7">
+              <p className="eyebrow">Midnight Alibi players</p>
+              <h2 className="mt-3 text-[1.375rem]">Questions about the game or your data?</h2>
+              <p className="mt-3 leading-relaxed text-muted-foreground">
+                Email me and include your Player ID from Settings → About if it's about your account. The privacy policy
+                and the deletion steps are also online.
+              </p>
+              <div className="mt-5 flex flex-col gap-2">
+                {/* Plain links: these are static pages outside the React app */}
+                <a href="/midnight-alibi/privacy/" className="arrow-link">
+                  Privacy policy <ArrowRight />
+                </a>
+                <a href="/midnight-alibi/delete-account/" className="arrow-link">
+                  Delete your data <ArrowRight />
+                </a>
               </div>
-            </ScrollReveal>
-
-          </div>
+            </aside>
+          </ScrollReveal>
         </div>
       </section>
-    </main>
+    </>
   );
 };
 
