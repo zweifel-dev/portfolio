@@ -281,6 +281,9 @@ section.tight { padding: clamp(36px, 6vw, 64px) 0; }
 .split.flip > :first-child { order: 2; }
 @media (max-width: 820px) { .split { grid-template-columns: 1fr; } .split.flip > :first-child { order: 0; } }
 .split .phone { margin: 0 auto; max-width: 300px; }
+/* the paperback (home) */
+.book > div > p { color: var(--noir-muted); }
+.book-cover { display: block; width: 100%; max-width: 280px; height: auto; margin: 0 auto; border-radius: 4px; box-shadow: 0 24px 50px rgba(0, 0, 0, 0.5); }
 .num { font: 0.9rem/1 var(--type); color: var(--brass); letter-spacing: 0.1em; }
 
 /* screenshot strip */
