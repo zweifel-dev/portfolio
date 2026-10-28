@@ -284,6 +284,12 @@ section.tight { padding: clamp(36px, 6vw, 64px) 0; }
 /* the paperback (home) */
 .book > div > p { color: var(--noir-muted); }
 .book-cover { display: block; width: 100%; max-width: 280px; height: auto; margin: 0 auto; border-radius: 4px; box-shadow: 0 24px 50px rgba(0, 0, 0, 0.5); }
+/* 159px is 3px a module, so the code stays sharp enough to scan */
+.book-qr { display: flex; align-items: center; gap: 18px; margin: 24px 0 0; }
+.book-qr img { width: 159px; height: 159px; flex: none; border-radius: 6px; }
+.book-qr figcaption { max-width: 16em; font-size: 0.92rem; color: var(--noir-muted); }
+/* You can't scan the screen you're holding. */
+@media (max-width: 820px), (hover: none) { .book-qr { display: none; } }
 .num { font: 0.9rem/1 var(--type); color: var(--brass); letter-spacing: 0.1em; }
 
 /* screenshot strip */
