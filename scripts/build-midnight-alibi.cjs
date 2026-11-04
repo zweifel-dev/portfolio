@@ -22,7 +22,7 @@
  *        suspects/     the cast and the victims (engine.js SUSPECTS, ROLES, VICTIMS)
  *
  * Hand-written, not generated: public/midnight-alibi/index.html (home),
- * privacy/, delete-account/ and assets/site.css. Screenshots (assets/screens/,
+ * privacy/, terms/, delete-account/ and assets/site.css. Screenshots (assets/screens/,
  * assets/tablet/) and og-image.jpg are converted by hand from the game repo's
  * assets/store/ captures.
  */
@@ -98,11 +98,12 @@ function header(active) {
 
 const FOOTER = `  <footer>
     <div class="wrap">
-      <span>© 2026 Brandon Zweifel · Made at <a href="/">zweifel.tech</a></span>
+      <span>© 2026 Zweifel Tech LLC · Made at <a href="/">zweifel.tech</a></span>
       <nav aria-label="Footer">
         <a href="${BASE}/">Midnight Alibi</a>
         <a href="${BASE}/how-to-play/">How to play</a>
         <a href="${BASE}/privacy/">Privacy policy</a>
+        <a href="${BASE}/terms/">Terms of service</a>
         <a href="${BASE}/delete-account/">Delete your data</a>
         <a href="/contact">Contact</a>
       </nav>
