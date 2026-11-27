@@ -98,7 +98,7 @@ function header(active) {
 
 const FOOTER = `  <footer>
     <div class="wrap">
-      <span>© 2026 Zweifel Tech LLC · Made at <a href="/">zweifel.tech</a></span>
+      <span>A product of <a href="/">Zweifel Tech LLC</a> · © 2026</span>
       <nav aria-label="Footer">
         <a href="${BASE}/">Midnight Alibi</a>
         <a href="${BASE}/how-to-play/">How to play</a>

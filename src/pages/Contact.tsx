@@ -1,81 +1,85 @@
-import { Mail, Phone, Linkedin, MapPin, ArrowRight } from 'lucide-react';
-import PageHero from '@/components/PageHero';
-import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
-import { profile } from '@/lib/profile';
+import { Link } from "react-router-dom";
+import { ArrowRight, Briefcase, LifeBuoy, Newspaper, Handshake } from "lucide-react";
+import PageHero from "@/components/PageHero";
+import { Button } from "@/components/ui/button";
+import { company, mailto } from "@/lib/company";
+import { activeProjects } from "@/lib/projects";
 
-const contactMethods = [
-  { icon: Mail, label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
-  { icon: Linkedin, label: 'LinkedIn', value: profile.linkedinLabel, href: profile.linkedin, external: true },
-  { icon: Phone, label: 'Phone', value: profile.phone, href: profile.phoneHref },
-  { icon: MapPin, label: 'Location', value: profile.location },
+const others = [
+  { icon: Newspaper, title: "Press", body: "Interviews, articles and speaking about software delivery and AI adoption.", subject: "Press" },
+  { icon: Handshake, title: "Partners", body: "Agencies, consultancies and vendors who want to work together.", subject: "Partnership" },
 ];
 
-const Contact = () => {
-  return (
-    <>
-      <PageHero
-        eyebrow="Contact"
-        title="Let's talk."
-        lead="I'm glad to hear from fellow engineering leaders, people working on agentic AI, and Midnight Alibi players. Email is the fastest way to reach me."
-      />
+const Contact = () => (
+  <>
+    <PageHero
+      eyebrow="Contact"
+      title="Start a conversation."
+      lead={`Email is the way to reach ${company.legalName}. Pick the topic below so your message lands in the right place.`}
+    />
 
-      <section className="page-section">
-        <div className="page-container grid gap-12 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:gap-16">
-          <StaggerContainer className="grid content-start gap-3">
-            {contactMethods.map((method) => {
-              const content = (
-                <>
-                  <span className="card-icon">
-                    <method.icon className="h-5 w-5" />
-                  </span>
-                  <div className="min-w-0">
-                    <p className="eyebrow">{method.label}</p>
-                    <p className="mt-1 break-words font-medium text-foreground">{method.value}</p>
-                  </div>
-                </>
-              );
-              return (
-                <StaggerItem key={method.label}>
-                  {method.href ? (
-                    <a
-                      href={method.href}
-                      target={method.external ? '_blank' : undefined}
-                      rel={method.external ? 'noopener noreferrer' : undefined}
-                      className="surface-card flex items-center gap-4 px-6 py-5"
-                    >
-                      {content}
-                    </a>
-                  ) : (
-                    <div className="surface-card flex items-center gap-4 px-6 py-5">{content}</div>
-                  )}
-                </StaggerItem>
-              );
-            })}
-          </StaggerContainer>
+    <section className="page-section">
+      <div className="page-container">
+        <article className="ruled-card grid gap-6 p-7 pl-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:p-10 lg:pl-11">
+          <div>
+            <div className="flex items-center gap-3">
+              <span className="card-icon">
+                <Briefcase className="h-5 w-5" />
+              </span>
+              <p className="eyebrow">New engagement</p>
+            </div>
+            <h2 className="mt-4">Software architecture, AI-enabled delivery or training</h2>
+            <p className="mt-3 max-w-2xl leading-relaxed text-muted-foreground">
+              A few lines are enough: what you're building or changing, the team involved, and when you need it.
+            </p>
+          </div>
+          <Button asChild size="lg">
+            <a href={mailto("New engagement")}>Email {company.email}</a>
+          </Button>
+        </article>
 
-          <ScrollReveal delay={0.1}>
-            <aside className="ruled-card p-7">
-              <p className="eyebrow">Midnight Alibi players</p>
-              <h2 className="mt-3 text-[1.375rem]">Questions about the game or your data?</h2>
-              <p className="mt-3 leading-relaxed text-muted-foreground">
-                Email me and include your Player ID from Settings → About if it's about your account. The privacy policy
-                and the deletion steps are also online.
-              </p>
-              <div className="mt-5 flex flex-col gap-2">
-                {/* Plain links: these are static pages outside the React app */}
-                <a href="/midnight-alibi/privacy/" className="arrow-link">
-                  Privacy policy <ArrowRight />
-                </a>
-                <a href="/midnight-alibi/delete-account/" className="arrow-link">
-                  Delete your data <ArrowRight />
-                </a>
-              </div>
-            </aside>
-          </ScrollReveal>
+        <div className="mt-6 grid gap-6 md:grid-cols-3">
+          <article className="surface-card p-7">
+            <span className="card-icon">
+              <LifeBuoy className="h-5 w-5" />
+            </span>
+            <h3 className="mt-4">Product support</h3>
+            <p className="mt-2 leading-relaxed text-muted-foreground">Help with a product, your account or your data.</p>
+            <ul className="mt-4 space-y-1">
+              {activeProjects.map((p) => (
+                <li key={p.slug}>
+                  <a href={p.support.email ? `mailto:${p.support.email}` : mailto(`Support: ${p.name}`)} className="arrow-link min-h-11">
+                    {p.name} support <ArrowRight />
+                  </a>
+                </li>
+              ))}
+              <li>
+                <Link to="/support" className="arrow-link min-h-11">
+                  Privacy, terms and data deletion <ArrowRight />
+                </Link>
+              </li>
+            </ul>
+          </article>
+          {others.map((o) => (
+            <article key={o.title} className="surface-card p-7">
+              <span className="card-icon">
+                <o.icon className="h-5 w-5" />
+              </span>
+              <h3 className="mt-4">{o.title}</h3>
+              <p className="mt-2 leading-relaxed text-muted-foreground">{o.body}</p>
+              <a href={mailto(o.subject)} className="arrow-link mt-4 min-h-11">
+                Email about {o.title.toLowerCase()} <ArrowRight />
+              </a>
+            </article>
+          ))}
         </div>
-      </section>
-    </>
-  );
-};
+
+        <p className="mt-10 text-sm text-muted-foreground">
+          Mail: {company.mailingAddress.join(", ")}.
+        </p>
+      </div>
+    </section>
+  </>
+);
 
 export default Contact;

@@ -1,3 +1,4 @@
+import animate from "tailwindcss-animate";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -14,6 +15,10 @@ export default {
     },
     extend: {
       colors: {
+				project: {
+					ma: { bg: "hsl(var(--project-ma-bg))", ink: "hsl(var(--project-ma-ink))", accent: "hsl(var(--project-ma-accent))" },
+					vd: { bg: "hsl(var(--project-vd-bg))", ink: "hsl(var(--project-vd-ink))", accent: "hsl(var(--project-vd-accent))" },
+				},
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -117,5 +122,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [animate],
 } satisfies Config;

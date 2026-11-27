@@ -301,7 +301,7 @@ any leftover bg-gradient-* class renders as a solid color.
 
   /* Text link with an arrow that nudges on hover */
   .arrow-link {
-    @apply inline-flex items-center gap-1.5 font-medium text-primary underline-offset-4 hover:underline;
+    @apply inline-flex min-h-11 items-center gap-1.5 font-medium text-primary underline-offset-4 hover:underline;
   }
 
   .arrow-link svg {
@@ -323,5 +323,19 @@ any leftover bg-gradient-* class renders as a solid color.
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Project colors. Each product keeps its own look inside the company site (FR-022). */
+@layer base {
+  :root {
+    /* Midnight Alibi: noir with brass */
+    --project-ma-bg: 264 12% 8%;
+    --project-ma-ink: 42 42% 87%;
+    --project-ma-accent: 39 63% 57%;
+    /* Vulpen Design: from its own stylesheet (navy #010e2f, cream #faf5eb, gold #f6bf0c) */
+    --project-vd-bg: 223 96% 9%;
+    --project-vd-ink: 40 60% 95%;
+    --project-vd-accent: 46 93% 51%;
   }
 }

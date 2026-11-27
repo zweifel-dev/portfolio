@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
-import { allWork } from "@/lib/work";
+import { allWork } from "@/lib/personal";
 
 interface Fact {
   label: string;
@@ -29,7 +29,7 @@ export const CaseFacts = ({ facts }: { facts: Fact[] }) => (
   </section>
 );
 
-// "Keep reading" cards at the bottom of a case study, looked up by route in src/lib/work.ts.
+// "Keep reading" cards at the bottom of a case study, looked up by route in src/lib/personal.ts.
 export const RelatedWork = ({ routes }: { routes: string[] }) => {
   const items = routes.map((to) => allWork.find((item) => item.to === to)).filter(Boolean);
   return (
@@ -39,8 +39,8 @@ export const RelatedWork = ({ routes }: { routes: string[] }) => {
           eyebrow="Related"
           title="Keep reading"
           action={
-            <Link to="/projects" className="arrow-link">
-              All projects <ArrowRight />
+            <Link to="/brandon/work" className="arrow-link">
+              All case studies <ArrowRight />
             </Link>
           }
         />

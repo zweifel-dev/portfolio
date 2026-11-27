@@ -22,11 +22,11 @@ const buttonVariants = cva(
         "on-navy": "border border-navy-foreground/25 bg-transparent text-navy-foreground hover:bg-navy-foreground/10",
       },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
+        default: "h-11 px-4 py-2",
+        sm: "h-11 rounded-md px-3 md:h-9",
         lg: "h-11 px-6 text-[0.9375rem]",
         xl: "h-12 px-8 text-base",
-        icon: "h-10 w-10",
+        icon: "h-11 w-11",
       },
     },
     defaultVariants: {

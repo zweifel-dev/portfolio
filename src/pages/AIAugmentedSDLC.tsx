@@ -82,7 +82,7 @@ const decisions = [
   {
     title: "Pick the loop for the job",
     body: "Model-driven tool loops suit open-ended work like investigation. Graph-based workflows suit structured, auditable steps. I choose per agent, after building both in my lab.",
-    link: { to: "/ai-development-lab", label: "AI Development Lab" },
+    link: { to: "/services/ai-training", label: "AI adoption training" },
   },
   {
     title: "Tools over a standard protocol",
@@ -404,7 +404,7 @@ const AIAugmentedSDLC = () => {
         </div>
       </section>
 
-      <RelatedWork routes={["/team-scaling-leadership", "/delta-framework-implementation", "/prove-pattern"]} />
+      <RelatedWork routes={["/brandon/work/team-scaling-leadership", "/brandon/work/delta-framework-implementation", "/method/prove"]} />
     </>
   );
 };

@@ -416,3 +416,6 @@ docs/
 .specify/
 specs/
 prove/
+# Playwright output
+test-results/
+playwright-report/

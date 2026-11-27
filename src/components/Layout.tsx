@@ -1,48 +1,53 @@
-import { ReactNode, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Navigation from "./Navigation";
-import { profile } from "@/lib/profile";
+import PageOutlet from "./PageOutlet";
+import { company, copyright } from "@/lib/company";
+import { navItems } from "@/lib/routes";
 
-interface LayoutProps {
-  children: ReactNode;
-}
+const linkClass = "inline-flex min-h-11 items-center text-muted-foreground transition-colors hover:text-foreground md:min-h-0";
 
-const footerLinks = [
-  { to: "/about", label: "About" },
-  { to: "/projects", label: "Projects" },
-  { to: "/research", label: "Research" },
-  { to: "/reflections", label: "Reflections" },
-  { to: "/contact", label: "Contact" },
-];
-
-const Layout = ({ children }: LayoutProps) => {
-  const { pathname } = useLocation();
-
-  // Start each page at the top; the router keeps the old scroll position otherwise
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+// The company site's frame: header, the current page and the company footer.
+// The footer's founder link is the only link from the company site to the personal pages.
+const Layout = () => {
+  const siteLinks = [...navItems("primary"), { path: "/contact", label: "Contact" }];
+  const helpLinks = navItems("footer");
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-background focus:px-4 focus:py-2 focus:shadow"
+      >
+        Skip to content
+      </a>
       <Navigation />
-      <main className="flex-1">{children}</main>
+      <main id="main" className="flex-1">
+        <PageOutlet />
+      </main>
       <footer className="border-t">
         <div className="page-container grid gap-10 py-12 md:grid-cols-[1.5fr_1fr_1fr]">
           <div>
-            <p className="font-semibold">{profile.name}</p>
-            <p className="mt-1 text-sm text-muted-foreground">
-              {profile.title}, HHAeXchange
-              <br />
-              Founder, Zweifel Tech LLC
+            <div className="flex items-center gap-3">
+              <img src={company.logo.emblemMono} alt="" width={40} height={40} className="h-10 w-10" loading="lazy" />
+              <p className="font-semibold">{company.legalName}</p>
+            </div>
+            <p className="mt-3 max-w-sm text-sm text-muted-foreground">
+              Software design, architecture and scale, and AI-enabled delivery for engineering teams.
             </p>
+            <address className="mt-4 text-sm not-italic text-muted-foreground">
+              {company.mailingAddress.slice(1).map((line) => (
+                <span key={line} className="block">
+                  {line}
+                </span>
+              ))}
+            </address>
           </div>
           <nav aria-label="Footer">
-            <p className="eyebrow mb-3">Site</p>
-            <ul className="space-y-2 text-sm">
-              {footerLinks.map((link) => (
-                <li key={link.to}>
-                  <Link to={link.to} className="text-muted-foreground transition-colors hover:text-foreground">
+            <p className="eyebrow mb-3">Company</p>
+            <ul className="text-sm md:space-y-2">
+              {siteLinks.map((link) => (
+                <li key={link.path}>
+                  <Link to={link.path} className={linkClass}>
                     {link.label}
                   </Link>
                 </li>
@@ -50,30 +55,37 @@ const Layout = ({ children }: LayoutProps) => {
             </ul>
           </nav>
           <div>
-            <p className="eyebrow mb-3">Elsewhere</p>
-            <ul className="space-y-2 text-sm">
+            <p className="eyebrow mb-3">Help</p>
+            <ul className="text-sm md:space-y-2">
+              {helpLinks.map((link) => (
+                <li key={link.path}>
+                  <Link to={link.path} className={linkClass}>
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
               <li>
-                <a href={`mailto:${profile.email}`} className="text-muted-foreground transition-colors hover:text-foreground">
-                  {profile.email}
-                </a>
-              </li>
-              <li>
-                <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground transition-colors hover:text-foreground">
-                  LinkedIn
+                <a href={`mailto:${company.email}`} className={linkClass}>
+                  {company.email}
                 </a>
               </li>
               <li>
                 {/* A plain link: /midnight-alibi/ is a static page outside the React app */}
-                <a href="/midnight-alibi/" className="text-muted-foreground transition-colors hover:text-foreground">
+                <a href="/midnight-alibi/" className={linkClass}>
                   Midnight Alibi
                 </a>
+              </li>
+              <li>
+                <Link to="/brandon" className={linkClass}>
+                  Founder: {company.founder}
+                </Link>
               </li>
             </ul>
           </div>
         </div>
         <div className="border-t">
           <p className="page-container py-6 text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} {profile.name}. Midnight Alibi is published by Zweifel Tech LLC.
+            {copyright()}. Midnight Alibi and Vulpen Design are Zweifel Tech LLC projects.
           </p>
         </div>
       </footer>

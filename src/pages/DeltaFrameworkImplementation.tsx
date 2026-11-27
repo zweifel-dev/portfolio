@@ -382,8 +382,8 @@ const DeltaFrameworkImplementation = () => {
               certified data learns to trust governed agent output much faster.
             </p>
             <Link
-              to="/ai-augmented-sdlc"
-              className="mt-6 inline-flex items-center gap-1.5 font-medium text-accent underline-offset-4 hover:underline"
+              to="/brandon/work/ai-augmented-sdlc"
+              className="mt-6 inline-flex min-h-11 items-center gap-1.5 font-medium text-accent underline-offset-4 hover:underline"
             >
               The AI-Augmented SDLC Organization <ArrowRight className="h-4 w-4" />
             </Link>
@@ -420,7 +420,7 @@ const DeltaFrameworkImplementation = () => {
         </div>
       </section>
 
-      <RelatedWork routes={["/ai-augmented-sdlc", "/team-scaling-leadership", "/prove-pattern"]} />
+      <RelatedWork routes={["/brandon/work/ai-augmented-sdlc", "/brandon/work/team-scaling-leadership", "/method/prove"]} />
     </>
   );
 };

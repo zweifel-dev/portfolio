@@ -50,7 +50,7 @@ const chapters = [
       "Trained engineers on agent frameworks and production agent deployment",
       "Kept hands-on engineering time so skills stayed sharp",
     ],
-    link: { to: "/ai-augmented-sdlc", label: "The AI-Augmented SDLC Organization" },
+    link: { to: "/brandon/work/ai-augmented-sdlc", label: "The AI-Augmented SDLC Organization" },
   },
 ];
 
@@ -245,7 +245,7 @@ const TeamScalingLeadership = () => {
               eyebrow="Lessons"
               title="What I'd tell a leader scaling a team now"
               action={
-                <Link to="/reflections" className="arrow-link">
+                <Link to="/brandon/reflections" className="arrow-link">
                   More reflections <ArrowRight />
                 </Link>
               }
@@ -263,7 +263,7 @@ const TeamScalingLeadership = () => {
         </div>
       </section>
 
-      <RelatedWork routes={["/ai-augmented-sdlc", "/delta-framework-implementation", "/ai-development-lab"]} />
+      <RelatedWork routes={["/brandon/work/ai-augmented-sdlc", "/brandon/work/delta-framework-implementation", "/services/ai-training"]} />
     </>
   );
 };
