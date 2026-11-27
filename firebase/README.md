@@ -2,7 +2,7 @@
 
 The contact form on /contact saves each message to the Firestore collection `inquiries`. A Google
 Apps Script under the company Workspace account (`apps-script/`) checks that collection every five
-minutes and emails each new message to brandon@zweifeltech.com, with the sender's address as Reply-To.
+minutes and puts each new message in the inbox to brandon@zweifeltech.com, with the sender's address as Reply-To.
 Everything stays on the free Spark plan.
 
 Use a Firebase project of its own for the website (`zweifel-tech-site`), so these rules
@@ -19,10 +19,12 @@ never replace the rules of another app's database.
    - Open https://script.google.com, create a project named "Website inquiries".
    - Project Settings: tick "Show appsscript.json manifest file in editor".
    - Replace `Code.gs` and `appsscript.json` with the files in `apps-script/`.
-   - Choose the function `setup` and press Run. Approve the permissions (Firestore, send email,
-     triggers). It creates a 5-minute trigger and sends any messages already waiting.
+   - Choose the function `setup` and press Run (not Deploy). Approve the permissions (Firestore,
+     add mail to your inbox, triggers). It creates a 5-minute trigger and delivers any messages waiting.
    - Errors show under Executions in the script editor.
-   The script remembers the newest message it sent, so each message is emailed once.
+   The script remembers the newest message it delivered, so each message arrives once. It inserts the
+   message into your inbox (unread) instead of sending it, because Gmail files mail you send to your
+   own address under Sent only. The manifest turns on the Gmail advanced service.
    (Alternative: the "Trigger Email from Firestore" extension. It needs the Blaze plan, and the
    documents already carry its `to`, `replyTo` and `message` fields.)
 5. **Authorized domains.** Add `zweifel.tech` (and `localhost` for testing) under the API key's

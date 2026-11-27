@@ -1,7 +1,8 @@
 // Emails new contact-form messages from the website to the company inbox.
 // The site saves each message to the Firestore collection "inquiries" (project zweifel-tech-site).
 // This script runs every 5 minutes under your Workspace account, reads messages newer than the last
-// one it sent, and emails each one with the visitor's address as Reply-To. Free; no Blaze plan needed.
+// one it delivered, and puts each one in the inbox, unread, with the visitor's address as Reply-To.
+// Free; no Blaze plan needed.
 // Setup: firebase/README.md, "Email with Apps Script".
 
 const PROJECT_ID = "zweifel-tech-site";
@@ -77,12 +78,44 @@ function sendOne(f) {
   const from = org ? `${name} (${org})` : name;
   const esc = (t) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-  MailApp.sendEmail({
+  // Gmail files mail you send to yourself under Sent only, so instead of sending, put the message straight
+  // into the inbox, unread (Gmail API insert; needs only the gmail.insert permission).
+  const raw = buildMessage({
+    from: `Zweifel Tech website <${INBOX}>`,
     to: INBOX,
     replyTo: email,
-    name: "Zweifel Tech website",
     subject: `Website inquiry: ${topic}, from ${from}`.slice(0, 200),
-    body: `${from} <${email}>\nTopic: ${topic}\n\n${body}`,
-    htmlBody: `<p>${esc(from)} &lt;${esc(email)}&gt;<br>Topic: ${esc(topic)}</p><p style="white-space:pre-wrap">${esc(body)}</p>`,
+    text: `${from} <${email}>\nTopic: ${topic}\n\n${body}`,
+    html: `<p>${esc(from)} &lt;${esc(email)}&gt;<br>Topic: ${esc(topic)}</p><p style="white-space:pre-wrap">${esc(body)}</p>`,
   });
+  Gmail.Users.Messages.insert({ raw, labelIds: ["INBOX", "UNREAD"] }, "me", null, { internalDateSource: "receivedTime" });
+}
+
+function buildMessage(m) {
+  const b64 = (t) => Utilities.base64Encode(t, Utilities.Charset.UTF_8);
+  const header = (t) => `=?UTF-8?B?${b64(t)}?=`;
+  const boundary = `b${Utilities.getUuid().replace(/-/g, "")}`;
+  const safe = (t) => t.replace(/[\r\n]+/g, " ");
+  const lines = [
+    `From: ${m.from}`,
+    `To: ${m.to}`,
+    `Reply-To: ${safe(m.replyTo)}`,
+    `Subject: ${header(safe(m.subject))}`,
+    `Date: ${new Date().toUTCString()}`,
+    "MIME-Version: 1.0",
+    `Content-Type: multipart/alternative; boundary="${boundary}"`,
+    "",
+    `--${boundary}`,
+    'Content-Type: text/plain; charset="UTF-8"',
+    "Content-Transfer-Encoding: base64",
+    "",
+    b64(m.text),
+    `--${boundary}`,
+    'Content-Type: text/html; charset="UTF-8"',
+    "Content-Transfer-Encoding: base64",
+    "",
+    b64(m.html),
+    `--${boundary}--`,
+  ];
+  return Utilities.base64EncodeWebSafe(lines.join("\r\n"), Utilities.Charset.UTF_8);
 }
