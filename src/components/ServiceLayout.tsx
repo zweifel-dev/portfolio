@@ -4,7 +4,6 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
-import { mailto } from "@/lib/company";
 import { methodPages, methodPath } from "@/lib/method";
 import { services, type Service } from "@/lib/services";
 
@@ -18,7 +17,7 @@ const ServiceLayout = ({ service, lead, children }: { service: Service; lead?: s
     <>
       <PageHero eyebrow="Service" title={service.name} lead={lead ?? service.summary}>
         <Button asChild variant="accent" size="lg">
-          <a href={mailto(service.cta.mailSubject)}>{service.cta.label}</a>
+          <Link to={`/contact?topic=${service.cta.topic}`}>{service.cta.label}</Link>
         </Button>
         <Button asChild variant="on-navy" size="lg">
           <Link to="/method">Read the method</Link>
@@ -102,7 +101,7 @@ const ServiceLayout = ({ service, lead, children }: { service: Service; lead?: s
       </section>
 
       <section className="hero-band">
-        <div className="page-container flex flex-col gap-8 py-16 lg:flex-row lg:items-center lg:justify-between lg:py-20">
+        <div className="page-container flex flex-col gap-8 py-12 lg:flex-row lg:items-center lg:justify-between lg:py-16">
           <div className="max-w-2xl">
             <p className="eyebrow mb-4">Next step</p>
             <h2>Talk it through.</h2>
@@ -112,7 +111,7 @@ const ServiceLayout = ({ service, lead, children }: { service: Service; lead?: s
           </div>
           <div className="flex flex-wrap gap-3">
             <Button asChild variant="accent" size="lg">
-              <a href={mailto(service.cta.mailSubject)}>{service.cta.label}</a>
+              <Link to={`/contact?topic=${service.cta.topic}`}>{service.cta.label}</Link>
             </Button>
             {others.map((s) => (
               <Button key={s.slug} asChild variant="on-navy" size="lg">

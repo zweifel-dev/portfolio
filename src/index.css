@@ -241,7 +241,7 @@ any leftover bg-gradient-* class renders as a solid color.
   }
 
   .page-section {
-    @apply py-16 lg:py-24;
+    @apply py-12 lg:py-16;
   }
 
   .page-section-sm {

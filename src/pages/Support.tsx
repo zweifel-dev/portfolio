@@ -31,7 +31,7 @@ const Support = () => (
     <PageHero
       eyebrow="Support"
       title="Help with our products."
-      lead="Help, privacy policies, terms and data deletion for each Zweifel Tech LLC product."
+      lead="Help, privacy policies, terms and data deletion for Midnight Alibi and Vulpen Design."
     />
     <section className="page-section">
       <div className="page-container grid gap-6 lg:grid-cols-2">

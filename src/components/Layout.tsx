@@ -28,7 +28,7 @@ const Layout = () => {
         <div className="page-container grid gap-10 py-12 md:grid-cols-[1.5fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
-              <img src={company.logo.emblemMono} alt="" width={40} height={40} className="h-10 w-10" loading="lazy" />
+              <img src={company.logo.emblem.src160} alt="" width={40} height={40} className="h-10 w-10" loading="lazy" />
               <p className="font-semibold">{company.legalName}</p>
             </div>
             <p className="mt-3 max-w-sm text-sm text-muted-foreground">
@@ -85,7 +85,7 @@ const Layout = () => {
         </div>
         <div className="border-t">
           <p className="page-container py-6 text-xs text-muted-foreground">
-            {copyright()}. Midnight Alibi and Vulpen Design are Zweifel Tech LLC projects.
+            {copyright()}
           </p>
         </div>
       </footer>

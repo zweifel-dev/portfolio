@@ -21,7 +21,7 @@ const AiTraining = () => {
     <ServiceLayout service={service}>
       <section className="page-section border-t">
         <div className="page-container">
-          <SectionHeading eyebrow="Format" title="A hands-on lab, not a lecture" />
+          <SectionHeading eyebrow="Format" title="Hands-on labs" />
           <ul className="grid gap-6 md:grid-cols-4">
             {format.map((f) => (
               <li key={f.title} className="border-t-2 border-accent pt-5">

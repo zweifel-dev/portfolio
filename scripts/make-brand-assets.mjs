@@ -12,7 +12,6 @@ await mkdir(out(""), { recursive: true });
 
 const crest = src("Mystical_Nine_Tailed_Fox_Crest.png");
 const emblem = src("Emblem.png");
-const mono = src("Monochrome_emblem.png");
 
 for (const w of [640, 1280]) {
   await sharp(crest).resize(w).webp({ quality: 82 }).toFile(out(`crest-${w}.webp`));
@@ -20,7 +19,6 @@ for (const w of [640, 1280]) {
 for (const w of [160, 320, 640]) {
   await sharp(emblem).resize(w).webp({ quality: 85 }).toFile(out(`emblem-${w}.webp`));
 }
-await sharp(mono).resize(320).webp({ quality: 85 }).toFile(out("emblem-mono-320.webp"));
 
 // Link-preview image: emblem on navy with the company name, 1200x630 PNG for social crawlers.
 const navy = "#0f1d3a";

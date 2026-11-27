@@ -73,7 +73,7 @@ const page: MethodPage = {
       id: "adapt",
       body: [
         "The tool references are supporting documentation. The six-part contract, the twelve-stage lifecycle, the risk classes and the L0 to L4 maturity model are proposed design choices, meant to be adapted to each organization's policy.",
-        "Zweifel Tech uses this method in its AI maturity and AI-enabled SDLC engagements, starting with an assessment against the maturity levels and the readiness checklist above.",
+        "We use this method in our AI maturity and AI-enabled SDLC engagements, starting with an assessment against the maturity levels and the readiness checklist above.",
       ],
     },
   ],

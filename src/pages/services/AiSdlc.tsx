@@ -31,8 +31,8 @@ const AiSdlc = () => {
         <div className="page-container">
           <SectionHeading
             eyebrow="The method behind it"
-            title="Five levels, one contract, measured results"
-            description="Every engagement uses the Zweifel Tech method, published in full on this site."
+            title="The method behind the work"
+            description="Every engagement follows the same method, and all of it is published on this site."
           />
           <ol className="grid gap-3 md:grid-cols-5">
             {method.maturity.map((l) => (

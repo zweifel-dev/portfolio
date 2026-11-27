@@ -84,7 +84,7 @@ test.describe("company pages", () => {
   test("every service page has a contact action", async ({ page }) => {
     for (const p of ["/services/software-architecture", "/services/ai-sdlc", "/services/ai-training"]) {
       await page.goto(p);
-      expect((await hrefs(page, "main a")).some((h) => h.startsWith("mailto:brandon@zweifeltech.com") || h === "/contact")).toBe(true);
+      expect((await hrefs(page, "main a")).some((h) => h.startsWith("/contact"))).toBe(true);
     }
   });
 
@@ -114,13 +114,13 @@ test.describe("company pages", () => {
     expect(links).toContain("https://vulpendesign.com");
   });
 
-  test("company page shows the legal name, mailing address and email", async ({ page }) => {
+  test("company page shows the mailing address and email without repeating the name", async ({ page }) => {
     await page.goto("/company");
     const main = page.locator("main");
-    await expect(main).toContainText("Zweifel Tech LLC");
     await expect(main).toContainText("2501 Chatham Rd Ste 5816");
     await expect(main).toContainText("Springfield, IL 62704");
     await expect(main).toContainText("brandon@zweifeltech.com");
+    expect(((await main.innerText()).match(/Zweifel Tech/g) ?? []).length).toBeLessThanOrEqual(1);
   });
 
   test("support page covers both products", async ({ page }) => {
@@ -130,15 +130,23 @@ test.describe("company pages", () => {
     expect(links.some((h) => h.startsWith("https://vulpendesign.com"))).toBe(true);
   });
 
-  test("contact page offers mailto links with preset subjects and no phone", async ({ page }) => {
-    await page.goto("/contact");
-    const mailtos = (await hrefs(page, "main a")).filter((h) => h.startsWith("mailto:"));
-    const company = mailtos.filter((h) => h.startsWith("mailto:brandon@zweifeltech.com"));
-    expect(company.length).toBeGreaterThanOrEqual(3);
-    for (const m of company) expect(m).toMatch(/^mailto:brandon@zweifeltech\.com\?subject=/);
-    // Any other address is a product's own support inbox
-    for (const m of mailtos.filter((h) => !company.includes(h))) expect(m).toMatch(/^mailto:support@/);
+  test("contact page is an intake form, not a mail link", async ({ page }) => {
+    await page.goto("/contact?topic=training");
+    const form = page.getByRole("form", { name: "Contact form" });
+    await expect(form.getByLabel("Name")).toBeVisible();
+    await expect(form.getByLabel("Email")).toBeVisible();
+    await expect(form.getByLabel("What's it about?")).toHaveValue("training");
+    await expect(form.getByLabel("Message")).toBeVisible();
     expect(await page.locator('a[href^="tel:"]').count()).toBe(0);
+  });
+
+  test("start-a-conversation buttons open the contact form", async ({ page }) => {
+    for (const p of ["/", "/services", "/services/software-architecture", "/services/ai-sdlc", "/services/ai-training", "/method"]) {
+      await page.goto(p);
+      const links = await page.getByRole("link", { name: /Start a conversation|Plan a training/ }).evaluateAll((els) => els.map((e) => e.getAttribute("href")));
+      expect(links.length, p).toBeGreaterThan(0);
+      for (const h of links) expect(h, p).toMatch(/^\/contact(\?topic=\w+)?$/);
+    }
   });
 });
 
@@ -180,7 +188,7 @@ test.describe("brand", () => {
       await expect(header).toContainText("Zweifel Tech LLC");
       await expect(header).not.toContainText("BZ");
       await expect(page.locator("footer")).toContainText(
-        `© ${new Date().getFullYear()} Zweifel Tech LLC. Midnight Alibi and Vulpen Design are Zweifel Tech LLC projects.`
+        `© ${new Date().getFullYear()} Zweifel Tech LLC`
       );
       await expect(page.locator('meta[property="og:site_name"]')).toHaveAttribute("content", "Zweifel Tech LLC");
 

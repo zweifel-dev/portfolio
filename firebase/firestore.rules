@@ -1,0 +1,38 @@
+rules_version = '2';
+
+// Rules for the Zweifel Tech website's Firebase project. The contact form may only add new documents to
+// "inquiries", addressed to the company inbox, with bounded sizes. Nobody can read, change or delete them
+// from the browser; the Trigger Email extension (server side) sends them on.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /inquiries/{id} {
+      allow create: if isInquiry(request.resource.data);
+      allow read, update, delete: if false;
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+
+  function str(v, min, max) {
+    return v is string && v.size() >= min && v.size() <= max;
+  }
+
+  function isInquiry(d) {
+    return d.keys().hasOnly(['name', 'email', 'organization', 'topic', 'body', 'createdAt', 'to', 'replyTo', 'message'])
+      && d.keys().hasAll(['name', 'email', 'organization', 'topic', 'body', 'createdAt', 'to', 'replyTo', 'message'])
+      && str(d.name, 1, 100)
+      && str(d.email, 3, 200) && d.email.matches('^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$')
+      && str(d.organization, 0, 120)
+      && d.topic in ['engagement', 'training', 'support', 'press', 'partnership', 'other']
+      && str(d.body, 10, 5000)
+      && d.createdAt == request.time
+      && d.to == 'brandon@zweifeltech.com'
+      && d.replyTo == d.email
+      && d.message is map
+      && d.message.keys().hasOnly(['subject', 'text', 'html'])
+      && str(d.message.subject, 1, 200)
+      && str(d.message.text, 1, 6000)
+      && str(d.message.html, 1, 30000);
+  }
+}

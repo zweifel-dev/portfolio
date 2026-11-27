@@ -1,18 +1,18 @@
 import PageHero from "@/components/PageHero";
 import ServiceCard from "@/components/ServiceCard";
 import { Button } from "@/components/ui/button";
-import { mailto } from "@/lib/company";
+import { Link } from "react-router-dom";
 import { services } from "@/lib/services";
 
 const ServicesIndex = () => (
   <>
     <PageHero
       eyebrow="Services"
-      title="Three ways to work with Zweifel Tech."
+      title="Three ways we can help."
       lead="Build and scale software, bring AI into how your teams deliver it, and train developers to work with agents. Each engagement starts with a conversation and a short, fixed-scope first step."
     >
       <Button asChild variant="accent" size="lg">
-        <a href={mailto("New engagement")}>Start a conversation</a>
+        <Link to="/contact">Start a conversation</Link>
       </Button>
     </PageHero>
     <section className="page-section">

@@ -13,7 +13,8 @@ export interface Service {
   audience: string[];
   deliverables: string[];
   measures: string[];
-  cta: { label: string; mailSubject: string };
+  /** The contact form opens with this topic selected */
+  cta: { label: string; topic: "engagement" | "training" };
   relatedMethod: MethodSlug[];
   learningPath?: { level: "L1" | "L2" | "L3"; title: string; developersLearn: string[] }[];
   labBasis?: string[];
@@ -46,7 +47,7 @@ export const services: Service[] = [
       "Load the system handles within its targets",
       "Time for a new engineer to make a first safe change",
     ],
-    cta: { label: "Start a conversation", mailSubject: "New engagement: software architecture" },
+    cta: { label: "Start a conversation", topic: "engagement" },
     relatedMethod: ["stage-contract", "lifecycle", "controls"],
   },
   {
@@ -78,7 +79,7 @@ export const services: Service[] = [
       "Product results",
       "Organizational enablement",
     ],
-    cta: { label: "Start a conversation", mailSubject: "New engagement: AI-enabled delivery" },
+    cta: { label: "Start a conversation", topic: "engagement" },
     relatedMethod: ["", "foundation", "stage-contract", "prove", "lifecycle", "controls", "measurement"],
   },
   {
@@ -92,7 +93,7 @@ export const services: Service[] = [
     problem:
       "Teams have licenses for AI tools but adoption is uneven: a few enthusiasts, many skeptics and no shared way of working. Developers learn by trial and error, and leaders cannot tell who is ready for more autonomy.",
     audience: [
-      "Developers who want to work with agents rather than around them",
+      "Developers who want to use agents in their daily work",
       "Tech leads who will review agent output and set the rules for their repositories",
       "Engineering managers responsible for adoption, quality and the change in roles",
     ],
@@ -107,7 +108,7 @@ export const services: Service[] = [
       "Review time and defects escaped to production",
       "Repositories with current instructions and skills",
     ],
-    cta: { label: "Plan a training", mailSubject: "New engagement: AI adoption training" },
+    cta: { label: "Plan a training", topic: "training" },
     relatedMethod: ["", "foundation", "prove"],
     learningPath: [
       {

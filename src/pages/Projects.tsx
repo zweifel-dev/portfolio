@@ -7,8 +7,8 @@ const Projects = () => (
   <>
     <PageHero
       eyebrow="Projects"
-      title="Products we built, and you can buy."
-      lead="Zweifel Tech designs, builds and runs its own products. They're on sale today, and they're the proof behind the services: the same design, architecture and delivery practices, in production."
+      title="Our products."
+      lead="We design, build and run our own software with the same practices we use on client work. Both products are on sale today."
     />
     <section className="page-section">
       <div className="page-container">

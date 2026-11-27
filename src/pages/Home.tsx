@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import ServiceCard from "@/components/ServiceCard";
 import ProjectTile from "@/components/ProjectTile";
-import { company, mailto } from "@/lib/company";
+import { company } from "@/lib/company";
 import { services } from "@/lib/services";
 import { activeProjects } from "@/lib/projects";
 import { method } from "@/content/method/data";
@@ -12,7 +12,7 @@ import { method } from "@/content/method/data";
 const Home = () => (
   <>
     <section className="hero-band">
-      <div className="page-container grid gap-10 py-14 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-16 lg:py-20">
+      <div className="page-container grid gap-10 py-12 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-16 lg:py-16">
         <div className="max-w-3xl">
           <p className="eyebrow mb-6">Software architecture · AI-enabled delivery</p>
           <h1 className="hero-title">{company.legalName}</h1>
@@ -31,7 +31,7 @@ const Home = () => (
           </ul>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Button asChild variant="accent" size="lg">
-              <a href={mailto("New engagement")}>Start a conversation</a>
+              <Link to="/contact">Start a conversation</Link>
             </Button>
             <Button asChild variant="on-navy" size="lg">
               <Link to="/services">See services</Link>
@@ -55,7 +55,7 @@ const Home = () => (
       <div className="page-container">
         <SectionHeading
           eyebrow="Services"
-          title="What Zweifel Tech does"
+          title="What we do"
           action={
             <Link to="/services" className="arrow-link">
               All services <ArrowRight />
@@ -78,8 +78,8 @@ const Home = () => (
           <p className="eyebrow mb-3">The Method</p>
           <h2>AI in delivery, without giving up control.</h2>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-            Zweifel Tech publishes its method in full: five maturity levels, a six-part contract every stage follows, a
-            twelve-stage lifecycle and the controls agents can never bypass.
+            The whole method is published here: five maturity levels, a six-part contract that every stage follows, a
+            twelve-stage lifecycle and the controls no agent can bypass.
           </p>
           <Link to="/method" className="arrow-link mt-6">
             Read the method <ArrowRight />
@@ -100,7 +100,7 @@ const Home = () => (
       <div className="page-container">
         <SectionHeading
           eyebrow="Projects"
-          title="Products built and sold by Zweifel Tech"
+          title="Our products"
           action={
             <Link to="/projects" className="arrow-link">
               All projects <ArrowRight />
@@ -118,20 +118,20 @@ const Home = () => (
     </section>
 
     <section className="hero-band">
-      <div className="page-container flex flex-col gap-8 py-16 lg:flex-row lg:items-center lg:justify-between lg:py-20">
+      <div className="page-container flex flex-col gap-8 py-12 lg:flex-row lg:items-center lg:justify-between lg:py-16">
         <div className="max-w-2xl">
           <p className="eyebrow mb-4">Contact</p>
           <h2>Have a project or a team to bring along?</h2>
           <p className="mt-4 text-lg leading-relaxed text-navy-muted">
-            Write to {company.email} with a few lines about where you are and what you need.
+            Send a few lines about where you are and what you need, and you'll get a reply by email.
           </p>
         </div>
         <div className="flex flex-wrap gap-3">
           <Button asChild variant="accent" size="lg">
-            <a href={mailto("New engagement")}>Start a conversation</a>
+            <Link to="/contact">Start a conversation</Link>
           </Button>
           <Button asChild variant="on-navy" size="lg">
-            <Link to="/contact">Other ways to reach us</Link>
+            <Link to="/services">See services</Link>
           </Button>
         </div>
       </div>

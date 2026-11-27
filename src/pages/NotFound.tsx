@@ -13,7 +13,7 @@ const NotFound = () => (
     <p className="eyebrow">Error 404</p>
     <h1 className="mt-4 max-w-2xl">This page doesn't exist, or it has moved.</h1>
     <p className="mt-4 max-w-xl text-lg text-muted-foreground">
-      Zweifel Tech's site was reorganized around the company. Try one of these instead.
+      The site was reorganized recently. One of these pages may have what you were looking for.
     </p>
     <div className="mt-8 flex flex-wrap gap-3">
       <Button asChild size="lg">

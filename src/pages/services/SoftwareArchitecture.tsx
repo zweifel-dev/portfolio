@@ -30,7 +30,7 @@ const SoftwareArchitecture = () => {
             ))}
           </ol>
           <p className="mt-10 max-w-3xl leading-relaxed text-muted-foreground">
-            Zweifel Tech built and ships its own products this way: Midnight Alibi, a puzzle game with its own case generator on iPhone,
+            We built our own products this way: Midnight Alibi, a puzzle game with its own case generator on iPhone,
             iPad and Android, and Vulpen Design, a floor-plan web app with live subscriptions.
           </p>
         </div>

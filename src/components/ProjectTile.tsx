@@ -45,7 +45,6 @@ const ProjectTile = ({ project, detailed = false }: { project: Project; detailed
             ))}
           </ul>
         )}
-        <p className="mt-5 text-xs opacity-80">Built and owned by Zweifel Tech LLC</p>
         <div className="mt-auto pt-6">
           <a
             href={project.primaryAction.href}

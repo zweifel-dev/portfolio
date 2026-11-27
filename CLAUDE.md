@@ -45,7 +45,8 @@ npm run preview    # Preview production build
 - **Company data**: `src/lib/company.ts` (legal name, email, mailing address, logo set), `src/lib/services.ts` (the three services), `src/lib/projects.ts` (Midnight Alibi and Vulpen Design, their art, colors and support links)
 - **Method**: `src/lib/method.ts` lists the seven pages; their content is structured data in `src/content/method/` (from white paper v9.3, employer names removed), rendered by `src/pages/method/MethodPage.tsx` with figures from `src/components/method/Figures.tsx`. No download link: the Method is read on the site
 - **Personal site**: `src/lib/personal.ts` (name, email, LinkedIn, case-study cards) and `src/lib/resume.ts` (experience, loaded only by the personal About page). No phone number or home location anywhere. Case study pages use `CaseFacts` and `RelatedWork` from `src/components/CaseStudy.tsx`
-- **Brand**: the nine-tailed fox. Sources in `assets/`, derived web images in `public/brand/` (`npm run brand`), tab icons in `public/icons/`
+- **Contact form**: `/contact` is an intake form (`src/pages/Contact.tsx`, `src/lib/inquiry.ts`). It writes to the Firestore collection `inquiries` in the website's Firebase project, and the Trigger Email extension emails each one to the company inbox. The web app config goes in `src/lib/firebase-config.ts`; rules and setup steps are in `firebase/`. "Start a conversation" buttons link to `/contact?topic=...`, never to a mailto
+- **Brand**: the nine-tailed fox. Sources in `assets/`, derived web images in `public/brand/` (`npm run brand`), tab icons in `public/icons/`. Use the color emblem; there is no monochrome version
 - `cn()` utility in `src/lib/utils.ts` merges Tailwind classes via clsx + tailwind-merge
 
 ### Styling

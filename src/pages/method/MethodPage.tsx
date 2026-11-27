@@ -5,7 +5,6 @@ import { figures } from "@/components/method/Figures";
 import { method } from "@/content/method/data";
 import { methodPageByPath, methodPages, methodPath, type MethodSection } from "@/lib/method";
 import { cn } from "@/lib/utils";
-import { mailto } from "@/lib/company";
 import { Button } from "@/components/ui/button";
 
 const slugify = (s: string) =>
@@ -199,14 +198,14 @@ const MethodPage = () => {
           <aside className="mt-12 rounded-lg bg-navy p-7 text-navy-foreground">
             <p className="eyebrow text-accent">Put the method to work</p>
             <p className="mt-2 max-w-2xl text-lg">
-              Zweifel Tech assesses where your teams are on this model and helps them move up a level safely.
+              We assess where your teams are on this model and help them move up a level safely.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <Button asChild variant="accent">
                 <Link to="/services/ai-sdlc">AI-enabled delivery service</Link>
               </Button>
               <Button asChild variant="on-navy">
-                <a href={mailto("New engagement: AI-enabled delivery")}>Start a conversation</a>
+                <Link to="/contact">Start a conversation</Link>
               </Button>
             </div>
           </aside>

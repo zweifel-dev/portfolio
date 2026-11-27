@@ -17,7 +17,7 @@ const PageHero = ({ eyebrow, title, lead, children, aside, className }: PageHero
   <section className={cn("hero-band", className)}>
     <div
       className={cn(
-        "page-container grid gap-10 py-16 lg:py-24",
+        "page-container grid gap-10 py-12 lg:py-16",
         aside && "lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-16"
       )}
     >

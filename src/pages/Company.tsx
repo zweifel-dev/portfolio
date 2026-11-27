@@ -9,12 +9,12 @@ const Company = () => (
   <>
     <PageHero
       eyebrow="Company"
-      title={company.legalName}
-      lead={`An ${company.state} software company. ${company.shortName} sells software design, architecture and AI adoption services, and builds and sells its own products.`}
+      title="A small software company in Illinois."
+      lead="We design, build and scale software, help engineering teams adopt AI, and make and sell our own products."
       aside={
-        <picture className="hidden lg:block">
-          <source type="image/webp" srcSet={`${company.logo.crest.src640} 640w, ${company.logo.crest.src1280} 1280w`} sizes="320px" />
-          <img src={company.logo.crest.src640} alt="Zweifel Tech LLC crest: a nine-tailed fox" width={320} height={320} className="w-80 rounded-lg" />
+        <picture className="hidden justify-self-center lg:block">
+          <source type="image/webp" srcSet={`${company.logo.emblem.src320} 320w, ${company.logo.emblem.src640} 640w`} sizes="240px" />
+          <img src={company.logo.emblem.src320} alt="The company emblem, a nine-tailed fox" width={240} height={231} className="w-60" />
         </picture>
       }
     />
@@ -51,14 +51,10 @@ const Company = () => (
           <p className="eyebrow mb-3">Contact details</p>
           <dl className="space-y-5">
             <div>
-              <dt className="text-sm text-muted-foreground">Legal name</dt>
-              <dd className="font-medium">{company.legalName}</dd>
-            </div>
-            <div>
               <dt className="text-sm text-muted-foreground">Mailing address</dt>
               <dd className="font-medium">
                 <address className="not-italic">
-                  {company.mailingAddress.map((line) => (
+                  {company.mailingAddress.slice(1).map((line) => (
                     <span key={line} className="block">
                       {line}
                     </span>
@@ -84,9 +80,9 @@ const Company = () => (
     </section>
 
     <section className="page-section border-t bg-muted">
-      <div className="page-container max-w-3xl">
+      <div className="page-container">
         <p className="eyebrow mb-3">Customers and reviewers</p>
-        <p className="text-lg leading-relaxed">
+        <p className="max-w-3xl text-lg leading-relaxed">
           Looking for a product's privacy policy, terms or how to delete your data? Everything is on the{" "}
           <Link to="/support" className="font-medium text-primary underline-offset-4 hover:underline">
             Support page
