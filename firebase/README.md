@@ -4,7 +4,7 @@ The contact form on /contact saves each message to the Firestore collection `inq
 "Trigger Email from Firestore" extension watches that collection and emails each new document to
 brandon@zweifeltech.com, with the sender's address as Reply-To.
 
-Use a Firebase project of its own for the website (for example `zweifel-tech-site`), so these rules
+Use a Firebase project of its own for the website (`zweifel-tech-site`), so these rules
 never replace the rules of another app's database.
 
 ## One-time setup
