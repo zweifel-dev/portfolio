@@ -3,6 +3,8 @@
 export interface LogoSet {
   crest: { src640: string; src1280: string };
   emblem: { src160: string; src320: string; src640: string };
+  /** Simplified mark (fox head on a navy disc) for sizes under 64 px */
+  mark: { src96: string; src192: string };
   icon: { svg: string; ico: string };
   ogImage: string;
 }
@@ -19,6 +21,7 @@ export const company = {
   logo: {
     crest: { src640: "/brand/crest-640.webp", src1280: "/brand/crest-1280.webp" },
     emblem: { src160: "/brand/emblem-160.webp", src320: "/brand/emblem-320.webp", src640: "/brand/emblem-640.webp" },
+    mark: { src96: "/brand/mark-96.webp", src192: "/brand/mark-192.webp" },
     icon: { svg: "/icons/fox.svg", ico: "/icons/favicon.ico" },
     ogImage: "/brand/og-default.png",
   } satisfies LogoSet,

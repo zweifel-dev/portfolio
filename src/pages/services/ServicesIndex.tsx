@@ -1,5 +1,6 @@
 import PageHero from "@/components/PageHero";
 import ServiceCard from "@/components/ServiceCard";
+import FounderBlock from "@/components/FounderBlock";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { services } from "@/lib/services";
@@ -26,6 +27,7 @@ const ServicesIndex = () => (
         </ul>
       </div>
     </section>
+    <FounderBlock />
   </>
 );
 

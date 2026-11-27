@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import ServiceCard from "@/components/ServiceCard";
-import ProjectTile from "@/components/ProjectTile";
+import FounderBlock from "@/components/FounderBlock";
 import { company } from "@/lib/company";
 import { services } from "@/lib/services";
 import { activeProjects } from "@/lib/projects";
@@ -14,21 +14,9 @@ const Home = () => (
     <section className="hero-band">
       <div className="page-container grid gap-10 py-12 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-16 lg:py-16">
         <div className="max-w-3xl">
-          <p className="eyebrow mb-6">Software architecture · AI-enabled delivery</p>
-          <h1 className="hero-title">{company.legalName}</h1>
+          <p className="eyebrow mb-6">{company.legalName}</p>
+          <h1 className="hero-title">Software architecture and AI-enabled delivery for engineering teams.</h1>
           <p className="hero-lead mt-6">{company.positioning}</p>
-          <ul className="mt-6 flex flex-wrap gap-2" aria-label="Services">
-            {services.map((s) => (
-              <li key={s.slug}>
-                <Link
-                  to={s.path}
-                  className="inline-flex min-h-11 items-center rounded-full border border-navy-foreground/25 px-4 text-sm font-medium text-navy-foreground transition-colors hover:border-accent hover:text-accent"
-                >
-                  {s.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Button asChild variant="accent" size="lg">
               <Link to="/contact">Start a conversation</Link>
@@ -72,6 +60,8 @@ const Home = () => (
       </div>
     </section>
 
+    <FounderBlock />
+
     <section className="border-y bg-muted">
       <div className="page-container page-section-sm grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] lg:items-center lg:gap-16">
         <div>
@@ -107,10 +97,22 @@ const Home = () => (
             </Link>
           }
         />
-        <ul className="grid gap-6 lg:grid-cols-2">
+        <ul className="grid gap-6 md:grid-cols-2">
           {activeProjects.map((p) => (
             <li key={p.slug}>
-              <ProjectTile project={p} />
+              <a
+                href={p.primaryAction.href}
+                target={p.primaryAction.external ? "_blank" : undefined}
+                rel={p.primaryAction.external ? "noopener noreferrer" : undefined}
+                className="surface-card group flex h-full gap-5 p-5"
+              >
+                <img src={p.art.image} alt="" width={96} height={96} loading="lazy" className="h-24 w-24 shrink-0 rounded-md object-cover" style={{ objectPosition: p.art.position }} />
+                <span className="flex flex-col">
+                  <span className="text-sm text-muted-foreground">{p.category}</span>
+                  <span className="mt-1 text-lg font-semibold">{p.name}</span>
+                  <span className="mt-1 text-sm leading-relaxed text-muted-foreground">{p.tagline}</span>
+                </span>
+              </a>
             </li>
           ))}
         </ul>
@@ -129,9 +131,6 @@ const Home = () => (
         <div className="flex flex-wrap gap-3">
           <Button asChild variant="accent" size="lg">
             <Link to="/contact">Start a conversation</Link>
-          </Button>
-          <Button asChild variant="on-navy" size="lg">
-            <Link to="/services">See services</Link>
           </Button>
         </div>
       </div>

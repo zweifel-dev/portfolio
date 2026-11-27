@@ -12,8 +12,8 @@ const ServiceCard = ({ service, showAudience = false }: { service: Service; show
     <p className="mt-2 flex-1 leading-relaxed text-muted-foreground">{service.summary}</p>
     {showAudience && (
       <p className="mt-4 text-sm text-muted-foreground">
-        <span className="font-medium text-foreground">For: </span>
-        {service.audience.map((a) => a.split(" who ")[0].split(" facing ")[0]).join("; ")}
+        <span className="font-medium text-foreground">For </span>
+        {service.forWhom.charAt(0).toLowerCase() + service.forWhom.slice(1)}
       </p>
     )}
     <span className="arrow-link mt-5">

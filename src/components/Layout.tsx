@@ -28,7 +28,7 @@ const Layout = () => {
         <div className="page-container grid gap-10 py-12 md:grid-cols-[1.5fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
-              <img src={company.logo.emblem.src160} alt="" width={40} height={40} className="h-10 w-10" loading="lazy" />
+              <img src={company.logo.mark.src96} srcSet={`${company.logo.mark.src96} 1x, ${company.logo.mark.src192} 2x`} alt="" width={40} height={40} className="h-10 w-10" loading="lazy" />
               <p className="font-semibold">{company.legalName}</p>
             </div>
             <p className="mt-3 max-w-sm text-sm text-muted-foreground">
@@ -67,12 +67,6 @@ const Layout = () => {
               <li>
                 <a href={`mailto:${company.email}`} className={linkClass}>
                   {company.email}
-                </a>
-              </li>
-              <li>
-                {/* A plain link: /midnight-alibi/ is a static page outside the React app */}
-                <a href="/midnight-alibi/" className={linkClass}>
-                  Midnight Alibi
                 </a>
               </li>
               <li>

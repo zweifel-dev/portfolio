@@ -10,7 +10,7 @@ export interface Project {
   built: string[];
   primaryAction: { label: string; href: string; external: boolean };
   support: { help: string; helpLabel: string; email?: string; privacy: string; terms: string; deleteData?: string; note?: string };
-  art: { image: string; srcSet?: string; position?: string; contain?: boolean };
+  art: { image: string; alt: string; srcSet?: string; position?: string; contain?: boolean };
   /** Tailwind color group from the --project-* tokens in index.css */
   colors: "ma" | "vd";
   status: "active" | "retired";
@@ -21,8 +21,8 @@ export const projects: Project[] = [
     slug: "midnight-alibi",
     name: "Midnight Alibi",
     tagline: "A murder-mystery logic puzzle: rebuild every suspect's night, hour by hour, and name the killer.",
-    category: "Game and book",
-    platforms: ["iPhone", "iPad", "Android", "Book"],
+    category: "Puzzle game and book",
+    platforms: ["iPhone", "iPad", "Android"],
     built: [
       "A constraint solver that generates every case and grades it by the deduction techniques it needs",
       "The game, built as a web app and shipped to the App Store and Google Play with Capacitor",
@@ -38,7 +38,7 @@ export const projects: Project[] = [
       deleteData: "/midnight-alibi/delete-account/",
       note: "Writing about your account? Include your Player ID from Settings, then About.",
     },
-    art: { image: "/midnight-alibi/assets/manor-night.webp", position: "center 30%" },
+    art: { image: "/midnight-alibi/assets/manor-night.webp", alt: "A dark manor house under a night sky, from the game", position: "center 35%" },
     colors: "ma",
     status: "active",
   },
@@ -65,6 +65,7 @@ export const projects: Project[] = [
     },
     art: {
       image: "/brand/vulpen-design-640.webp",
+      alt: "The Vulpen Design logo, a fox head on navy",
       srcSet: "/brand/vulpen-design-640.webp 640w, /brand/vulpen-design-1280.webp 1280w",
       position: "center",
       contain: true,

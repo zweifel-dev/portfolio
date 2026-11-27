@@ -20,6 +20,31 @@ for (const w of [160, 320, 640]) {
   await sharp(emblem).resize(w).webp({ quality: 85 }).toFile(out(`emblem-${w}.webp`));
 }
 
+// Small mark for the header and footer (under 64 px the nine tails blur): the fox head on a navy disc
+// with a gold ring, cropped from the emblem.
+{
+  const size = 512;
+  // The emblem's gold ring passes just right of the muzzle: drop gold pixels from the right part of the crop.
+  const crop = { left: 700, top: 250, width: 490, height: 490 };
+  const { data, info } = await sharp(emblem).extract(crop).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  for (let y = 0; y < info.height; y++) {
+    for (let x = Math.floor(info.width * 0.7); x < info.width; x++) {
+      const i = (y * info.width + x) * 4;
+      const [r, g, b] = [data[i], data[i + 1], data[i + 2]];
+      if (r - b > 20 && r >= g - 10) data[i + 3] = 0;
+    }
+  }
+  const head = await sharp(data, { raw: info }).resize(size - 64).png().toBuffer();
+  const disc = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}"><circle cx="${size / 2}" cy="${size / 2}" r="${size / 2 - 12}" fill="#0f1d3a" stroke="#dfbe7e" stroke-width="20"/></svg>`);
+  const mask = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}"><circle cx="${size / 2}" cy="${size / 2}" r="${size / 2 - 22}" fill="#fff"/></svg>`);
+  const clipped = await sharp({ create: { width: size, height: size, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } } })
+    .composite([{ input: head, left: 40, top: 48 }, { input: mask, blend: "dest-in" }])
+    .png()
+    .toBuffer();
+  const mark = await sharp(disc).composite([{ input: clipped }]).png().toBuffer();
+  for (const w of [96, 192]) await sharp(mark).resize(w).webp({ quality: 90 }).toFile(out(`mark-${w}.webp`));
+}
+
 // Link-preview image: emblem on navy with the company name, 1200x630 PNG for social crawlers.
 const navy = "#0f1d3a";
 const gold = "#dfbe7e";

@@ -11,6 +11,8 @@ export interface Service {
   summary: string;
   problem: string;
   audience: string[];
+  /** One sentence for the Services index cards */
+  forWhom: string;
   deliverables: string[];
   measures: string[];
   /** The contact form opens with this topic selected */
@@ -30,6 +32,7 @@ export const services: Service[] = [
     summary: "Get from idea to a working, well-structured product quickly, then make it hold up as usage grows.",
     problem:
       "A product idea needs to become working software fast, or a system that worked at launch is slowing the team down: releases are risky, the architecture fights every change and nobody is sure what will break at ten times the load.",
+    forWhom: "Founders who need a first version built to last, and teams whose architecture has started to slow them down.",
     audience: [
       "Founders and product owners who need a first version built and structured to last",
       "Engineering leaders facing a rewrite, a monolith split or a cloud move",
@@ -60,6 +63,7 @@ export const services: Service[] = [
       "Find out where your teams are on the path from manual work to agent-assisted delivery, and move up a level without losing control.",
     problem:
       "Developers are using AI tools, but nobody can say whether delivery is faster or safer. Agents write code nobody reviews properly, the rules they follow live in chat prompts, and leaders cannot tell which work is safe to hand to an agent.",
+    forWhom: "Engineering leaders deciding how far to take AI in delivery, and the teams who will run and control it.",
     audience: [
       "CTOs and VPs of Engineering deciding how far to take AI in delivery",
       "Engineering managers and tech leads who will run the new way of working",
@@ -92,6 +96,7 @@ export const services: Service[] = [
       "Hands-on training that takes developers from trying AI tools to running agents under review in their own repositories.",
     problem:
       "Teams have licenses for AI tools but adoption is uneven: a few enthusiasts, many skeptics and no shared way of working. Developers learn by trial and error, and leaders cannot tell who is ready for more autonomy.",
+    forWhom: "Developers, tech leads and managers who want agents in daily work, under review they can trust.",
     audience: [
       "Developers who want to use agents in their daily work",
       "Tech leads who will review agent output and set the rules for their repositories",

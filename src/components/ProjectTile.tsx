@@ -5,31 +5,25 @@ import { cn } from "@/lib/utils";
 // Each project keeps its own colors (--project-* tokens) inside the company site. Plain <a> links: the targets are
 // static pages outside the React app or another site.
 const tone = {
-  ma: { bg: "bg-project-ma-bg", ink: "text-project-ma-ink", accent: "text-project-ma-accent", fill: "bg-project-ma-accent", onFill: "text-project-ma-bg", from: "from-project-ma-bg via-project-ma-bg/90" },
-  vd: { bg: "bg-project-vd-bg", ink: "text-project-vd-ink", accent: "text-project-vd-accent", fill: "bg-project-vd-accent", onFill: "text-project-vd-bg", from: "from-project-vd-bg via-project-vd-bg/90" },
+  ma: { bg: "bg-project-ma-bg", ink: "text-project-ma-ink", accent: "text-project-ma-accent", fill: "bg-project-ma-accent", onFill: "text-project-ma-bg" },
+  vd: { bg: "bg-project-vd-bg", ink: "text-project-vd-ink", accent: "text-project-vd-accent", fill: "bg-project-vd-accent", onFill: "text-project-vd-bg" },
 };
 
 const ProjectTile = ({ project, detailed = false }: { project: Project; detailed?: boolean }) => {
   const t = tone[project.colors];
   const Icon = project.primaryAction.external ? ArrowUpRight : ArrowRight;
   return (
-    <article className={cn("relative flex h-full flex-col overflow-hidden rounded-lg", t.bg, t.ink)}>
-      <div aria-hidden="true" className="absolute inset-0">
-        <img
-          src={project.art.image}
-          srcSet={project.art.srcSet}
-          sizes="(min-width: 1024px) 40vw, 100vw"
-          alt=""
-          loading="lazy"
-          className={cn(
-            "absolute inset-0 h-full w-full opacity-60",
-            project.art.contain ? "object-contain object-right" : "object-cover"
-          )}
-          style={{ objectPosition: project.art.contain ? undefined : project.art.position }}
-        />
-        <div className={cn("absolute inset-0 bg-gradient-to-r to-transparent", t.from)} />
-      </div>
-      <div className="relative flex flex-1 flex-col p-7 lg:p-9">
+    <article className={cn("flex h-full flex-col overflow-hidden rounded-lg", t.bg, t.ink)}>
+      <img
+        src={project.art.image}
+        srcSet={project.art.srcSet}
+        sizes="(min-width: 1024px) 40vw, 100vw"
+        alt={project.art.alt}
+        loading="lazy"
+        className={cn("aspect-[16/7] w-full", project.art.contain ? "object-contain" : "object-cover")}
+        style={{ objectPosition: project.art.position }}
+      />
+      <div className="flex flex-1 flex-col p-7 lg:p-9">
         <p className={cn("font-mono text-xs uppercase tracking-[0.18em]", t.accent)}>
           {project.category} · {project.platforms.join(", ")}
         </p>

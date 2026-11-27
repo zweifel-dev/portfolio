@@ -192,8 +192,10 @@ test.describe("brand", () => {
       );
       await expect(page.locator('meta[property="og:site_name"]')).toHaveAttribute("content", "Zweifel Tech LLC");
 
-      // The personal site is linked only from the footer
-      const outsideFooter = await page.locator("a[href^='/brandon']").evaluateAll((els) => els.filter((e) => !e.closest("footer")).length);
+      // The personal site is linked only from the footer and the "Who you'll work with" block
+      const outsideFooter = await page
+        .locator("a[href^='/brandon']")
+        .evaluateAll((els) => els.filter((e) => !e.closest("footer") && !e.closest("[data-founder]")).length);
       expect(outsideFooter, r.path).toBe(0);
     }
   });

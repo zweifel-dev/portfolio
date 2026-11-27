@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Company website for Zweifel Tech LLC, hosted on GitHub Pages at zweifel.tech: services, the Method (the company's published AI-enabled delivery method), projects (Midnight Alibi, Vulpen Design), company and support pages. Brandon Zweifel's personal site lives under `/brandon` with its own header and is linked only from the company footer. React + TypeScript SPA built with Vite and prerendered to static HTML per page.
+Company website for Zweifel Tech LLC, hosted on GitHub Pages at zweifel.tech: services, the Method (the company's published AI-enabled delivery method), projects (Midnight Alibi, Vulpen Design), company and support pages. Brandon Zweifel's personal site lives under `/brandon` with its own header and is linked from the company footer and the "Who you'll work with" block (`FounderBlock`) on Home and Services. React + TypeScript SPA built with Vite and prerendered to static HTML per page.
 
 ## Commands
 
@@ -46,7 +46,7 @@ npm run preview    # Preview production build
 - **Method**: `src/lib/method.ts` lists the seven pages; their content is structured data in `src/content/method/` (from white paper v9.3, employer names removed), rendered by `src/pages/method/MethodPage.tsx` with figures from `src/components/method/Figures.tsx`. No download link: the Method is read on the site
 - **Personal site**: `src/lib/personal.ts` (name, email, LinkedIn, case-study cards) and `src/lib/resume.ts` (experience, loaded only by the personal About page). No phone number or home location anywhere. Case study pages use `CaseFacts` and `RelatedWork` from `src/components/CaseStudy.tsx`
 - **Contact form**: `/contact` is an intake form (`src/pages/Contact.tsx`, `src/lib/inquiry.ts`). It writes to the Firestore collection `inquiries` in the website's Firebase project, and an Apps Script under the company Workspace account (`firebase/apps-script/`) emails each one to the company inbox every five minutes, so the project stays on the free Spark plan. The web app config goes in `src/lib/firebase-config.ts`; rules and setup steps are in `firebase/`. "Start a conversation" buttons link to `/contact?topic=...`, never to a mailto
-- **Brand**: the nine-tailed fox. Sources in `assets/`, derived web images in `public/brand/` (`npm run brand`), tab icons in `public/icons/`. Use the color emblem; there is no monochrome version
+- **Brand**: the nine-tailed fox. Sources in `assets/`, derived web images in `public/brand/` (`npm run brand`), tab icons in `public/icons/`. Use the color emblem; there is no monochrome version. Under 64 px (header, footer) use `company.logo.mark`, the fox head on a navy disc
 - `cn()` utility in `src/lib/utils.ts` merges Tailwind classes via clsx + tailwind-merge
 
 ### Styling

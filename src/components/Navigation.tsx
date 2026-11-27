@@ -23,7 +23,7 @@ interface NavigationProps {
 }
 
 const CompanyMark = () => (
-  <img src={company.logo.emblem.src160} alt="" width={36} height={36} className="h-9 w-9 shrink-0" />
+  <img src={company.logo.mark.src96} srcSet={`${company.logo.mark.src96} 1x, ${company.logo.mark.src192} 2x`} alt="" width={36} height={36} className="h-9 w-9 shrink-0" />
 );
 
 const Navigation = ({
