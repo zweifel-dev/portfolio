@@ -40,7 +40,7 @@ const stages = [
     stage: "Design",
     agent: "Design options and an ADR draft with trade-offs, citing earlier decisions",
     person: "The tech lead or architect chooses",
-    guardrail: "Decisions get recorded, not just made",
+    guardrail: "Every decision is recorded",
   },
   {
     stage: "Build",
@@ -76,7 +76,7 @@ const stages = [
 
 const decisions = [
   {
-    title: "Specialists, not one generalist",
+    title: "A team of specialist agents",
     body: "Narrow agents with one job, a small toolset and their own review checklist are easier to evaluate, trust and fix than a single agent that does everything.",
   },
   {
@@ -90,7 +90,7 @@ const decisions = [
   },
   {
     title: "The pull request is the interface",
-    body: "Agents work on branches and open pull requests. Their output runs through the same CI/CD, tests and code owners as human work, so there's one quality system, not two.",
+    body: "Agents work on branches and open pull requests. Their output runs through the same CI/CD, tests and code owners as human work, so human and agent work share one quality system.",
   },
   {
     title: "Human in the loop by design",
@@ -345,7 +345,7 @@ const AIAugmentedSDLC = () => {
               {
                 title: "Keeping people strong",
                 items: [
-                  "Treat review as high-value engineering, not a demotion",
+                  "Treat review as senior engineering work",
                   "Protect hands-on engineering time so skills don't fade",
                   "Give everyone a path to practitioner depth, like a shared resource guide and guided notebooks",
                   "Show senior engineers that directing agents is where their individual work is heading",

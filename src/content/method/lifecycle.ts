@@ -13,7 +13,7 @@ const page: MethodPage = {
       heading: "What are the twelve stages?",
       id: "stages",
       body: [
-        "The stages keep a clean chain from requirement intake to production learning. Planning produces both architecture decisions and a dependency-ordered task set, and analysis is an explicit gate before any code is written.",
+        "The stages link requirement intake to production learning in one unbroken chain. Planning produces both architecture decisions and a dependency-ordered task set, and analysis is an explicit gate before any code is written.",
       ],
       figure: "DeliveryChain",
       figureCaption:

@@ -14,7 +14,7 @@ const page: MethodPage = {
       heading: "What should be measured?",
       id: "scorecard",
       body: [
-        "Measure six areas together. Faster code generation that makes releases less stable, or that ships features nobody uses, is not an improvement.",
+        "Measure six areas together, because faster code generation can make releases less stable or ship features nobody uses.",
       ],
       figure: "Scorecard",
       figureCaption: "A balanced scorecard: example measures and the question each area answers.",
@@ -44,7 +44,7 @@ const page: MethodPage = {
         "The provenance of code-index and knowledge-graph sources verified.",
         "Scoped MCP tools and gateway authorization tested with restricted identities.",
         "Templates for specification, plan, tasks and review, and the stage contracts, under version control.",
-        "CI and browser and API tests actually running on representative changes.",
+        "CI, browser and API tests running on representative changes.",
         "A protected trunk branch with required reviews and checks enforced.",
         "A rollback path, a telemetry baseline, monitored services and product outcomes defined.",
         "A review queue that captures approve, edit, feedback, rerun and block decisions and who made them.",

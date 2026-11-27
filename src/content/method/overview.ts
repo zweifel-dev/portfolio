@@ -7,7 +7,7 @@ const page: MethodPage = {
   navTitle: "Overview and maturity",
   title: "AI-enabled software delivery",
   summary:
-    "A reference model for bringing AI agents into software delivery without giving up control: an organizational foundation, a contract every stage follows, a twelve-stage lifecycle, deterministic controls and measured outcomes.",
+    "A reference model for bringing AI agents into software delivery while people keep control. It covers the organizational foundation, a contract every stage follows, a twelve-stage lifecycle, deterministic controls and how to measure the results.",
   sourceMap: ["Cover", "Executive summary", "Contents", "Operating constraints", "1", "1.1", "1.2", "Figure 1", "Figure 1a"],
   references: "method",
   sections: [
@@ -16,7 +16,7 @@ const page: MethodPage = {
       body: [
         "The method connects approved requirements to specifications, plans, tasks, validated code, controlled releases and recorded production outcomes. Each step leaves evidence that the next step, a reviewer or an auditor can check.",
         "It has five parts: standing organizational controls, architecture and repository context, a six-field stage contract, objective test evidence with protected branch and release controls, and production observations that feed the next round of work.",
-        "It is a reference design. It describes what a well-run AI-enabled delivery organization puts in place; it does not claim that any particular organization already has every integration, permission or safeguard configured.",
+        "It is a reference design: what a well-run AI-enabled delivery organization puts in place. Most organizations will have some of these integrations, permissions and safeguards and still need to add others.",
       ],
       callout: {
         label: "The stage contract",
@@ -46,14 +46,14 @@ const page: MethodPage = {
         "The specification is the authoritative statement of approved intent. Code is validated against it, not the other way around.",
         "Outputs are durable business and engineering artifacts: work-item updates, specifications, plans, pull requests, review decisions, test runs, deployment records and monitoring reports. A chat reply is not an output.",
         "Agent reasoning is probabilistic. CI, permissions, quality gates and branch protection must be deterministic.",
-        "Production performance and product adoption close the loop. Technical correctness is necessary, but it does not prove customer value on its own.",
+        "Production performance and product adoption feed back into the next round of work. Correct code can still fail to help customers, so delivery is judged on both.",
       ],
     },
     {
       heading: "What are the five maturity levels?",
       id: "maturity",
       body: [
-        "The levels describe who starts and coordinates the work, and how much decision-making is delegated to agents. They are not a score based on how many agents a team runs. Even at high maturity, higher-risk work may stay under human control.",
+        "The levels describe who starts and coordinates the work, and how much decision-making is delegated to agents. A team with many agents can still be at a low level. Even at high maturity, higher-risk work may stay under human control.",
       ],
       figure: "MaturityLadder",
       figureCaption: "Figure 1. From manual to adaptive agentic delivery. Autonomy grows; deterministic verification and accountable release controls stay in place at every level.",
@@ -84,7 +84,7 @@ const page: MethodPage = {
       body: [
         "No. Deterministic automation runs predefined logic: compile, scan, test, deploy, compare against policy and block failures. Agentic execution interprets ambiguous context and chooses next actions within a permitted scope.",
         "A mature platform combines both. Agents can choose how to carry out a bounded task, but they cannot choose to waive required checks or grant themselves access.",
-        "Levels can differ by kind of work. A team may run L3 for documentation or tests, L2 for architecture decisions, and still authorize every release that touches protected data by hand. The risk of an action, not the maturity label, decides the approval rule.",
+        "Levels can differ by kind of work. A team may run L3 for documentation or tests, L2 for architecture decisions, and still authorize every release that touches protected data by hand. The approval rule follows the risk of the action, whatever the team's level.",
       ],
       figure: "ResponsibilityMatrix",
       figureCaption:

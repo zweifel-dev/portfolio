@@ -19,7 +19,7 @@ const page: MethodPage = {
       ],
       figure: "StageContract",
       figureCaption:
-        "Figure 3. The six-part execution contract. Each step is a stateful work unit with an evidence-based transition, not simply a prompt.",
+        "Figure 3. The six-part execution contract. Each step is a stateful unit of work that moves on only when its evidence checks out.",
     },
     {
       heading: "What must each field contain?",
@@ -50,7 +50,7 @@ const page: MethodPage = {
         columns: ["Field", "Implementation-stage example"],
         rows: method.contract.map((f) => [f.name, f.implementationExample]),
       },
-      after: ["The output is a verifiable artifact or action, never only an agent's chat response."],
+      after: ["The output is an artifact or action someone can verify. A chat reply from the agent does not count."],
     },
   ],
 };

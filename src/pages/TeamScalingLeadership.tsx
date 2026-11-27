@@ -32,10 +32,10 @@ const chapters = [
   {
     label: "Remote",
     title: "A distributed team, overnight",
-    intro: "The pandemic turned an office team into a remote one while the business needed more from it, not less.",
+    intro: "The pandemic turned an office team into a remote one while the business needed more from it.",
     points: [
       "Moved the whole team to remote work at the start of the pandemic",
-      "Added check-ins about workload and well-being, not just status",
+      "Added check-ins about workload and well-being as well as status",
       "Moved collaboration onto digital tools and processes built for distance",
       "Sped up hiring to meet new demand while keeping delivery on track",
     ],
@@ -94,7 +94,7 @@ const inclusion = [
 
 const growth = [
   ["Development plans", "Personal career roadmaps with quarterly check-ins"],
-  ["One-on-ones", "Monthly, and about coaching and growth rather than status"],
+  ["One-on-ones", "Monthly, and about coaching and growth more than status"],
   ["360-degree feedback", "Collaboration weighed alongside individual results"],
   ["Two career tracks", "Clear promotion criteria for management and for senior individual contributors"],
   ["Stretch assignments", "Emerging leaders lead visible projects, with support"],

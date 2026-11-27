@@ -16,7 +16,7 @@ const page: MethodPage = {
       body: [
         "The model assumes one integration trunk for the main repository (develop, in many teams). Agents create short-lived task branches from the trunk for isolated changes and open pull requests that target it.",
         "Builds and deployments to shared environments come only from the trunk, never from a release, hotfix, epic, feature or personal branch. Production fixes are made and merged into the trunk first, then deployed through the same approved path. Feature flags separate deploying a change from exposing it.",
-        "This policy is enforced in branch rules and CI/CD, not written as an instruction in CLAUDE.md. Required status checks, reviews, conversation resolution and protected-branch restrictions are all configurable in the source-control platform. [4]",
+        "Branch rules and CI/CD enforce this policy; an instruction in CLAUDE.md would only ask for it. Required status checks, reviews, conversation resolution and protected-branch restrictions are all configurable in the source-control platform. [4]",
       ],
     },
     {
@@ -59,7 +59,7 @@ const page: MethodPage = {
     {
       heading: "Who may authorize which actions?",
       id: "approvals",
-      body: ["Authorization follows the risk of the action and the environment it touches, not the team's maturity level."],
+      body: ["Who may authorize an action depends on its risk and the environment it touches. The team's maturity level does not change that."],
       figure: "ApprovalClasses",
       figureCaption: "Action risk and approval model: four classes from read-only advice to high-impact change.",
       callout: {
@@ -71,7 +71,7 @@ const page: MethodPage = {
       heading: "Which system does what?",
       id: "tools",
       body: [
-        "The method does not depend on particular products. This is the reference stack it was designed with; any tool that fills the same role works.",
+        "The method was designed with the stack below, but any tool that fills the same role works.",
       ],
       table: {
         columns: ["System", "Role in the workflow"],

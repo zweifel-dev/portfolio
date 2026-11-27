@@ -15,7 +15,7 @@ const page: MethodPage = {
       heading: "What has to exist before agents can work?",
       id: "capabilities",
       body: [
-        "The foundation sets non-negotiable standards, gives agents the operating context they need, packages repeatable behavior as tools, and puts boundaries on what agents can reach outside the repository.",
+        "The foundation sets the standards every team must meet, gives agents the context they need, packages repeatable behavior as tools, and limits what agents can reach outside the repository.",
         "It is grouped into six capabilities: govern, instruct, ground, equip, connect and operate.",
       ],
       figure: "FoundationGrid",
@@ -51,7 +51,7 @@ const page: MethodPage = {
       body: [
         "Every discovery output names the sources it queried, the code revision, owners, dependency edges, relevant architecture decisions, missing facts, and its confidence and limits.",
         "A code search index grounds the agent in the current repositories, and a knowledge graph connects services to each other and to their owners.",
-        "Stale or contradictory material is a stop condition or an explicit risk. It is never an invitation to guess.",
+        "Stale or contradictory material either stops the stage or is recorded as an explicit risk, so the agent does not fill the gap with a guess.",
       ],
     },
     {
@@ -71,7 +71,7 @@ const page: MethodPage = {
       id: "setup",
       figure: "FoundationSetup",
       figureCaption:
-        "Figure A1. Initial foundation checklist: organizational configuration, repository instructions, engineering knowledge, behaviors, authorized tools and runtime prerequisites. The outcome is repeatable, secure and traceable execution, not just faster code generation.",
+        "Figure A1. Initial foundation checklist: organizational configuration, repository instructions, engineering knowledge, behaviors, authorized tools and runtime prerequisites. The goal is execution that is repeatable, secure and traceable.",
     },
   ],
 };

@@ -20,7 +20,7 @@ const pillars = [
     principle: "Accessible, integrated, high-quality data that people trust.",
     moves: [
       "One governed foundation integrating both platforms",
-      "HIPAA-compliant governance designed in, not bolted on",
+      "HIPAA-compliant governance designed in from the start",
       "Metrics defined and certified once, then reused everywhere",
       "Self-service built on certified data",
     ],
@@ -133,7 +133,7 @@ const phases = [
     moves: [
       "Grew the team across engineering, analytics and data science",
       "Extended analytics into new products and markets",
-      "Treated the platform as an ongoing capability, not a fixed project",
+      "Ran the platform as an ongoing capability with no end date",
     ],
   },
 ];
@@ -149,7 +149,7 @@ const problems = [
     title: "Hiring in a hot market",
     issue: "Data professionals in healthcare technology were hard to hire and harder to keep.",
     approach:
-      "Inclusive hiring, mentoring, clear career paths and real learning opportunities, so the team competed on growth and mission, not pay alone.",
+      "Inclusive hiring, mentoring, clear career paths and real learning opportunities, so the team competed on growth and mission as well as pay.",
   },
   {
     title: "Healthcare compliance",
