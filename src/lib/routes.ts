@@ -175,7 +175,7 @@ export const routes: RouteEntry[] = [
     component: Company,
     title: "Company · Zweifel Tech LLC",
     description:
-      "Zweifel Tech LLC is an Illinois software company: services, products, the business mailing address and how to reach the company.",
+      "A small, veteran-owned software business in Illinois: our services, products, mailing address and how to reach us.",
     nav: { area: "primary", label: "Company", order: 4 },
     section: "company",
   },

@@ -3,7 +3,7 @@
 export interface LogoSet {
   crest: { src640: string; src1280: string };
   emblem: { src160: string; src320: string; src640: string };
-  /** Simplified mark (fox head on a navy disc) for sizes under 64 px */
+  /** The whole color emblem, squared with a transparent margin, for the header and footer */
   mark: { src96: string; src192: string };
   icon: { svg: string; ico: string };
   ogImage: string;

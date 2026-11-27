@@ -9,7 +9,7 @@ const Company = () => (
   <>
     <PageHero
       eyebrow="Company"
-      title="A small software company in Illinois."
+      title="A small, veteran-owned software business in Illinois."
       lead="We design, build and scale software, help engineering teams adopt AI, and make and sell our own products."
       aside={
         <picture className="hidden justify-self-center lg:block">
@@ -72,7 +72,7 @@ const Company = () => (
             </div>
             <div>
               <dt className="text-sm text-muted-foreground">Founder</dt>
-              <dd className="font-medium">{company.founder}</dd>
+              <dd className="font-medium">{company.founder}, U.S. veteran</dd>
             </div>
           </dl>
         </div>

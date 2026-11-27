@@ -27,7 +27,7 @@ const ProjectTile = ({ project, detailed = false }: { project: Project; detailed
         <p className={cn("font-mono text-xs uppercase tracking-[0.18em]", t.accent)}>
           {project.category} · {project.platforms.join(", ")}
         </p>
-        <h3 className="mt-3 text-3xl font-semibold">{project.name}</h3>
+        <h3 className="mt-3 text-2xl font-semibold">{project.name}</h3>
         <p className="mt-3 max-w-md leading-relaxed opacity-90">{project.tagline}</p>
         {detailed && (
           <ul className="mt-5 max-w-md space-y-2 text-sm opacity-90">

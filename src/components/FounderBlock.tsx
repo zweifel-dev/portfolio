@@ -13,7 +13,7 @@ const FounderBlock = () => (
         <p className="eyebrow mb-3">Who you'll work with</p>
         <h2 id="founder-h">{company.founder}, founder</h2>
         <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-          Every engagement is led by Brandon, a software engineering leader who grew an R&amp;D team from 15 to more
+          Every engagement is led by Brandon, a U.S. veteran and software engineering leader who grew an R&amp;D team from 15 to more
           than 65 people and shipped seven production AI agents with a human reviewer on every change. He wrote the
           Method published on this site.
         </p>

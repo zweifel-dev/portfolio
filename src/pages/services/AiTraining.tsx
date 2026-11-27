@@ -43,7 +43,7 @@ const AiTraining = () => {
           <ol className="grid gap-6 lg:grid-cols-3">
             {service.learningPath.map((step) => (
               <li key={step.level} className="surface-card p-7">
-                <p className="font-mono text-2xl font-semibold text-primary">{step.level}</p>
+                <p className="font-mono text-xl font-semibold text-primary">{step.level}</p>
                 <h3 className="mt-1">{step.title}</h3>
                 <p className="mt-4 text-sm font-medium">Developers learn</p>
                 <ul className="mt-2 space-y-2">
