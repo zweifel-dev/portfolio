@@ -9,7 +9,7 @@ const DayTradingJourney = () => {
       <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-6">Day Trading Journey</h1>
-          <p className="text-xl leading-relaxed">Applying Data Analytics and Strategic Thinking to Financial Markets</p>
+          <p className="text-xl leading-relaxed">Learning to day trade the way I'd learn any technical skill</p>
         </div>
       </section>
 
@@ -19,7 +19,7 @@ const DayTradingJourney = () => {
             <Card className="p-8">
               <CardContent className="space-y-8">
                 <div className="text-center space-y-4">
-                  <h2 className="text-3xl font-bold text-gray-900">My Day Trading Journey - Initial Research & Strategy</h2>
+                  <h2 className="text-3xl font-bold text-gray-900">My day trading journey, part 1: research and first trades</h2>
                   <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
                     <span className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
@@ -33,27 +33,24 @@ const DayTradingJourney = () => {
                 </div>
 
                 <section className="space-y-4">
-                  <h3 className="text-2xl font-bold text-gray-900">Introduction: Why I Started Day Trading</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">Why I started day trading</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    The first time I saw someone day trade was in the movie Paranormal Activity. Very scary movie, but I was intrigued by the concept of day trading. It's an overwhelming experience getting into day trading because of so much information and graphs are thrown at you and you need to figure out what each of these things are.
+                    The first time I saw anyone day trade was in Paranormal Activity. The movie scared me, but the trading stuck with me. Getting started is overwhelming: news, charts, brokers and apps all come at you at once, and you have to work out what each one is before you can see how they fit together.
                   </p>
                   
                   <p className="text-gray-700 leading-relaxed">
-                    At the time of writing this, I started my learning journey on being a successful day trader. I have been working on learning as much as I can for about 2 months now. That might not seem like a long time, but I have been dabbling in swing trading (investing in a stock and letting it sit there for long term) for over 10 years.
+                    As I write this, I've spent about two months learning to day trade. That isn't long, but I've been swing trading (buying a stock and holding it for the longer term) for more than 10 years.
                   </p>
                   
                   <p className="text-gray-700 leading-relaxed">
-                    <strong>What makes my approach different?</strong> I'm treating this like any complex skill worth mastering, with systematic learning, data analysis, and yes, even AI assistance. Call me crazy, but I'm using everything from traditional books to ChatGPT and Claude to accelerate my learning curve.
+                    I'm approaching it the way I'd learn any hard skill: read a lot, practice, track the results and ask a lot of questions. For the questions, I lean on ChatGPT and Claude as much as on books.
                   </p>
                 </section>
 
                 <section className="space-y-4">
-                  <h3 className="text-2xl font-bold text-gray-900">Learning Materials & Systematic Approach</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">What I read</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    With my background established, let me detail the systematic learning approach I've developed over these past months.
-                  </p>
-                  <p className="text-gray-700 leading-relaxed">
-                    In these past months, I have now read these books on day trading in this order:
+                    Over the past two months I have read these books on day trading, in this order:
                   </p>
                   <ol className="list-decimal pl-6 space-y-1 text-gray-700">
                     <li><em>How to Day Trade: The Plain Truth</em> by Ross Cameron</li>
@@ -63,7 +60,7 @@ const DayTradingJourney = () => {
                   </ol>
                   
                   <p className="text-gray-700 leading-relaxed">
-                    To supplement these books, I also acquired:
+                    I also bought these to read next:
                   </p>
                   <ul className="list-disc pl-6 space-y-1 text-gray-700">
                     <li><em>Candlestick Trading Bible</em> by Delbert Conley</li>
@@ -73,32 +70,29 @@ const DayTradingJourney = () => {
                   
                   <Card className="bg-blue-50 border border-blue-200">
                     <CardContent className="p-6">
-                      <h4 className="text-xl font-bold text-gray-900 mb-3">AI-Assisted Learning</h4>
+                      <h4 className="text-xl font-bold text-gray-900 mb-3">Asking AI the questions books can't answer</h4>
                       <p className="text-gray-700 leading-relaxed">
-                        Learning from books can be difficult as you have no one to ask questions to. This is where I use ChatGPT and Claude to answer specific questions and clarify concepts. It's like having a college professor's office hours for discussion on specific topics. I know first-hand that these chat bots can lie and get information wrong. Use them as a starting point, but always verify with reliable sources. There have even been times when I get so frustrated by having to repeat myself to the chatbot and clarify what I mean that I feel like I'm losing my mind. There are entire concepts and best practices around prompt engineering that I won't get into in this writing.
+                        A book can't answer a follow-up question, so I use ChatGPT and Claude to explain the parts I don't get. It's a bit like a professor's office hours. They do get things wrong, sometimes confidently, so I treat their answers as a starting point and check them against a reliable source. And some days I spend more time rephrasing my question than reading the answer, which is its own kind of frustrating.
                       </p>
                     </CardContent>
                   </Card>
                 </section>
 
                 <section className="space-y-6">
-                  <h3 className="text-2xl font-bold text-gray-900">Platform Selection & Technical Setup</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">Choosing a broker and a platform</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Once I had absorbed the foundational knowledge from books and AI assistance, the next critical step was selecting the right tools to put theory into practice.
-                  </p>
-                  <p className="text-gray-700 leading-relaxed">
-                    Choosing the right broker and trading platform was a critical first decision. I wanted to follow along with the material that I was reading. I learn best by doing and visually seeing all the steps. I needed to get hands on with the material. There are a lot out there to choose from and you need a broker and a trading platform. One is your bank, and the other is where you interact with the market. Here were my key requirements on choosing the right setup:
+                    I learn by doing, so I wanted to follow along in a real platform while I read. You need two things: a broker, which holds your money and places the trades, and a trading platform, which is where you read charts and send orders. Sometimes one company provides both. Here's what I wanted from each:
                   </p>
                   
                   <div className="grid md:grid-cols-2 gap-6">
                     <Card className="border border-gray-200">
                       <CardContent className="p-6">
-                        <h4 className="text-xl font-bold text-gray-900 mb-4">Broker Requirements:</h4>
+                        <h4 className="text-xl font-bold text-gray-900 mb-4">Broker</h4>
                         <ul className="list-disc pl-6 space-y-1 text-gray-700">
-                          <li>Commission Free</li>
+                          <li>Commission free</li>
                           <li>Quick trade ordering</li>
                           <li>Level 2 data available</li>
-                          <li>Margin Account</li>
+                          <li>Margin account</li>
                           <li>IRA & Roth IRA options</li>
                         </ul>
                       </CardContent>
@@ -106,50 +100,47 @@ const DayTradingJourney = () => {
                     
                     <Card className="border border-gray-200">
                       <CardContent className="p-6">
-                        <h4 className="text-xl font-bold text-gray-900 mb-4">Trading Platform Requirements:</h4>
+                        <h4 className="text-xl font-bold text-gray-900 mb-4">Trading platform</h4>
                         <ul className="list-disc pl-6 space-y-1 text-gray-700">
                           <li>Advanced scanners and filters</li>
                           <li>Real-time Level 2 data</li>
                           <li>Custom dashboards</li>
                           <li>Hot keys for rapid execution</li>
                           <li>Advanced charting with indicators</li>
-                          <li>Paper / Simulation trading</li>
+                          <li>Paper (simulation) trading</li>
                         </ul>
                       </CardContent>
                     </Card>
                   </div>
                   
                   <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-                    <h4 className="text-xl font-bold text-gray-900 mb-3">My Platform Journey</h4>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">Where I ended up</h4>
                     <p className="text-gray-700 leading-relaxed mb-4">
-                      While searching what I was going to use, I looked to see what I already had would work or not. I had a Fidelity Individual Broker account and a Fidelity Managed account. From all of the readings and experts I listened to, Fidelity was never an option they suggested. So, I first started out with TD Ameritrade's platform, thinkorSwim. The broker behind this is now Charles Schwab, who acquired TD Ameritrade. I opened a margin account since that was required to even download the thinkorSwim platform. I originally went with this route because it came up in a couple books as an option and I didn't know what to look for at this point. The only reasons I chose this over the others that I read about were: 1. Commission Free Trades on Stocks and 2. They offered Paper / Simulation Trading.
+                      I already had a Fidelity individual brokerage account and a Fidelity managed account, but none of the books or traders I followed recommended Fidelity for day trading. I started with thinkorSwim, TD Ameritrade's platform, which now belongs to Charles Schwab since it acquired TD Ameritrade. You need a margin account just to download it, so I opened one. I picked it because a couple of the books mentioned it, it had commission-free stock trades and it offered paper trading. At that point I didn't know what else to look for.
                     </p>
                     <p className="text-gray-700 leading-relaxed">
-                      After watching a YouTube clip by Ross Cameron (one of the authors from the books I read and founder of Warrior Trader), that goes into the pros and cons of all the major brokers and trading platforms and lists the key features that he looks for and uses. At this point, I don't even remember all the facets but what I do recall is speed of executing an order, hot key assignments, level 2 trade data, and cost.
+                      Then I watched a YouTube video by Ross Cameron, one of the authors I'd read and the founder of Warrior Trading, comparing the major brokers and platforms and the features he cares about. The ones I remember are order execution speed, hot keys, Level 2 data and cost.
                     </p>
                     <p className="text-gray-700 leading-relaxed">
-                      From this and other reviews, I switched to Webull, which is both broker and trading platform. I have been with Webull since and have now transferred money into my individual broker account.
+                      After that video and a few other reviews, I switched to Webull, which is both a broker and a platform. I've used it since and have funded my individual account there.
                     </p>
                   </div>
                 </section>
 
                 <section className="space-y-6">
-                  <h3 className="text-2xl font-bold text-gray-900">Understanding Charts and Indicators</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">Charts and indicators</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    With my platform selected and account funded, it was time to dive deep into the technical analysis that forms the foundation of day trading decisions.
-                  </p>
-                  <p className="text-gray-700 leading-relaxed">
-                    Before we get into finding stocks to trade, we need to understand what we are looking at and for when trading stocks. The first thing I learned was how to read the graphs for day trading.
+                    Before picking stocks, you need to know how to read a chart. That was the first thing I learned.
                   </p>
                   
                   <Card className="bg-green-50 border border-green-200">
                     <CardContent className="p-6">
-                      <h4 className="text-xl font-bold text-gray-900 mb-4">Reading Candlestick Charts</h4>
+                      <h4 className="text-xl font-bold text-gray-900 mb-4">Reading candlestick charts</h4>
                       <p className="text-gray-700 leading-relaxed mb-4">
-                        The most common graph is based on candles set to certain intervals of time. Each candle represents 4 specific data points of all the orders that were filled in that bucket of time. For example, if I have a candle graph going from 9:30 am to 10:30am set at a 1-minute interval. I would see 60 candles, one for each minute. Time is on the x-axis while price is on the y-axis.
+                        The most common chart is made of candles, each covering a fixed slice of time. A candle summarizes every order filled during its slice with four numbers. A chart from 9:30 to 10:30 a.m. at a 1-minute interval has 60 candles, one per minute, with time on the x-axis and price on the y-axis.
                       </p>
                       
-                      <p className="text-gray-700 leading-relaxed mb-2">Now, like I mentioned, a candle shows 4 data points:</p>
+                      <p className="text-gray-700 leading-relaxed mb-2">The four numbers are:</p>
                       <ul className="list-disc pl-6 space-y-1 text-gray-700">
                         <li>The opening price for that period (the first filled trade price for that bin)</li>
                         <li>The closing price for that period (the last filled trade price for that bin)</li>
@@ -158,20 +149,20 @@ const DayTradingJourney = () => {
                       </ul>
                       
                       <p className="text-gray-700 leading-relaxed mt-4">
-                        The candle will have a box for the opening and closing price, have a wick (or sometimes called a shadow) going up to the highest price, and then a wick going down to the lowest price.
+                        The body of the candle spans the open and close. A thin line called a wick (or shadow) runs up to the high and down to the low.
                       </p>
                     </CardContent>
                   </Card>
 
                   <div className="space-y-6">
-                    <h4 className="text-xl font-bold text-gray-900">Technical Indicators</h4>
+                    <h4 className="text-xl font-bold text-gray-900">Technical indicators</h4>
                     
                     <div className="space-y-4">
                       <Card className="border border-gray-200">
                         <CardContent className="p-6">
                           <h5 className="text-lg font-bold text-gray-900 mb-2">VWAP (Volume Weighted Average Price)</h5>
                           <p className="text-gray-700 leading-relaxed">
-                            This is your Volume Weighted Average Price. It is an intraday metric, meaning it resets every morning at 9:30am and will give the average price of the day taking volume into consideration. When this is graphed on the chart, there are 3 lines. One line is the VWAP and then 1 standard deviation on each side. This can be useful to know for breakthrough momentums either up or down if it crosses one of the lines. It can also look for rebounds, support or resistance lines, if the price gets close to one of the lines and "bounces" back the other way.
+                            VWAP is the day's average price, weighted by volume. It's an intraday measure that resets at 9:30 every morning. On the chart it shows as three lines: the VWAP itself and one standard deviation on either side. When the price breaks through a line, that can signal momentum in that direction. When the price nears a line and "bounces" back, the line is acting as support or resistance.
                           </p>
                         </CardContent>
                       </Card>
@@ -180,10 +171,10 @@ const DayTradingJourney = () => {
                         <CardContent className="p-6">
                           <h5 className="text-lg font-bold text-gray-900 mb-2">EMA (Exponential Moving Average)</h5>
                           <p className="text-gray-700 leading-relaxed">
-                            This is similar and is the Exponential Moving Average. This is a type of moving average that assigns more weight to recent price data compared to older data. This makes it more responsive to price changes. You will typically see EMA followed by a number. That number refers to how many candles back that it is looking at to calculate the moving average.
+                            The EMA is a moving average that gives recent prices more weight than older ones, so it reacts faster to price changes. The number after it (EMA 9, EMA 20) is how many candles back it averages.
                           </p>
                           <p className="text-gray-700 leading-relaxed mt-2">
-                            Don't get EMA confused with SMA (Simple Moving Average), as EMA weighs closer to real time data exponentially more than its historical data. If you look online for the most common number to use with EMA, you will get a lot of variety from 4 to 200. The common ones though are 4,5, 8, 9, 10, 12, 20, 26, 50, 100, 200. The smaller the number the shorter term it is and will be quicker to catch movements and identify trends. Then the middle numbers like 20 to 50 are used for trend confirmation. Finally, the longer ones of 100 and 200 are for a broader direction and not really used for day trading but usually used for swing traders.
+                            A simple moving average (SMA) weights every candle equally; the EMA weights recent candles exponentially more. Search for the best EMA length and you'll find anything from 4 to 200. The common ones are 4, 5, 8, 9, 10, 12, 20, 26, 50, 100 and 200. Short ones catch moves and new trends quickly. Lengths from 20 to 50 are used to confirm a trend. 100 and 200 show the broad direction and matter more to swing traders than day traders.
                           </p>
                         </CardContent>
                       </Card>
@@ -192,7 +183,7 @@ const DayTradingJourney = () => {
                         <CardContent className="p-6">
                           <h5 className="text-lg font-bold text-gray-900 mb-2">MACD (Moving Average Convergence Divergence)</h5>
                           <p className="text-gray-700 leading-relaxed">
-                            This is a trend momentum indicator that compares the relationship between two EMAs price. This is in its own chart and has 3 components, the MACD line, the signal line, and a histogram. The MACD line is calculated by subtracting the EMA-26 from the EMA-12, showing you the difference between the two moving averages. The signal line is the EMA-9 line. The histogram will then show you the difference between the MACD line and the signal line. It visually highlights the convergence or divergence of the moving averages.
+                            MACD is a momentum indicator built from two EMAs. It gets its own chart with three parts. The MACD line is the 12-period EMA minus the 26-period EMA. The signal line is a 9-period EMA. The histogram shows the gap between the MACD line and the signal line, so you can see the averages converge or diverge.
                           </p>
                         </CardContent>
                       </Card>
@@ -201,7 +192,7 @@ const DayTradingJourney = () => {
                         <CardContent className="p-6">
                           <h5 className="text-lg font-bold text-gray-900 mb-2">RSI (Relative Strength Index)</h5>
                           <p className="text-gray-700 leading-relaxed">
-                            The last indicator that I look at is the RSI. This is also a momentum indicator that measures the speed and magnitude of the price changes. It evaluates whether the stock is overbought or oversold. The evaluation ranges from 0 to 100. Above 70 indicates overbought conditions and a potential price correction or downward trend could be coming. Below 30 is the opposite, it indicates an oversold condition, and a potential price rebound or an upward trend. When the RSI is between 30 and 70, it is considered the neutral zone, with 50 meaning it is lacking any trend. This indicator is subjective on if it is a leading or lagging measure.
+                            The last indicator I watch is RSI, another momentum indicator. It measures how fast and how far the price has moved, on a scale of 0 to 100, to judge whether a stock is overbought or oversold. Above 70 means overbought, and a pullback may be coming. Below 30 means oversold, and a rebound may be coming. Between 30 and 70 is neutral, and 50 means no trend. Traders disagree on whether RSI leads or lags the price.
                           </p>
                         </CardContent>
                       </Card>
@@ -210,38 +201,35 @@ const DayTradingJourney = () => {
                 </section>
 
                 <section className="space-y-4">
-                  <h3 className="text-2xl font-bold text-gray-900">The Reality of Real vs. Simulation Trading</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">Paper trading vs. real money</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Understanding charts and indicators is crucial, but nothing prepared me for the harsh reality of transitioning from theory to actual trading.
-                  </p>
-                  <p className="text-gray-700 leading-relaxed">
-                    Paper trading or Simulation trading (used interchangeably), is a way to practice trading with real data but without using money or having risk. You are simulating "what would happen if I executed an order at this time." It then tracks it on "paper" for you to see your potential results.
+                    Paper trading, also called simulation trading, lets you practice on live market data without risking money. You place orders as if they were real, and the platform tracks how they would have done.
                   </p>
                   <p className="text-gray-700 font-semibold text-red-600">
-                    The Critical Lesson: Paper trading creates dangerous habits because it doesn't account for real market conditions.
+                    Paper trading taught me bad habits, because it leaves out two things real trading has.
                   </p>
                   
                   <Card className="bg-red-50 border border-red-200">
                     <CardContent className="p-6">
                       <p className="text-gray-700 leading-relaxed mb-4">
-                        <strong>Price Slippage Reality:</strong> In simulation, you get filled at exactly the displayed price. In real trading, you might see $10.50 but get filled at $10.52-$10.53, especially on volatile stocks. This slippage completely changes your risk management calculations.
+                        <strong>Slippage.</strong> In simulation, you get filled at exactly the displayed price. In real trading, you might see $10.50 but get filled at $10.52 or $10.53, especially on volatile stocks. That throws off every risk calculation you made.
                       </p>
                       
                       <p className="text-gray-700 leading-relaxed">
-                        <strong>Emotional Component:</strong> The fear, greed, and FOMO don't exist with fake money. You make completely different decisions when your actual capital is at risk.
+                        <strong>Emotions.</strong> Fear, greed and FOMO don't show up when the money is fake. You make very different decisions when your own money is at risk.
                       </p>
                     </CardContent>
                   </Card>
                   
                   <p className="text-gray-700 leading-relaxed">
-                    I paper traded for two days thinking I understood the mechanics, then put real money in and realized I had learned nothing about the most important aspects: managing emotions AND accounting for real market conditions.
+                    I paper traded for two days and thought I understood the mechanics. Once I put real money in, I realized I hadn't learned to handle either of these.
                   </p>
                 </section>
 
                 <section className="space-y-6">
-                  <h3 className="text-2xl font-bold text-gray-900">Order Types and Risk Management</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">Order types</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    This reality check forced me to focus intensively on the mechanical aspects of trading and risk management before placing another trade.
+                    Before placing another trade, I went back and learned the order types properly.
                   </p>
                   
                   <div className="overflow-x-auto">
@@ -275,86 +263,83 @@ const DayTradingJourney = () => {
                 </section>
 
                 <section className="space-y-4">
-                  <h3 className="text-2xl font-bold text-gray-900">Early Performance & Pattern Day Trader Status</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">My first real trades</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    With my screening criteria established and risk management framework in place, it was time to put real money to work and track actual performance.
-                  </p>
-                  <p className="text-gray-700 leading-relaxed">
-                    <strong>Capital Requirements:</strong> I deposited $28K total ($26K bank transfer + $2K debit card) to meet Pattern Day Trader requirements. Anyone making more than a certain number of daily trades needs $25K minimum to avoid account restrictions.
+                    I deposited $28K in total: $26K by bank transfer and $2K by debit card. If your broker flags you as a pattern day trader, which happens once you make more than a few day trades in a short window, you need at least $25K in the account or it gets restricted.
                   </p>
                   
                   <Card className="bg-green-50 border border-green-200">
                     <CardContent className="p-6">
-                      <h4 className="text-xl font-bold text-gray-900 mb-4">First Three Days Performance:</h4>
+                      <h4 className="text-xl font-bold text-gray-900 mb-4">My first three days</h4>
                       <ul className="space-y-2 text-gray-700">
-                        <li><strong>Friday June 6th:</strong> -$142.76 (learning curve)</li>
-                        <li><strong>Monday:</strong> +$39.38 (breakthrough)</li>
-                        <li><strong>Tuesday:</strong> +$166.03 (building consistency)</li>
+                        <li><strong>Friday, June 6:</strong> -$142.76</li>
+                        <li><strong>Monday:</strong> +$39.38</li>
+                        <li><strong>Tuesday:</strong> +$166.03</li>
                       </ul>
                     </CardContent>
                   </Card>
                   
                   <p className="text-gray-700 font-semibold text-blue-600">
-                    Key Lesson: "You trade the market you are in, not the one you want." The market doesn't care about your expectations - successful trading requires adapting to current conditions, not forcing preconceived strategies.
+                    "You trade the market you are in, not the one you want." The market doesn't care what you expected. You adjust to what it's doing that day.
                   </p>
                 </section>
 
                 <section className="space-y-4">
-                  <h3 className="text-2xl font-bold text-gray-900">The Software Engineering Advantage</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">Automating my trade journal</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    While exploring various journaling solutions, I realized my technical background provided a unique opportunity to solve this problem more effectively than existing tools.
+                    Every trade needs to go in a journal so you can learn from it. I tried a spreadsheet and a few journaling tools, then built my own.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
-                    <strong>Python Automation Solution:</strong> I developed a custom Python application that processes Webull CSV exports and enriches them with historical data from Yahoo Finance.
+                    It's a Python app that reads Webull's CSV export and fills in market data from Yahoo Finance for the moment of each trade.
                   </p>
                   
                   <Card className="bg-purple-50 border border-purple-200">
                     <CardContent className="p-6">
-                      <h4 className="text-xl font-bold text-gray-900 mb-4">Automated Data Collection Includes:</h4>
+                      <h4 className="text-xl font-bold text-gray-900 mb-4">What it records for each trade</h4>
                       <ul className="list-disc pl-6 space-y-1 text-gray-700">
                         <li>Symbol, P/L, cap category, entry/exit timing</li>
                         <li>Float, average volume, relative volume, gap percent</li>
                         <li>RSI, EMA 9, VWAP, MACD signals</li>
                         <li>Intraday volatility and price range analysis</li>
-                        <li>Trade quality scoring algorithm</li>
+                        <li>A trade quality score</li>
                         <li>Entry/exit timing analysis</li>
                       </ul>
                     </CardContent>
                   </Card>
                   
                   <p className="text-gray-700 leading-relaxed">
-                    <strong>AI-Powered Analysis:</strong> I export the processed data to Claude and OpenAI with the prompt: "As an expert financial day trader who specializes in small and micro-cap intraday trading, analyze and provide insights from this trading journal."
+                    Then I hand the results to Claude and ChatGPT with this prompt: "As an expert financial day trader who specializes in small and micro-cap intraday trading, analyze and provide insights from this trading journal."
                   </p>
                   
                   <p className="text-gray-700 leading-relaxed">
-                    Even with just 3 days of data, the AI analysis has identified key patterns and scenarios where I'm most profitable, as well as situations to avoid.
+                    With only three days of data, they've already pointed out the setups where I make money and the ones I should avoid.
                   </p>
                 </section>
 
                 <section className="space-y-4">
-                  <h3 className="text-2xl font-bold text-gray-900">Next Steps & Strategic Vision</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">What's next</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Looking ahead, this journey has evolved from simple curiosity about day trading into a comprehensive research project that combines financial markets, data science, and systematic analysis.
+                    This started as curiosity and has turned into a research project that uses the same data skills I use at work.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
-                    <strong>Systematic Development:</strong> The goal isn't to get rich quick, but to develop a systematic, data-driven approach to day trading that can generate consistent returns. My background in software engineering and data science provides unique analytical tools to accelerate learning.
+                    I'm not trying to get rich quick. I want a repeatable, data-driven way to trade that makes money consistently.
                   </p>
                   
                   <Card className="bg-blue-50 border border-blue-200">
                     <CardContent className="p-6">
-                      <h4 className="text-xl font-bold text-gray-900 mb-4">Continuing Journey:</h4>
+                      <h4 className="text-xl font-bold text-gray-900 mb-4">The plan from here</h4>
                       <ul className="list-disc pl-6 space-y-1 text-gray-700">
-                        <li>Daily trading with systematic documentation</li>
-                        <li>AI-powered performance analysis</li>
-                        <li>Pattern recognition and strategy refinement</li>
-                        <li>Risk management optimization</li>
-                        <li>Potential algorithmic trading exploration</li>
+                        <li>Trade daily and journal every trade</li>
+                        <li>Have AI review the journal</li>
+                        <li>Find the patterns that work and adjust my strategy</li>
+                        <li>Tighten up risk management</li>
+                        <li>Maybe try algorithmic trading</li>
                       </ul>
                     </CardContent>
                   </Card>
                   
                   <p className="text-gray-700 leading-relaxed">
-                    <strong>Market Humility:</strong> The market is humbling, but I'm approaching it with the same methodical mindset I bring to complex technical problems. Time will tell if this systematic approach pays off, but I'm committed to the journey.
+                    The market is humbling, and I don't know yet whether this approach will pay off. I'll keep trading, keep the journal and report back.
                   </p>
                   
                   <blockquote className="border-l-4 border-blue-500 pl-6 py-4 bg-gray-50 rounded-r-lg">
@@ -362,13 +347,13 @@ const DayTradingJourney = () => {
                       "You trade the market you're in, not the one you want."
                     </p>
                     <p className="text-sm text-gray-600 mt-2">
-                      <em>Now let's see if I can master trading the market I'm actually in.</em>
+                      <em>Now to learn to trade the market I'm actually in.</em>
                     </p>
                   </blockquote>
                 </section>
 
                 <div className="bg-gray-100 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Key Research Areas</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Research areas</h3>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div className="text-center space-y-2">
                       <BarChart3 className="w-8 h-8 text-blue-600 mx-auto" />
@@ -390,11 +375,11 @@ const DayTradingJourney = () => {
                 </div>
 
                 <div className="space-y-6">
-                  <h3 className="text-xl font-bold text-gray-900">References & Sources</h3>
+                  <h3 className="text-xl font-bold text-gray-900">References and sources</h3>
                   
                   <div className="space-y-4">
                     <div>
-                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Books Referenced:</h4>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Books</h4>
                       <ol className="list-decimal pl-6 space-y-1 text-sm text-gray-700">
                         <li>Cameron, R. (2017). <em>How to Day Trade: The Plain Truth</em>. Warrior Trading.</li>
                         <li>Aziz, A. (2016). <em>How to Day Trade for a Living: A Beginner's Guide to Trading Tools and Tactics, Money Management, Discipline and Trading Psychology</em>. CreateSpace Independent Publishing Platform.</li>
@@ -407,7 +392,7 @@ const DayTradingJourney = () => {
                     </div>
                     
                     <div>
-                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Research & Data Sources:</h4>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Research and data sources</h4>
                       <ul className="list-disc pl-6 space-y-1 text-sm text-gray-700">
                         <li><strong>fivehundred.co</strong> - Candlestick pattern predictive power study across 40 years of market data on major stock indices and large cap stocks.</li>
                         <li><strong>Warrior Trading</strong> (Ross Cameron) - Educational content on broker selection and trading platform analysis.</li>
@@ -417,7 +402,7 @@ const DayTradingJourney = () => {
                     </div>
                     
                     <div>
-                      <h4 className="text-lg font-semibold text-gray-900 mb-2">AI Tools Used for Analysis:</h4>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">AI tools</h4>
                       <ul className="list-disc pl-6 space-y-1 text-sm text-gray-700">
                         <li><strong>OpenAI ChatGPT</strong> - Trade journal analysis and pattern recognition insights.</li>
                         <li><strong>Anthropic Claude</strong> - Cross-validation of trading analysis and strategy refinement.</li>
@@ -442,8 +427,8 @@ const DayTradingJourney = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Card className="p-8 text-center bg-gradient-to-r from-blue-50 to-purple-50">
           <CardContent className="space-y-6">
-            <h3 className="text-2xl font-bold text-gray-900">Continue Following the Journey</h3>
-            <p className="text-gray-700">This is the first post in my day trading research series. Stay tuned for more insights, analysis, and lessons learned.</p>
+            <h3 className="text-2xl font-bold text-gray-900">Follow along</h3>
+            <p className="text-gray-700">This is the first post in my day trading series. I'll post more as the journal grows.</p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link to="/research">
                 <Button className="bg-blue-600 hover:bg-blue-700">

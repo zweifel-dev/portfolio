@@ -197,8 +197,7 @@ const DeltaFrameworkImplementation = () => {
             <p className="eyebrow">The model</p>
             <h2 className="mt-3">Why DELTA Plus</h2>
             <blockquote className="mt-8 border-l-2 border-accent pl-5 text-xl font-medium leading-relaxed text-foreground">
-              The biggest challenge wasn't technical, it was cultural. We had to help people see data not as a burden, but as
-              their competitive advantage.
+              The hardest part was cultural. People had to stop seeing data as extra work and start using it to get ahead.
             </blockquote>
           </ScrollReveal>
           <ScrollReveal delay={0.05}>
@@ -214,7 +213,7 @@ const DeltaFrameworkImplementation = () => {
                 <strong className="text-foreground">Analytical techniques</strong>; the extended model is often called DELTA Plus.
               </p>
               <p>
-                I chose it because it treats culture and leadership as first-class, alongside the tools. After a merger, culture is
+                I chose it because it gives culture and leadership the same weight as the tools. After a merger, culture is
                 the harder problem.
               </p>
             </div>
@@ -227,7 +226,7 @@ const DeltaFrameworkImplementation = () => {
         <div className="page-container grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] lg:gap-16">
           <ScrollReveal>
             <p className="eyebrow">Starting point</p>
-            <h2 className="mt-3">One company, two ways of knowing.</h2>
+            <h2 className="mt-3">One company, two versions of the numbers.</h2>
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
               The merged company needed one view of the business, and leaders who trusted it.
             </p>

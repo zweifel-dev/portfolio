@@ -18,15 +18,15 @@ const stats = [
 const principles = [
   {
     title: "Trust before tooling",
-    body: "AI adoption stalls on trust, not technology. Start with low-risk work, let agents draft, and keep people as reviewers.",
+    body: "Teams adopt AI once they trust it. Start with low-risk work, let agents write the drafts, and keep people reviewing.",
   },
   {
     title: "Leaders in the code",
-    body: "I build with the tools before asking a team to adopt them. It's how you set expectations that hold up.",
+    body: "I build with a tool before I ask a team to adopt it, so I know what to expect from it.",
   },
   {
-    title: "Architecture is a people choice",
-    body: "The right technology is the one that fits the team you have and where the organization is heading.",
+    title: "Choose technology for the team",
+    body: "Pick what fits the team you have and where the organization is heading, not what tops the benchmarks.",
   },
 ];
 
@@ -40,7 +40,7 @@ const Home = () => {
       <PageHero
         eyebrow={`${profile.title} · HHAeXchange`}
         title={profile.name}
-        lead="Engineering leader with twenty years of turning information into decisions, from Army intelligence to building software, data and AI teams in healthcare SaaS. I also run Zweifel Tech LLC, a small software publisher."
+        lead="I've spent twenty years helping people make decisions from messy information, first in Army intelligence and then leading software, data and AI teams in healthcare SaaS. I also run Zweifel Tech LLC, a small software publisher."
         aside={<Portrait eager className="mx-0 w-44 sm:w-64 lg:w-72" />}
       >
         <Button asChild variant="accent" size="lg">
@@ -190,7 +190,7 @@ const Home = () => {
             <p className="eyebrow mb-4">Contact</p>
             <h2>Let's talk.</h2>
             <p className="mt-4 text-lg leading-relaxed text-navy-muted">
-              Engineering leadership, agentic AI, or a Midnight Alibi case that got the better of you. I'm glad to hear from you.
+              Write to me about engineering leadership, agentic AI, or a Midnight Alibi case that beat you.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">

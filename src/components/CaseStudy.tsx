@@ -23,7 +23,7 @@ export const CaseFacts = ({ facts }: { facts: Fact[] }) => (
       </dl>
       <p className="mt-6 border-t pt-4 text-sm text-muted-foreground">
         Drawn from my experience leading engineering and data teams in healthcare SaaS. Company-specific details are left
-        out; this covers the approach, the decisions and the lessons.
+        out; this covers how the work was done and what I learned.
       </p>
     </div>
   </section>

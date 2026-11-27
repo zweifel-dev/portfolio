@@ -9,24 +9,24 @@ const STEPS = [
       "Before any action, state what you believe and what would disprove it. Generate competing predictions when ambiguous.",
     color: "#946B00",
     missing:
-      "ReAct collapses this into an unstructured 'Thought' — no falsifiable claim, no competing hypotheses.",
+      "ReAct folds this into an unstructured 'Thought', with no falsifiable claim and no competing hypotheses.",
   },
   {
     letter: "R",
     name: "Run",
     short: "Execute a targeted experiment",
     detail:
-      "Choose the action that best differentiates between competing hypotheses. Maximize diagnostic value, not just coverage.",
+      "Choose the action that best tells the competing hypotheses apart, rather than the one that covers the most ground.",
     color: "#A93A24",
     missing:
-      "ReAct acts on first instinct. No experimental design, no consideration of which action is most informative.",
+      "ReAct acts on first instinct, without asking which action would tell it the most.",
   },
   {
     letter: "O",
     name: "Observe",
     short: "Collect results without interpretation",
     detail:
-      "Record factual outcomes — status codes, data returned, timing. Keep observation separate from analysis to prevent confirmation bias.",
+      "Record what happened: status codes, data returned, timing. Keep observation separate from analysis to guard against confirmation bias.",
     color: "#1A7A56",
     missing:
       "ReAct has this step but immediately feeds it into the next unstructured reasoning step.",
@@ -36,20 +36,20 @@ const STEPS = [
     name: "Validate",
     short: "Compare results against predictions",
     detail:
-      "Structured evaluation: Did the observation match, contradict, or neither? Track confidence. This is the step ReAct doesn't have at all.",
+      "Did the observation match the prediction, contradict it, or neither? Track confidence. ReAct has no version of this step.",
     color: "#1F5CA0",
     missing:
-      "Completely absent from ReAct. No prediction-to-outcome comparison. No falsification mechanism.",
+      "Missing from ReAct entirely: nothing compares predictions to outcomes, and nothing can falsify a hypothesis.",
   },
   {
     letter: "E",
     name: "Evolve",
     short: "Update understanding and iterate",
     detail:
-      "Hypothesis supported → build on it. Falsified → generate new hypothesis from all evidence. Inconclusive → sharpen the experiment.",
+      "If the hypothesis held, build on it. If it was falsified, form a new one from all the evidence. If it was inconclusive, sharpen the experiment.",
     color: "#6A4B8E",
     missing:
-      "ReAct repeats without structured learning. 'Try again' instead of 'try smarter.'",
+      "ReAct repeats without learning in any structured way. It tries again instead of trying smarter.",
   },
 ];
 
@@ -91,37 +91,37 @@ const COMPARISON_ROWS = [
   {
     method: "Hypothesize",
     react: { text: "No falsifiable predictions", present: false },
-    prove: { text: "Predict — competing hypotheses", present: true },
+    prove: { text: "Predict: competing hypotheses", present: true },
   },
   {
     method: "Design Experiment",
     react: { text: "Ad hoc action selection", present: false },
-    prove: { text: "Run — maximize diagnostic value", present: true },
+    prove: { text: "Run: most informative action", present: true },
   },
   {
     method: "Run Experiment",
-    react: { text: "Act — tool invocation", present: true },
-    prove: { text: "Run — targeted execution", present: true },
+    react: { text: "Act: tool invocation", present: true },
+    prove: { text: "Run: targeted execution", present: true },
   },
   {
     method: "Collect Results",
-    react: { text: "Observe — environment feedback", present: true },
-    prove: { text: "Observe — separated from interpretation", present: true },
+    react: { text: "Observe: environment feedback", present: true },
+    prove: { text: "Observe: separate from interpretation", present: true },
   },
   {
     method: "Analyze Against Predictions",
     react: { text: "Completely absent", present: false },
-    prove: { text: "Validate — structured comparison", present: true },
+    prove: { text: "Validate: structured comparison", present: true },
   },
   {
     method: "Falsify or Confirm",
     react: { text: "No mechanism", present: false },
-    prove: { text: "Validate — explicit falsification", present: true },
+    prove: { text: "Validate: explicit falsification", present: true },
   },
   {
     method: "Revise Understanding",
     react: { text: "Implicit in next 'Thought'", present: false },
-    prove: { text: "Evolve — deliberate refinement", present: true },
+    prove: { text: "Evolve: deliberate refinement", present: true },
   },
 ];
 
@@ -319,7 +319,7 @@ export default function ProveDiagram() {
                           {step.name}
                         </span>
                         <span className="text-sm ml-3 text-muted-foreground">
-                          — {step.short}
+                          {step.short}
                         </span>
                       </div>
                     </div>
@@ -336,10 +336,10 @@ export default function ProveDiagram() {
             {/* Recurse note */}
             <div className="mt-10 p-5 rounded-lg bg-muted border-l-[3px] border-border">
               <p className="text-sm leading-7 italic m-0 text-muted-foreground">
-                The loop recurses. Evolved understanding generates new predictions,
-                driving new experiments, new observations, new validation. It terminates
-                when confidence is sufficient through multiple validated predictions or
-                when all hypotheses are exhausted and the agent escalates honestly.
+                Then the loop runs again: what the agent now understands produces new
+                predictions and new experiments. It stops when enough predictions have
+                held up for the agent to be confident, or when it runs out of hypotheses
+                and escalates instead of guessing.
               </p>
             </div>
           </div>
@@ -349,8 +349,8 @@ export default function ProveDiagram() {
         {view === "layers" && (
           <div>
             <p className="text-base leading-7 mb-9 max-w-[620px] text-muted-foreground">
-              The same five steps apply at every altitude. The only things that change
-              are the scope of the hypothesis, the timescale, and the tools available.
+              The same five steps apply at every level. What changes is the scope of
+              the hypothesis, the timescale and the tools available.
             </p>
 
             <div className="relative">
@@ -405,10 +405,9 @@ export default function ProveDiagram() {
 
             <div className="mt-10 p-5 rounded-lg bg-muted border-l-[3px] border-border">
               <p className="text-sm leading-7 italic m-0 text-muted-foreground">
-                The pattern is fractal. Each agent in a multi-agent PROVE implementation
-                can run its own PROVE loop internally. The Experimenter runs PROVE to
-                select the best action. The Reviewer runs PROVE to validate its own
-                critique. Recursion all the way down.
+                Each agent in a multi-agent PROVE setup can run its own PROVE loop
+                inside. The Experimenter runs PROVE to pick the best action, and the
+                Reviewer runs PROVE to check its own critique.
               </p>
             </div>
           </div>
@@ -418,8 +417,8 @@ export default function ProveDiagram() {
         {view === "compare" && (
           <div>
             <p className="text-base leading-7 mb-9 max-w-[620px] text-muted-foreground">
-              ReAct wasn't wrong, it was a necessarily simplified version of the
-              scientific method. Every post-ReAct framework independently rediscovered a
+              ReAct wasn't wrong. It was a simplified version of the scientific method,
+              and at the time it had to be. Every post-ReAct framework independently rediscovered a
               piece that was missing.
             </p>
 
@@ -515,8 +514,8 @@ export default function ProveDiagram() {
               style={{ borderLeft: "3px solid #946B00" }}
             >
               <p className="text-sm leading-7 italic m-0 text-muted-foreground">
-                They all improve on ReAct precisely because they each add back
-                something the scientific method already had. PROVE implements the
+                Each improves on ReAct by adding back something the scientific method
+                already had. PROVE implements the
                 complete loop, applied recursively across abstraction layers.
               </p>
             </div>

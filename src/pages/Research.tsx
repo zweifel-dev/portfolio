@@ -6,18 +6,18 @@ import PageHero from '@/components/PageHero';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
 
 const proveSteps = [
-  { letter: 'P', name: 'Predict', text: 'Form falsifiable hypotheses with competing predictions before any action' },
-  { letter: 'R', name: 'Run', text: 'Execute targeted experiments that maximize diagnostic value between hypotheses' },
-  { letter: 'O', name: 'Observe', text: 'Collect factual results separated from interpretation to prevent confirmation bias' },
+  { letter: 'P', name: 'Predict', text: 'Write down competing hypotheses, each with a prediction that could prove it wrong, before acting' },
+  { letter: 'R', name: 'Run', text: 'Run the experiment that best tells the hypotheses apart' },
+  { letter: 'O', name: 'Observe', text: 'Record what happened, kept apart from what it means, to guard against confirmation bias' },
   { letter: 'V', name: 'Validate', text: 'Compare observations against predictions: supported, falsified, or inconclusive' },
-  { letter: 'E', name: 'Evolve', text: 'Update understanding based on evidence, then iterate or conclude with confidence' },
+  { letter: 'E', name: 'Evolve', text: 'Update what you believe from the evidence, then go around again or stop' },
 ];
 
 const agenticAreas = [
   ['Framework evaluation', 'Strands Agents SDK vs LangGraph vs CrewAI vs OpenAI Agents SDK, with selection criteria tied to team capability and infrastructure fit'],
-  ['Production agent architecture', 'Model-driven loops, graph pipelines, and multi-agent orchestration at enterprise scale'],
+  ['Production agent architecture', 'Model-driven loops, graph pipelines and multi-agent orchestration for large organizations'],
   ['Quality gates', 'Human-in-the-loop review for agent-generated code, documentation, and metric definitions'],
-  ['MCP & composability', 'Tool integration patterns that let agents operate across data platform layers'],
+  ['MCP & composability', 'Tool integration patterns that let agents work across the layers of a data platform'],
   ['Change management', 'Moving teams from manual production to agent-augmented review without losing trust or quality'],
   ['Local AI infrastructure', 'Model routing, RAG patterns, and cloud vs. local vs. hybrid inference trade-offs'],
 ];
@@ -25,39 +25,39 @@ const agenticAreas = [
 const topics = [
   {
     tag: 'Healthcare SaaS',
-    title: 'AI/ML in Healthcare SaaS',
-    why: 'AI-powered clinical tools only drive value when analytics can prove it. Measured impact is what earns executive buy-in.',
-    intro: 'Applied research into AI and ML products within healthcare technology, and the analytics practices that measure their value.',
+    title: 'AI/ML in healthcare SaaS',
+    why: 'An AI clinical tool is only worth what analytics can show it does, and measured results are what convince executives to keep funding it.',
+    intro: 'AI and ML products in healthcare technology, and the analytics that measure whether they work.',
     points: [
       ['Measuring AI features', 'Time saved, adoption, and correlation between feature usage and outcomes'],
-      ['Product research analytics', 'Segmentation, correlation analysis, and operational insights for customer success and leadership'],
+      ['Product research analytics', 'Segmentation, correlation analysis and operational reporting for customer success and leadership'],
       ['Predictive analytics', 'Patient flow optimization and real-time clinical decision support'],
       ['Privacy by design', 'Data governance and privacy architecture in HIPAA-compliant medical systems'],
     ],
   },
   {
     tag: 'Platform architecture',
-    title: 'Enterprise Data Platform Architecture',
-    why: 'A well-architected data platform ends the "dashboard factory," stops metric rebuilding, and gives every consumer, human or AI, a single source of truth.',
-    intro: 'Modern enterprise data platform design, semantic layer governance, and metric certification: the layer that makes both analytics and AI agents trustworthy.',
+    title: 'Enterprise data platform architecture',
+    why: 'A good data platform ends the "dashboard factory": metrics get defined once, and every consumer, human or AI, reads the same numbers.',
+    intro: 'Data platform design, semantic layer governance and metric certification. Analysts and AI agents can only be trusted if the numbers underneath them can.',
     points: [
       ['Layered architecture', 'Ingestion through delivery, designed for iterative deployment instead of big-bang launches'],
-      ['Semantic layer governance', 'dbt MetricFlow with a formal certification lifecycle and stakeholder alignment'],
+      ['Semantic layer governance', 'dbt MetricFlow, with a formal process for certifying metrics and getting stakeholders to agree on them'],
       ['CDC pipeline design', 'Kafka, Schema Registry, and Debezium for real-time data movement'],
-      ['Strangler pattern migration', 'Iterative platform cutover that builds organizational confidence through early wins'],
+      ['Strangler pattern migration', 'Moving to a new platform piece by piece, so early wins build confidence'],
       ['Entity resolution', 'Kimball star schema with crosswalks for cross-system identity mapping'],
     ],
   },
   {
     tag: 'Culture & transformation',
-    title: 'Data Culture & Organizational Transformation',
-    why: 'AI agent adoption fails without data trust, governance maturity, and cultural readiness. The technology is the easy part.',
-    intro: 'Building data cultures that support both human and AI-augmented decision-making at enterprise scale.',
+    title: 'Data culture and organizational change',
+    why: 'Agent adoption fails when people don\'t trust the data, governance is immature or the culture isn\'t ready. Those are harder problems than the technology.',
+    intro: 'Building a data culture where both people and AI agents can make decisions from the same data.',
     points: [
-      ['DELTA framework', 'Structured implementation for measuring and advancing data-driven maturity'],
-      ['Cultural shift', 'Moving from dashboard factory to metric-certified operation, reducing rework and increasing trust'],
-      ['Executive alignment', 'Frameworks for getting leadership buy-in on data strategy and governance investment'],
-      ['ROI measurement', 'Quantifying the business value of analytics maturity and infrastructure investment'],
+      ['DELTA framework', 'A structured way to measure how data-driven an organization is and to improve it'],
+      ['Cultural shift', 'Moving from a dashboard factory to certified metrics, with less rework and more trust in the numbers'],
+      ['Executive alignment', 'Getting leadership to back data strategy and governance spending'],
+      ['ROI measurement', 'Putting a business value on analytics maturity and infrastructure spending'],
       ['AI readiness', 'The governance, trust, and process discipline that AI agent adoption requires'],
     ],
     link: { to: '/delta-framework-implementation', label: 'Case study: Building a data culture with DELTA Plus' },
@@ -103,12 +103,12 @@ const Research = () => {
         {/* Agentic AI */}
         <Topic
           tag="AI leadership"
-          title="Agentic AI & AI-Augmented Organizations"
-          why="Teams that put AI agents into production workflows gain throughput, consistency, and speed, while human effort shifts from creation to review."
+          title="Agentic AI and AI-augmented organizations"
+          why="When agents do the first draft in a team's production work, the team ships more, more consistently, and people spend their time reviewing instead of writing."
         >
           <p className="text-lg leading-relaxed text-muted-foreground">
-            Building and deploying agentic AI systems that change how engineering and data teams operate: framework
-            evaluation, production agent architecture, and the change management that adoption needs.
+            Building and deploying agent systems that change how engineering and data teams work, from picking a
+            framework to production architecture to the change management that adoption needs.
           </p>
 
           {/* PROVE */}
@@ -116,10 +116,10 @@ const Research = () => {
             <p className="eyebrow">Original research</p>
             <h3 className="mt-2">The PROVE Pattern</h3>
             <p className="mt-3 leading-relaxed text-muted-foreground">
-              PROVE (Predict, Run, Observe, Validate, Evolve) applies the scientific method as an agentic AI reasoning loop.
-              It grew out of the documented failure modes of production ReAct-based architectures (looping, premature
-              commitment, error propagation, and confabulation) and answers each by implementing the full hypothesis-driven
-              cycle that existing frameworks only partly recover.
+              PROVE (Predict, Run, Observe, Validate, Evolve) uses the scientific method as a reasoning loop for AI agents.
+              I started from the documented ways production ReAct-based agents fail (looping, committing too early,
+              propagating errors and confabulating). PROVE addresses each one by running the full hypothesis-testing cycle,
+              where existing frameworks cover only parts of it.
             </p>
             <ol className="mt-6 space-y-3">
               {proveSteps.map((step) => (
@@ -134,9 +134,9 @@ const Research = () => {
               ))}
             </ol>
             <p className="mt-6 text-[0.9375rem] leading-relaxed text-muted-foreground">
-              The pattern works recursively across four abstraction layers (Meta, Strategic, Tactical, and Operational) and
-              maps naturally to multi-agent architectures. It's analyzed against eight or more existing frameworks, including
-              ReAct, Reflexion, Tree of Thoughts, LATS, and Plan-and-Execute, each of which rediscovered part of the loop.
+              The pattern runs recursively at four levels (Meta, Strategic, Tactical and Operational) and maps cleanly onto
+              multi-agent systems. I compared it with eight or more existing frameworks, including ReAct, Reflexion, Tree of
+              Thoughts, LATS and Plan-and-Execute. Each of them rediscovered part of the loop.
             </p>
             <StaggerContainer className="mt-6 grid grid-cols-2 gap-4 border-t pt-6 sm:grid-cols-4">
               {[
@@ -159,7 +159,7 @@ const Research = () => {
             <h3 className="mt-2">Agentic AI Resource Guide</h3>
             <p className="mt-3 leading-relaxed text-muted-foreground">
               A guide to more than 85 resources on architecture patterns, foundational research (ReAct, Chain of Thought,
-              Tree of Thoughts, CoALA), production operations, and evaluation methodology. I wrote it to give engineering,
+              Tree of Thoughts, CoALA), running agents in production, and evaluating them. I wrote it to give engineering,
               product, and leadership a shared vocabulary when a team starts working with agents.
             </p>
             <div className="mt-6 grid grid-cols-3 gap-4 border-t pt-6">

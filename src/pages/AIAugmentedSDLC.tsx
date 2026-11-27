@@ -94,7 +94,7 @@ const decisions = [
   },
   {
     title: "Human in the loop by design",
-    body: "No auto-merge is a design choice, not a temporary limitation. Review is where quality is enforced, and it's how the team learns what the agents are good at.",
+    body: "We don't auto-merge, and that's on purpose. Review is where quality gets enforced, and it's how the team learns what the agents are good at.",
   },
   {
     title: "Route models by task",
@@ -162,9 +162,9 @@ const AIAugmentedSDLC = () => {
                 person still approves every change.
               </p>
               <p>
-                This isn't an automation story; it's a leverage story. Every engineer gets an agent that drafts the first version.
-                The engineer's job shifts from writer to editor and owner, and editors work at a multiple of a writer's throughput
-                while spending their attention on judgment instead of scaffolding.
+                Nobody is automated away here. Every engineer gets an agent that drafts the first version, and the engineer
+                becomes its editor and owner. An editor gets through several times as much work as a writer, and spends that
+                attention on judgment calls instead of scaffolding.
               </p>
             </div>
           </ScrollReveal>
@@ -210,7 +210,7 @@ const AIAugmentedSDLC = () => {
               to full production review, and expanded only after it earned the team's trust.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              The pattern generalizes. Anything a team produces as a reviewable artifact, an agent can draft.
+              The same approach works for other teams: if a team produces something a person can review, an agent can draft it.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.05}>
@@ -328,7 +328,7 @@ const AIAugmentedSDLC = () => {
             <SectionHeading
               eyebrow="Change management"
               title="Trust is built one domain at a time"
-              description="The team's first reaction to agents was anxiety, not excitement. The fix wasn't reassurance. It was demonstration."
+              description="The team's first reaction to agents was anxiety. Reassurance didn't help much; showing them did."
             />
           </ScrollReveal>
           <StaggerContainer className="grid gap-6 md:grid-cols-2">
@@ -348,7 +348,7 @@ const AIAugmentedSDLC = () => {
                   "Treat review as high-value engineering, not a demotion",
                   "Protect hands-on engineering time so skills don't fade",
                   "Give everyone a path to practitioner depth, like a shared resource guide and guided notebooks",
-                  "Show that directing agents is the future of senior individual contribution",
+                  "Show senior engineers that directing agents is where their individual work is heading",
                 ],
               },
             ].map((col) => (

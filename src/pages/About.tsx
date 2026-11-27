@@ -18,8 +18,8 @@ const experience = [
       "Moved the data and analytics team to an agent-augmented operating model: agents draft models, metrics, tests and documentation; engineers review and merge.",
       "Shipped seven production AI agents, piloting on low-risk work first and keeping a human reviewer on every change.",
       "Built the enterprise data platform and a governed semantic layer, so metrics are defined and certified once and reused everywhere.",
-      "Started a product analytics practice that gave product and executive leadership evidence to decide with.",
-      "Led the change management for the AI transition: review guardrails, quality standards and hands-on upskilling.",
+      "Started a product analytics practice so product and executive leaders could base decisions on data.",
+      "Led the AI transition on the people side: review guardrails, quality standards and hands-on training.",
     ],
   },
   {
@@ -55,7 +55,7 @@ const experience = [
     period: "2005 – 2013",
     summary: "",
     points: [
-      "Led strategic intelligence analysis during a 13-month Iraq deployment, briefing General officers on decisions that shaped operations.",
+      "Led strategic intelligence analysis during a 13-month deployment to Iraq, including briefings for general officers.",
     ],
   },
 ];

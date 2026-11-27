@@ -11,7 +11,7 @@ const chapters = [
     title: "From 15 to more than 65",
     intro: "Doubling a team twice over is where culture either gets written down or gets lost.",
     points: [
-      "Recruited on culture, growth and impact, not compensation alone",
+      "Recruited on culture, growth and the work itself, alongside pay",
       "Ran structured interviews with diverse panels and consistent evaluation",
       "Sold the mission: software that helps clinicians take care of patients",
       "Aligned roles to clear ownership, so a bigger team didn't trip over itself",
@@ -43,9 +43,9 @@ const chapters = [
   {
     label: "AI transition",
     title: "From producers to reviewers",
-    intro: "The biggest operating-model shift in the team's history, and the one that tested trust the most.",
+    intro: "The biggest change to how the team worked, and the one that tested trust the most.",
     points: [
-      "Met fear of replacement with demonstration: agents multiply capacity, people keep the judgment",
+      "Answered the fear of being replaced by showing the agents at work: they add capacity, and people still make the calls",
       "Built trust with low-risk wins before expanding",
       "Trained engineers on agent frameworks and production agent deployment",
       "Kept hands-on engineering time so skills stayed sharp",
@@ -75,7 +75,7 @@ const inclusion = [
   {
     title: "Introverted leadership",
     points: [
-      "Recognized that leadership takes more forms than the loudest voice in the room",
+      "Made room for leaders who aren't the loudest voice in the room",
       "Senior individual-contributor paths valued as much as management",
       "Rewarded clear written communication",
       "Optional presentation coaching for anyone who wanted it",
@@ -104,10 +104,10 @@ const growth = [
 
 const lessons = [
   ["Culture compounds", "The mentoring and culture work of the merger years paid off during the AI transition in ways I couldn't have predicted."],
-  ["Skill is table stakes", "Technical capability gets a team in the room. Psychological safety, clear communication and shared purpose decide which teams thrive through change."],
-  ["Clarity beats comfort", "Settle overlapping roles and open questions quickly. A hard answer now is kinder than ambiguity later."],
+  ["Skill is the minimum", "Technical skill gets a team in the room. Whether it gets through change depends on whether people feel safe speaking up, communicate clearly and agree on the goal."],
+  ["Answer quickly", "Settle overlapping roles and open questions quickly. A hard answer now is kinder than months of not knowing."],
   ["Trust comes before AI", "The teams that adopt AI fastest aren't the most technical. They're the ones where people feel safe flagging bad output."],
-  ["Grow leaders early", "Succession planning is a growth strategy, not HR paperwork."],
+  ["Grow leaders early", "Succession planning is how a growing team gets the leaders it needs, so treat it as more than HR paperwork."],
 ];
 
 const TeamScalingLeadership = () => {
@@ -136,12 +136,12 @@ const TeamScalingLeadership = () => {
           </ScrollReveal>
           <ScrollReveal delay={0.05}>
             <blockquote className="border-l-2 border-accent pl-5 text-xl font-medium leading-relaxed text-foreground">
-              Strong leadership builds both people and performance. By shaping strategy with data and empowering teams to act on
-              it, success becomes sustainable, scalable, and repeatable.
+              Good leadership grows the people and the results together. Set strategy with data, give teams the room to act
+              on it, and the results keep coming as the team grows.
             </blockquote>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              I pair the discipline I learned in the Army with empathy: creating psychological safety while holding high
-              performance standards. The two aren't in tension; each depends on the other.
+              I pair the discipline I learned in the Army with empathy. People need to feel safe speaking up, and they need
+              high standards. In my experience each of those makes the other easier.
             </p>
           </ScrollReveal>
         </div>
@@ -193,7 +193,7 @@ const TeamScalingLeadership = () => {
             <SectionHeading
               eyebrow="Inclusion"
               title="Inclusion as an operating practice"
-              description="Not a program on the side. These were part of how the team hired, met, promoted and looked after each other."
+              description="These were part of how the team hired, met, promoted and looked after each other, day to day."
             />
           </ScrollReveal>
           <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

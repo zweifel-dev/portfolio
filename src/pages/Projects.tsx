@@ -35,7 +35,7 @@ const Projects = () => {
       <PageHero
         eyebrow="Projects"
         title="Things I've built, led and published."
-        lead="Leadership case studies, products from Zweifel Tech LLC, and my independent research on agentic AI. The case studies cover approach and lessons; details that belong to the companies involved stay with them."
+        lead="Leadership case studies, products from Zweifel Tech LLC, and my independent research on agentic AI. The case studies describe the approach and what I learned, and leave out details that belong to the companies."
       />
 
       {/* Leadership case studies */}

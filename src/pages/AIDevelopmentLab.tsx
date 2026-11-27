@@ -43,13 +43,13 @@ const AIDevelopmentLab: React.FC = () => {
 
             {/* Executive Summary */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-4">Executive Summary</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">Summary</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="mb-4">
-                  Built a fully local AI development platform orchestrating Ollama, vLLM, and Qdrant with three production agents and comprehensive framework evaluation infrastructure. This practitioner-depth work — building, evaluating, and benchmarking agentic AI systems across multiple frameworks — is where I form the judgment behind architecture decisions: which framework fits which job, where agents fail, and how much review they need.
+                  I built a fully local AI development platform on Ollama, vLLM and Qdrant, with three working agents and a setup for comparing agent frameworks. Building and benchmarking agents across several frameworks is how I form the judgment behind my architecture decisions: which framework fits which job, where agents fail, and how much review they need.
                 </p>
                 <p>
-                  The AI Lab demonstrates that <strong>leadership credibility in AI transformation comes from building, not just directing</strong>. By operating at the practitioner level — writing agent code, benchmarking inference engines, and comparing framework trade-offs — the lab produces the judgment I bring to teams adopting AI-augmented workflows.
+                  I think a leader asking a team to adopt AI should have built with it first. Here I write the agent code, benchmark the inference engines and compare the frameworks myself, and what I learn goes with me to the teams I lead.
                 </p>
               </div>
             </section>
@@ -57,9 +57,9 @@ const AIDevelopmentLab: React.FC = () => {
             {/* Platform Architecture */}
             <ScrollReveal>
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-4">Platform Architecture</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">Platform architecture</h2>
               <p className="mb-6">
-                The AI Lab runs entirely on local infrastructure, providing full control over model selection, data privacy, and cost. The architecture separates compute, storage, and orchestration into distinct layers:
+                The lab runs entirely on my own hardware, so I control model choice, data privacy and cost. Compute, storage and orchestration are separate layers:
               </p>
 
               <div className="space-y-6">
@@ -68,11 +68,11 @@ const AIDevelopmentLab: React.FC = () => {
                     <Server className="w-6 h-6 text-primary" />
                     <h4 className="font-bold text-lg">Ollama (Port 11434)</h4>
                   </div>
-                  <p className="text-sm mb-2">Primary model runtime serving 9+ models for different task types. Acts as the default inference backend for most agent workloads, providing broad model compatibility and straightforward local deployment.</p>
+                  <p className="text-sm mb-2">The main model runtime, serving 9+ models for different kinds of tasks. Most agent work runs here by default, since it supports a wide range of models and is simple to run locally.</p>
                   <ul className="space-y-1 text-sm text-muted-foreground">
                     <li>• Supports models from 3B to 14B+ parameters</li>
                     <li>• Hot-swap models without restarting services</li>
-                    <li>• OpenAI-compatible API for seamless framework integration</li>
+                    <li>• OpenAI-compatible API, so the frameworks plug straight in</li>
                   </ul>
                 </Card>
 
@@ -81,7 +81,7 @@ const AIDevelopmentLab: React.FC = () => {
                     <Gauge className="w-6 h-6 text-primary" />
                     <h4 className="font-bold text-lg">vLLM (Port 8000)</h4>
                   </div>
-                  <p className="text-sm mb-2">High-performance inference engine for throughput-demanding workloads. Used when batch processing or concurrent requests exceed what Ollama handles efficiently.</p>
+                  <p className="text-sm mb-2">A faster inference engine for heavy workloads. I use it when batch jobs or concurrent requests are more than Ollama handles well.</p>
                   <ul className="space-y-1 text-sm text-muted-foreground">
                     <li>• Continuous batching for higher throughput</li>
                     <li>• PagedAttention for efficient memory management</li>
@@ -94,7 +94,7 @@ const AIDevelopmentLab: React.FC = () => {
                     <Database className="w-6 h-6 text-primary" />
                     <h4 className="font-bold text-lg">Qdrant (Port 6333)</h4>
                   </div>
-                  <p className="text-sm mb-2">Vector database for semantic search and RAG applications. Stores embedded research papers and email content for similarity-based retrieval across all agents.</p>
+                  <p className="text-sm mb-2">The vector database for semantic search and RAG. It stores embedded research papers and email content that all the agents search by similarity.</p>
                   <ul className="space-y-1 text-sm text-muted-foreground">
                     <li>• Collections for research papers, email clusters, and experiments</li>
                     <li>• Payload filtering for metadata-driven search refinement</li>
@@ -105,9 +105,9 @@ const AIDevelopmentLab: React.FC = () => {
                 <Card className="p-6 border-l-[3px] border-l-accent">
                   <div className="flex items-center gap-3 mb-4">
                     <Cog className="w-6 h-6 text-primary" />
-                    <h4 className="font-bold text-lg">Task-Based Model Routing</h4>
+                    <h4 className="font-bold text-lg">Task-based model routing</h4>
                   </div>
-                  <p className="text-sm mb-2">Shared model router maps tasks to appropriately-sized models. All agent code uses the router instead of hardcoding models, enabling centralized model management and easy upgrades.</p>
+                  <p className="text-sm mb-2">A shared router maps each kind of task to a model of the right size. Agent code asks the router instead of hardcoding a model, so I can change models in one place.</p>
                   <ul className="space-y-1 text-sm text-muted-foreground">
                     <li>• <strong>Fast tasks</strong> → phi3:mini (low latency, simple extraction)</li>
                     <li>• <strong>Research</strong> → qwen3:14b (nuanced summarization)</li>
@@ -119,9 +119,9 @@ const AIDevelopmentLab: React.FC = () => {
                 <Card className="p-6 border-l-[3px] border-l-accent">
                   <div className="flex items-center gap-3 mb-4">
                     <Box className="w-6 h-6 text-muted-foreground" />
-                    <h4 className="font-bold text-lg">Split Storage Architecture</h4>
+                    <h4 className="font-bold text-lg">Split storage</h4>
                   </div>
-                  <p className="text-sm">Code lives on SSD for fast development iteration. Data — models, vector stores, outputs, and logs — lives on a separate drive optimized for capacity. This separation keeps the development environment responsive while accommodating large model files and growing vector collections.</p>
+                  <p className="text-sm">Code lives on an SSD so development stays fast. Data (models, vector stores, outputs and logs) lives on a separate, larger drive, which leaves room for big model files and growing vector collections.</p>
                 </Card>
               </div>
             </section>
@@ -131,9 +131,9 @@ const AIDevelopmentLab: React.FC = () => {
             {/* Three Production Agents */}
             <ScrollReveal>
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-4">Three Production Agents</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">Three working agents</h2>
               <p className="mb-6">
-                Each agent was built on a different framework to evaluate real-world trade-offs between graph-based pipelines, model-driven agent loops, and multi-agent orchestration:
+                I built the agents on different frameworks to see the trade-offs between graph-based pipelines and model-driven agent loops in practice:
               </p>
 
               <div className="space-y-6">
@@ -143,17 +143,17 @@ const AIDevelopmentLab: React.FC = () => {
                     <h4 className="font-bold text-lg">Research Agent (LangGraph)</h4>
                   </div>
                   <p className="text-sm mb-3">
-                    Daily digest of AI papers from six academic sources: ArXiv, Semantic Scholar, OpenAlex, DBLP, RSS feeds, and HuggingFace. Produces a curated summary of the most relevant new research each day.
+                    A daily digest of AI papers from six sources: ArXiv, Semantic Scholar, OpenAlex, DBLP, RSS feeds and HuggingFace. Each day it summarizes the new papers most relevant to my interests.
                   </p>
                   <div className="bg-muted p-4 rounded-lg mb-3">
-                    <p className="text-sm font-medium text-foreground mb-2">Pipeline Flow:</p>
+                    <p className="text-sm font-medium text-foreground mb-2">Pipeline</p>
                     <p className="text-sm text-muted-foreground">Fetches → Filters by relevance → Embeds in Qdrant → Summarizes → Delivers as markdown/JSON/email</p>
                   </div>
                   <ul className="space-y-2 text-sm">
-                    <li><strong>Graph-Based Pipeline:</strong> Each stage is a LangGraph node with explicit edges, making the flow debuggable and modifiable</li>
-                    <li><strong>Relevance Filtering:</strong> LLM scores papers against configurable research interests before embedding</li>
-                    <li><strong>Multi-Channel Delivery:</strong> Same content output as markdown files, structured JSON, and formatted email</li>
-                    <li><strong>Incremental Processing:</strong> Tracks previously seen papers to avoid duplicate processing on subsequent runs</li>
+                    <li><strong>Graph pipeline:</strong> Each stage is a LangGraph node with explicit edges, so the flow is easy to debug and change</li>
+                    <li><strong>Relevance filtering:</strong> An LLM scores papers against configurable research interests before embedding</li>
+                    <li><strong>Several outputs:</strong> The same digest as markdown files, structured JSON and formatted email</li>
+                    <li><strong>Incremental runs:</strong> Remembers papers it has already seen, so later runs skip them</li>
                   </ul>
                   <div className="mt-3">
                     <Badge variant="secondary" className="mr-1">LangGraph</Badge>
@@ -169,17 +169,17 @@ const AIDevelopmentLab: React.FC = () => {
                     <h4 className="font-bold text-lg">Email Agent (LangGraph)</h4>
                   </div>
                   <p className="text-sm mb-3">
-                    Gmail inbox organizer processing 5,000+ emails. Clusters emails by sender domain, uses LLM to name groups and flag spam, then applies Gmail labels — all without ever deleting a message.
+                    Organizes a Gmail inbox of 5,000+ emails. It clusters email by sender domain, has an LLM name the groups and flag spam, then applies Gmail labels. It never deletes a message.
                   </p>
                   <div className="bg-muted p-4 rounded-lg mb-3">
-                    <p className="text-sm font-medium text-foreground mb-2">Key Design Pattern:</p>
-                    <p className="text-sm text-muted-foreground">Code handles volume (Python clustering), LLMs handle judgment (naming, classification). This pattern maximizes cost efficiency and reliability.</p>
+                    <p className="text-sm font-medium text-foreground mb-2">Design pattern</p>
+                    <p className="text-sm text-muted-foreground">Code handles the volume (Python clustering) and the LLM handles the judgment (naming and classification). That keeps it cheap and predictable.</p>
                   </div>
                   <ul className="space-y-2 text-sm">
-                    <li><strong>Hybrid Processing:</strong> Python handles the heavy lifting of clustering 5,000+ emails by domain; the LLM only judges cluster names and spam likelihood</li>
-                    <li><strong>Safety-First:</strong> Never deletes — only labels. Dry-run mode available for previewing changes before applying</li>
-                    <li><strong>Checkpoint Support:</strong> Incremental runs via checkpoints so only new emails are processed on each execution</li>
-                    <li><strong>Gmail API Integration:</strong> Reads inbox, creates labels, and applies labels through the Gmail API</li>
+                    <li><strong>Hybrid processing:</strong> Python does the heavy lifting of clustering 5,000+ emails by domain; the LLM only judges cluster names and spam likelihood</li>
+                    <li><strong>Safe by default:</strong> Only labels, never deletes. A dry-run mode previews changes before they're applied</li>
+                    <li><strong>Checkpoints:</strong> Each run processes only the emails that arrived since the last one</li>
+                    <li><strong>Gmail API:</strong> Reads the inbox, creates labels, and applies labels through the Gmail API</li>
                   </ul>
                   <div className="mt-3">
                     <Badge variant="secondary" className="mr-1">LangGraph</Badge>
@@ -195,17 +195,17 @@ const AIDevelopmentLab: React.FC = () => {
                     <h4 className="font-bold text-lg">Knowledge Agent (Strands Agents SDK)</h4>
                   </div>
                   <p className="text-sm mb-3">
-                    Interactive RAG Q&A over stored research papers. The model autonomously decides when to search Qdrant, get paper details, or answer directly from context — demonstrating the model-driven tool loop pattern.
+                    Interactive RAG Q&A over the stored research papers. The model decides on its own whether to search Qdrant, pull up a paper's details or answer from what it already has, which is the model-driven tool loop pattern.
                   </p>
                   <div className="bg-muted p-4 rounded-lg mb-3">
-                    <p className="text-sm font-medium text-foreground mb-2">Architecture Contrast:</p>
-                    <p className="text-sm text-muted-foreground">Unlike the graph-based LangGraph agents where the developer defines the flow, the Strands agent lets the model decide which tools to call and when — a fundamentally different pattern for agent design.</p>
+                    <p className="text-sm font-medium text-foreground mb-2">How it differs</p>
+                    <p className="text-sm text-muted-foreground">In the LangGraph agents, I define the flow. The Strands agent lets the model decide which tools to call and when, which is a very different way to design an agent.</p>
                   </div>
                   <ul className="space-y-2 text-sm">
-                    <li><strong>Model-Driven Tool Loop:</strong> The agent receives a question and autonomously decides its strategy — search vectors, retrieve full papers, or answer directly</li>
-                    <li><strong>Qdrant Integration:</strong> Semantic search over embedded research papers with metadata filtering</li>
-                    <li><strong>Conversational Context:</strong> Maintains conversation history for follow-up questions and deeper exploration</li>
-                    <li><strong>Framework Validation:</strong> Showed that the Strands SDK holds up on production-style workloads</li>
+                    <li><strong>Model-driven tool loop:</strong> Given a question, the agent picks its own approach: search vectors, retrieve full papers or answer directly</li>
+                    <li><strong>Qdrant:</strong> Semantic search over embedded research papers with metadata filtering</li>
+                    <li><strong>Conversation history:</strong> Keeps the conversation so you can ask follow-up questions</li>
+                    <li><strong>Framework check:</strong> Showed that the Strands SDK holds up on production-style workloads</li>
                   </ul>
                   <div className="mt-3">
                     <Badge variant="secondary" className="mr-1">Strands SDK</Badge>
@@ -222,9 +222,9 @@ const AIDevelopmentLab: React.FC = () => {
             {/* Framework Evaluations */}
             <ScrollReveal>
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-4">Framework Evaluations</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">Framework evaluations</h2>
               <p className="mb-6">
-                The lab contains eight experiment notebooks comparing frameworks head-to-head. These are not toy examples — each evaluation uses real workloads and measures practical trade-offs that matter in production:
+                The lab has eight experiment notebooks that compare frameworks head to head. Each one runs a real workload and measures trade-offs that matter in production:
               </p>
 
 
@@ -236,18 +236,18 @@ const AIDevelopmentLab: React.FC = () => {
                   </div>
                   <p className="text-sm mb-2">Compared on agent loop flexibility, tool integration, error handling, and developer experience.</p>
                   <ul className="space-y-1 text-sm text-muted-foreground">
-                    <li>• LangGraph: Best for structured, multi-step pipelines</li>
-                    <li>• Strands: Best for model-driven tool loops</li>
-                    <li>• CrewAI: Best for multi-agent role orchestration</li>
+                    <li>• LangGraph: best for structured, multi-step pipelines</li>
+                    <li>• Strands: best for model-driven tool loops</li>
+                    <li>• CrewAI: best for multi-agent role orchestration</li>
                   </ul>
                 </Card>
 
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <Microscope className="w-6 h-6 text-primary" />
-                    <h4 className="font-bold text-lg">Embedding Model Comparison</h4>
+                    <h4 className="font-bold text-lg">Embedding model comparison</h4>
                   </div>
-                  <p className="text-sm mb-2">Benchmarked across relevance, speed, and memory footprint.</p>
+                  <p className="text-sm mb-2">Benchmarked on relevance, speed and memory use.</p>
                   <ul className="space-y-1 text-sm text-muted-foreground">
                     <li>• Compared nomic-embed-text, mxbai-embed-large, and others</li>
                     <li>• Measured retrieval quality on real research corpus</li>
@@ -258,9 +258,9 @@ const AIDevelopmentLab: React.FC = () => {
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <Target className="w-6 h-6 text-primary" />
-                    <h4 className="font-bold text-lg">Classification Strategies</h4>
+                    <h4 className="font-bold text-lg">Classification strategies</h4>
                   </div>
-                  <p className="text-sm mb-2">Evaluated different approaches to content categorization.</p>
+                  <p className="text-sm mb-2">Compared ways of sorting content into categories.</p>
                   <ul className="space-y-1 text-sm text-muted-foreground">
                     <li>• Zero-shot vs. few-shot classification accuracy</li>
                     <li>• Prompt engineering effects on categorization quality</li>
@@ -271,9 +271,9 @@ const AIDevelopmentLab: React.FC = () => {
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <TestTube className="w-6 h-6 text-primary" />
-                    <h4 className="font-bold text-lg">Temperature Effects</h4>
+                    <h4 className="font-bold text-lg">Temperature</h4>
                   </div>
-                  <p className="text-sm mb-2">Tested output quality vs. creativity across model parameters.</p>
+                  <p className="text-sm mb-2">Tested how temperature and other parameters trade accuracy against creativity.</p>
                   <ul className="space-y-1 text-sm text-muted-foreground">
                     <li>• Measured determinism at low temperatures</li>
                     <li>• Evaluated creativity vs. accuracy trade-offs</li>
@@ -288,32 +288,32 @@ const AIDevelopmentLab: React.FC = () => {
             {/* Learning Infrastructure */}
             <ScrollReveal>
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-4">Learning Infrastructure</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">Learning setup</h2>
               <p className="mb-6">
-                Beyond the production agents, the lab includes a comprehensive learning and experimentation environment designed to build deep, hands-on understanding of AI engineering:
+                Besides the agents, the lab has notebooks, a dashboard and docs for learning AI engineering hands-on:
               </p>
 
               <div className="space-y-6">
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <Notebook className="w-6 h-6 text-primary" />
-                    <h4 className="font-bold text-lg">8 Guided Notebooks</h4>
+                    <h4 className="font-bold text-lg">8 guided notebooks</h4>
                   </div>
                   <p className="text-sm mb-3">Step-by-step notebooks that walk through core concepts with working code:</p>
                   <ul className="space-y-2 text-sm">
                     <li>• Model routing patterns and shared utility design</li>
-                    <li>• RAG fundamentals — embedding, indexing, retrieval, and generation</li>
-                    <li>• LangGraph patterns — nodes, edges, state management, and conditional routing</li>
-                    <li>• CrewAI multi-agent orchestration — roles, tasks, and crew assembly</li>
-                    <li>• Strands Agents SDK — tool definitions, agent loops, and model-driven execution</li>
-                    <li>• Shared utilities — clients, configuration, and reusable components</li>
+                    <li>• RAG fundamentals: embedding, indexing, retrieval and generation</li>
+                    <li>• LangGraph patterns: nodes, edges, state management and conditional routing</li>
+                    <li>• CrewAI multi-agent orchestration: roles, tasks and crew assembly</li>
+                    <li>• Strands Agents SDK: tool definitions, agent loops and model-driven execution</li>
+                    <li>• Shared utilities: clients, configuration and reusable components</li>
                   </ul>
                 </Card>
 
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <FlaskConical className="w-6 h-6 text-primary" />
-                    <h4 className="font-bold text-lg">8 Experiment Notebooks</h4>
+                    <h4 className="font-bold text-lg">8 experiment notebooks</h4>
                   </div>
                   <p className="text-sm mb-3">Head-to-head framework comparisons and parameter optimization with real workloads:</p>
                   <ul className="space-y-2 text-sm">
@@ -327,9 +327,9 @@ const AIDevelopmentLab: React.FC = () => {
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <Globe className="w-6 h-6 text-primary" />
-                    <h4 className="font-bold text-lg">Web Dashboard</h4>
+                    <h4 className="font-bold text-lg">Web dashboard</h4>
                   </div>
-                  <p className="text-sm mb-3">FastAPI backend + SPA frontend providing a unified interface to the lab:</p>
+                  <p className="text-sm mb-3">A FastAPI backend and SPA frontend that put the whole lab in one place:</p>
                   <ul className="space-y-2 text-sm">
                     <li>• Research digest viewer with filtering and search</li>
                     <li>• Email grouping visualizer showing cluster structure</li>
@@ -342,12 +342,12 @@ const AIDevelopmentLab: React.FC = () => {
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <FileText className="w-6 h-6 text-primary" />
-                    <h4 className="font-bold text-lg">Documentation & Testing</h4>
+                    <h4 className="font-bold text-lg">Documentation and tests</h4>
                   </div>
                   <ul className="space-y-2 text-sm">
-                    <li><strong>Comprehensive Documentation:</strong> Services, frameworks, agents, architecture, daily workflow, model routing, endpoints, and integrations</li>
-                    <li><strong>Full Test Suite:</strong> Unit tests for all shared utilities and clients, integration tests for each agent's full pipeline</li>
-                    <li><strong>Runbooks:</strong> Step-by-step guides for common operations — starting services, running agents, troubleshooting failures</li>
+                    <li><strong>Documentation:</strong> Services, frameworks, agents, architecture, daily workflow, model routing, endpoints, and integrations</li>
+                    <li><strong>Tests:</strong> Unit tests for all shared utilities and clients, integration tests for each agent's full pipeline</li>
+                    <li><strong>Runbooks:</strong> Step-by-step guides for starting services, running agents and troubleshooting failures</li>
                   </ul>
                 </Card>
               </div>
@@ -358,50 +358,50 @@ const AIDevelopmentLab: React.FC = () => {
             {/* Design Philosophy */}
             <ScrollReveal>
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-4">Design Philosophy</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">Design principles</h2>
               <p className="mb-6">
-                The lab is built around five principles that emerged from building and operating real agents — not theoretical preferences:
+                Five principles came out of building and running these agents:
               </p>
 
               <div className="space-y-6">
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <Workflow className="w-6 h-6 text-primary" />
-                    <h4 className="font-bold text-lg">1. Framework Specialization</h4>
+                    <h4 className="font-bold text-lg">1. Pick the framework for the job</h4>
                   </div>
-                  <p className="text-sm">Right tool for each job: <strong>graph pipelines</strong> (LangGraph) for structured multi-step workflows, <strong>model-driven agent loops</strong> (Strands) for autonomous tool use, and <strong>multi-agent orchestration</strong> (CrewAI) for role-based collaboration. No single framework is best at everything — the lab proves this through direct comparison.</p>
+                  <p className="text-sm">Graph pipelines (LangGraph) for structured multi-step workflows, model-driven agent loops (Strands) for open-ended tool use, and multi-agent orchestration (CrewAI) for role-based collaboration. The side-by-side comparisons showed me that no single framework is best at everything.</p>
                 </Card>
 
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <Cpu className="w-6 h-6 text-primary" />
-                    <h4 className="font-bold text-lg">2. Code Handles Volume, LLMs Handle Judgment</h4>
+                    <h4 className="font-bold text-lg">2. Code handles volume, LLMs handle judgment</h4>
                   </div>
-                  <p className="text-sm">Email clustering is pure Python; naming clusters uses the LLM. Research paper fetching is deterministic code; relevance scoring uses the LLM. This pattern <strong>maximizes cost efficiency and reliability</strong> — LLMs are expensive and nondeterministic, so they should only be used where judgment is genuinely needed.</p>
+                  <p className="text-sm">Email clustering is pure Python; naming clusters uses the LLM. Research paper fetching is deterministic code; relevance scoring uses the LLM. LLMs are expensive and nondeterministic, so I only use them where a judgment call is needed, which keeps costs down and results predictable.</p>
                 </Card>
 
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <Shield className="w-6 h-6 text-primary" />
-                    <h4 className="font-bold text-lg">3. Safety-First Design</h4>
+                    <h4 className="font-bold text-lg">3. Safe by default</h4>
                   </div>
-                  <p className="text-sm">The email agent only labels, never deletes. Dry-run modes are available everywhere. No auto-merge in any agent workflow. <strong>Agents that operate on real data need guardrails</strong> — especially when running locally where there is no approval workflow to catch mistakes.</p>
+                  <p className="text-sm">The email agent only labels, never deletes. Dry-run modes are available everywhere. No agent workflow auto-merges. Agents that touch real data need guardrails, especially locally, where no approval workflow will catch a mistake.</p>
                 </Card>
 
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <RefreshCw className="w-6 h-6 text-primary" />
-                    <h4 className="font-bold text-lg">4. Incremental Processing</h4>
+                    <h4 className="font-bold text-lg">4. Process only what's new</h4>
                   </div>
-                  <p className="text-sm">Checkpoint-based execution so agents process only new data on each run. The research agent tracks previously seen papers; the email agent tracks processed message IDs. This makes daily operation efficient and prevents duplicate work.</p>
+                  <p className="text-sm">Checkpoints let each run handle only new data. The research agent remembers the papers it has seen, and the email agent remembers the message IDs it has processed, so daily runs are quick and nothing is done twice.</p>
                 </Card>
 
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <Send className="w-6 h-6 text-primary" />
-                    <h4 className="font-bold text-lg">5. Multi-Channel Delivery</h4>
+                    <h4 className="font-bold text-lg">5. One pipeline, several outputs</h4>
                   </div>
-                  <p className="text-sm">Same content delivered as markdown, JSON, and email for different consumption patterns. A research digest can be read as a formatted markdown file, ingested programmatically as JSON, or skimmed as a morning email. One pipeline, multiple outputs.</p>
+                  <p className="text-sm">The same content goes out as markdown, JSON and email. I can read the research digest as a markdown file, load it into code as JSON, or skim it as a morning email.</p>
                 </Card>
               </div>
             </section>
@@ -410,18 +410,18 @@ const AIDevelopmentLab: React.FC = () => {
 
             {/* Agentic AI Resource Guide */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-4">Agentic AI Resource Guide</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">Agentic AI resource guide</h2>
 
 
               <p className="mb-4">
-                Authored a curated 85+ resource guide covering the full landscape of agentic AI — from foundational research to production deployment patterns:
+                I wrote a guide to 85+ resources on agentic AI, from the foundational research to running agents in production:
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <Lightbulb className="w-6 h-6 text-primary" />
-                    <h4 className="font-bold text-lg">Architecture & Design</h4>
+                    <h4 className="font-bold text-lg">Architecture and design</h4>
                   </div>
                   <ul className="space-y-1 text-sm text-muted-foreground">
                     <li>• Architecture patterns and system design for AI agents</li>
@@ -433,7 +433,7 @@ const AIDevelopmentLab: React.FC = () => {
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <GraduationCap className="w-6 h-6 text-primary" />
-                    <h4 className="font-bold text-lg">Foundational Research</h4>
+                    <h4 className="font-bold text-lg">Foundational research</h4>
                   </div>
                   <ul className="space-y-1 text-sm text-muted-foreground">
                     <li>• ReAct: Reasoning and Acting in Language Models</li>
@@ -445,7 +445,7 @@ const AIDevelopmentLab: React.FC = () => {
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <Layers className="w-6 h-6 text-primary" />
-                    <h4 className="font-bold text-lg">Framework Deep Dives</h4>
+                    <h4 className="font-bold text-lg">Frameworks</h4>
                   </div>
                   <ul className="space-y-1 text-sm text-muted-foreground">
                     <li>• Strands Agents SDK architecture and patterns</li>
@@ -457,7 +457,7 @@ const AIDevelopmentLab: React.FC = () => {
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <GitBranch className="w-6 h-6 text-primary" />
-                    <h4 className="font-bold text-lg">Ecosystem Coverage</h4>
+                    <h4 className="font-bold text-lg">Ecosystem</h4>
                   </div>
                   <ul className="space-y-1 text-sm text-muted-foreground">
                     <li>• OpenAI/GPT patterns and API best practices</li>
@@ -470,49 +470,49 @@ const AIDevelopmentLab: React.FC = () => {
 
             {/* What the lab taught me */}
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-4">What the Lab Taught Me</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">What the lab taught me</h2>
               <p className="mb-6">
-                Every experiment, agent, and evaluation in the lab answers a question I would otherwise be guessing at as a leader:
+                Each experiment and agent answers a question I would otherwise be guessing at as a leader:
               </p>
 
               <div className="space-y-6">
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <ArrowRight className="w-5 h-5 text-primary" />
-                    <h4 className="font-bold text-lg">Framework Selection</h4>
+                    <h4 className="font-bold text-lg">Choosing a framework</h4>
                   </div>
-                  <p className="text-sm">Head-to-head comparisons show where each framework fits. The <strong>Strands Agents SDK</strong> model-driven tool loop suits agents that need to make their own decisions within defined tool boundaries; graph-based LangGraph suits structured, auditable workflows.</p>
+                  <p className="text-sm">Head-to-head comparisons show where each framework fits. The Strands Agents SDK's model-driven tool loop suits agents that need to make their own decisions within defined tool boundaries; graph-based LangGraph suits structured, auditable workflows.</p>
                 </Card>
 
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <ArrowRight className="w-5 h-5 text-primary" />
-                    <h4 className="font-bold text-lg">Agent Architecture Patterns</h4>
+                    <h4 className="font-bold text-lg">Agent architecture</h4>
                   </div>
-                  <p className="text-sm">Graph-based pipelines for structured workflows and model-driven loops for autonomous tasks, tested locally on real workloads, give me <strong>proven patterns</strong> rather than theoretical architectures.</p>
+                  <p className="text-sm">I've run graph-based pipelines for structured workflows and model-driven loops for open-ended tasks on real workloads, so the patterns I recommend are ones I've tested.</p>
                 </Card>
 
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <ArrowRight className="w-5 h-5 text-primary" />
-                    <h4 className="font-bold text-lg">Model Routing Strategy</h4>
+                    <h4 className="font-bold text-lg">Model routing</h4>
                   </div>
-                  <p className="text-sm">The task-based model routing pattern — mapping different task types to appropriately-sized models — is how I approach model selection for any agent. This approach <strong>optimizes both cost and quality</strong> by matching model capability to task complexity.</p>
+                  <p className="text-sm">I pick models for any agent the way the lab's router does: each type of task goes to a model sized for it. Matching the model to how hard the task is keeps costs down without hurting quality.</p>
                 </Card>
 
                 <Card className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <Users className="w-5 h-5 text-primary" />
-                    <h4 className="font-bold text-lg">Teaching Others</h4>
+                    <h4 className="font-bold text-lg">Teaching others</h4>
                   </div>
-                  <p className="text-sm">The 85+ resource guide and guided notebooks give engineers moving from manual pipeline work to agent-augmented workflows a <strong>practitioner-level path</strong> into agentic AI systems.</p>
+                  <p className="text-sm">The 85+ resource guide and guided notebooks give engineers moving from manual pipeline work to agent-augmented workflows a hands-on way into agentic AI.</p>
                 </Card>
               </div>
             </section>
 
             {/* Footer */}
             <div className="border-t pt-8">
-              <h3 className="text-xl font-bold mb-4">Keep Exploring</h3>
+              <h3 className="text-xl font-bold mb-4">Keep exploring</h3>
               <p className="mb-6">
                 The lab is where I test ideas before asking a team to rely on them. The PROVE pattern for agent reasoning grew out of the same work, and the AI-Augmented SDLC case study describes the operating model these patterns serve.
               </p>

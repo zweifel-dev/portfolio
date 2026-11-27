@@ -54,7 +54,7 @@ const ProvePattern = () => {
               <Card className="p-8 lg:p-10 shadow-executive-lg mb-10">
                 <CardContent className="p-0">
                   <p className="text-xl lg:text-2xl font-bold text-primary leading-snug border-l-4 border-primary pl-4 mb-6">
-                    We've been reinventing a wheel when it comes to Agentic Patterns.
+                    Most agent reasoning patterns are partial copies of the scientific method.
                   </p>
                 </CardContent>
               </Card>
@@ -63,25 +63,25 @@ const ProvePattern = () => {
             {/* Section: We Were So Close */}
             <ScrollReveal>
               <div className="mb-12">
-                <h2 className="section-title">ReAct is Close</h2>
+                <h2 className="section-title">ReAct got close</h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    If you've built and deployed to production anything with AI agents, you already know ReAct doesn't work reliably once you scale. You've watched an agent loop on the same failed API call six times in a row. You've seen it commit to a wrong answer in step two and spend the next fifteen steps rationalizing it. You've debugged traces where the agent's stated reasoning has nothing to do with what it actually did.
+                    If you've put AI agents into production, you know ReAct gets unreliable at scale. I've watched an agent retry the same failed API call six times in a row, and another commit to a wrong answer in step two and spend fifteen more steps justifying it. I've also debugged traces where the reasoning the agent wrote down had nothing to do with what it did.
                   </p>
                   <p>
-                    ReAct was a genuinely good idea. Take an LLM, let it reason about what to do, let it do the thing, let it see what happened, and repeat. <b>Reason, Act, Observe. Simple. Elegant.</b> It worked better than anything before it.
+                    ReAct was a good idea. An LLM reasons about what to do, does it, looks at the result and repeats: <b>Reason, Act, Observe.</b> It was simple, and it beat everything that came before it.
                   </p>
                   <p>
-                    And then we spent the next three years building increasingly complex systems on top of it to handle context and decision making (tree search, self-reflection layers, planning frameworks, guardrails on guardrails) trying to fix problems that kept showing up in production.
+                    Over the next three years we stacked more and more on top of it (tree search, self-reflection layers, planning frameworks, guardrails on guardrails) to fix the problems that kept showing up in production.
                   </p>
                   <p>
-                    Every one of those fixes are each independently rediscovering a piece of something that already exists. Something that's been stress-tested across every domain of human inquiry for centuries. Something most of us learned the basics of in middle school science class.
+                    Each of those fixes recovers a piece of a method people have used in every field for centuries, and that most of us first met in middle school science class.
                   </p>
                   <p>
-                    We accidentally built a stripped-down version of the scientific method giving the constraints at the time. ReAct removed the parts that make the scientific method actually work, and then spent years trying to bolt those parts back on one at a time without recognizing what we were rebuilding.
+                    Given the limits of the models at the time, we ended up with a stripped-down scientific method. ReAct left out the parts that make the method work, and the field has spent years adding them back one at a time without noticing what it was rebuilding.
                   </p>
                   <p>
-                    I'm not saying ReAct was wrong. I'm saying it was <em>incomplete</em> and the complete version has been sitting in every science textbook since before any of us were born.
+                    ReAct wasn't wrong. It was <em>incomplete</em>, and the complete version is in any science textbook.
                   </p>
                 </div>
               </div>
@@ -90,8 +90,8 @@ const ProvePattern = () => {
             {/* Section: Side by Side */}
             <ScrollReveal>
               <div className="mb-12">
-                <h2 className="section-title">Look at This Side by Side</h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">Once you see it, you can't unsee it.</p>
+                <h2 className="section-title">Look at this side by side</h2>
+                <p className="text-muted-foreground leading-relaxed mb-6">Put the two loops next to each other and the gaps are easy to spot.</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <Card className="p-6 shadow-executive-md">
@@ -111,8 +111,8 @@ const ProvePattern = () => {
                       <ol className="space-y-2 text-muted-foreground list-decimal list-inside">
                         <li>Observe the situation and gather information</li>
                         <li>Ask a specific question</li>
-                        <li>Form a hypothesis — a falsifiable prediction</li>
-                        <li>Design an experiment to confirm OR disprove</li>
+                        <li>Form a hypothesis: a falsifiable prediction</li>
+                        <li>Design an experiment that could confirm or disprove it</li>
                         <li>Run the experiment and collect results</li>
                         <li>Analyze the results against your prediction</li>
                         <li>Conclude or iterate</li>
@@ -122,7 +122,7 @@ const ProvePattern = () => {
                 </div>
 
                 <p className="text-muted-foreground leading-relaxed">
-                  ReAct's "Reason" step collapses items 2, 3, and 4 into a single unstructured thought. Its "Observe" step skips item 6 entirely. And there's no concept of item 7 as a deliberate decision point. But we're not in that phase anymore. Models are bigger, context is longer, and we have three years of production failure data telling us exactly which simplifications are costing us.
+                  ReAct's "Reason" step collapses items 2, 3, and 4 into a single unstructured thought. Its "Observe" step skips item 6 entirely. And it has no concept of item 7 as a deliberate decision point. Those shortcuts made sense when ReAct came out. Models are bigger now, context windows are longer, and three years of production failures show which shortcuts are costing us.
                 </p>
               </div>
             </ScrollReveal>
@@ -130,44 +130,44 @@ const ProvePattern = () => {
             {/* Section: Failures Map */}
             <ScrollReveal>
               <div className="mb-12">
-                <h2 className="section-title">The Failures Map Perfectly</h2>
+                <h2 className="section-title">Each failure maps to a missing step</h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Walk through the most common agent failure modes and ask "which scientific method step would have caught this?"
+                  For each common agent failure, ask which step of the scientific method would have caught it.
                 </p>
 
                 <div className="space-y-6">
                   <Card className="p-6 shadow-executive-md">
                     <CardContent className="p-0">
-                      <h3 className="font-bold text-foreground mb-1">Looping → Missing: Falsification</h3>
+                      <h3 className="font-bold text-foreground mb-1">Looping: missing falsification</h3>
                       <p className="text-muted-foreground leading-relaxed">
-                        When a ReAct agent hits a dead end, it has no mechanism to recognize that its current approach has been disproven. It never formed a falsifiable prediction, so it can't evaluate whether evidence contradicts its reasoning. Production evaluations on diagnostic tasks have documented repetition rates around 12%, with stronger models abandoning their own stated investigation plans in over half of cases. A scientist who runs the same experiment three times and gets the same negative result doesn't run it a fourth time. They form a new hypothesis.
+                        When a ReAct agent hits a dead end, it has no way to recognize that its approach has been disproven. It never made a falsifiable prediction, so it can't tell when the evidence contradicts it. Production evaluations on diagnostic tasks have documented repetition rates around 12%, with stronger models abandoning their own stated investigation plans in over half of cases. A scientist who gets the same negative result three times doesn't run the experiment a fourth time. They come up with a new hypothesis.
                       </p>
                     </CardContent>
                   </Card>
 
                   <Card className="p-6 shadow-executive-md">
                     <CardContent className="p-0">
-                      <h3 className="font-bold text-foreground mb-1">Premature Commitment → Missing: Competing Hypotheses</h3>
+                      <h3 className="font-bold text-foreground mb-1">Premature commitment: missing competing hypotheses</h3>
                       <p className="text-muted-foreground leading-relaxed">
-                        ReAct generates one line of reasoning and acts on it. There's no step where the agent considers alternative explanations. In practice, this means the agent latches onto whatever interpretation the LLM generates first, which is determined by token probability, not by evidence. Imagine a doctor who diagnosed every patient based on the first symptom they mentioned. You'd call that malpractice.
+                        ReAct generates one line of reasoning and acts on it. There's no step where the agent considers alternative explanations. So the agent latches onto whatever interpretation the LLM produces first, and token probability decides that, not evidence. A doctor who diagnosed every patient from the first symptom they mentioned would be committing malpractice.
                       </p>
                     </CardContent>
                   </Card>
 
                   <Card className="p-6 shadow-executive-md">
                     <CardContent className="p-0">
-                      <h3 className="font-bold text-foreground mb-1">Error Propagation → Missing: Validation Against Predictions</h3>
+                      <h3 className="font-bold text-foreground mb-1">Error propagation: missing validation against predictions</h3>
                       <p className="text-muted-foreground leading-relaxed">
-                        When a ReAct agent gets a bad result from a tool call, it feeds that result into the next reasoning step without evaluating whether the result makes sense. Production benchmarks show agents achieving near-97% accuracy in controlled settings dropping significantly under real-world conditions (rate limit errors, schema drift, unexpected null values) because errors compound unchecked.
+                        When a tool call returns a bad result, a ReAct agent feeds it into the next reasoning step without checking whether it makes sense. Production benchmarks show agents that reach nearly 97% accuracy in controlled settings dropping sharply under real-world conditions (rate limit errors, schema drift, unexpected null values) because errors compound unchecked.
                       </p>
                     </CardContent>
                   </Card>
 
                   <Card className="p-6 shadow-executive-md">
                     <CardContent className="p-0">
-                      <h3 className="font-bold text-foreground mb-1">Confabulation → Missing: Structural Accountability</h3>
+                      <h3 className="font-bold text-foreground mb-1">Confabulation: missing structural accountability</h3>
                       <p className="text-muted-foreground leading-relaxed">
-                        The most dangerous one. The agent says "I'm investigating whether the database connection is timing out" and then proceeds to do something completely unrelated. Its reasoning and its actions are disconnected, and there's no structural check to catch the mismatch. In ReAct, reasoning, perception, action execution, learning, and communication are all implicitly and monolithically jammed into a single LLM interaction loop. There's no separation of concerns, so there's no place for accountability to live.
+                        This is the most dangerous one. The agent says "I'm investigating whether the database connection is timing out" and then does something unrelated, and nothing in the loop catches the mismatch. ReAct jams reasoning, perception, action, learning and communication into a single LLM loop. With nothing separated, there's no place to check one against another.
                       </p>
                     </CardContent>
                   </Card>
@@ -180,7 +180,7 @@ const ProvePattern = () => {
               <div className="mb-12">
                 <h2 className="section-title">PROVE: Predict, Run, Observe, Validate, Evolve</h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Instead of patching ReAct's gaps one at a time, implement the full scientific method as an agentic reasoning loop. Five steps. Each one exists because removing it causes a known failure mode.
+                  Instead of patching ReAct's gaps one at a time, implement the full scientific method as an agent's reasoning loop. It has five steps, and each one is there because leaving it out causes a known failure mode.
                 </p>
                 <ProveDiagram />
               </div>
@@ -196,10 +196,10 @@ const ProvePattern = () => {
                       Before any action, the agent forms a <strong className="text-foreground">falsifiable prediction.</strong> Not "I should probably check the logs" but "If the service is failing due to memory pressure, then the container logs should show OOM kill events in the last 30 minutes."
                     </p>
                     <p>
-                      This forces the agent to articulate what it <em>believes</em> before acting, creates success/failure criteria <em>before</em> seeing results (preventing post-hoc rationalization), and defines what would <em>disprove</em> the current hypothesis.
+                      The agent has to say what it <em>believes</em> before acting and set its success and failure criteria <em>before</em> it sees results, so it can't rationalize afterward. It also has to say what would <em>disprove</em> the current hypothesis.
                     </p>
                     <p>
-                      When the situation is ambiguous, the Predict step generates <strong className="text-foreground">competing predictions</strong>. The subsequent Run step then targets the action that best differentiates between these possibilities. This is the single biggest upgrade from ReAct.
+                      When the situation is ambiguous, the Predict step generates <strong className="text-foreground">competing predictions</strong>. The Run step then picks the action that best tells these possibilities apart. This is the biggest single improvement over ReAct.
                     </p>
                   </div>
                 </div>
@@ -207,14 +207,14 @@ const ProvePattern = () => {
                 <div>
                   <h3 className="font-bold text-foreground text-xl mb-2">Run</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Execute a targeted action designed to test the prediction. The key discipline: <strong className="text-foreground">choose the action that best differentiates between competing hypotheses.</strong> If three hypotheses would all produce the same result from the same action, that action has low diagnostic value. Pick the one where different hypotheses predict different outcomes. Scientists don't just run experiments that might tell them something. They design experiments that <em>will</em> tell them something regardless of outcome.
+                    Take an action designed to test the prediction, and <strong className="text-foreground">choose the one that best tells the competing hypotheses apart.</strong> If three hypotheses would all produce the same result from the same action, that action has low diagnostic value. Pick the one where different hypotheses predict different outcomes. Scientists design experiments that <em>will</em> tell them something whatever the outcome, instead of ones that might.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="font-bold text-foreground text-xl mb-2">Observe</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Collect the results. Deliberately keep this step factual and separate from interpretation. What status code came back? What data was returned? What error message appeared? How long did it take? ReAct has this step, but it immediately feeds observations into the next unstructured reasoning step where the agent can unconsciously filter evidence that contradicts its current belief.
+                    Record the results: the status code, the data returned, any error message and how long it took. Keep this step factual and leave interpretation for later. ReAct has an Observe step, but it pipes observations straight into the next unstructured reasoning step, where the agent can quietly ignore evidence that contradicts what it already believes.
                   </p>
                 </div>
 
@@ -222,12 +222,12 @@ const ProvePattern = () => {
                   <h3 className="font-bold text-foreground text-xl mb-2">Validate</h3>
                   <div className="space-y-3 text-muted-foreground leading-relaxed">
                     <p>
-                      This is the step that matters most. Compare the observation against the prediction with three possible outcomes:
+                      This step matters most. Compare the observation against the prediction. There are three possible outcomes:
                     </p>
                     <ul className="space-y-2 ml-4">
                       <li className="flex items-start gap-2">
                         <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                        <span><strong className="text-foreground">Observation matches prediction:</strong> The hypothesis survives not "proven," but one piece of supporting evidence.</span>
+                        <span><strong className="text-foreground">Observation matches prediction:</strong> The hypothesis survives. It isn't proven, but it has one more piece of supporting evidence.</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
@@ -239,7 +239,7 @@ const ProvePattern = () => {
                       </li>
                     </ul>
                     <p>
-                      This step kills most of ReAct's failure modes in one shot. Looping stops because falsified hypotheses are explicitly retired. Error propagation stops because unexpected results trigger investigation. Confabulation becomes visible because there's an external criterion to check reasoning against.
+                      This one step handles most of ReAct's failure modes. Looping stops because falsified hypotheses are explicitly retired. Error propagation stops because unexpected results trigger investigation. Confabulation becomes visible because there's an external criterion to check reasoning against.
                     </p>
                   </div>
                 </div>
@@ -255,7 +255,7 @@ const ProvePattern = () => {
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
-                        <span><strong className="text-foreground">Hypothesis falsified:</strong> Generate a new hypothesis that accounts for <em>all</em> evidence so far. The agent doesn't restart it incorporates what it's learned.</span>
+                        <span><strong className="text-foreground">Hypothesis falsified:</strong> Generate a new hypothesis that accounts for <em>all</em> evidence so far. The agent doesn't start over; it keeps what it has learned.</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
@@ -263,7 +263,7 @@ const ProvePattern = () => {
                       </li>
                     </ul>
                     <p>
-                      The loop then recurses. It terminates when the agent reaches sufficient confidence through multiple validated predictions or when all candidate hypotheses have been exhausted and the agent escalates honestly rather than guessing.
+                      Then the loop runs again. It stops when enough predictions have held up for the agent to be confident, or when it has run out of hypotheses, in which case it escalates instead of guessing.
                     </p>
                   </div>
                 </div>
@@ -273,18 +273,18 @@ const ProvePattern = () => {
             {/* Abstraction Layers */}
             <ScrollReveal>
               <div className="mb-12">
-                <h2 className="section-title">PROVE Across Abstraction Layers</h2>
+                <h2 className="section-title">PROVE at every layer</h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  PROVE isn't just a single-level reasoning loop. It works at every abstraction layer of an agentic system from strategic architecture decisions down to debugging a single line of code. The only things that change are the scope of the hypothesis, the timescale, and the tools available.
+                  PROVE works at every layer of an agent system, from architecture decisions down to debugging a single line of code. What changes is the scope of the hypothesis, the timescale and the tools available.
                 </p>
 
                 <div className="space-y-6">
                   <Card className="p-6 shadow-executive-md border-l-4 border-l-[#6A4B8E]">
                     <CardContent className="p-0">
                       <span className="font-mono text-xs tracking-widest text-[#6A4B8E]">META LAYER</span>
-                      <h3 className="font-bold text-foreground mt-1 mb-2">Self-Governance</h3>
+                      <h3 className="font-bold text-foreground mt-1 mb-2">Self-governance</h3>
                       <p className="text-muted-foreground leading-relaxed text-sm">
-                        PROVE operates above all other layers, governing the agent's confidence in its own reasoning. "My current approach should produce measurable progress within the next 3 cycles." If no progress after 3 cycles, the meta-hypothesis that "this approach is working" is itself falsified. This prevents the fifty-cycle death spiral.
+                        At the top, PROVE checks the agent's confidence in its own reasoning. "My current approach should produce measurable progress within the next 3 cycles." If no progress after 3 cycles, the meta-hypothesis that "this approach is working" is itself falsified. That stops the fifty-cycle death spiral.
                       </p>
                     </CardContent>
                   </Card>
@@ -292,9 +292,9 @@ const ProvePattern = () => {
                   <Card className="p-6 shadow-executive-md border-l-4 border-l-[#946B00]">
                     <CardContent className="p-0">
                       <span className="font-mono text-xs tracking-widest text-[#946B00]">STRATEGIC LAYER</span>
-                      <h3 className="font-bold text-foreground mt-1 mb-2">Big Decisions</h3>
+                      <h3 className="font-bold text-foreground mt-1 mb-2">Big decisions</h3>
                       <p className="text-muted-foreground leading-relaxed text-sm">
-                        "If daily data volume exceeds 10M rows, a streaming architecture will reduce end-to-end latency by at least 50% compared to batch." At this altitude, each PROVE cycle might take hours or days in human terms, and minutes in agent terms. The cost of committing to a wrong answer is high, that's exactly when you need the rigor most.
+                        "If daily data volume exceeds 10M rows, a streaming architecture will reduce end-to-end latency by at least 50% compared to batch." At this level a PROVE cycle might take a person hours or days, and an agent minutes. Committing to a wrong answer is expensive here, which is when you need the rigor most.
                       </p>
                     </CardContent>
                   </Card>
@@ -302,9 +302,9 @@ const ProvePattern = () => {
                   <Card className="p-6 shadow-executive-md border-l-4 border-l-[#1A7A56]">
                     <CardContent className="p-0">
                       <span className="font-mono text-xs tracking-widest text-[#1A7A56]">TACTICAL LAYER</span>
-                      <h3 className="font-bold text-foreground mt-1 mb-2">Task Decomposition</h3>
+                      <h3 className="font-bold text-foreground mt-1 mb-2">Task decomposition</h3>
                       <p className="text-muted-foreground leading-relaxed text-sm">
-                        "If this PR introduces a performance regression, profiling the payment processing hot path will show increased memory allocation compared to baseline." This prevents the code review antipattern of "something looks off so the whole PR is suspect." Instead of vibes-based review, you're forming specific claims and testing them.
+                        "If this PR introduces a performance regression, profiling the payment processing hot path will show increased memory allocation compared to baseline." That beats the usual "something looks off, so the whole PR is suspect" review, because you're making a specific claim and testing it.
                       </p>
                     </CardContent>
                   </Card>
@@ -312,9 +312,9 @@ const ProvePattern = () => {
                   <Card className="p-6 shadow-executive-md border-l-4 border-l-[#1F5CA0]">
                     <CardContent className="p-0">
                       <span className="font-mono text-xs tracking-widest text-[#1F5CA0]">OPERATIONAL LAYER</span>
-                      <h3 className="font-bold text-foreground mt-1 mb-2">Individual Actions</h3>
+                      <h3 className="font-bold text-foreground mt-1 mb-2">Individual actions</h3>
                       <p className="text-muted-foreground leading-relaxed text-sm">
-                        "If the 401 is caused by an expired JWT, decoding the token will show an exp timestamp in the past." Even at this granularity, the pattern adds meaningful rigor. When the null check fixes the NPE but a different test fails, the senior engineer asks "but <em>why</em> was it null?" PROVE makes the senior engineer's instinct structural.
+                        "If the 401 is caused by an expired JWT, decoding the token will show an exp timestamp in the past." The pattern helps even at this level. When the null check fixes the NPE but a different test fails, the senior engineer asks "but <em>why</em> was it null?" PROVE builds that instinct into the loop.
                       </p>
                     </CardContent>
                   </Card>
@@ -325,17 +325,17 @@ const ProvePattern = () => {
             {/* Transparency */}
             <ScrollReveal>
               <div className="mb-12">
-                <h2 className="section-title">Transparency and Governance</h2>
+                <h2 className="section-title">Transparency and governance</h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    There's a growing argument in the security and compliance world that opaque agent reasoning isn't just an engineering problem, it's a security vulnerability. When an autonomous agent takes action in an enterprise environment, operators need to understand <em>why</em> it made that decision. Regulators are catching up, the EU AI Act, the NIST AI Risk Management Framework, and ISO 42001 all increasingly demand that high-risk AI systems be explainable.
+                    More and more people in security and compliance argue that opaque agent reasoning is a security vulnerability as well as an engineering problem. When an autonomous agent takes action in an enterprise environment, operators need to understand <em>why</em> it made that decision. Regulators are catching up: the EU AI Act, the NIST AI Risk Management Framework and ISO 42001 all increasingly demand that high-risk AI systems be explainable.
                   </p>
                   <p>
-                    Most current approaches try to achieve transparency through post-hoc interpretability, tools like LIME and SHAP that reverse-engineer model outputs after the fact. These work, but they're bolted on. <strong className="text-foreground">PROVE produces transparency structurally, not as an afterthought.</strong>
+                    Most current approaches add transparency after the fact with interpretability tools like LIME and SHAP, which reverse-engineer model outputs. They work, but they're bolted on. <strong className="text-foreground">In PROVE, the transparency comes from the structure of the loop itself.</strong>
                   </p>
                   <Card className="p-6 shadow-executive-md bg-muted/50">
                     <CardContent className="p-0">
-                      <p className="font-semibold text-foreground mb-3">Every PROVE cycle generates an inherently auditable record:</p>
+                      <p className="font-semibold text-foreground mb-3">Every PROVE cycle leaves an auditable record:</p>
                       <ul className="space-y-2 text-muted-foreground">
                         <li className="flex items-start gap-2">
                           <span className="text-primary mt-1.5 flex-shrink-0">&#8226;</span>
@@ -358,11 +358,11 @@ const ProvePattern = () => {
                           <span><strong className="text-foreground">Evolve</strong> captures how the agent's understanding changed.</span>
                         </li>
                       </ul>
-                      <p className="mt-3 text-sm italic">This isn't a JSON log of tool calls. It's a narrative of decision-making, exactly what auditors, security teams, and regulators need.</p>
+                      <p className="mt-3 text-sm italic">A JSON log of tool calls doesn't tell you why. This record tells the story of each decision, which is what auditors, security teams and regulators ask for.</p>
                     </CardContent>
                   </Card>
                   <p>
-                    For regulated industries (healthcare, finance, government) this structural transparency isn't a nice-to-have. It's the difference between an AI system you can deploy and one you can't.
+                    In regulated industries like healthcare, finance and government, that record can decide whether you're allowed to deploy an AI system at all.
                   </p>
                 </div>
               </div>
@@ -371,18 +371,18 @@ const ProvePattern = () => {
             {/* Multi-Agent */}
             <ScrollReveal>
               <div className="mb-12">
-                <h2 className="section-title">Multi-Agent Implementation</h2>
+                <h2 className="section-title">Multi-agent implementation</h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  PROVE works fine as a single-agent loop with structured prompting. But it maps naturally to a multi-agent architecture where each step is owned by a specialist.
+                  PROVE works fine as a single-agent loop with structured prompting. It also maps cleanly onto a multi-agent architecture where a specialist agent owns each step.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
-                    { role: "The Predictor", desc: "Generates competing hypotheses and falsifiable predictions. Its job is creative — coming up with plausible explanations and specific, testable claims." },
-                    { role: "The Experimenter", desc: "Designs and executes actions that test hypotheses. Optimizes for diagnostic value — choosing actions that differentiate between hypotheses." },
-                    { role: "The Observer", desc: "Collects and structures results without interpretation. Keeping this separate from analysis prevents premature interpretation and confirmation bias." },
+                    { role: "The Predictor", desc: "Generates competing hypotheses and falsifiable predictions. Its job is the creative part: plausible explanations and specific, testable claims." },
+                    { role: "The Experimenter", desc: "Designs and executes actions that test hypotheses. It picks the actions that best tell the hypotheses apart." },
+                    { role: "The Observer", desc: "Collects and structures results without interpretation. Keeping this apart from analysis guards against jumping to conclusions and confirmation bias." },
                     { role: "The Validator", desc: "Compares observations against predictions using explicit criteria. Renders a verdict: supported, falsified, or inconclusive." },
-                    { role: "The Evolver", desc: "Synthesizes validation results with the full evidence history. Generates the context for the next cycle." },
-                    { role: "The Reviewer", desc: "Challenges the Validator's conclusions. Looks for confounds and alternative explanations. Adversarial by design — prevents premature convergence." },
+                    { role: "The Evolver", desc: "Combines the validation results with the full evidence history and sets up the next cycle." },
+                    { role: "The Reviewer", desc: "Challenges the Validator's conclusions. Looks for confounds and alternative explanations. It's adversarial on purpose, so the team doesn't settle on an answer too early." },
                   ].map((agent) => (
                     <Card key={agent.role} className="p-5 shadow-executive-sm">
                       <CardContent className="p-0">
@@ -398,16 +398,16 @@ const ProvePattern = () => {
             {/* Why Not Just Better ReAct */}
             <ScrollReveal>
               <div className="mb-12">
-                <h2 className="section-title">Why This Isn't Just "Better ReAct"</h2>
+                <h2 className="section-title">Why this isn't just a better ReAct</h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    PROVE isn't a ReAct extension. It's a different starting point. ReAct started from "what can we get an LLM to do?" and built up from there. PROVE starts from "what does rigorous reasoning actually require?" and implements that.
+                    PROVE doesn't extend ReAct; it starts somewhere else. ReAct started from "what can we get an LLM to do?" and built up from there. PROVE starts from "what does rigorous reasoning actually require?" and implements that.
                   </p>
                   <p>
-                    The distinction matters because every major post-ReAct architecture (Reflexion, Tree of Thoughts, LATS, Plan-and-Execute) independently rediscovered a piece of the scientific method and bolted it onto ReAct's frame. They all work, and they all improve on ReAct, precisely because they each add back something the scientific method already had. But none of them implement the full loop. None enforce explicit falsification. None apply recursively across abstraction layers.
+                    Every major post-ReAct architecture (Reflexion, Tree of Thoughts, LATS, Plan-and-Execute) independently rediscovered a piece of the scientific method and bolted it onto ReAct's frame. They all improve on ReAct because each adds back something the scientific method already had. None of them implements the full loop, enforces explicit falsification or runs recursively across layers.
                   </p>
                   <p>
-                    We don't need another ReAct variant. We need to recognize what we've been circling around and implement it directly. The complete reasoning framework already exists. It's been peer-reviewed by a few centuries of scientists across every domain imaginable.
+                    We don't need another ReAct variant. We need to build the loop we've been circling, all of it, on purpose.
                   </p>
                 </div>
               </div>
@@ -416,38 +416,38 @@ const ProvePattern = () => {
             {/* Getting Started */}
             <ScrollReveal>
               <div className="mb-12">
-                <h2 className="section-title">Getting Started</h2>
+                <h2 className="section-title">Getting started</h2>
                 <div className="space-y-6">
                   <Card className="p-6 shadow-executive-md">
                     <CardContent className="p-0">
-                      <h3 className="font-bold text-foreground mb-2">If You Build Agents</h3>
+                      <h3 className="font-bold text-foreground mb-2">If you build agents</h3>
                       <p className="text-muted-foreground leading-relaxed mb-3">
                         Start small. Take your existing agent loop and add two requirements:
                       </p>
                       <ol className="space-y-2 text-muted-foreground list-decimal list-inside">
-                        <li>Before every action, the agent must state a falsifiable prediction, what it expects to happen and what would disprove its current reasoning.</li>
-                        <li>After every observation, the agent must explicitly compare the result against the prediction, not just summarize what happened.</li>
+                        <li>Before every action, the agent must state a falsifiable prediction: what it expects to happen and what would disprove its current reasoning.</li>
+                        <li>After every observation, the agent must compare the result against the prediction instead of only summarizing what happened.</li>
                       </ol>
                       <p className="text-muted-foreground leading-relaxed mt-3">
-                        That's Predict and Validate. Just those two steps will immediately reduce looping and premature commitment.
+                        That's Predict and Validate. Those two steps alone will cut down on looping and premature commitment.
                       </p>
                     </CardContent>
                   </Card>
 
                   <Card className="p-6 shadow-executive-md">
                     <CardContent className="p-0">
-                      <h3 className="font-bold text-foreground mb-2">If You Build Frameworks</h3>
+                      <h3 className="font-bold text-foreground mb-2">If you build frameworks</h3>
                       <p className="text-muted-foreground leading-relaxed">
-                        Build first-class support for hypothesis tracking, prediction-observation comparison, and confidence scoring. Agent orchestration tools should treat the reasoning trace as a structured evidence graph, hypotheses with links to the predictions they generated, the experiments that tested them, and the observations that supported or falsified them.
+                        Build in support for tracking hypotheses, comparing predictions with observations and scoring confidence. Agent orchestration tools should treat the reasoning trace as a structured evidence graph: hypotheses linked to the predictions they generated, the experiments that tested them, and the observations that supported or falsified them.
                       </p>
                     </CardContent>
                   </Card>
 
                   <Card className="p-6 shadow-executive-md">
                     <CardContent className="p-0">
-                      <h3 className="font-bold text-foreground mb-2">If You Lead Engineering Teams</h3>
+                      <h3 className="font-bold text-foreground mb-2">If you lead engineering teams</h3>
                       <p className="text-muted-foreground leading-relaxed">
-                        When evaluating agent architectures, ask three questions: Does this system form predictions before acting? Does it validate results against those predictions? Can it explicitly falsify a hypothesis and change course? If the answer to any of these is no, the system will hit the failure modes.
+                        When evaluating agent architectures, ask three questions: Does this system form predictions before acting? Does it validate results against those predictions? Can it explicitly falsify a hypothesis and change course? If the answer to any of these is no, the system will hit the failure modes above.
                       </p>
                     </CardContent>
                   </Card>
@@ -459,19 +459,16 @@ const ProvePattern = () => {
             <ScrollReveal>
               <Card className="p-8 lg:p-10 shadow-executive-lg mb-12 border-primary/20">
                 <CardContent className="p-0">
-                  <h2 className="section-title">The Punchline</h2>
+                  <h2 className="section-title">The punchline</h2>
                   <div className="space-y-4 text-muted-foreground leading-relaxed">
                     <p>
-                      We spent years building increasingly sophisticated patches for agent reasoning failures. The fix was in every science textbook the whole time. Not in the advanced chapters, in the introduction that we take for granted.
+                      We spent years patching agent reasoning failures one at a time. The fix was in the first chapter of every science textbook.
                     </p>
                     <p className="text-lg font-semibold text-foreground">
-                      PROVE — Predict, Run, Observe, Validate, Evolve — doesn't reinvent anything. It just takes the most battle-tested reasoning loop in human history and implements it faithfully for autonomous AI systems.
+                      PROVE (Predict, Run, Observe, Validate, Evolve) doesn't invent anything new. It implements the scientific method, in full, as the reasoning loop for AI agents.
                     </p>
                     <p>
-                      Applied recursively across abstraction layers, from strategic planning down to individual tool calls, with transparency and auditability baked into the structure rather than bolted on after the fact.
-                    </p>
-                    <p className="text-primary font-semibold">
-                      The models are ready. The frameworks can support it. The only thing we were missing was the obvious.
+                      It runs at every layer, from strategic planning down to single tool calls, and it leaves an audit trail as it goes. Today's models and frameworks can already support it.
                     </p>
                   </div>
                 </CardContent>
