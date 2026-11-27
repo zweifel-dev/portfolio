@@ -1,5 +1,5 @@
-// Sends a contact-form inquiry. It is saved as one document in the Firestore "inquiries" collection; the
-// "Trigger Email from Firestore" extension, set to watch that collection, emails it to the company address
+// Sends a contact-form inquiry. It is saved as one document in the Firestore "inquiries" collection; an
+// Apps Script under the company Workspace account (firebase/apps-script) emails it to the company address
 // with the visitor's email as Reply-To. Setup steps are in firebase/README.md.
 import { company } from "./company";
 import { firebaseConfig } from "./firebase-config";
@@ -46,7 +46,7 @@ export async function sendInquiry(inquiry: Inquiry): Promise<void> {
     topic: inquiry.topic,
     body: inquiry.body,
     createdAt: serverTimestamp(),
-    // Read by the Trigger Email extension
+    // The fields the Trigger Email extension reads, kept so it can replace the Apps Script later
     to: company.email,
     replyTo: inquiry.email,
     message: {

@@ -1,8 +1,9 @@
 # Contact form backend (Firebase)
 
-The contact form on /contact saves each message to the Firestore collection `inquiries`. The
-"Trigger Email from Firestore" extension watches that collection and emails each new document to
-brandon@zweifeltech.com, with the sender's address as Reply-To.
+The contact form on /contact saves each message to the Firestore collection `inquiries`. A Google
+Apps Script under the company Workspace account (`apps-script/`) checks that collection every five
+minutes and emails each new message to brandon@zweifeltech.com, with the sender's address as Reply-To.
+Everything stays on the free Spark plan.
 
 Use a Firebase project of its own for the website (`zweifel-tech-site`), so these rules
 never replace the rules of another app's database.
@@ -14,15 +15,19 @@ never replace the rules of another app's database.
    into `src/lib/firebase-config.ts`.
 2. **Firestore.** Build > Firestore Database > Create database (production mode, a US region).
 3. **Rules.** From this folder: `firebase deploy --only firestore:rules --project <project-id>`.
-4. **Email.** Install the extension "Trigger Email from Firestore" (`firebase/firestore-send-email`):
-   - Email documents collection: `inquiries`
-   - Default FROM address: a mailbox you can send from, for example `website@zweifeltech.com`
-   - SMTP connection URI: for Google Workspace, `smtps://<user>@zweifeltech.com@smtp.gmail.com:465`
-     with an app password stored as the extension's SMTP password secret
-   The extension needs the Blaze (pay as you go) plan; at website volumes it costs nothing or close to it.
+4. **Email with Apps Script.** Signed in to the Workspace account that owns the Firebase project:
+   - Open https://script.google.com, create a project named "Website inquiries".
+   - Project Settings: tick "Show appsscript.json manifest file in editor".
+   - Replace `Code.gs` and `appsscript.json` with the files in `apps-script/`.
+   - Choose the function `setup` and press Run. Approve the permissions (Firestore, send email,
+     triggers). It creates a 5-minute trigger and sends any messages already waiting.
+   - Errors show under Executions in the script editor.
+   The script remembers the newest message it sent, so each message is emailed once.
+   (Alternative: the "Trigger Email from Firestore" extension. It needs the Blaze plan, and the
+   documents already carry its `to`, `replyTo` and `message` fields.)
 5. **Authorized domains.** Add `zweifel.tech` (and `localhost` for testing) under the API key's
    website restrictions in Google Cloud console > APIs & Services > Credentials.
-6. Send a test message from http://localhost:8080/contact and check the inbox and the
+6. Send a test message from http://localhost:8081/contact and check the inbox and the
    `inquiries` collection.
 
 ## Spam
